@@ -1,8 +1,13 @@
+@import "ui-variables";
+
 .settings-view {
     .section {
         atom-text-editor[mini], atom-text-editor[mini]::shadow {
             opacity: 1;
         }
+    }
+    .panels {
+
     }
     select.form-control {
         background: transparent;
@@ -11,5 +16,60 @@
         box-shadow: none;
         border-radius: 0 !important;
         color: rgba(255,255,255,0.8);
+    }
+    .package-card {
+        position: relative;
+        padding-left: 150px;
+        min-height: 100px;
+        background: #FFF;
+        border-radius: @component-border-radius;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+        color: @text-color-subtle;
+
+        &:hover {
+            background: #FFF;
+        }
+        h4 a {
+            color: @background-color-selected;
+        }
+        .meta {
+            display: block;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+        .meta-controls {
+            display: block;
+
+            .btn-toolbar {
+                margin: 0;
+            }
+        }
+        .meta-user {
+            display: block;
+            white-space: nowrap;
+            margin: 0;
+
+            a {
+                display: inline-block;
+                max-width: 100%;
+            }
+            .author {
+                color: rgba(0,0,0,0.5);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 80px;
+                position: relative;
+                top: 4px;
+            }
+            .avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
     }
 }

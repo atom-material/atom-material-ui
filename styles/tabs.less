@@ -36,7 +36,7 @@
         max-width: @tab-max-width;
         height: @tab-height;
         line-height: @tab-height;
-        padding: 0 10px;
+        padding: 0 10px 0 12px;
         color: @text-color;
         transition: color 0.1s ease-in;
         border: none;
@@ -66,11 +66,15 @@
             position: relative;
             z-index: 1;
             padding-right: 10px;
+
+            &.icon-tools::before {
+                display: inline-block;
+            }
         }
         .title:before {
             display: none;
             color: rgba(255,255,255,0.8) !important;
-            margin-right: 10px;
+            margin-right: 10px !important;
         }
     }
     .tab.active {
@@ -102,7 +106,7 @@
     }
     .tab.active:hover .close-icon {
         color: @text-color;
-        
+
         &:hover {
             color: inherit;
         }
