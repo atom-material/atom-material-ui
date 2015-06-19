@@ -1,0 +1,50 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.btn-background (@color, @hover-color, @selected-color, @text-color) {
+    color: rgba(255,255,255,0.5);
+    background-color: @app-background-color;
+    transition: all 250ms ease;
+    height: 36px;
+    line-height: 36px;
+
+    &:focus {
+        color: @text-color;
+    }
+    &:hover {
+        color: @text-color-highlight;
+        background-color: lighten(@app-background-color, 10%);
+    }
+    &.selected,
+    &.selected:hover {
+        color: @text-color-highlight;
+    }
+}
+.btn-variant (@color) {
+    @bg: darken(@color, 10%);
+    @hover: @color;
+    @selected: @color;
+    .btn-background(@bg, @hover, @selected, @text-color-highlight);
+}
+.btn {
+    .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+}
+.btn.btn-primary {
+    .btn-variant(@background-color-info);
+}
+.btn.btn-info {
+    .btn-variant(@background-color-info);
+}
+.btn.btn-success {
+    .btn-variant(@background-color-success);
+}
+.btn.btn-warning {
+    .btn-variant(@background-color-warning);
+}
+.btn.btn-error {
+    .btn-variant(@background-color-error);
+}
+.caret {
+    border-top: 5px solid #fff;
+    margin-top: -1px;
+}

@@ -1,0 +1,44 @@
+@import "ui-variables";
+@import "ui-mixins";
+atom-text-editor[mini],
+atom-text-editor[mini]::shadow {
+    color: @text-color-subtle;
+    background-color: #FFF;
+    border: none;
+    border-radius: @component-border-radius;
+    font-size: 12px;
+    height: 36px;
+    padding: 5px 0 5px @component-padding;
+    max-height: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+
+    .cursor {
+        border-color: @background-color-selected;
+        border-width: 2px;
+    }
+    .selection .region {
+        background-color: lighten(@input-background-color, 10%);
+    }
+    .placeholder-text {
+        color: lighten(@text-color-subtle, 40%);
+    }
+}
+atom-text-editor[mini].is-focused,
+atom-text-editor[mini].is-focused::shadow {
+    background-color: #FFF;
+
+    .selection .region {
+        background-color: desaturate(@background-color-info, 50%);
+    }
+}
+
+// FIXME: these should go in syntax themes?
+atom-text-editor,
+atom-text-editor::shadow {
+    .gutter.drop-shadow {
+        -webkit-box-shadow: -2px 0 10px 2px #222;
+    }
+    .wrap-guide {
+        background-color: rgba(255,255,255,0.05);
+    }
+}

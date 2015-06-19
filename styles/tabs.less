@@ -1,0 +1,119 @@
+@import "ui-variables";
+@tab-radius: 0;
+@modified-icon-width: 8px;
+@tab-skew: 0;
+@tab-top-padding: 0;
+@tab-bottom-border-height: 0;
+@tab-border: none;
+@tab-bar-bottom-border-color: transparent;
+@tab-max-width: 160px;
+
+.tab-bar {
+    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    background: @app-background-color;
+    padding: 0 10px 0 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: @tab-bottom-border-height;
+        left: 0;
+        right: 0;
+        background-color: @tab-background-color-active;
+        border-top: 1px solid @tab-border-color;
+        border-bottom: 1px solid @tab-bar-bottom-border-color;
+        pointer-events: none;
+    }
+    .tab {
+        position: relative;
+        top: @tab-top-padding;
+        max-width: @tab-max-width;
+        height: @tab-height;
+        line-height: @tab-height;
+        padding: 0 10px;
+        color: @text-color;
+        transition: color 0.1s ease-in;
+        border: none;
+
+        .close-icon {
+            right: 10px;
+            z-index: 3;
+            text-align: right;
+            line-height: @tab-height;
+            opacity: 0;
+            color: @text-color;
+            transition: opacity 250ms ease;
+            &:hover {
+                color: inherit;
+            }
+        }
+        &.modified:not(:hover) .close-icon {
+            right: 10px;
+            top: @tab-height/2 - @modified-icon-width/2 + 1px;
+            width: @modified-icon-width;
+            height: @modified-icon-width;
+        }
+        &.modified:hover .close-icon:hover {
+            color: @text-color-highlight;
+        }
+        .title {
+            position: relative;
+            z-index: 1;
+            padding-right: 10px;
+        }
+        .title:before {
+            display: none;
+            color: rgba(255,255,255,0.8) !important;
+            margin-right: 10px;
+        }
+    }
+    .tab.active {
+        z-index: 1;
+        border-bottom: 2px solid #26c6da;
+        color: @text-color-highlight;
+
+        .close-icon {
+            line-height: @tab-height - 1px;
+            color: @text-color;
+            opacity: 1;
+        }
+        &:before {
+            box-shadow: inset 1px 1px 0 @tab-border-color, -4px -4px 4px rgba(0,0,0,.1);
+        }
+        &:after {
+            box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+        }
+        .title:before {
+            display: inline-block;
+        }
+    }
+    .tab:hover {
+        color: @text-color-highlight;
+
+        .close-icon {
+            opacity: 1;
+        }
+    }
+    .tab.active:hover .close-icon {
+        color: @text-color;
+        
+        &:hover {
+            color: inherit;
+        }
+    }
+    .placeholder {
+        height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+        margin-left: -9px; // center between tabs
+        pointer-events: none;
+
+        &:after {
+            top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+        }
+    }
+}

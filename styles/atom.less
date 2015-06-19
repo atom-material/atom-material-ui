@@ -1,0 +1,27 @@
+@import "ui-variables";
+
+* {
+	box-sizing: border-box;
+}
+
+atom-workspace {
+  background-color: @app-background-color;
+}
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black inset;
+  }
+}
