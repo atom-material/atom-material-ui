@@ -4,3 +4,17 @@ ul.background-message {
   font-weight: bold;
   color: rgba(0, 0, 0, .2);
 }
+.panel-heading {
+    background: @app-background-color !important;
+    padding: 20px;
+    border-bottom: 1px solid lighten(@app-background-color, 1%);
+}
+.highlight-info {
+    background: @background-color-selected !important;
+    color: @app-background-color !important;
+}
+.settings-view .alert-info {
+    background-color: lighten(@app-background-color, 5%);
+    border: none;
+    color: @background-color-selected;
+}

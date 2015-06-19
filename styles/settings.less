@@ -10,16 +10,28 @@
 
     }
     select.form-control {
-        background: transparent;
+        background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
+        background-position: right center;
         border: none;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         box-shadow: none;
         border-radius: 0 !important;
         color: rgba(255,255,255,0.8);
+        cursor: pointer;
+        padding: 0;
+        line-height: 36px;
+        height: 36px;
+        -webkit-appearance: none;
+
+        &:hover, &:focus {
+            background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
+            background-position: right center;
+        }
     }
-    .package-card {
+    .package-card, .package-detail .package-card {
         position: relative;
-        padding-left: 150px;
+        padding-left: 170px;
+        padding-bottom: 72px;
         min-height: 100px;
         background: #FFF;
         border-radius: @component-border-radius;
@@ -30,12 +42,20 @@
         &:hover {
             background: #FFF;
         }
+        &.disabled {
+            background: #FFF;
+            opacity: 0.75;
+        }
         h4 a {
             color: @background-color-selected;
         }
+        .stats {
+            opacity: 0.25;
+        }
         .meta {
             display: block;
-            width: 150px;
+            width: 170px;
+            height: 100%;
             position: absolute;
             top: 0;
             left: 0;
@@ -43,9 +63,27 @@
         }
         .meta-controls {
             display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 280px;
 
             .btn-toolbar {
                 margin: 0;
+            }
+        }
+        .btn-group > .btn {
+            background: #FFF;
+            border: none;
+            outline: none;
+            color: @text-color-subtle;
+
+            &:hover {
+                color: @background-color-selected;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            }
+            &::after {
+                background-color: @md-pink;
             }
         }
         .meta-user {
@@ -66,10 +104,21 @@
                 top: 4px;
             }
             .avatar {
-                width: 32px;
-                height: 32px;
+                width: 48px;
+                height: 48px;
+                margin-right: 10px;
                 border-radius: 50%;
             }
+        }
+    }
+    .setting-description {
+        color: rgba(255,255,255,0.25);
+    }
+    .link {
+        color: @background-color-selected;
+
+        &:hover {
+            color: lighten(@background-color-selected, 20%);
         }
     }
 }

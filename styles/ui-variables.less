@@ -11,9 +11,9 @@
 @text-color-error: #F44336;
 
 @text-color-ignored: @text-color-subtle;
-@text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
-@text-color-modified: @text-color-warning;
+@text-color-added: lighten(@text-color-success, 10%);
+@text-color-renamed: lighten(@text-color-info, 10%);
+@text-color-modified: lighten(@text-color-warning, 15%);
 @text-color-removed: @text-color-error;
 
 @background-color-info: #2196F3;
@@ -29,7 +29,7 @@
 @base-border-color: rgba(0, 0, 0, 0.1);
 
 @pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 0.5);
+@pane-item-border-color: rgba(0, 0, 0, 0.1);
 
 @input-background-color: #FFF;
 @input-border-color: @base-border-color;
@@ -85,7 +85,28 @@
 
 @tab-height: 48px;
 
-
 // Other
 
 @font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+// Material Design Key Colors
+
+@md-red:            #F44336;
+@md-pink:           #E91E63;
+@md-purple:         #9C27B0;
+@md-deep-purple:    #673AB7;
+@md-indigo:         #3F51B5;
+@md-blue:           #2196F3;
+@md-light-blue:     #03A9F4;
+@md-cyan:           #00BCD4;
+@md-teal:           #009688;
+@md-green:          #4CAF50;
+@md-light-green:    #8BC34A;
+@md-lime:           #CDDC39;
+@md-yellow:         #FFEB3B;
+@md-amber:          #FFC107;
+@md-orange:         #FF9800;
+@md-deep-orange:    #FF5722;
+@md-brown:          #795548;
+@md-grey:           #9E9E9E;
+@md-blue-grey:      #607D8B;

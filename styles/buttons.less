@@ -6,6 +6,7 @@
     background-color: @app-background-color;
     transition: all 250ms ease;
     height: 36px;
+    outline: none;
     line-height: 36px;
 
     &:focus {
@@ -18,6 +19,13 @@
     &.selected,
     &.selected:hover {
         color: @text-color-highlight;
+        background-color: lighten(@app-background-color, 5%);
+        outline: none;
+    }
+    &:active {
+        background-color: darken(@app-background-color, 5%);
+        box-shadow: none;
+        outline: none;
     }
 }
 .btn-variant (@color) {
