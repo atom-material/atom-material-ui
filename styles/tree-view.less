@@ -19,8 +19,16 @@
     &:focus {
         background: @app-background-color;
 
-        .selected:before {
-            background: lighten(@app-background-color, 10%);
+        .selected {
+            color: #FFF !important;
+            text-shadow: none !important;
+
+            &::before {
+                background: @background-color-selected;
+            }
+            span[class*="icon"]::before {
+                color: rgba(255,255,255,0.9);
+            }
         }
     }
 }

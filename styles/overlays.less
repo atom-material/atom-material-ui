@@ -1,4 +1,5 @@
 @import "ui-variables";
+@import "keyframes";
 
 atom-panel.modal, .overlay {
     color: @text-color;
@@ -6,6 +7,8 @@ atom-panel.modal, .overlay {
     padding: 0;
     box-shadow: 0 5px 20px rgba(0,0,0,0.25);
     border-radius: @component-border-radius;
+    transition: all 500ms ease;
+    -webkit-animation: circleReveal 500ms ease;
 
     atom-text-editor[mini] {
         margin: 10px 10px @component-padding;
@@ -44,4 +47,8 @@ atom-panel.modal, .overlay {
             }
         }
     }
+}
+@-webkit-keyframes circleReveal {
+    from { clip-path: circle(0% at center); }
+    to { clip-path: circle(100% at center); }
 }

@@ -1,4 +1,6 @@
 @import "ui-variables";
+@import "keyframes";
+
 @tab-radius: 0;
 @modified-icon-width: 8px;
 @tab-skew: 0;
@@ -90,7 +92,7 @@
     }
     .tab.active {
         z-index: 1;
-        border-bottom: 2px solid #26c6da;
+        border-bottom: 2px solid @background-color-selected;
         color: @text-color-highlight;
 
         .close-icon {
