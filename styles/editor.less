@@ -1,16 +1,19 @@
 @import "ui-variables";
 @import "ui-mixins";
+@import "elevation";
+
 atom-text-editor[mini],
 atom-text-editor[mini]::shadow {
-    color: @text-color-subtle;
-    background-color: #FFF;
+    color: #FFF;
+    background-color: transparent;
     border: none;
-    border-radius: @component-border-radius;
+    border-radius: 0;
     font-size: 12px;
     height: 36px;
-    padding: 5px 0 5px @component-padding;
+    padding: 5px 0;
     max-height: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 250ms ease;
 
     .cursor {
         border-color: @background-color-selected;
@@ -20,12 +23,14 @@ atom-text-editor[mini]::shadow {
         background-color: lighten(@input-background-color, 10%);
     }
     .placeholder-text {
-        color: lighten(@text-color-subtle, 40%);
+        color: rgba(255,255,255,0.5);
     }
 }
 atom-text-editor[mini].is-focused,
 atom-text-editor[mini].is-focused::shadow {
-    background-color: #FFF;
+    background-color: transparent;
+    border-bottom-color: @background-color-selected;
+    box-shadow: 0 1px 0 @background-color-selected;
 
     .selection .region {
         background-color: desaturate(@background-color-info, 50%);
