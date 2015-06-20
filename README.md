@@ -15,3 +15,7 @@ Fire up a console and type:
 Or, inside Atom's settings select Install and then search for this package.
 
 ![](https://raw.githubusercontent.com/silvestreh/atom-material-ui/master/screenshot.png)
+
+## Credits
+
+[SublimeText Material](https://github.com/equinusocio/material-theme) theme.
