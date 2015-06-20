@@ -3,6 +3,12 @@
   "theme": "ui",
   "version": "0.2.0",
   "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
+  "keywords": [
+    "ui",
+    "theme",
+    "material",
+    "material design"
+  ],
   "license": "MIT",
   "repository": "https://github.com/silvestreh/atom-material-ui",
   "engines": {

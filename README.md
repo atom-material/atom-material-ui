@@ -6,4 +6,4 @@ A dark UI theme for Atom that (kinda) follows Google's Material Design Guideline
 
 <a href='https://pledgie.com/campaigns/29552'><img alt='Click here to lend your support to: Atom Material Design Theme and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/29552.png?skin_name=chrome' border='0' ></a>
 
-![](/screenshot.png)
+![](https://raw.githubusercontent.com/silvestreh/atom-material-ui/master/screenshot.png)
