@@ -10,6 +10,7 @@
     "material design"
   ],
   "license": "MIT",
+  "main": "lib/settings",
   "repository": "https://github.com/silvestreh/atom-material-ui",
   "engines": {
     "atom": ">0.40.0"

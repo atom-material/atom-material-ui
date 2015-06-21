@@ -1,0 +1,393 @@
+@import "ui-variables";
+
+html.Cyan {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-cyan;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                &::before {
+                    background: @md-cyan;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-cyan;
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(0deg);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-cyan;
+                box-shadow: 0 1px 0 @md-cyan;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-cyan;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: @md-cyan;
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-cyan, 20%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-cyan;
+        }
+    }
+    .link {
+        color: @md-cyan;
+
+        &:hover {
+            color: lighten(@md-cyan, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-cyan;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-cyan;
+        box-shadow: 0 1px 0 @md-cyan;
+    }
+}
+html.Green {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-light-green;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                &::before {
+                    background: @md-light-green;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-light-green;
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(-100deg) brightness(1.2);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-light-green;
+                box-shadow: 0 1px 0 @md-light-green;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-light-green;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: @md-light-green;
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-light-green, 20%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-light-green;
+        }
+    }
+    .link {
+        color: @md-light-green;
+
+        &:hover {
+            color: lighten(@md-light-green, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-light-green;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-light-green;
+        box-shadow: 0 1px 0 @md-light-green;
+    }
+}
+html.Pink {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-pink;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                &::before {
+                    background: @md-pink;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-pink;
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(165deg) saturate(3);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-pink;
+                box-shadow: 0 1px 0 @md-pink;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-pink;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: @md-pink;
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-pink, 20%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-pink;
+        }
+    }
+    .link {
+        color: @md-pink;
+
+        &:hover {
+            color: lighten(@md-pink, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-pink;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-pink;
+        box-shadow: 0 1px 0 @md-pink;
+    }
+}
+html.Purple {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-deep-purple;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                &::before {
+                    background: @md-deep-purple;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-deep-purple;
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(70deg) saturate(3.5);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-deep-purple;
+                box-shadow: 0 1px 0 @md-deep-purple;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-deep-purple;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: @md-deep-purple;
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-deep-purple, 20%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-deep-purple;
+        }
+    }
+    .link {
+        color: @md-deep-purple;
+
+        &:hover {
+            color: lighten(@md-deep-purple, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-deep-purple;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-deep-purple;
+        box-shadow: 0 1px 0 @md-deep-purple;
+    }
+}
+html.Red {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-red;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                &::before {
+                    background: @md-red;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-red;
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(175deg) saturate(2.5);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-red;
+                box-shadow: 0 1px 0 @md-red;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-red;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: @md-red;
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-red, 20%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-red;
+        }
+    }
+    .link {
+        color: @md-red;
+
+        &:hover {
+            color: lighten(@md-red, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-red;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-red;
+        box-shadow: 0 1px 0 @md-red;
+    }
+}
+html.Yellow {
+    .tab-bar .tab.active {
+        border-bottom-color: @md-yellow;
+    }
+    .focusable-panel {
+        &:focus {
+            .selected {
+                color: darken(@md-yellow, 40%) !important;
+
+                &::before {
+                    background: @md-yellow;
+                }
+                span::before {
+                    color: darken(@md-yellow, 40%) !important;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @md-yellow;
+            color: darken(@md-yellow, 40%);
+        }
+    }
+    .settings-view {
+        input[type="checkbox"] {
+            -webkit-filter: hue-rotate(240deg) saturate(8);
+        }
+        select.form-control {
+            &:focus {
+                border-bottom-color: @md-yellow;
+                box-shadow: 0 1px 0 @md-yellow;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            h4 a {
+                color: @md-yellow;
+            }
+            .btn-group > .btn {
+                &:hover {
+                    color: darken(@md-yellow, 40%);
+                }
+            }
+        }
+        .alert-info {
+            color: lighten(@md-yellow, 10%);
+        }
+        .config-menu .nav > li.active > a {
+            background-color: @md-yellow;
+            color: darken(@md-yellow, 40%);
+        }
+    }
+    .link {
+        color: @md-yellow;
+
+        &:hover {
+            color: lighten(@md-yellow, 10%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @md-yellow;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        border-bottom-color: @md-yellow;
+        box-shadow: 0 1px 0 @md-yellow;
+    }
+}
