@@ -5,16 +5,22 @@ atom-panel.modal, .overlay {
     color: @text-color;
     background-color: #fff;
     padding: 0;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
     border-radius: @component-border-radius;
     transition: all 500ms ease;
+    &:extend(.elevation-2);
     -webkit-animation: circleReveal 500ms ease;
 
     atom-text-editor[mini] {
+        color: @text-color-dark;
         margin: 10px 10px @component-padding;
         border-bottom: 1px solid rgba(0,0,0,0.1);
         box-shadow: none;
         border-radius: 0;
+
+        &.is-focused, .is-focused::shadow {
+            border-bottom-color: @background-color-selected;
+            box-shadow: 0 1px 0 @background-color-selected;
+        }
     }
     .select-list ol.list-group, &.select-list ol.list-group {
         background-color: #fff;

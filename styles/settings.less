@@ -26,6 +26,10 @@
             background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
             background-position: right center;
         }
+        &:focus {
+            border-bottom-color: @background-color-selected;
+            box-shadow: 0 1px 0 @background-color-selected;
+        }
     }
     .package-card, .package-detail .package-card {
         position: relative;
@@ -126,10 +130,15 @@
         border: none;
         width: 18px;
         height: 18px;
+        transform: translate3d(0,0,0);
 
         &:checked {
             background-color: transparent;
             background-image: url('atom://atom-material-ui/assets/checkbox-checked.svg')
+        }
+        &:focus {
+            border: none;
+            box-shadow: none;
         }
     }
 }
