@@ -22,8 +22,8 @@
 .ripple {
     overflow: hidden;
     position: relative;
-    
-    &::before {
+
+    &::after {
         display: none;
         content: '';
         position: absolute;
@@ -35,4 +35,7 @@
         height: 2px;
         background: rgba(0,0,0,0.1);
     }
+}
+.btn:extend(.ripple) {
+    
 }

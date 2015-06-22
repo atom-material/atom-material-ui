@@ -1,10 +1,13 @@
 @import "ui-variables";
 
-html.Cyan {
+html.cyan {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: @md-cyan;
+                &::after {
+                    background-color: @md-cyan;
+                }
+                // border-bottom-color: @md-cyan;
             }
             &::before {
                 background-color: @md-cyan;
@@ -77,11 +80,14 @@ html.Cyan {
         }
     }
 }
-html.Green {
+html.green {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: @md-light-green;
+                &::after {
+                    background-color: @md-light-green;
+                }
+                // border-bottom-color: @md-light-green;
             }
             &::before {
                 background-color: @md-light-green;
@@ -154,11 +160,14 @@ html.Green {
         }
     }
 }
-html.Pink {
+html.pink {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: lighten(@md-pink, 5%);
+                &::after {
+                    background-color: lighten(@md-pink, 5%);
+                }
+                // border-bottom-color: lighten(@md-pink, 5%);
             }
             &::before {
                 background-color: lighten(@md-pink, 5%);
@@ -231,11 +240,14 @@ html.Pink {
         }
     }
 }
-html.Purple {
+html.purple {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: lighten(@md-deep-purple, 10%);
+                &::after {
+                    background-color: lighten(@md-deep-purple, 10%);
+                }
+                // border-bottom-color: lighten(@md-deep-purple, 10%);
             }
             &::before {
                 background-color: lighten(@md-deep-purple, 10%);
@@ -308,11 +320,14 @@ html.Purple {
         }
     }
 }
-html.Red {
+html.red {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: @md-red;
+                &::after {
+                    background-color: @md-red;
+                }
+                // border-bottom-color: @md-red;
             }
             &::before {
                 background-color: @md-red;
@@ -385,11 +400,14 @@ html.Red {
         }
     }
 }
-html.Yellow {
+html.yellow {
     .tab-bar {
         .tab {
             &.active {
-                border-bottom-color: @md-yellow;
+                &::after {
+                    background-color: @md-yellow;
+                }
+                // border-bottom-color: @md-yellow;
             }
             &::before {
                 background-color: @md-yellow;

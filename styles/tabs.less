@@ -1,5 +1,7 @@
 @import "ui-variables";
 @import "keyframes";
+@import "animate";
+@import "fonts";
 
 @tab-radius: 0;
 @modified-icon-width: 8px;
@@ -20,18 +22,6 @@
     &::-webkit-scrollbar {
         display: none;
     }
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        height: @tab-bottom-border-height;
-        left: 0;
-        right: 0;
-        background-color: @tab-background-color-active;
-        border-top: 1px solid @tab-border-color;
-        border-bottom: 1px solid @tab-bar-bottom-border-color;
-        pointer-events: none;
-    }
     .tab {
         position: relative;
         top: @tab-top-padding;
@@ -39,21 +29,27 @@
         height: @tab-height;
         line-height: @tab-height;
         padding: 0 10px 0 12px;
-        color: rgba(255,255,255,0.3);
-        transition: color 0.1s ease-in;
+        opacity: 0.25;
+        color: #FFF;
         border: none;
         overflow: hidden;
+        -webkit-transition: opacity 250ms ease;
+        -webkit-transform: translate3d(0,0,0);
 
         .close-icon {
+            display: none;
             right: 10px;
             z-index: 3;
             text-align: right;
             line-height: @tab-height;
-            opacity: 0;
             color: @text-color;
-            transition: opacity 250ms ease;
+            -webkit-animation: zoomIn 250ms ease;
+
             &:hover {
                 color: inherit;
+            }
+            &::before {
+                font-size: 15px;
             }
         }
         &.modified:not(:hover) .close-icon {
@@ -90,22 +86,36 @@
             width: 2px;
             height: 2px;
             background: rgba(0,0,0,0.1);
+            -webkit-transform: translate3d(0,0,0);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            height: 2px;
+            -webkit-transition: left 250ms ease, right 250ms ease;
+            -webkit-transform: translate3d(0,0,0);
         }
     }
     .tab.active {
         z-index: 1;
-        border-bottom: 2px solid @background-color-selected;
-        color: #FFF;
+        opacity: 1;
 
         .close-icon {
+            display: inline-block;
             line-height: @tab-height - 1px;
             color: @text-color;
-            opacity: 1;
         }
         &::before {
-            display: block;
+            display: inline-block;
             -webkit-animation: ripple 500ms ease;
             -webkit-animation-fill-mode: forwards;
+        }
+        &::after {
+            left: 0%;
+            right: 0%;
         }
         .title:before {
             display: inline-block;
@@ -115,7 +125,7 @@
         color: #FFF;
 
         .close-icon {
-            opacity: 1;
+            display: inline-block;
         }
     }
     .tab.active:hover .close-icon {

@@ -5,13 +5,13 @@ module.exports =
         # Accent color
 
         setAccentColor = (currentAccentColor) ->
-            root.classList.remove('Cyan')
-            root.classList.remove('Green')
-            root.classList.remove('Pink')
-            root.classList.remove('Purple')
-            root.classList.remove('Red')
-            root.classList.remove('Yellow')
-            root.classList.add(currentAccentColor)
+            root.classList.remove('cyan')
+            root.classList.remove('green')
+            root.classList.remove('pink')
+            root.classList.remove('purple')
+            root.classList.remove('red')
+            root.classList.remove('yellow')
+            root.classList.add(currentAccentColor.toLowerCase())
 
         atom.config.onDidChange 'atom-material-ui.accentColor', ->
             setAccentColor(atom.config.get('atom-material-ui.accentColor'))
