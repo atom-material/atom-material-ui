@@ -1,4 +1,5 @@
 ![](http://i.imgur.com/7C2H2mw.png)
+---
 
 A dark UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
