@@ -1,4 +1,4 @@
-# Atom Material UI
+![](http://i.imgur.com/7C2H2mw.png)
 
 A dark UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
@@ -27,3 +27,9 @@ You'll find the color dropdown there.
 Here's the obligatory screenshot.
 
 ![](http://i.imgur.com/WxrQLWb.png)
+
+## Extra
+
+![](http://i.imgur.com/0tHORB1.png)
+
+You can download the redesigned icon from [dropbox](https://dl.dropboxusercontent.com/u/115930/Atom-MD-Icon.zip). It's a ZIP file containing multiple resolution PNGs and an ICNS.
