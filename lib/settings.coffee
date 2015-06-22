@@ -11,6 +11,11 @@ module.exports =
             description: 'Choose wether to use Roboto Mono font for the editor.'
             type: 'boolean',
             default: false
+        slimScrollbar:
+            title: 'Slim scrollbars'
+            description: 'Makes scrollbars very slim.'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->
