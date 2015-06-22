@@ -63,7 +63,7 @@
             height: @modified-icon-width;
         }
         &.modified:hover .close-icon:hover {
-            color: @text-color-highlight;
+            color: #FFF;
         }
         .title {
             position: relative;
@@ -95,7 +95,7 @@
     .tab.active {
         z-index: 1;
         border-bottom: 2px solid @background-color-selected;
-        color: @text-color-highlight;
+        color: #FFF;
 
         .close-icon {
             line-height: @tab-height - 1px;
@@ -105,13 +105,14 @@
         &::before {
             display: block;
             -webkit-animation: ripple 500ms ease;
+            -webkit-animation-fill-mode: forwards;
         }
         .title:before {
             display: inline-block;
         }
     }
     .tab:hover {
-        color: @text-color-highlight;
+        color: #FFF;
 
         .close-icon {
             opacity: 1;

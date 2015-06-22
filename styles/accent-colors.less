@@ -67,6 +67,15 @@ html.Cyan {
         border-bottom-color: @md-cyan;
         box-shadow: 0 1px 0 @md-cyan;
     }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: @md-cyan;
+                }
+            }
+        }
+    }
 }
 html.Green {
     .tab-bar {
@@ -134,6 +143,15 @@ html.Green {
     atom-text-editor[mini].is-focused::shadow {
         border-bottom-color: @md-light-green;
         box-shadow: 0 1px 0 @md-light-green;
+    }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: @md-light-green;
+                }
+            }
+        }
     }
 }
 html.Pink {
@@ -203,6 +221,15 @@ html.Pink {
         border-bottom-color: lighten(@md-pink, 5%);
         box-shadow: 0 1px 0 lighten(@md-pink, 5%);
     }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: lighten(@md-pink, 5%);
+                }
+            }
+        }
+    }
 }
 html.Purple {
     .tab-bar {
@@ -271,6 +298,15 @@ html.Purple {
         border-bottom-color: lighten(@md-deep-purple, 10%);
         box-shadow: 0 1px 0 lighten(@md-deep-purple, 10%);
     }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: lighten(@md-deep-purple, 10%);
+                }
+            }
+        }
+    }
 }
 html.Red {
     .tab-bar {
@@ -338,6 +374,15 @@ html.Red {
     atom-text-editor[mini].is-focused::shadow {
         border-bottom-color: @md-red;
         box-shadow: 0 1px 0 @md-red;
+    }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: @md-red;
+                }
+            }
+        }
     }
 }
 html.Yellow {
@@ -413,5 +458,17 @@ html.Yellow {
     atom-text-editor[mini].is-focused::shadow {
         border-bottom-color: @md-yellow;
         box-shadow: 0 1px 0 @md-yellow;
+    }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                &.selected {
+                    color: #FFF;
+                }
+                span.character-match {
+                    color: darken(@md-yellow, 30%);
+                }
+            }
+        }
     }
 }
