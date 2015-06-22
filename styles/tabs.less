@@ -39,9 +39,10 @@
         height: @tab-height;
         line-height: @tab-height;
         padding: 0 10px 0 12px;
-        color: @text-color;
+        color: rgba(255,255,255,0.3);
         transition: color 0.1s ease-in;
         border: none;
+        overflow: hidden;
 
         .close-icon {
             right: 10px;
@@ -79,6 +80,7 @@
             margin-right: 10px !important;
         }
         &::before {
+            display: none;
             content: '';
             position: absolute;
             border-radius: 50%;
@@ -101,6 +103,7 @@
             opacity: 1;
         }
         &::before {
+            display: block;
             -webkit-animation: ripple 500ms ease;
         }
         .title:before {

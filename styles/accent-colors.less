@@ -1,8 +1,15 @@
 @import "ui-variables";
 
 html.Cyan {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-cyan;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: @md-cyan;
+            }
+            &::before {
+                background-color: @md-cyan;
+            }
+        }
     }
     .focusable-panel {
         &:focus {
@@ -29,9 +36,6 @@ html.Cyan {
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-cyan;
-            }
             .btn-group > .btn {
                 &:hover {
                     color: @md-cyan;
@@ -65,8 +69,15 @@ html.Cyan {
     }
 }
 html.Green {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-light-green;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: @md-light-green;
+            }
+            &::before {
+                background-color: @md-light-green;
+            }
+        }
     }
     .focusable-panel {
         &:focus {
@@ -93,9 +104,6 @@ html.Green {
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-light-green;
-            }
             .btn-group > .btn {
                 &:hover {
                     color: @md-light-green;
@@ -129,21 +137,28 @@ html.Green {
     }
 }
 html.Pink {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-pink;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: lighten(@md-pink, 5%);
+            }
+            &::before {
+                background-color: lighten(@md-pink, 5%);
+            }
+        }
     }
     .focusable-panel {
         &:focus {
             .selected {
                 &::before {
-                    background: @md-pink;
+                    background: lighten(@md-pink, 5%);
                 }
             }
         }
     }
     .select-list ol.list-group, &.select-list ol.list-group {
         li.selected {
-            background-color: @md-pink;
+            background-color: lighten(@md-pink, 5%);
         }
     }
     .settings-view {
@@ -152,62 +167,66 @@ html.Pink {
         }
         select.form-control {
             &:focus {
-                border-bottom-color: @md-pink;
-                box-shadow: 0 1px 0 @md-pink;
+                border-bottom-color: lighten(@md-pink, 5%);
+                box-shadow: 0 1px 0 lighten(@md-pink, 5%);
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-pink;
-            }
             .btn-group > .btn {
                 &:hover {
-                    color: @md-pink;
+                    color: lighten(@md-pink, 5%);
                 }
             }
         }
         .alert-info {
-            color: lighten(@md-pink, 20%);
+            color: lighten(lighten(@md-pink, 20%), 5%);
         }
         .config-menu .nav > li.active > a {
-            background-color: @md-pink;
+            background-color: lighten(@md-pink, 5%);
         }
     }
     .link {
-        color: @md-pink;
+        color: lighten(@md-pink, 5%);
 
         &:hover {
-            color: lighten(@md-pink, 20%);
+            color: lighten(lighten(@md-pink, 20%), 5%);
         }
     }
     atom-text-editor[mini],
     atom-text-editor[mini]::shadow {
         .cursor {
-            border-color: @md-pink;
+            border-color: lighten(@md-pink, 5%);
         }
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-pink;
-        box-shadow: 0 1px 0 @md-pink;
+        border-bottom-color: lighten(@md-pink, 5%);
+        box-shadow: 0 1px 0 lighten(@md-pink, 5%);
     }
 }
 html.Purple {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-deep-purple;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: lighten(@md-deep-purple, 10%);
+            }
+            &::before {
+                background-color: lighten(@md-deep-purple, 10%);
+            }
+        }
     }
     .focusable-panel {
         &:focus {
             .selected {
                 &::before {
-                    background: @md-deep-purple;
+                    background: lighten(@md-deep-purple, 10%);
                 }
             }
         }
     }
     .select-list ol.list-group, &.select-list ol.list-group {
         li.selected {
-            background-color: @md-deep-purple;
+            background-color: lighten(@md-deep-purple, 10%);
         }
     }
     .settings-view {
@@ -216,49 +235,53 @@ html.Purple {
         }
         select.form-control {
             &:focus {
-                border-bottom-color: @md-deep-purple;
-                box-shadow: 0 1px 0 @md-deep-purple;
+                border-bottom-color: lighten(@md-deep-purple, 10%);
+                box-shadow: 0 1px 0 lighten(@md-deep-purple, 10%);
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-deep-purple;
-            }
             .btn-group > .btn {
                 &:hover {
-                    color: @md-deep-purple;
+                    color: lighten(@md-deep-purple, 10%);
                 }
             }
         }
         .alert-info {
-            color: lighten(@md-deep-purple, 20%);
+            color: lighten(lighten(@md-deep-purple, 20%), 10%);
         }
         .config-menu .nav > li.active > a {
-            background-color: @md-deep-purple;
+            background-color: lighten(@md-deep-purple, 10%);
         }
     }
     .link {
-        color: @md-deep-purple;
+        color: lighten(@md-deep-purple, 10%);
 
         &:hover {
-            color: lighten(@md-deep-purple, 20%);
+            color: lighten(lighten(@md-deep-purple, 20%), 10%);
         }
     }
     atom-text-editor[mini],
     atom-text-editor[mini]::shadow {
         .cursor {
-            border-color: @md-deep-purple;
+            border-color: lighten(@md-deep-purple, 10%);
         }
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-deep-purple;
-        box-shadow: 0 1px 0 @md-deep-purple;
+        border-bottom-color: lighten(@md-deep-purple, 10%);
+        box-shadow: 0 1px 0 lighten(@md-deep-purple, 10%);
     }
 }
 html.Red {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-red;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: @md-red;
+            }
+            &::before {
+                background-color: @md-red;
+            }
+        }
     }
     .focusable-panel {
         &:focus {
@@ -285,9 +308,6 @@ html.Red {
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-red;
-            }
             .btn-group > .btn {
                 &:hover {
                     color: @md-red;
@@ -321,8 +341,15 @@ html.Red {
     }
 }
 html.Yellow {
-    .tab-bar .tab.active {
-        border-bottom-color: @md-yellow;
+    .tab-bar {
+        .tab {
+            &.active {
+                border-bottom-color: @md-yellow;
+            }
+            &::before {
+                background-color: @md-yellow;
+            }
+        }
     }
     .focusable-panel {
         &:focus {
@@ -355,9 +382,6 @@ html.Yellow {
             }
         }
         .package-card, .package-detail .package-card {
-            h4 a {
-                color: @md-yellow;
-            }
             .btn-group > .btn {
                 &:hover {
                     color: darken(@md-yellow, 40%);

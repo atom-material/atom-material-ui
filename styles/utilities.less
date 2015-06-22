@@ -19,3 +19,20 @@
 .find-and-replace .find-meta-container {
     top: 5px;
 }
+.ripple {
+    overflow: hidden;
+    position: relative;
+    
+    &::before {
+        display: none;
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        top: calc(50% - 1px);
+        left: calc(50% - 1px);
+        pointer-events: none;
+        width: 2px;
+        height: 2px;
+        background: rgba(0,0,0,0.1);
+    }
+}
