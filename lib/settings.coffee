@@ -6,6 +6,11 @@ module.exports =
             type: 'string'
             default: 'Cyan'
             enum: ['Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Yellow']
+        useRoboto:
+            title: 'Use Roboto Mono'
+            description: 'Choose wether to use Roboto Mono font for the editor.'
+            type: 'boolean',
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

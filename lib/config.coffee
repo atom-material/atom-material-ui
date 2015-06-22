@@ -17,3 +17,16 @@ module.exports =
             setAccentColor(atom.config.get('atom-material-ui.accentColor'))
 
         setAccentColor(atom.config.get('atom-material-ui.accentColor'))
+
+        # Roboto Mono Font
+
+        setRobotoFont = (boolean) ->
+            if boolean
+                root.classList.add('roboto-mono')
+            else
+                root.classList.remove('roboto-mono')
+
+        atom.config.onDidChange 'atom-material-ui.useRoboto', ->
+            setRobotoFont(atom.config.get('atom-material-ui.useRoboto'))
+
+        setRobotoFont(atom.config.get('atom-material-ui.useRoboto'))
