@@ -29,6 +29,10 @@ Here's the obligatory screenshot.
 
 ![](http://i.imgur.com/WxrQLWb.png)
 
+Animated tabs!
+
+![](http://i.imgur.com/lUR3uRv.gif)
+
 ## Extra
 
 ![](http://i.imgur.com/0tHORB1.png)
