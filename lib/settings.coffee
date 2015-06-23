@@ -16,6 +16,11 @@ module.exports =
             description: 'Makes scrollbars very slim.'
             type: 'boolean'
             default: false
+        disableAnimations:
+            title: 'Disable animations'
+            description: 'Reduces distractions when switching tabs.'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

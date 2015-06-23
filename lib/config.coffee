@@ -43,3 +43,16 @@ module.exports =
             setSlimScrollbars(atom.config.get('atom-material-ui.slimScrollbar'))
 
         setSlimScrollbars(atom.config.get('atom-material-ui.slimScrollbar'))
+
+        # Disable Animations
+
+        setAnimationStatus = (boolean) ->
+            if boolean
+                root.classList.add('no-animations')
+            else
+                root.classList.remove('no-animations')
+
+        atom.config.onDidChange 'atom-material-ui.disableAnimations', ->
+            setAnimationStatus(atom.config.get('atom-material-ui.disableAnimations'))
+
+        setAnimationStatus(atom.config.get('atom-material-ui.disableAnimations'))
