@@ -22,16 +22,21 @@ atom-panel.modal, .overlay {
             box-shadow: 0 1px 0 @background-color-selected;
         }
     }
-    .select-list ol.list-group, &.select-list ol.list-group {
+    .select-list ol.list-group, .select-list ol.list-group {
         background-color: #fff;
         border-radius: 0 0 @component-border-radius + 1px @component-border-radius + 1px;
 
         li {
             padding: @component-padding;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: @app-background-color;
 
             &.two-lines {
                 padding: @component-padding/2 @component-padding;
+
+                .primary-line {
+                    color: @app-background-color;
+                }
             }
             .status.icon {
                 float: right;
@@ -41,11 +46,23 @@ atom-panel.modal, .overlay {
                     margin-right: 0;
                 }
             }
+            span {
+                color: @app-background-color;
+            }
             &.selected {
                 background-color: lighten(@app-background-color, 20%) !important;
+                color: @text-color-highlight;
 
+                &.two-lines {
+                    .primary-line {
+                        color: @text-color-highlight;
+                    }
+                }
                 .status.icon {
                     color: @text-color-selected;
+                }
+                span {
+                    color: @text-color-highlight;
                 }
                 &::last-child {
                     border-radius: 0 0 @component-border-radius @component-border-radius;
@@ -54,6 +71,7 @@ atom-panel.modal, .overlay {
         }
     }
 }
+// atom-panel.modal .select-list ol.list-group li:not(.list-nested-item) span, .overlay .select-list ol.list-group li:not(.list-nested-item) span, atom-panel.modal.select-list ol.list-group li:not(.list-nested-item) span, .overlay.select-list ol.list-group li:not(.list-nested-item) span
 @-webkit-keyframes circleReveal {
     from { clip-path: circle(0% at center); }
     to { clip-path: circle(100% at center); }
