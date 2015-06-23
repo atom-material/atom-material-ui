@@ -6,9 +6,6 @@
             opacity: 1;
         }
     }
-    .panels {
-
-    }
     select.form-control {
         background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
         background-position: right center;
@@ -161,9 +158,13 @@
             }
             & > a {
                 transition: color 250ms ease;
+                padding: 1.25rem 1rem;
 
                 &:hover {
                     background-color: transparent;
+                }
+                &::before {
+                    margin-right: 2rem;
                 }
             }
             &.active {
