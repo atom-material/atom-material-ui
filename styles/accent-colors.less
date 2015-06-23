@@ -7,7 +7,6 @@ html.cyan {
                 &::after {
                     background-color: @md-cyan;
                 }
-                // border-bottom-color: @md-cyan;
             }
             &::before {
                 background-color: @md-cyan;
@@ -48,8 +47,10 @@ html.cyan {
         .alert-info {
             color: lighten(@md-cyan, 20%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: @md-cyan;
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: @md-cyan;
+            }
         }
     }
     .link {
@@ -87,7 +88,6 @@ html.green {
                 &::after {
                     background-color: @md-light-green;
                 }
-                // border-bottom-color: @md-light-green;
             }
             &::before {
                 background-color: @md-light-green;
@@ -128,8 +128,10 @@ html.green {
         .alert-info {
             color: lighten(@md-light-green, 20%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: @md-light-green;
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: @md-light-green;
+            }
         }
     }
     .link {
@@ -208,8 +210,10 @@ html.pink {
         .alert-info {
             color: lighten(lighten(@md-pink, 20%), 5%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: lighten(@md-pink, 5%);
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: lighten(@md-pink, 5%);
+            }
         }
     }
     .link {
@@ -288,8 +292,10 @@ html.purple {
         .alert-info {
             color: lighten(lighten(@md-deep-purple, 20%), 10%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: lighten(@md-deep-purple, 10%);
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: lighten(@md-deep-purple, 10%);
+            }
         }
     }
     .link {
@@ -327,7 +333,6 @@ html.red {
                 &::after {
                     background-color: @md-red;
                 }
-                // border-bottom-color: @md-red;
             }
             &::before {
                 background-color: @md-red;
@@ -368,8 +373,10 @@ html.red {
         .alert-info {
             color: lighten(@md-red, 20%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: @md-red;
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: @md-red;
+            }
         }
     }
     .link {
@@ -407,7 +414,6 @@ html.yellow {
                 &::after {
                     background-color: @md-yellow;
                 }
-                // border-bottom-color: @md-yellow;
             }
             &::before {
                 background-color: @md-yellow;
@@ -454,9 +460,13 @@ html.yellow {
         .alert-info {
             color: lighten(@md-yellow, 10%);
         }
-        .config-menu .nav > li.active > a {
-            background-color: @md-yellow;
-            color: darken(@md-yellow, 40%);
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: @md-yellow;
+            }
+            a {
+                color: darken(@md-yellow, 40%);
+            }
         }
     }
     .link {

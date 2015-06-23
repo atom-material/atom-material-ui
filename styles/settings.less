@@ -141,4 +141,45 @@
             box-shadow: none;
         }
     }
+    .config-menu {
+        .nav > li {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                display: none;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                top: calc(50% - 1px);
+                left: calc(50% - 1px);
+                pointer-events: none;
+                width: 2px;
+                height: 2px;
+                background: rgba(0,0,0,0.1);
+                -webkit-transform: translate3d(0,0,0);
+            }
+            & > a {
+                transition: color 250ms ease;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            &.active {
+                & > a {
+                    background-color: transparent;
+                }
+                &::before {
+                    display: block;
+                    -webkit-animation: ripplePaint 250ms ease;
+                    -webkit-animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
+@-webkit-keyframes ripplePaint {
+    from { transform: scale(1); }
+    to { transform: scale(110); }
 }
