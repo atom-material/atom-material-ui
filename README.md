@@ -29,7 +29,7 @@ Here's the obligatory screenshot.
 
 ![](http://i.imgur.com/WxrQLWb.png)
 
-Animated tabs!
+Animated tabs! (these animations can be disabled from the theme's settings)
 
 ![](http://i.imgur.com/lUR3uRv.gif)
 
