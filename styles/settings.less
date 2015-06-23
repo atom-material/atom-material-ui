@@ -1,7 +1,10 @@
 @import "ui-variables";
+@import "elevation";
 
 .settings-view {
     .section {
+        border-color: fade(@text-color, 5%);
+
         atom-text-editor[mini], atom-text-editor[mini]::shadow {
             opacity: 1;
         }
@@ -10,7 +13,7 @@
         background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
         background-position: right center;
         border: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid fade(@text-color, 10%);
         box-shadow: none;
         border-radius: 0 !important;
         cursor: pointer;
@@ -29,6 +32,7 @@
         }
     }
     .package-card, .package-detail .package-card {
+        &:extend(.elevation-1);
         position: relative;
         padding-left: 170px;
         padding-bottom: 72px;
@@ -36,7 +40,6 @@
         background: #FFF;
         border-radius: @component-border-radius;
         border: none;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.25);
         color: @text-color-subtle;
 
         &:hover {
@@ -80,7 +83,7 @@
 
             &:hover {
                 color: @background-color-selected;
-                box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+                &:extend(.elevation-2);
             }
             &::after {
                 background-color: @md-pink;
@@ -139,6 +142,8 @@
         }
     }
     .config-menu {
+        border-color: fade(@text-color, 5%);
+
         .nav > li {
             position: relative;
             overflow: hidden;
@@ -153,7 +158,7 @@
                 pointer-events: none;
                 width: 2px;
                 height: 2px;
-                background: rgba(0,0,0,0.1);
+                background: fade(@text-color, 20%);
                 -webkit-transform: translate3d(0,0,0);
             }
             & > a {
@@ -161,6 +166,7 @@
                 padding: 1.25rem 1rem;
 
                 &:hover {
+                    color: lighten(@text-color, 20%);
                     background-color: transparent;
                 }
                 &::before {
@@ -170,12 +176,42 @@
             &.active {
                 & > a {
                     background-color: transparent;
+
+                    &:hover {
+                        color: @text-color-highlight;
+                    }
                 }
                 &::before {
                     display: block;
                     -webkit-animation: ripplePaint 250ms ease;
                     -webkit-animation-fill-mode: forwards;
                 }
+            }
+        }
+    }
+    .section-heading-count {
+        color: lighten(@text-color, 10%);
+        font-size: 1rem;
+        margin-left: 1rem;
+        background-color: fade(@text-color, 5%);
+    }
+    section, .section {
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: 200;
+
+            &::before {
+                font-size: 2rem;
+                position: relative;
+                top: -0.25rem;
+            }
+        }
+        .section-heading, .sub-section-heading {
+            font-weight: 400;
+            color: @text-color;
+
+            &::before {
+                margin-right: 2rem;
             }
         }
     }

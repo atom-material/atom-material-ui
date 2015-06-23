@@ -4,7 +4,7 @@
 
 atom-text-editor[mini],
 atom-text-editor[mini]::shadow {
-    color: #FFF;
+    color: @text-color;
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -12,7 +12,7 @@ atom-text-editor[mini]::shadow {
     height: 36px;
     padding: 5px 0;
     max-height: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid fade(@text-color, 10%);
     transition: all 250ms ease;
 
     .cursor {
@@ -23,7 +23,7 @@ atom-text-editor[mini]::shadow {
         background-color: lighten(@input-background-color, 10%);
     }
     .placeholder-text {
-        color: rgba(255,255,255,0.5);
+        color: fade(@text-color, 50%);
     }
 }
 atom-text-editor[mini].is-focused,
