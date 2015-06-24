@@ -27,7 +27,7 @@ You'll find the color dropdown there.
 
 ## Screenshot
 
-Here's the obligatory screenshot.
+Here's the obligatory screenshot. The toolbar on the left side is a package named [Tool-bar-main](https://atom.io/packages/tool-bar-main).
 
 ![](http://i.imgur.com/2jNgkR9.png)
 
