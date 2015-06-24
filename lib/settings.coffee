@@ -5,7 +5,7 @@ module.exports =
             description: 'Set the accent color for the UI theme.'
             type: 'string'
             default: 'Cyan'
-            enum: ['Cyan', 'Green', 'Pink', 'Purple', 'Red', 'White', 'Yellow']
+            enum: ['Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
         useRoboto:
             title: 'Use Roboto Mono'
             description: 'Choose wether to use Roboto Mono font for the editor.'
