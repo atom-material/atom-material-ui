@@ -10,10 +10,11 @@
 @tab-top-padding: 0;
 @tab-bottom-border-height: 0;
 @tab-border: none;
-@tab-bar-bottom-border-color: transparent;
+@tab-bar-bottom-border-color: @tab-bar-border-color;
 @tab-max-width: 160px;
 
 .tab-bar {
+    border-bottom: 1px solid @tab-bar-bottom-border-color;
     height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
     padding: 0;
     overflow-x: auto;
@@ -98,7 +99,7 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 1px;
             left: 50%;
             right: 50%;
             height: 2px;
