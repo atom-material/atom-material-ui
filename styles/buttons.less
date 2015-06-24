@@ -3,6 +3,15 @@
 @import "utilities";
 @import "elevation";
 
+.button-variant(@background-color, @color) {
+    background-color: @background-color;
+    color: @color;
+
+    &:hover, &:focus, &:active, &:active:focus {
+        background-color: @background-color;
+        color: @color;
+    }
+}
 .btn, button, button[class] {
     background: @app-background-color;
     color: @text-color;
@@ -36,48 +45,18 @@
     // Alternative Buttons
 
     &.btn-primary {
-        background-color: @background-color-info;
-        color: #FFF;
-
-        &:hover, &:focus, &:active, &:active:focus {
-            background-color: @background-color-info;
-            color: #FFF;
-        }
+        .button-variant(@md-cyan, #FFF);
     }
     &.btn-info {
-        background-color: @background-color-info;
-        color: #FFF;
-
-        &:hover, &:focus, &:active, &:active:focus {
-            background-color: @background-color-info;
-            color: #FFF;
-        }
+        .button-variant(@md-indigo, #FFF);
     }
     &.btn-success {
-        background-color: @background-color-success;
-        color: #FFF;
-
-        &:hover, &:focus, &:active, &:active:focus {
-            background-color: @background-color-success;
-            color: #FFF;
-        }
+        .button-variant(@md-light-green, #FFF);
     }
     &.btn-warning {
-        background-color: @background-color-warning;
-        color: #FFF;
-
-        &:hover, &:focus, &:active, &:active:focus {
-            background-color: @background-color-warning;
-            color: #FFF;
-        }
+        .button-variant(@md-amber, #FFF);
     }
     &.btn-error {
-        background-color: @background-color-error;
-        color: #FFF;
-
-        &:hover, &:focus, &:active, &:active:focus {
-            background-color: @background-color-error;
-            color: #FFF;
-        }
+        .button-variant(@md-red, #FFF);
     }
 }
