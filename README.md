@@ -29,7 +29,7 @@ You'll find the color dropdown there.
 
 Here's the obligatory screenshot.
 
-![](http://i.imgur.com/WxrQLWb.png)
+![](http://i.imgur.com/2jNgkR9.png)
 
 Animated tabs! (these animations can be disabled from the theme's settings)
 
