@@ -35,7 +35,10 @@ atom-panel.modal, .overlay {
                 padding: @component-padding/2 @component-padding;
 
                 .primary-line {
-                    color: @app-background-color;
+                    color: @text-color-subtle;
+                }
+                .secondary-line {
+                    color: fade(@text-color-subtle, 60%);
                 }
             }
             .status.icon {
@@ -50,12 +53,12 @@ atom-panel.modal, .overlay {
                 color: @app-background-color;
             }
             &.selected {
-                background-color: lighten(@app-background-color, 20%) !important;
-                .highlight(@app-background-color);
-
                 &.two-lines {
                     .primary-line {
-                        .highlight(@app-background-color);
+                        color: #FFF;
+                    }
+                    .secondary-line {
+                        color: rgba(255,255,255,0.6);
                     }
                 }
                 .status.icon {

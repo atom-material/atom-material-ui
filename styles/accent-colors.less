@@ -435,9 +435,25 @@ html.yellow {
         }
     }
     .select-list ol.list-group, &.select-list ol.list-group {
-        li.selected {
-            background-color: @md-yellow;
-            color: darken(@md-yellow, 40%);
+        li {
+            color: @text-color-subtle;
+
+            &.selected {
+                background-color: @md-yellow;
+                color: darken(@md-yellow, 40%);
+
+                &.two-lines {
+                    .primary-line, .secondary-line {
+                        color: darken(@md-yellow, 40%);
+                    }
+                }
+                span {
+                    color: darken(@md-yellow, 40%);
+                }
+            }
+            span {
+                color: @text-color-subtle;
+            }
         }
     }
     .settings-view {
@@ -494,6 +510,21 @@ html.yellow {
                     color: #FFF;
                 }
                 span.character-match {
+                    color: darken(@md-yellow, 30%);
+                }
+            }
+        }
+    }
+    autocomplete-suggestion-list, autocomplete-suggestion-list.select-list.popover-list {
+        ol.list-group {
+            li.selected {
+                .word {
+                    color: darken(@md-yellow, 40%);
+                }
+                .icon.snippet, .icon {
+                    color: darken(@md-yellow, 40%);
+                }
+                .snippet-completion, .left-label {
                     color: darken(@md-yellow, 30%);
                 }
             }
