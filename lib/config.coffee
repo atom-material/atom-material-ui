@@ -69,3 +69,16 @@ module.exports =
             setPanelContrast(atom.config.get('atom-material-ui.panelContrast'))
 
         setPanelContrast(atom.config.get('atom-material-ui.panelContrast'))
+
+        # Contrasting Panels
+
+        setDepth = (boolean) ->
+            if boolean
+                root.classList.add('panel-depth')
+            else
+                root.classList.remove('panel-depth')
+
+        atom.config.onDidChange 'atom-material-ui.depth', ->
+            setDepth(atom.config.get('atom-material-ui.depth'))
+
+        setDepth(atom.config.get('atom-material-ui.depth'))

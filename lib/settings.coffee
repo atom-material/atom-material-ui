@@ -26,6 +26,11 @@ module.exports =
             description: 'Makes panels\' background darker. Applies to tabs, search & replace, tree-view, etc.'
             type: 'boolean'
             default: false
+        depth:
+            title: 'Add depth'
+            description: 'Adds a few shadows here and there to add depth to the UI.'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->
