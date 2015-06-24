@@ -21,6 +21,11 @@ module.exports =
             description: 'Reduces distractions when switching tabs.'
             type: 'boolean'
             default: false
+        panelContrast:
+            title: 'Contrasting panels'
+            description: 'Makes panels\' background darker. Applies to tabs, search & replace, tree-view, etc.'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

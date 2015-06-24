@@ -56,3 +56,16 @@ module.exports =
             setAnimationStatus(atom.config.get('atom-material-ui.disableAnimations'))
 
         setAnimationStatus(atom.config.get('atom-material-ui.disableAnimations'))
+
+        # Contrasting Panels
+
+        setPanelContrast = (boolean) ->
+            if boolean
+                root.classList.add('panel-contrast')
+            else
+                root.classList.remove('panel-contrast')
+
+        atom.config.onDidChange 'atom-material-ui.panelContrast', ->
+            setPanelContrast(atom.config.get('atom-material-ui.panelContrast'))
+
+        setPanelContrast(atom.config.get('atom-material-ui.panelContrast'))

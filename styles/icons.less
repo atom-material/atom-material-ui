@@ -1,10 +1,13 @@
 .settings-view {
     [class*="icon-"]::before {
-        font-family: 'Material Icons';
+        font-family: 'Material Icons' !important;
         display: inline-block;
         vertical-align: middle;
         -webkit-font-smoothing: antialiased;
     }
+
+    // Settings Icons
+
     .icon-settings::before, .icon-gear::before {
         content: '\E8B8';
     }
@@ -76,5 +79,8 @@
     }
     .icon-law::before {
         content: '\E865';
+    }
+    .icon-check::before {
+        content: '\E5CA';
     }
 }

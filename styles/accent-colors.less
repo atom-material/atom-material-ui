@@ -1,15 +1,15 @@
 @import "ui-variables";
 
-html.cyan {
+.accent(@color) {
     .tab-bar {
         .tab {
             &.active {
                 &::after {
-                    background-color: @md-cyan;
+                    background-color: @color;
                 }
             }
             &::before {
-                background-color: @md-cyan;
+                background-color: @color;
             }
         }
     }
@@ -17,491 +17,90 @@ html.cyan {
         &:focus {
             .selected {
                 &::before {
-                    background: @md-cyan;
+                    background: @color;
                 }
             }
         }
     }
     .select-list ol.list-group, &.select-list ol.list-group {
         li.selected {
-            background-color: @md-cyan;
+            background-color: @color;
         }
     }
     .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(0deg);
-        }
         select.form-control {
             &:focus {
-                border-bottom-color: @md-cyan;
-                box-shadow: 0 1px 0 @md-cyan;
+                border-bottom-color: @color;
+                box-shadow: 0 1px 0 @color;
             }
         }
         .package-card, .package-detail .package-card {
             .btn-group > .btn {
                 &:hover {
-                    color: @md-cyan !important;
+                    color: @color !important;
                 }
             }
         }
         .alert-info {
-            color: lighten(@md-cyan, 20%);
+            color: lighten(@color, 20%);
         }
         .config-menu .nav > li.active {
             &::before {
-                background-color: @md-cyan;
+                background-color: @color;
             }
         }
     }
     .link {
-        color: @md-cyan;
+        color: @color;
 
         &:hover {
-            color: lighten(@md-cyan, 20%);
+            color: lighten(@color, 20%);
         }
     }
     atom-text-editor[mini],
     atom-text-editor[mini]::shadow {
         .cursor {
-            border-color: @md-cyan;
+            border-color: @color;
         }
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-cyan;
-        box-shadow: 0 1px 0 @md-cyan;
+        border-bottom-color: @color;
+        box-shadow: 0 1px 0 @color;
     }
     atom-panel.modal, .overlay {
         .select-list ol.list-group, &.select-list ol.list-group {
-            li {
+            li.selected {
                 span.character-match {
                     color: #FFF;
                 }
             }
         }
     }
+    .light-accent(@color);
 }
-html.green {
-    .tab-bar {
-        .tab {
-            &.active {
-                &::after {
-                    background-color: @md-light-green;
-                }
-            }
-            &::before {
-                background-color: @md-light-green;
-            }
-        }
-    }
-    .focusable-panel {
-        &:focus {
-            .selected {
-                &::before {
-                    background: @md-light-green;
-                }
-            }
-        }
-    }
-    .select-list ol.list-group, &.select-list ol.list-group {
-        li.selected {
-            background-color: @md-light-green;
-        }
-    }
-    .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(-100deg) brightness(1.2);
-        }
-        select.form-control {
-            &:focus {
-                border-bottom-color: @md-light-green;
-                box-shadow: 0 1px 0 @md-light-green;
-            }
-        }
-        .package-card, .package-detail .package-card {
-            .btn-group > .btn {
-                &:hover {
-                    color: @md-light-green !important;
-                }
-            }
-        }
-        .alert-info {
-            color: lighten(@md-light-green, 20%);
-        }
-        .config-menu .nav > li.active {
-            &::before {
-                background-color: @md-light-green;
-            }
-        }
-    }
-    .link {
-        color: @md-light-green;
-
-        &:hover {
-            color: lighten(@md-light-green, 20%);
-        }
-    }
-    atom-text-editor[mini],
-    atom-text-editor[mini]::shadow {
-        .cursor {
-            border-color: @md-light-green;
-        }
-    }
-    atom-text-editor[mini].is-focused,
-    atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-light-green;
-        box-shadow: 0 1px 0 @md-light-green;
-    }
-    atom-panel.modal, .overlay {
-        .select-list ol.list-group, &.select-list ol.list-group {
-            li {
-                span.character-match {
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
-html.pink {
-    .tab-bar {
-        .tab {
-            &.active {
-                &::after {
-                    background-color: lighten(@md-pink, 5%);
-                }
-                // border-bottom-color: lighten(@md-pink, 5%);
-            }
-            &::before {
-                background-color: lighten(@md-pink, 5%);
-            }
-        }
-    }
-    .focusable-panel {
-        &:focus {
-            .selected {
-                &::before {
-                    background: lighten(@md-pink, 5%);
-                }
-            }
-        }
-    }
-    .select-list ol.list-group, &.select-list ol.list-group {
-        li.selected {
-            background-color: lighten(@md-pink, 5%);
-        }
-    }
-    .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(165deg) saturate(3);
-        }
-        select.form-control {
-            &:focus {
-                border-bottom-color: lighten(@md-pink, 5%);
-                box-shadow: 0 1px 0 lighten(@md-pink, 5%);
-            }
-        }
-        .package-card, .package-detail .package-card {
-            .btn-group > .btn {
-                &:hover {
-                    color: lighten(@md-pink, 5%) !important;
-                }
-            }
-        }
-        .alert-info {
-            color: lighten(lighten(@md-pink, 20%), 5%);
-        }
-        .config-menu .nav > li.active {
-            &::before {
-                background-color: lighten(@md-pink, 5%);
-            }
-        }
-    }
-    .link {
-        color: lighten(@md-pink, 5%);
-
-        &:hover {
-            color: lighten(lighten(@md-pink, 20%), 5%);
-        }
-    }
-    atom-text-editor[mini],
-    atom-text-editor[mini]::shadow {
-        .cursor {
-            border-color: lighten(@md-pink, 5%);
-        }
-    }
-    atom-text-editor[mini].is-focused,
-    atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: lighten(@md-pink, 5%);
-        box-shadow: 0 1px 0 lighten(@md-pink, 5%);
-    }
-    atom-panel.modal, .overlay {
-        .select-list ol.list-group, &.select-list ol.list-group {
-            li {
-                span.character-match {
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
-html.purple {
-    .tab-bar {
-        .tab {
-            &.active {
-                &::after {
-                    background-color: lighten(@md-deep-purple, 10%);
-                }
-                // border-bottom-color: lighten(@md-deep-purple, 10%);
-            }
-            &::before {
-                background-color: lighten(@md-deep-purple, 10%);
-            }
-        }
-    }
-    .focusable-panel {
-        &:focus {
-            .selected {
-                &::before {
-                    background: lighten(@md-deep-purple, 10%);
-                }
-            }
-        }
-    }
-    .select-list ol.list-group, &.select-list ol.list-group {
-        li.selected {
-            background-color: lighten(@md-deep-purple, 10%);
-        }
-    }
-    .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(70deg) saturate(3.5);
-        }
-        select.form-control {
-            &:focus {
-                border-bottom-color: lighten(@md-deep-purple, 10%);
-                box-shadow: 0 1px 0 lighten(@md-deep-purple, 10%);
-            }
-        }
-        .package-card, .package-detail .package-card {
-            .btn-group > .btn {
-                &:hover {
-                    color: lighten(@md-deep-purple, 10%) !important;
-                }
-            }
-        }
-        .alert-info {
-            color: lighten(lighten(@md-deep-purple, 20%), 10%);
-        }
-        .config-menu .nav > li.active {
-            &::before {
-                background-color: lighten(@md-deep-purple, 10%);
-            }
-        }
-    }
-    .link {
-        color: lighten(@md-deep-purple, 10%);
-
-        &:hover {
-            color: lighten(lighten(@md-deep-purple, 20%), 10%);
-        }
-    }
-    atom-text-editor[mini],
-    atom-text-editor[mini]::shadow {
-        .cursor {
-            border-color: lighten(@md-deep-purple, 10%);
-        }
-    }
-    atom-text-editor[mini].is-focused,
-    atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: lighten(@md-deep-purple, 10%);
-        box-shadow: 0 1px 0 lighten(@md-deep-purple, 10%);
-    }
-    atom-panel.modal, .overlay {
-        .select-list ol.list-group, &.select-list ol.list-group {
-            li {
-                span.character-match {
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
-html.red {
-    .tab-bar {
-        .tab {
-            &.active {
-                &::after {
-                    background-color: @md-red;
-                }
-            }
-            &::before {
-                background-color: @md-red;
-            }
-        }
-    }
-    .focusable-panel {
-        &:focus {
-            .selected {
-                &::before {
-                    background: @md-red;
-                }
-            }
-        }
-    }
-    .select-list ol.list-group, &.select-list ol.list-group {
-        li.selected {
-            background-color: @md-red;
-        }
-    }
-    .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(175deg) saturate(2.5);
-        }
-        select.form-control {
-            &:focus {
-                border-bottom-color: @md-red;
-                box-shadow: 0 1px 0 @md-red;
-            }
-        }
-        .package-card, .package-detail .package-card {
-            .btn-group > .btn {
-                &:hover {
-                    color: @md-red !important;
-                }
-            }
-        }
-        .alert-info {
-            color: lighten(@md-red, 20%);
-        }
-        .config-menu .nav > li.active {
-            &::before {
-                background-color: @md-red;
-            }
-        }
-    }
-    .link {
-        color: @md-red;
-
-        &:hover {
-            color: lighten(@md-red, 20%);
-        }
-    }
-    atom-text-editor[mini],
-    atom-text-editor[mini]::shadow {
-        .cursor {
-            border-color: @md-red;
-        }
-    }
-    atom-text-editor[mini].is-focused,
-    atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-red;
-        box-shadow: 0 1px 0 @md-red;
-    }
-    atom-panel.modal, .overlay {
-        .select-list ol.list-group, &.select-list ol.list-group {
-            li {
-                span.character-match {
-                    color: #FFF;
-                }
-            }
-        }
-    }
-}
-html.yellow {
-    .tab-bar {
-        .tab {
-            &.active {
-                &::after {
-                    background-color: @md-yellow;
-                }
-            }
-            &::before {
-                background-color: @md-yellow;
-            }
-        }
-    }
-    .focusable-panel {
-        &:focus {
-            .selected {
-                color: darken(@md-yellow, 40%) !important;
-
-                &::before {
-                    background: @md-yellow;
-                }
-                & > span::before, & > .header.list-item span, & > .header.list-item::before {
-                    color: darken(@md-yellow, 40%) !important;
-                }
-            }
-        }
-    }
+.light-accent(@accent) when (lightness(@accent) > 50%) {
     .select-list ol.list-group, &.select-list ol.list-group {
         li {
             color: @text-color-subtle;
 
             &.selected {
-                background-color: @md-yellow;
-                color: darken(@md-yellow, 40%);
+                background-color: @accent;
+                color: darken(@accent, 40%);
 
                 &.two-lines {
                     .primary-line, .secondary-line {
-                        color: darken(@md-yellow, 40%);
+                        color: darken(@accent, 40%);
                     }
                 }
                 span {
-                    color: darken(@md-yellow, 40%);
+                    color: darken(@accent, 40%);
                 }
             }
             span {
                 color: @text-color-subtle;
             }
         }
-    }
-    .settings-view {
-        input[type="checkbox"] {
-            -webkit-filter: hue-rotate(240deg) saturate(8);
-        }
-        select.form-control {
-            &:focus {
-                border-bottom-color: @md-yellow;
-                box-shadow: 0 1px 0 @md-yellow;
-            }
-        }
-        .package-card, .package-detail .package-card {
-            .btn-group > .btn {
-                &:hover {
-                    color: darken(@md-yellow, 40%) !important;
-                }
-            }
-        }
-        .alert-info {
-            color: lighten(@md-yellow, 10%);
-        }
-        .config-menu .nav > li.active {
-            &::before {
-                background-color: @md-yellow;
-            }
-            a {
-                color: darken(@md-yellow, 40%);
-            }
-        }
-    }
-    .link {
-        color: @md-yellow;
-
-        &:hover {
-            color: lighten(@md-yellow, 10%);
-        }
-    }
-    atom-text-editor[mini],
-    atom-text-editor[mini]::shadow {
-        .cursor {
-            border-color: @md-yellow;
-        }
-    }
-    atom-text-editor[mini].is-focused,
-    atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @md-yellow;
-        box-shadow: 0 1px 0 @md-yellow;
     }
     atom-panel.modal, .overlay {
         .select-list ol.list-group, &.select-list ol.list-group {
@@ -510,7 +109,7 @@ html.yellow {
                     color: #FFF;
                 }
                 span.character-match {
-                    color: darken(@md-yellow, 40%);
+                    color: darken(@accent, 40%);
                 }
             }
         }
@@ -519,15 +118,51 @@ html.yellow {
         ol.list-group {
             li.selected {
                 .word {
-                    color: darken(@md-yellow, 40%);
+                    color: darken(@accent, 40%);
                 }
                 .icon.snippet, .icon {
-                    color: darken(@md-yellow, 40%);
+                    color: darken(@accent, 40%);
                 }
                 .snippet-completion, .left-label {
-                    color: darken(@md-yellow, 30%);
+                    color: darken(@accent, 30%);
                 }
             }
         }
+    }
+}
+html.cyan {
+    .accent(@md-cyan);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: none;
+    }
+}
+html.green {
+    .accent(@md-light-green);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(-100deg) brightness(1.2);
+    }
+}
+html.pink {
+    .accent(@md-pink);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(165deg) saturate(3);
+    }
+}
+html.purple {
+    .accent(lighten(@md-deep-purple, 10%));
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(70deg) saturate(3.5);
+    }
+}
+html.red {
+    .accent(@md-red);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(175deg) saturate(2.5);
+    }
+}
+html.yellow {
+    .accent(@md-yellow);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(240deg) saturate(8);
     }
 }
