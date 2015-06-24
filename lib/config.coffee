@@ -10,6 +10,7 @@ module.exports =
             root.classList.remove('pink')
             root.classList.remove('purple')
             root.classList.remove('red')
+            root.classList.remove('white')
             root.classList.remove('yellow')
             root.classList.add(currentAccentColor.toLowerCase())
 
