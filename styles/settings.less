@@ -10,8 +10,9 @@
         }
     }
     select.form-control {
-        background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
+        .select-arrow(@app-background-color);
         background-position: right center;
+        background-size: 22px;
         border: none;
         border-bottom: 1px solid fade(@text-color, 10%);
         box-shadow: none;
@@ -23,12 +24,20 @@
         -webkit-appearance: none;
 
         &:hover, &:focus {
-            background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
+            .select-arrow(@app-background-color);
             background-position: right center;
+            background-size: 22px;
         }
         &:focus {
             border-bottom-color: @background-color-selected;
             box-shadow: 0 1px 0 @background-color-selected;
+        }
+    }
+    .btn.active-theme-settings {
+        &:hover {
+            background: none;
+            .highlight(@app-background-color);
+            &:extend(.elevation-0);
         }
     }
     .package-card, .package-detail .package-card {
@@ -48,6 +57,10 @@
         &.disabled {
             background: #FFF;
             opacity: 0.75;
+        }
+        [class*="icon-"]::before {
+            position: relative;
+            top: -2px;
         }
         h4 a {
             color: @background-color-selected;
@@ -70,6 +83,7 @@
             bottom: 10px;
             left: 10px;
             width: 280px;
+            height: 36px;
 
             .btn-toolbar {
                 margin: 0;
@@ -83,10 +97,12 @@
 
             &:hover {
                 color: @background-color-selected;
-                &:extend(.elevation-2);
             }
-            &::after {
-                background-color: @md-pink;
+            &:focus, &:active:focus {
+                color: @text-color-subtle;
+            }
+            &:active {
+                background: #FFF;
             }
         }
         .meta-user {
@@ -144,6 +160,11 @@
     .config-menu {
         border-color: fade(@text-color, 5%);
 
+        [class*="icon-"]::before {
+            font-size: 18px;
+            position: relative;
+            top: -1px;
+        }
         .nav > li {
             position: relative;
             overflow: hidden;
@@ -178,7 +199,7 @@
                     background-color: transparent;
 
                     &:hover {
-                        .highlight(@app-background-color);
+                        color: #FFF;
                     }
                 }
                 &::before {
@@ -201,9 +222,9 @@
             font-weight: 200;
 
             &::before {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 position: relative;
-                top: -0.25rem;
+                top: -0.75rem;
             }
         }
         .section-heading, .sub-section-heading {

@@ -36,7 +36,7 @@
   text-shadow: none;
 }
 .highlight(@color) when (lightness(@color) > 50%) {
-    color: @text-color;
+    color: lighten(@text-color, 5%);
 }
 .highlight(@color) when (lightness(@color) < 50%) {
     color: rgba(255,255,255,0.9);
@@ -46,4 +46,10 @@
 }
 .panel-background(@color) when (lightness(@color) < 50%) {
     background-color: @app-background-color;
+}
+.select-arrow(@color) when (lightness(@color) > 50%) {
+    background: transparent url('atom://atom-material-ui/assets/arrow-drop-down.svg') no-repeat;
+}
+.select-arrow(@color) when (lightness(@color) < 50%) {
+    background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
 }

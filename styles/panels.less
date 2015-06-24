@@ -26,14 +26,11 @@ atom-panel, .tool-panel {
     .text(normal);
     background-color: transparent;
     background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
-
-    .btn {
-        padding-left: 8px;
-        padding-right: 8px;
-        @bg: lighten(@button-background-color, 10%);
-        @hover: lighten(@button-background-color-hover, 10%);
-        @selected: lighten(@button-background-color-selected, 10%);
-        @text: lighten(@text-color, 10%);
-        .btn-background(@bg, @hover, @selected, @text);
+}
+.find-and-replace, .project-find {
+    .options-label,
+    .find-meta-container span,
+    .header-item.description span {
+        color: fade(@text-color, 30%);
     }
 }

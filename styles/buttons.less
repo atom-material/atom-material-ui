@@ -1,59 +1,83 @@
 @import "ui-variables";
 @import "ui-mixins";
 @import "utilities";
+@import "elevation";
 
-.btn-background (@color, @hover-color, @selected-color, @text-color) {
+.btn, button, button[class] {
+    background: @app-background-color;
     color: @text-color;
-    background-color: @app-background-color;
     transition: all 250ms ease;
     height: 36px;
-    outline: none;
+    border-radius: 3px;
     line-height: 36px;
+    &:extend(.ripple);
 
-    &:focus {
-        color: @text-color;
-    }
     &:hover {
-        color: lighten(@text-color, 10%);
-        background-color: lighten(@app-background-color, 10%);
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
+        &:extend(.elevation-1);
     }
-    &.selected,
-    &.selected:hover {
-        .highlight(@app-background-color);
-        background-color: lighten(@app-background-color, 5%);
+    &:focus, &:active:focus {
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
         outline: none;
     }
     &:active {
-        background-color: darken(@app-background-color, 5%);
-        box-shadow: none;
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
         outline: none;
+        &:extend(.elevation-2);
     }
-}
-.btn-variant (@color) {
-    @bg: darken(@color, 10%);
-    @hover: @color;
-    @selected: @color;
-    .btn-background(@bg, @hover, @selected, @text-color-highlight);
-}
-.btn {
-    .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
-}
-.btn.btn-primary {
-    .btn-variant(@background-color-info);
-}
-.btn.btn-info {
-    .btn-variant(@background-color-info);
-}
-.btn.btn-success {
-    .btn-variant(@background-color-success);
-}
-.btn.btn-warning {
-    .btn-variant(@background-color-warning);
-}
-.btn.btn-error {
-    .btn-variant(@background-color-error);
-}
-.caret {
-    border-top: 5px solid #fff;
-    margin-top: -1px;
+    &.selected, &.selected:hover {
+        background: darken(@app-background-color, 2%);
+        &:extend(.elevation-0);
+    }
+
+    // Alternative Buttons
+
+    &.btn-primary {
+        background-color: @background-color-info;
+        color: #FFF;
+
+        &:hover, &:focus, &:active, &:active:focus {
+            background-color: @background-color-info;
+            color: #FFF;
+        }
+    }
+    &.btn-info {
+        background-color: @background-color-info;
+        color: #FFF;
+
+        &:hover, &:focus, &:active, &:active:focus {
+            background-color: @background-color-info;
+            color: #FFF;
+        }
+    }
+    &.btn-success {
+        background-color: @background-color-success;
+        color: #FFF;
+
+        &:hover, &:focus, &:active, &:active:focus {
+            background-color: @background-color-success;
+            color: #FFF;
+        }
+    }
+    &.btn-warning {
+        background-color: @background-color-warning;
+        color: #FFF;
+
+        &:hover, &:focus, &:active, &:active:focus {
+            background-color: @background-color-warning;
+            color: #FFF;
+        }
+    }
+    &.btn-error {
+        background-color: @background-color-error;
+        color: #FFF;
+
+        &:hover, &:focus, &:active, &:active:focus {
+            background-color: @background-color-error;
+            color: #FFF;
+        }
+    }
 }

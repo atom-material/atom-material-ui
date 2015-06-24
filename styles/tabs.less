@@ -38,20 +38,26 @@
         -webkit-transform: translate3d(0,0,0);
 
         .close-icon {
-            display: none;
             right: 10px;
             z-index: 3;
             text-align: right;
             line-height: @tab-height;
             color: @text-color;
-            -webkit-animation: zoomIn 250ms ease;
+            -webkit-animation: zoomOut 250ms ease;
+            -webkit-animation-fill-mode: forwards;
 
             &:hover {
                 color: inherit;
             }
             &::before {
-                font-size: 15px;
+                font-family: 'Material Icons';
+                font-size: 16px;
+                line-height: 3;
+                content: '\E5CD';
             }
+        }
+        &:hover .close-icon {
+            -webkit-animation: zoomIn 250ms ease;
         }
         &.modified:not(:hover) .close-icon {
             right: 10px;
@@ -108,6 +114,7 @@
             display: inline-block;
             line-height: @tab-height - 1px;
             color: @text-color;
+            -webkit-animation: zoomIn 250ms ease;
         }
         &::before {
             display: inline-block;
