@@ -75,7 +75,7 @@ html.cyan {
         .select-list ol.list-group, &.select-list ol.list-group {
             li {
                 span.character-match {
-                    color: @md-cyan;
+                    color: #FFF;
                 }
             }
         }
@@ -156,7 +156,7 @@ html.green {
         .select-list ol.list-group, &.select-list ol.list-group {
             li {
                 span.character-match {
-                    color: @md-light-green;
+                    color: #FFF;
                 }
             }
         }
@@ -238,7 +238,7 @@ html.pink {
         .select-list ol.list-group, &.select-list ol.list-group {
             li {
                 span.character-match {
-                    color: lighten(@md-pink, 5%);
+                    color: #FFF;
                 }
             }
         }
@@ -320,7 +320,7 @@ html.purple {
         .select-list ol.list-group, &.select-list ol.list-group {
             li {
                 span.character-match {
-                    color: lighten(@md-deep-purple, 10%);
+                    color: #FFF;
                 }
             }
         }
@@ -401,7 +401,7 @@ html.red {
         .select-list ol.list-group, &.select-list ol.list-group {
             li {
                 span.character-match {
-                    color: @md-red;
+                    color: #FFF;
                 }
             }
         }
@@ -428,7 +428,7 @@ html.yellow {
                 &::before {
                     background: @md-yellow;
                 }
-                span::before {
+                & > span::before, & > .header.list-item span, & > .header.list-item::before {
                     color: darken(@md-yellow, 40%) !important;
                 }
             }
@@ -510,7 +510,7 @@ html.yellow {
                     color: #FFF;
                 }
                 span.character-match {
-                    color: darken(@md-yellow, 30%);
+                    color: darken(@md-yellow, 40%);
                 }
             }
         }
