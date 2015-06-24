@@ -14,12 +14,11 @@
 }
 .text(highlight) {
   font-weight: normal;
-  color: @text-color-highlight;
+  .highlight(@app-background-color);
 }
 .text(selected) {
   .text(highlight)
 }
-
 .text(info) {
   color: @text-color-info;
   text-shadow: none;
@@ -35,4 +34,16 @@
 .text(error) {
   color: @text-color-error;
   text-shadow: none;
+}
+.highlight(@color) when (lightness(@color) > 50%) {
+    color: @text-color;
+}
+.highlight(@color) when (lightness(@color) < 50%) {
+    color: rgba(255,255,255,0.9);
+}
+.panel-background(@color) when (lightness(@color) > 50%) {
+    background-color: desaturate(darken(@app-background-color, 2%), 10%);
+}
+.panel-background(@color) when (lightness(@color) < 50%) {
+    background-color: @app-background-color;
 }

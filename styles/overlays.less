@@ -51,18 +51,18 @@ atom-panel.modal, .overlay {
             }
             &.selected {
                 background-color: lighten(@app-background-color, 20%) !important;
-                color: @text-color-highlight;
+                .highlight(@app-background-color);
 
                 &.two-lines {
                     .primary-line {
-                        color: @text-color-highlight;
+                        .highlight(@app-background-color);
                     }
                 }
                 .status.icon {
                     color: @text-color-selected;
                 }
                 span {
-                    color: @text-color-highlight;
+                    .highlight(@app-background-color);
                 }
                 &::last-child {
                     border-radius: 0 0 @component-border-radius @component-border-radius;

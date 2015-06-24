@@ -2,10 +2,10 @@
 
 .tree-view {
     font-size: @font-size;
-    background: @tree-view-background-color;
+    .panel-background(@tree-view-background-color);
 
     .selected:before {
-        background: @app-background-color;
+        .panel-background(@app-background-color);
     }
 }
 .tree-view-resizer {
@@ -17,7 +17,7 @@
     opacity: 1;
 
     &:focus {
-        background: @app-background-color;
+        .panel-background(@app-background-color);
 
         .selected {
             color: #FFF !important;
@@ -30,10 +30,5 @@
                 color: rgba(255,255,255,0.9);
             }
         }
-    }
-}
-[data-show-on-right-side=true] {
-    .tree-view .selected:before, .focusable-panel {
-        box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
     }
 }

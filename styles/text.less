@@ -57,7 +57,7 @@ code {
 }
 
 .highlight {
-  color: @text-color-highlight;
+  .highlight(@app-background-color);
   // font-weight: bold;
   text-shadow: none;
   background-color: @background-color-highlight;
@@ -68,7 +68,6 @@ code {
 .highlight-color(@name, @color, @text-color) {
   .highlight-@{name} {
     color: lighten(saturate(@text-color, 0%), 30%);
-    // font-weight: bold;
     text-shadow: none;
     background-color: fadeout(@color, 60%);
     border-radius: @component-border-radius;
