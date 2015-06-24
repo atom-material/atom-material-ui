@@ -5,6 +5,8 @@ A dark UI theme for Atom that (kinda) follows Google's Material Design Guideline
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
+**Notice:** This theme is in _active_ development. Expect to have dialy updates while I iron out some issues.
+
 ## Installation
 
 Fire up a console and type:
