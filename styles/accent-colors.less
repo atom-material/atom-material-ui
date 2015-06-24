@@ -79,7 +79,7 @@
     }
     .light-accent(@color);
 }
-.light-accent(@accent) when (lightness(@accent) > 50%) {
+.light-accent(@accent) when (lightness(@accent) > 60%) {
     .select-list ol.list-group, &.select-list ol.list-group {
         li {
             color: @text-color-subtle;
@@ -129,6 +129,11 @@
             }
         }
     }
+    .settings-view {
+        .config-menu .nav > li.active > a {
+            color: darken(@accent, 40%);
+        }
+    }
 }
 html.cyan {
     .accent(@md-cyan);
@@ -158,6 +163,12 @@ html.red {
     .accent(@md-red);
     .settings-view input[type="checkbox"] {
         -webkit-filter: hue-rotate(175deg) saturate(2.5);
+    }
+}
+html.white {
+    .accent(lighten(@md-grey, 15%));
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: grayscale(1);
     }
 }
 html.yellow {
