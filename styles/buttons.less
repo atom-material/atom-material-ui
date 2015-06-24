@@ -41,6 +41,10 @@
         background: darken(@app-background-color, 2%);
         &:extend(.elevation-0);
     }
+    &[disabled], &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
     // Alternative Buttons
 
