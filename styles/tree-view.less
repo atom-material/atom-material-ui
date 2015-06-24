@@ -19,9 +19,9 @@
     &:focus {
         .panel-background(@app-background-color);
 
-        .selected {
-            color: #FFF !important;
-            text-shadow: none !important;
+        .selected, .selected[class*="status-"] {
+            color: #FFF;
+            text-shadow: none;
 
             &::before {
                 background: @background-color-selected;

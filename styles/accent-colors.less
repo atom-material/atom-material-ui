@@ -134,6 +134,17 @@
             color: darken(@accent, 40%);
         }
     }
+    .focusable-panel {
+        &:focus {
+            .selected, .selected[class*="status-"] {
+                color: darken(@accent, 40%);
+
+                & > span[class*="icon"]::before, & > .header.list-item span, & > .header.list-item::before {
+                    color: darken(@accent, 40%);
+                }
+            }
+        }
+    }
 }
 html.cyan {
     .accent(@md-cyan);
