@@ -36,13 +36,13 @@
   text-shadow: none;
 }
 .highlight(@color) when (lightness(@color) > 50%) {
-    color: lighten(@text-color, 5%);
+    color: lighten(@text-color, 15%);
 }
 .highlight(@color) when (lightness(@color) < 50%) {
     color: rgba(255,255,255,0.9);
 }
 .panel-background(@color) when (lightness(@color) > 50%) {
-    background-color: desaturate(darken(@app-background-color, 2%), 10%);
+    background-color: desaturate(darken(@app-background-color, 5%), 10%);
 }
 .panel-background(@color) when (lightness(@color) < 50%) {
     background-color: @app-background-color;

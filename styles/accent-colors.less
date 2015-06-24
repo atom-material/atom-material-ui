@@ -15,7 +15,9 @@
     }
     .focusable-panel {
         &:focus {
-            .selected {
+            .selected, .selected[class*="status-"] {
+                color: #FFF;
+                
                 &::before {
                     background: @color;
                 }
@@ -70,6 +72,11 @@
     }
     atom-panel.modal, .overlay {
         .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    .highlight(@app-background-color);
+                }
+            }
             li.selected {
                 span.character-match {
                     color: #FFF;

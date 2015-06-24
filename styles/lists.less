@@ -18,12 +18,23 @@
     .generate-list-item-text-color(error);
     .generate-list-item-text-color(selected);
     .generate-list-item-status-color(@color, @status) {
-        li:not(.list-nested-item).status-@{status}, li.list-nested-item.status-@{status}> .list-item {
-            color: @color;
+        .contrast-color(@color) when (lightness(@app-background-color) < 60%) {
+            li:not(.list-nested-item).status-@{status}, li.list-nested-item.status-@{status}> .list-item {
+                color: @color;
+            }
+            li:not(.list-nested-item).selected.status-@{status}, li.list-nested-item.selected.status-@{status}> .list-item {
+                color: @color;
+            }
         }
-        li:not(.list-nested-item).selected.status-@{status}, li.list-nested-item.selected.status-@{status}> .list-item {
-            color: @color;
+        .contrast-color(@color) when (lightness(@app-background-color) > 60%) {
+            li:not(.list-nested-item).status-@{status}, li.list-nested-item.status-@{status}> .list-item {
+                color: desaturate(darken(@color, 25%), 10%);
+            }
+            li:not(.list-nested-item).selected.status-@{status}, li.list-nested-item.selected.status-@{status}> .list-item {
+                color: desaturate(darken(@color, 25%), 10%);
+            }
         }
+        .contrast-color(@color);
     }
     .generate-list-item-status-color(@text-color-subtle, ignored);
     .generate-list-item-status-color(@text-color-added, added);
