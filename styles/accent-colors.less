@@ -11,6 +11,12 @@
             &::before {
                 background-color: @color;
             }
+            &.modified:not(:hover) .close-icon {
+                border-color: @color;
+            }
+        }
+        .placeholder::after {
+            border-top-color: @color;
         }
     }
     .focusable-panel {
