@@ -245,7 +245,15 @@
         }
     }
 }
+body[class*="platform-win"] {
+    select.form-control {
+        option {
+            background-color: #FFF;
+            color: @text-color-subtle;
+        }
+    }
+}
 @-webkit-keyframes ripplePaint {
     from { transform: scale(1); }
-    to { transform: scale(110); }
+    to { transform: scale(130); }
 }
