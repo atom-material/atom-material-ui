@@ -55,16 +55,16 @@
         padding-left: 170px;
         padding-bottom: 72px;
         min-height: 100px;
-        background: #FFF;
+        background: lighten(@app-background-color, 5%);
         border-radius: @component-border-radius;
         border: none;
-        color: @text-color-subtle;
+        color: @text-color;
 
         &:hover {
-            background: #FFF;
+            background: lighten(@app-background-color, 5%);
         }
         &.disabled {
-            background: #FFF;
+            background: lighten(@app-background-color, 5%);
             opacity: 0.75;
         }
         [class*="icon-"]::before {
@@ -75,11 +75,15 @@
             margin-bottom: 10px;
 
             a {
-                color: @text-color-subtle;
+                color: @text-color;
             }
         }
         .stats {
-            opacity: 0.25;
+            opacity: 0.5;
+
+            [class*="icon-"] {
+                color: @text-color;
+            }
         }
         .meta {
             display: block;
@@ -103,19 +107,19 @@
             }
         }
         .btn-group > .btn {
-            background: #FFF;
+            background: none;
             border: none;
             outline: none;
-            color: @text-color-subtle;
+            color: @text-color;
 
             &:hover {
                 color: @background-color-selected;
             }
             &:focus, &:active:focus {
-                color: @text-color-subtle;
+                color: @text-color;
             }
             &:active {
-                background: #FFF;
+                background: lighten(@app-background-color, 10%);;
             }
         }
         .meta-user {
@@ -128,7 +132,7 @@
                 max-width: 100%;
             }
             .author {
-                color: rgba(0,0,0,0.5);
+                color: fade(@text-color, 60%);
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-width: 80px;
