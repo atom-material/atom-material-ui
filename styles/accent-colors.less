@@ -91,6 +91,29 @@
             }
         }
     }
+    autocomplete-suggestion-list, autocomplete-suggestion-list.select-list.popover-list {
+        ol.list-group {
+            li {
+                .word {
+                    color: @text-color;
+                }
+                .right-label {
+                    color: fade(@text-color, 50%);
+                }
+                &.selected {
+                    .word {
+                        color: #FFF;
+                    }
+                    .right-label {
+                        color: rgba(255,255,255,0.5);
+                    }
+                }
+            }
+        }
+        .character-match {
+            .highlight(@app-background-color);
+        }
+    }
     .light-accent(@color);
 }
 .light-accent(@accent) when (lightness(@accent) > 60%) {
@@ -147,6 +170,9 @@
         .config-menu .nav > li.active > a {
             color: darken(@accent, 40%);
         }
+        .alert-info {
+            color: darken(@accent, 40%);
+        }
     }
     .focusable-panel {
         &:focus {
@@ -157,6 +183,13 @@
                     color: darken(@accent, 40%);
                 }
             }
+        }
+    }
+    .link {
+        color: darken(@accent, 25%);
+
+        &:hover {
+            color: darken(@accent, 20%);
         }
     }
 }
