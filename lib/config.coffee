@@ -5,6 +5,7 @@ module.exports =
         # Accent color
 
         setAccentColor = (currentAccentColor) ->
+            root.classList.remove('blue')
             root.classList.remove('cyan')
             root.classList.remove('green')
             root.classList.remove('pink')
@@ -84,3 +85,16 @@ module.exports =
             setDepth(atom.config.get('atom-material-ui.depth'))
 
         setDepth(atom.config.get('atom-material-ui.depth'))
+
+        # Dark Overlay
+
+        setAltCmdPalette = (boolean) ->
+            if boolean
+                root.classList.add('alt-cmd-palette')
+            else
+                root.classList.remove('alt-cmd-palette')
+
+        atom.config.onDidChange 'atom-material-ui.altCmdPalette', ->
+            setAltCmdPalette(atom.config.get('atom-material-ui.altCmdPalette'))
+
+        setAltCmdPalette(atom.config.get('atom-material-ui.altCmdPalette'))

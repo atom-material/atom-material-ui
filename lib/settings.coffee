@@ -5,7 +5,7 @@ module.exports =
             description: 'Set the accent color for the UI theme.'
             type: 'string'
             default: 'Teal'
-            enum: ['Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
+            enum: ['Blue', 'Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
         useRoboto:
             title: 'Use Roboto Mono'
             description: 'Choose wether to use Roboto Mono font for the editor.'
@@ -29,6 +29,11 @@ module.exports =
         depth:
             title: 'Add depth'
             description: 'Adds a few shadows here and there to add depth to the UI.'
+            type: 'boolean'
+            default: false
+        altCmdPalette:
+            title: 'Alternative command palette background'
+            description: 'Use a syntax\' background color for the command palette and fuzzy finder.'
             type: 'boolean'
             default: false
 

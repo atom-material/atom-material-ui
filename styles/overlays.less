@@ -8,7 +8,6 @@ atom-panel.modal, .overlay {
     border-radius: @component-border-radius;
     transition: all 500ms ease;
     &:extend(.elevation-2);
-    -webkit-animation: circleReveal 500ms ease;
 
     atom-text-editor[mini] {
         color: @text-color-dark;
@@ -75,6 +74,50 @@ atom-panel.modal, .overlay {
                     border-radius: 0 0 @component-border-radius @component-border-radius;
                 }
             }
+        }
+    }
+}
+.alt-cmd-palette, .alt-cmd-palette.panel-contrast {
+    atom-panel.modal.from-top, .overlay.from-top {
+        background-color: lighten(@app-background-color, 8%);
+
+        .select-list ol.list-group, .select-list ol.list-group {
+            background-color: lighten(@app-background-color, 8%);
+
+            li {
+                color: @text-color;
+
+                span {
+                    color: @text-color;
+                }
+                &.two-lines {
+                    .primary-line {
+                        color: @text-color;
+                    }
+                    .secondary-line {
+                        color: fade(@text-color, 40%);
+                    }
+                }
+
+                &.selected {
+                    color: #FFF;
+
+                    span {
+                        color: #FFF;
+                    }
+                    &.two-lines {
+                        .primary-line {
+                            color: #FFF;
+                        }
+                        .secondary-line {
+                            color: fade(#FFF, 80%);
+                        }
+                    }
+                }
+            }
+        }
+        atom-text-editor[mini] {
+            background-color: lighten(@app-background-color, 8%);
         }
     }
 }

@@ -123,15 +123,15 @@
 
             &.selected {
                 background-color: @accent;
-                color: darken(@accent, 40%);
+                color: darken(@accent, 40%) !important;
 
                 &.two-lines {
                     .primary-line, .secondary-line {
-                        color: darken(@accent, 40%);
+                        color: darken(@accent, 40%) !important;
                     }
                 }
                 span {
-                    color: darken(@accent, 40%);
+                    color: darken(@accent, 40%) !important;
                 }
             }
             span {
@@ -191,6 +191,12 @@
         &:hover {
             color: darken(@accent, 20%);
         }
+    }
+}
+html.blue {
+    .accent(@md-blue);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: none;
     }
 }
 html.cyan {
