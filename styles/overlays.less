@@ -81,6 +81,10 @@ atom-panel.modal, .overlay {
     atom-panel.modal.from-top, .overlay.from-top {
         background-color: lighten(@app-background-color, 8%);
 
+        .select-list .loading, .select-list .error-message {
+            padding: @component-padding;
+            color: fade(@text-color, 50%);
+        }
         .select-list ol.list-group, .select-list ol.list-group {
             background-color: lighten(@app-background-color, 8%);
 
@@ -118,6 +122,7 @@ atom-panel.modal, .overlay {
         }
         atom-text-editor[mini] {
             background-color: lighten(@app-background-color, 8%);
+            color: @text-color;
         }
     }
 }
