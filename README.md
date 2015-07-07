@@ -5,8 +5,6 @@ A dark UI theme for Atom that (kinda) follows Google's Material Design Guideline
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
-**Notice:** This theme is in _active_ development. Expect to have daily updates while I iron out some issues.
-
 ## Installation
 
 Fire up a console and type:
@@ -41,4 +39,4 @@ Animated tabs! (these animations can be disabled from the theme's settings)
 
 ![](http://i.imgur.com/0tHORB1.png)
 
-You can download the redesigned icon from [dropbox](https://dl.dropboxusercontent.com/u/115930/Atom-MD-Icon.zip). It's a ZIP file containing multiple resolution PNGs and an ICNS.
+You can download the redesigned icon from [dropbox](https://dl.dropboxusercontent.com/u/115930/Atom-MD-Icon.zip). It's a ZIP file containing multiple resolution PNGs, ICNS and ICO formats. Windows ICO converted by Akshit Tripathi.
