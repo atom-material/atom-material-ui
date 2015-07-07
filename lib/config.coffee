@@ -98,3 +98,16 @@ module.exports =
             setAltCmdPalette(atom.config.get('atom-material-ui.altCmdPalette'))
 
         setAltCmdPalette(atom.config.get('atom-material-ui.altCmdPalette'))
+
+        # Tabs Size
+
+        setTabSize = (currentTabSize) ->
+            root.classList.remove('tab-size-small')
+            root.classList.remove('tab-size-normal')
+            root.classList.remove('tab-size-big')
+            root.classList.add('tab-size-' + currentTabSize.toLowerCase())
+
+        atom.config.onDidChange 'atom-material-ui.tabSize', ->
+            setTabSize(atom.config.get('atom-material-ui.tabSize'))
+
+        setTabSize(atom.config.get('atom-material-ui.tabSize'))

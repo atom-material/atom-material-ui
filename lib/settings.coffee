@@ -6,6 +6,12 @@ module.exports =
             type: 'string'
             default: 'Teal'
             enum: ['Blue', 'Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
+        tabSize:
+            title: 'Tab bar size'
+            description: 'Set the height for the tab bar'
+            type: 'string'
+            default: 'Normal'
+            enum: ['Small', 'Normal', 'Big']
         useRoboto:
             title: 'Use Roboto Mono'
             description: 'Choose wether to use Roboto Mono font for the editor.'

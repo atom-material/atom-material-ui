@@ -1,11 +1,28 @@
 @import "ui-variables";
+@item-height: 32px;
 
 .tree-view {
     font-size: @font-size;
     .panel-background(@tree-view-background-color);
 
-    .selected:before {
+    .selected::before {
         .panel-background(@app-background-color);
+    }
+    .list-group, .list-tree {
+        li {
+            &:not(.list-nested-item), &.list-nested-item > .list-item {
+                line-height: @item-height;
+                height: @item-height;
+
+            }
+            &::before {
+                line-height: @item-height;
+                height: @item-height;
+            }
+            span[class*="icon-"]::before {
+                margin-right: 1rem;
+            }
+        }
     }
 }
 .tree-view-resizer {

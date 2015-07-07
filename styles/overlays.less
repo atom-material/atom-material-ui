@@ -76,6 +76,12 @@ atom-panel.modal, .overlay {
             }
         }
     }
+    .tree-view-dialog {
+        label.icon {
+            padding: @component-padding;
+            color: lighten(@text-color-subtle, 20%);
+        }
+    }
 }
 .alt-cmd-palette, .alt-cmd-palette.panel-contrast {
     atom-panel.modal.from-top, .overlay.from-top {
@@ -123,6 +129,11 @@ atom-panel.modal, .overlay {
         atom-text-editor[mini] {
             background-color: lighten(@app-background-color, 8%);
             color: @text-color;
+        }
+        .tree-view-dialog {
+            label.icon {
+                color: @text-color;
+            }
         }
     }
 }

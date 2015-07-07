@@ -1,13 +1,15 @@
+.material-icons-font() {
+    font-family: 'Material Icons';
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+// Settings Icons
+
 .settings-view {
     [class*="icon-"]::before {
-        font-family: 'Material Icons';
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-font-smoothing: antialiased;
+        .material-icons-font();
     }
-
-    // Settings Icons
-
     .icon-settings::before, .icon-gear::before {
         content: '\E8B8';
     }

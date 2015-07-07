@@ -14,7 +14,7 @@
 @tab-max-width: 160px;
 
 .tab-bar {
-    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    height: @tab-height;
     padding: 0;
     overflow-x: auto;
     overflow-y: hidden;
@@ -198,6 +198,31 @@
             }
         }
     }
+}
+.tab-size(@size) {
+    height: @size;
+
+    .tab {
+        height: @size;
+        line-height: @size;
+
+        .close-icon {
+            line-height: @size;
+
+            &::before {
+                line-height: @size;
+            }
+        }
+        &.modified:not(:hover) .close-icon {
+            top: calc(50% - 5px);
+        }
+    }
+}
+.tab-size-small .tab-bar {
+    .tab-size(32px);
+}
+.tab-size-big .tab-bar {
+    .tab-size(64px);
 }
 @-webkit-keyframes ripple {
     from { transform: scale(1); }
