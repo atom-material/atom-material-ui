@@ -36,6 +36,10 @@
             border-bottom-color: @background-color-selected;
             box-shadow: 0 1px 0 @background-color-selected;
         }
+        option {
+            background-color: lighten(@app-background-color, 5%);
+            color: @text-color;
+        }
     }
     .btn.active-theme-settings {
         &:hover {
@@ -251,14 +255,6 @@
             &::before {
                 margin-right: 2rem;
             }
-        }
-    }
-}
-body[class*="platform-win"] {
-    select.form-control {
-        option {
-            background-color: #FFF;
-            color: @text-color-subtle;
         }
     }
 }
