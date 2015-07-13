@@ -42,6 +42,11 @@ module.exports =
             description: 'Use a syntax\' background color for the command palette and fuzzy finder.'
             type: 'boolean'
             default: false
+        compactTreeView:
+            title: 'Compact Tree View'
+            description: 'Reduces line-height in the tree view component.'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

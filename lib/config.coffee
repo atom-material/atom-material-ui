@@ -111,3 +111,16 @@ module.exports =
             setTabSize(atom.config.get('atom-material-ui.tabSize'))
 
         setTabSize(atom.config.get('atom-material-ui.tabSize'))
+
+        # Tree-view Size
+
+        setCompactTreeView = (boolean) ->
+            if boolean
+                root.classList.add('compact-tree-view')
+            else
+                root.classList.remove('compact-tree-view')
+
+        atom.config.onDidChange 'atom-material-ui.compactTreeView', ->
+            setCompactTreeView(atom.config.get('atom-material-ui.compactTreeView'))
+
+        setCompactTreeView(atom.config.get('atom-material-ui.compactTreeView'))

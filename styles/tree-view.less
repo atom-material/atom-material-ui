@@ -1,5 +1,23 @@
 @import "ui-variables";
-@item-height: 32px;
+
+.tree-view-line-height(@height) {
+    .list-group, .list-tree {
+        li {
+            &:not(.list-nested-item), &.list-nested-item > .list-item {
+                line-height: @height;
+                height: @height;
+
+            }
+            &::before {
+                line-height: @height;
+                height: @height;
+            }
+            span[class*="icon-"]::before {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
 
 .tree-view {
     font-size: @font-size;
@@ -8,22 +26,7 @@
     .selected::before {
         .panel-background(@app-background-color);
     }
-    .list-group, .list-tree {
-        li {
-            &:not(.list-nested-item), &.list-nested-item > .list-item {
-                line-height: @item-height;
-                height: @item-height;
-
-            }
-            &::before {
-                line-height: @item-height;
-                height: @item-height;
-            }
-            span[class*="icon-"]::before {
-                margin-right: 1rem;
-            }
-        }
-    }
+    .tree-view-line-height(32px);
 }
 .tree-view-resizer {
     .tree-view-resize-handle {
@@ -47,5 +50,10 @@
                 color: rgba(255,255,255,0.9);
             }
         }
+    }
+}
+.compact-tree-view {
+    .tree-view {
+        .tree-view-line-height(24px);
     }
 }
