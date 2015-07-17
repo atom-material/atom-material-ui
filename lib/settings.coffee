@@ -47,6 +47,12 @@ module.exports =
             description: 'Reduces line-height in the tree view component.'
             type: 'boolean'
             default: false
+        fontSize:
+            title: 'UI font size'
+            description: 'Sets the font size used through the user interface. It doesn\'t override the text editor font size setting.'
+            type: 'string'
+            default: 'Regular'
+            enum: ['Small', 'Regular', 'Big', 'Huge']
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

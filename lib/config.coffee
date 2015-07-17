@@ -124,3 +124,17 @@ module.exports =
             setCompactTreeView(atom.config.get('atom-material-ui.compactTreeView'))
 
         setCompactTreeView(atom.config.get('atom-material-ui.compactTreeView'))
+
+        # UI Font Size
+
+        setFontSize = (currentFontSize) ->
+            root.classList.remove('font-size-small')
+            root.classList.remove('font-size-regular')
+            root.classList.remove('font-size-big')
+            root.classList.remove('font-size-huge')
+            root.classList.add('font-size-' + currentFontSize.toLowerCase())
+
+        atom.config.onDidChange 'atom-material-ui.fontSize', ->
+            setFontSize(atom.config.get('atom-material-ui.fontSize'))
+
+        setFontSize(atom.config.get('atom-material-ui.fontSize'))

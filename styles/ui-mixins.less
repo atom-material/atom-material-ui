@@ -53,3 +53,14 @@
 .select-arrow(@color) when (lightness(@color) < 50%) {
     background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
 }
+.ui-font-size(@size) {
+    .tab-bar .tab {
+        font-size: @size;
+    }
+    .tree-view .list-item {
+        font-size: @size;
+    }
+    .settings-view {
+        font-size: @size;
+    }
+}
