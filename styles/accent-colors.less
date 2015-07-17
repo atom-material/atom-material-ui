@@ -57,6 +57,16 @@
                 background-color: @color;
             }
         }
+        atom-text-editor[mini], atom-text-editor[mini]::shadow {
+            .selection .region {
+                background-color: rgba(0,0,0,0.2) !important;
+            }
+        }
+        atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+            .selection .region {
+                background-color: rgba(0,0,0,0.5) !important;
+            }
+        }
     }
     .link {
         color: @color;
@@ -70,11 +80,18 @@
         .cursor {
             border-color: @color;
         }
+        .selection .region {
+            background-color: rgba(0,0,0,0.2) !important;
+        }
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
         border-bottom-color: @color;
         box-shadow: 0 1px 0 @color;
+
+        .selection .region {
+            background-color: rgba(0,0,0,0.5) !important;
+        }
     }
     atom-panel.modal, .overlay {
         .select-list ol.list-group, &.select-list ol.list-group {
