@@ -41,7 +41,7 @@ module.exports =
             title: 'Alternative command palette background'
             description: 'Use a syntax\' background color for the command palette and fuzzy finder.'
             type: 'boolean'
-            default: false
+            default: true
         compactTreeView:
             title: 'Compact Tree View'
             description: 'Reduces line-height in the tree view component.'
