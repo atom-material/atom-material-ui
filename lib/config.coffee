@@ -112,6 +112,19 @@ module.exports =
 
         setTabSize(atom.config.get('atom-material-ui.tabSize'))
 
+        # Tabs Size
+
+        setThemeStyle = (currentThemeStyle) ->
+            root.classList.remove('theme-style-darker')
+            root.classList.remove('theme-style-default')
+            root.classList.remove('theme-style-lighter')
+            root.classList.add('theme-style-' + currentThemeStyle.toLowerCase())
+
+        atom.config.onDidChange 'atom-material-ui.themeSyle', ->
+            setThemeStyle(atom.config.get('atom-material-ui.themeSyle'))
+
+        setThemeStyle(atom.config.get('atom-material-ui.themeSyle'))
+
         # Tree-view Size
 
         setCompactTreeView = (boolean) ->
