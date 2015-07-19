@@ -29,7 +29,7 @@
       max-width: @tab-max-width;
       height: @tab-height;
       line-height: @tab-height;
-      padding: 0 10px 0 12px;
+      padding: 0 16px 0 16px;
       opacity: 0.5;
       color: @text-color;
       border: none;
@@ -85,22 +85,9 @@
          padding-right: 10px;
          padding-left: 0;
          transition: padding-left 200ms;
-
-         &.icon-tools::before {
-            display: inline-block;
-         }
       }
       .title::before {
          display: none;
-         position: absolute;
-         top: 50%;
-         left: 0;
-         bottom: auto;
-         transform: translateY(-50%) scale(0);
-         transition: all 200ms;
-         display: block;
-         color: @text-color !important;
-         margin-right: 10px !important;
       }
       &::before {
          display: none;
@@ -145,13 +132,8 @@
          left: 0%;
          right: 0%;
       }
-      .title {
-         padding-left: 24px;
-      }
       .title::before {
-         width: auto;
-         height: auto;
-         transform: translateY(-50%) scale(1);
+         display: none;
       }
       .title::after {
          display: none;
@@ -193,13 +175,8 @@
 .no-animations {
    .tab-bar {
       .tab {
-         .close-icon, &::after, .title::before {
-            display: none;
-            -webkit-animation: none;
-            -webkit-transition: none;
-         }
          &.active {
-            .close-icon, &::after, .title::before, &::before {
+            .close-icon, &::after, &::before {
                display: inline-block;
                -webkit-animation: none;
                -webkit-transition: none;
