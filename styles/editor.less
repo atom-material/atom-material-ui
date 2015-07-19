@@ -2,6 +2,24 @@
 @import "ui-mixins";
 @import "elevation";
 
+
+
+atom-text-editor[mini] {
+   position: relative;
+
+   &:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      bottom: 0px;
+      top: auto;
+      width: 0;
+      left: 50%;
+      transition: width 300ms;
+      transform: translateX( -50% );
+   }
+}
+
 atom-text-editor[mini],
 atom-text-editor[mini]::shadow {
    color: @text-color;
@@ -12,20 +30,8 @@ atom-text-editor[mini]::shadow {
    height: 36px;
    padding: 5px 0;
    max-height: none;
-   border-bottom: 1px solid fade(@text-color, 10%);
+   box-shadow: inset 0 -1px 0 0 fade(@text-color, 10%);
    transition: all 250ms ease;
-
-   &:before {
-      content: '';
-      position: absolute;
-      height: 2px;
-      bottom: 4px;
-      top: auto;
-      width: 0;
-      left: 50%;
-      transition: width 300ms;
-      transform: translateX( -50% );
-   }
 
    .cursor {
       border-width: 2px;
