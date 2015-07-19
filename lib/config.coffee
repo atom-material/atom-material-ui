@@ -112,7 +112,7 @@ module.exports =
 
         setTabSize(atom.config.get('atom-material-ui.tabSize'))
 
-        # Tabs Size
+        # Theme Style
 
         setThemeStyle = (currentThemeStyle) ->
             root.classList.remove('theme-style-darker')
