@@ -12,14 +12,8 @@ atom-panel.modal, .overlay {
     atom-text-editor[mini] {
         color: @text-color-dark;
         margin: 10px 10px @component-padding;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        box-shadow: none;
+        box-shadow: inset 0 -1px 0 0 @background-color-selected;
         border-radius: 0;
-
-        &.is-focused, .is-focused::shadow {
-            border-bottom-color: @background-color-selected;
-            box-shadow: 0 1px 0 @background-color-selected;
-        }
     }
     .select-list .loading, .select-list .error-message {
         padding: @component-padding;
