@@ -12,6 +12,12 @@ module.exports =
             type: 'string'
             default: 'Normal'
             enum: ['Small', 'Normal', 'Big']
+        themeSyle:
+            title: 'Theme style'
+            description: 'Select the theme style from Default, Darker and Lighter'
+            type: 'string'
+            default: 'Default'
+            enum: ['Darker', 'Default', 'Lighter']
         useRoboto:
             title: 'Use Roboto Mono'
             description: 'Choose wether to use Roboto Mono font for the editor.'

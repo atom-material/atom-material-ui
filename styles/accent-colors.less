@@ -8,9 +8,6 @@
                     background-color: @color;
                 }
             }
-            &::before {
-                background-color: @color;
-            }
             &.modified:not(:hover) .close-icon {
                 border-color: @color;
             }
@@ -86,8 +83,11 @@
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
-        border-bottom-color: @color;
-        box-shadow: 0 1px 0 @color;
+
+        &:before {
+           background-color: @color;
+           width: 100%;
+        }
 
         .selection .region {
             background-color: rgba(0,0,0,0.5) !important;
