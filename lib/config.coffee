@@ -112,6 +112,19 @@ module.exports =
 
         setTabSize(atom.config.get('atom-material-ui.tabSize'))
 
+        # Tab Icons
+
+        setTabIcons = (boolean) ->
+            if atom.config.get('atom-material-ui.tabIcons')
+                root.setAttribute('data-atom-material-ui-tabIcons', 'true')
+            else
+                root.setAttribute('data-atom-material-ui-tabIcons', 'false')
+
+        atom.config.onDidChange 'atom-material-ui.tabIcons', ->
+            setTabIcons(atom.config.get('atom-material-ui.tabIcons'))
+
+        setTabIcons(atom.config.get('atom-material-ui.tabIcons'))
+
         # Theme Style
 
         setThemeStyle = (currentThemeStyle) ->

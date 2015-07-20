@@ -12,6 +12,11 @@ module.exports =
             type: 'string'
             default: 'Normal'
             enum: ['Small', 'Normal', 'Big']
+        tabIcons:
+            title: 'Tab icons'
+            description: 'Allows tabs to contain an icon for the file type.'
+            type: 'boolean'
+            default: false
         themeSyle:
             title: 'Theme style'
             description: 'Select the theme style from Default, Darker and Lighter'

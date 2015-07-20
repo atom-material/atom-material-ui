@@ -182,6 +182,75 @@
         }
     }
 }
+
+//Layout for tab icons
+body[data-atom-material-ui-tabIcons='true'] {
+   .tab-bar {
+      .tab {
+         padding: 0 10px 0 12px;
+
+         .title {
+            position: relative;
+            z-index: 1;
+            padding-right: 10px;
+            padding-left: 0;
+            transition: padding-left 200ms;
+
+            &.icon-tools::before {
+               display: inline-block;
+            }
+         }
+         .title::before {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            bottom: auto;
+            transform: translateY(-50%) scale(0);
+            transition: all 200ms;
+            display: block;
+            color: @text-color !important;
+            margin-right: 10px !important;
+         }
+      }
+      .tab.active {
+         .title {
+            padding-left: 24px;
+         }
+         .title::before {
+            width: auto;
+            height: auto;
+            transform: translateY(-50%) scale(1);
+         }
+      }
+   }
+}
+
+// Previous "no-animations class with tab icons"
+//
+// .no-animations {
+//    .tab-bar {
+//       .tab {
+//          .close-icon, &::after, .title::before {
+//             display: none;
+//             -webkit-animation: none;
+//             -webkit-transition: none;
+//          }
+//          &.active {
+//             .close-icon, &::after, .title::before, &::before {
+//                display: inline-block;
+//                -webkit-animation: none;
+//                -webkit-transition: none;
+//             }
+//             &::before {
+//                display: none;
+//             }
+//          }
+//       }
+//    }
+// }
+
+
 .no-animations {
     .tab-bar {
         .tab {
