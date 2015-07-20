@@ -8,6 +8,7 @@ module.exports =
             root.classList.remove('blue')
             root.classList.remove('cyan')
             root.classList.remove('green')
+            root.classList.remove('orange')
             root.classList.remove('pink')
             root.classList.remove('purple')
             root.classList.remove('red')
