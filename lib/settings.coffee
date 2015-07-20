@@ -2,13 +2,13 @@ module.exports =
     config:
         accentColor:
             title: 'Accent color'
-            description: 'Set the accent color for the UI theme.'
+            description: 'Sets the accent color for the UI theme.'
             type: 'string'
             default: 'Teal'
             enum: ['Blue', 'Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
         tabSize:
             title: 'Tab bar size'
-            description: 'Set the height for the tab bar'
+            description: 'Sets the height for the tab bar'
             type: 'string'
             default: 'Normal'
             enum: ['Small', 'Normal', 'Big']
@@ -30,7 +30,7 @@ module.exports =
             default: false
         disableAnimations:
             title: 'Disable animations'
-            description: 'Reduces distractions when switching tabs.'
+            description: 'Reduces visual distractions when switching tabs or giving focus to text fields.'
             type: 'boolean'
             default: false
         panelContrast:
@@ -55,10 +55,15 @@ module.exports =
             default: false
         fontSize:
             title: 'UI font size'
-            description: 'Sets the font size used through the user interface. It doesn\'t override the text editor font size setting.'
+            description: 'Set the font size used through the user interface. It doesn\'t override the text editor font size setting.'
             type: 'string'
             default: 'Regular'
             enum: ['Small', 'Regular', 'Big', 'Huge']
+        showTabIcons:
+            title: 'Icons in tabs'
+            description: 'Shows the file-type icon for focused tabs.'
+            type: 'boolean',
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

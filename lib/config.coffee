@@ -151,3 +151,16 @@ module.exports =
             setFontSize(atom.config.get('atom-material-ui.fontSize'))
 
         setFontSize(atom.config.get('atom-material-ui.fontSize'))
+
+        # Tab Icons
+
+        setShowTabIcons = (boolean) ->
+            if boolean
+                root.classList.add('tab-icons')
+            else
+                root.classList.remove('tab-icons')
+
+        atom.config.onDidChange 'atom-material-ui.showTabIcons', ->
+            setShowTabIcons(atom.config.get('atom-material-ui.showTabIcons'))
+
+        setShowTabIcons(atom.config.get('atom-material-ui.showTabIcons'))
