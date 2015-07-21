@@ -19,13 +19,11 @@ module.exports =
             default: 'Default'
             enum: ['Darker', 'Default', 'Lighter']
         useRoboto:
-            title: 'Use Roboto Mono'
-            description: 'Choose wether to use Roboto Mono font for the editor.'
+            title: 'Use Roboto Mono font in text editors'
             type: 'boolean',
             default: false
         slimScrollbar:
             title: 'Slim scrollbars'
-            description: 'Makes scrollbars very slim.'
             type: 'boolean'
             default: false
         disableAnimations:
@@ -62,6 +60,10 @@ module.exports =
         showTabIcons:
             title: 'Icons in tabs'
             description: 'Shows the file-type icon for focused tabs. (Requires a package that enables file-type icons. i.e: file-icons, file-type-icons, seti-icons, etc…)'
+            type: 'boolean',
+            default: false
+        rippleAccentColor:
+            title: 'Use accent color in tabs\' ripple effect'
             type: 'boolean',
             default: false
 

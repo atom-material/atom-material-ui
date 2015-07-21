@@ -165,3 +165,16 @@ module.exports =
             setShowTabIcons(atom.config.get('atom-material-ui.showTabIcons'))
 
         setShowTabIcons(atom.config.get('atom-material-ui.showTabIcons'))
+
+        # Tab Accent Ripple
+
+        setRippleAccentColor = (boolean) ->
+            if boolean
+                root.classList.add('ripple-accent-color')
+            else
+                root.classList.remove('ripple-accent-color')
+
+        atom.config.onDidChange 'atom-material-ui.rippleAccentColor', ->
+            setRippleAccentColor(atom.config.get('atom-material-ui.rippleAccentColor'))
+
+        setRippleAccentColor(atom.config.get('atom-material-ui.rippleAccentColor'))

@@ -109,8 +109,8 @@
             pointer-events: none;
             width: 2px;
             height: 2px;
-            background: rgba(0,0,0,0.1);
             -webkit-transform: translate3d(0,0,0);
+            .ripple-color(@app-background-color);
         }
         &::after {
             content: '';
@@ -244,6 +244,12 @@
 }
 .tab-size-big .tab-bar {
     .tab-size(64px);
+}
+.ripple-color(@color) when (lightness(@color) > 60%) {
+    background-color: rgba(0,0,0,0.1);
+}
+.ripple-color(@color) when (lightness(@color) < 60%) {
+    background-color: rgba(255,255,255,0.1);
 }
 @-webkit-keyframes ripple {
     from {

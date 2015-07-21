@@ -1,6 +1,15 @@
 @import "ui-variables";
 
 .accent(@color) {
+    &.ripple-accent-color {
+        .tab-bar {
+            .tab {
+                &::before {
+                    background-color: fade(@color, 50%);
+                }
+            }
+        }
+    }
     .tab-bar {
         .tab {
             &.active {
