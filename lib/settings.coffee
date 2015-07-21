@@ -5,7 +5,7 @@ module.exports =
             description: 'Sets the accent color for the UI theme.'
             type: 'string'
             default: 'Teal'
-            enum: ['Blue', 'Cyan', 'Green', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
+            enum: ['Blue', 'Cyan', 'Green', 'Orange', 'Pink', 'Purple', 'Red', 'Teal', 'White', 'Yellow']
         tabSize:
             title: 'Tab bar size'
             description: 'Sets the height for the tab bar'
