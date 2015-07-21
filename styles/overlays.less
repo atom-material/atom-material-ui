@@ -64,7 +64,7 @@ atom-panel.modal, .overlay {
                 span {
                     .highlight(@app-background-color);
                 }
-                &::last-child {
+                &:last-child {
                     border-radius: 0 0 @component-border-radius @component-border-radius;
                 }
             }
@@ -93,6 +93,10 @@ atom-panel.modal, .overlay {
 
                 span {
                     color: @text-color;
+
+                    &.character-match {
+                        .highlight(@text-color);
+                    }
                 }
                 &.two-lines {
                     .primary-line {
