@@ -61,7 +61,7 @@
         }
         &.modified:not(:hover) .close-icon {
             right: 10px;
-            top: @tab-height/2 - @modified-icon-width/2 + 1px;
+            top: @tab-height / 2 - @modified-icon-width / 2 + 1px;
             width: @modified-icon-width;
             height: @modified-icon-width;
             border-width: 2px;
@@ -84,16 +84,13 @@
             z-index: 1;
             padding-right: 10px;
             padding-left: 0;
+            top: 0 !important; // seti-icons overrides this property
             transition: padding-left 200ms;
-
-            &.icon-tools::before {
-                display: inline-block;
-            }
         }
         .title::before {
             display: none;
-            position: absolute;
-            top: 50%;
+            position: absolute !important; // seti-icons overrides this property
+            top: 50% !important; // Some file-type icons override this property.
             left: 0;
             bottom: auto;
             transform: translateY(-50%) scale(0);
@@ -207,17 +204,17 @@
     }
 }
 .tab-size(@size) {
-    height: @size;
+    height: @size !important;
 
     .tab {
-        height: @size;
-        line-height: @size;
+        height: @size !important;
+        line-height: @size !important;
 
         .close-icon {
-            line-height: @size;
+            line-height: @size !important;
 
             &::before {
-                line-height: @size;
+                line-height: @size !important;
             }
         }
         &.modified:not(:hover) .close-icon {
@@ -241,6 +238,9 @@
 }
 .tab-size-small .tab-bar {
     .tab-size(32px);
+}
+.tab-size-normal .tab-bar {
+    .tab-size(48px);
 }
 .tab-size-big .tab-bar {
     .tab-size(64px);
