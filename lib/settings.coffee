@@ -61,7 +61,7 @@ module.exports =
             enum: ['Small', 'Regular', 'Big', 'Huge']
         showTabIcons:
             title: 'Icons in tabs'
-            description: 'Shows the file-type icon for focused tabs.'
+            description: 'Shows the file-type icon for focused tabs. (Requires a package that enables file-type icons. i.e: file-icons, file-type-icons, seti-icons, etc…)'
             type: 'boolean',
             default: false
 
