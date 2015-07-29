@@ -91,9 +91,10 @@
             display: none;
             position: absolute !important; // seti-icons overrides this property
             top: 50% !important; // Some file-type icons override this property.
-            left: 0;
+            left: 0 !important;
+            right: auto;
             bottom: auto;
-            transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0) !important; // Some file-types override this
             transition: all 200ms;
             display: block;
             color: @text-color !important;
@@ -127,6 +128,9 @@
         z-index: 1;
         opacity: 1;
 
+        .title::before {
+            transform: translateY(-50%) scale(1) !important; // Some file-types override this
+        }
         .close-icon {
             display: inline-block;
             line-height: @tab-height - 1px;
