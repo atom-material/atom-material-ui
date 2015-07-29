@@ -23,7 +23,7 @@ label {
 pre {
   box-shadow: none;
   color: @text-color;
-  background: @inset-panel-background-color;
+  background: darken(@app-background-color, 5%);
   border-radius: @component-border-radius;
   border: none;
   margin: 0;
@@ -31,7 +31,7 @@ pre {
 
 code {
   .text(highlight);
-  background: @background-color-highlight;
+  background: darken(@app-background-color, 5%);
   border-radius: @component-border-radius;
 }
 
