@@ -207,6 +207,10 @@
             }
             .title {
                 -webkit-transition: none;
+
+                &::before {
+                    display: none !important;
+                }
             }
             &:hover {
                 .close-icon {
@@ -242,7 +246,7 @@
                 padding-left: 24px;
             }
             .title::before {
-                display: block;
+                display: block !important;
                 width: auto;
                 height: auto;
                 transform: translateY(-50%) scale(1);
