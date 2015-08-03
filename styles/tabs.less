@@ -147,6 +147,9 @@
             left: 0;
             right: 0;
         }
+        .title::before {
+            display: none;
+        }
         .title::after {
             display: none;
         }
@@ -239,6 +242,7 @@
                 padding-left: 24px;
             }
             .title::before {
+                display: block;
                 width: auto;
                 height: auto;
                 transform: translateY(-50%) scale(1);
