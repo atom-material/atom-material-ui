@@ -270,11 +270,9 @@
             & > a {
                 transition: none;
             }
-            &.active {
-                &::before {
-                    -webkit-animation: ripplePaint 0ms;
-                    -webkit-animation-fill-mode: forwards;
-                }
+            &.active::before {
+                -webkit-animation: ripplePaint 0ms;
+                -webkit-animation-fill-mode: forwards;
             }
         }
     }
