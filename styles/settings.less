@@ -264,6 +264,21 @@
         }
     }
 }
+.no-animations {
+    .config-menu {
+        .nav > li {
+            & > a {
+                transition: none;
+            }
+            &.active {
+                &::before {
+                    -webkit-animation: ripplePaint 0ms;
+                    -webkit-animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
 @-webkit-keyframes ripplePaint {
     from { transform: scale(1); }
     to { transform: scale(130); }
