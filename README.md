@@ -13,10 +13,6 @@ Fire up a console and type:
 
 Or, inside Atom's settings select Install and then search for this package.
 
-## Buy me some coffee
-
-<a href='https://pledgie.com/campaigns/29552'><img alt='Click here to lend your support to: Atom Material Design Theme and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/29552.png?skin_name=chrome' border='0' ></a>
-
 ## Configuration
 
 Atom Material UI supports different accent colors. To change it, go to Settings > Themes and click the cog icon next to the theme selector.
