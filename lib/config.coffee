@@ -155,11 +155,13 @@ module.exports =
 
         # Tab Icons
 
-        setShowTabIcons = (boolean) ->
-            if boolean
-                root.classList.add('tab-icons')
-            else
-                root.classList.remove('tab-icons')
+        setShowTabIcons = (option) ->
+          root.classList.remove('tab-icons')
+          root.classList.remove('tab-icons-all')
+          if option == 'Show on active tab'
+              root.classList.add('tab-icons')
+          else if option == 'Show on all tabs'
+              root.classList.add('tab-icons-all')
 
         atom.config.onDidChange 'atom-material-ui.showTabIcons', ->
             setShowTabIcons(atom.config.get('atom-material-ui.showTabIcons'))

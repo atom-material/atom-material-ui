@@ -60,8 +60,9 @@ module.exports =
         showTabIcons:
             title: 'Icons in tabs'
             description: 'Shows the file-type icon for focused tabs. (Requires a package that enables file-type icons. i.e: file-icons, file-type-icons, seti-icons, etc…)'
-            type: 'boolean',
-            default: false
+            type: 'string'
+            default: 'Hide'
+            enum: ['Hide', 'Show on active tab', 'Show on all tabs']
         rippleAccentColor:
             title: 'Use accent color in tabs\' ripple effect'
             type: 'boolean',
