@@ -21,10 +21,10 @@
 
 .tree-view {
     font-size: @font-size;
-    .panel-background(@tree-view-background-color);
+    background-color: @tree-view-background-color;
 
     .selected::before {
-        .panel-background(@app-background-color);
+        background-color: rgba(0,0,0,0.025);
     }
     .tree-view-line-height(32px);
 }

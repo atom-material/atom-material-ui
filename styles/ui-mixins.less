@@ -42,7 +42,7 @@
     color: rgba(255,255,255,0.9);
 }
 .panel-background(@color) when (lightness(@color) > 50%) {
-    background-color: desaturate(darken(@app-background-color, 5%), 10%);
+    background-color: @app-background-color;
 }
 .panel-background(@color) when (lightness(@color) < 50%) {
     background-color: @app-background-color;

@@ -68,12 +68,12 @@
         }
         atom-text-editor[mini], atom-text-editor[mini]::shadow {
             .selection .region {
-                background-color: rgba(0,0,0,0.2) !important;
+                background-color: @syntax-selection-color;
             }
         }
         atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
             .selection .region {
-                background-color: rgba(0,0,0,0.5) !important;
+                background-color: @syntax-selection-color;
             }
         }
     }
@@ -90,7 +90,7 @@
             border-color: @color;
         }
         .selection .region {
-            background-color: rgba(0,0,0,0.2) !important;
+            background-color: @syntax-selection-color;
         }
     }
     atom-text-editor[mini].is-focused,
@@ -102,7 +102,7 @@
         }
 
         .selection .region {
-            background-color: rgba(0,0,0,0.5) !important;
+            background-color: @syntax-selection-color;
         }
     }
     atom-panel.modal, .overlay {
@@ -145,7 +145,7 @@
     }
     .light-accent(@color);
 }
-.light-accent(@accent) when (lightness(@accent) > 60%) {
+.light-accent(@accent) when (lightness(@accent) >= 60%) {
     .select-list ol.list-group, &.select-list ol.list-group {
         li {
             color: @text-color-subtle;
