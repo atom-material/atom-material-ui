@@ -2,6 +2,14 @@ module.exports =
     apply: ->
         root = document.documentElement
 
+        # Check if there are any file-type-icon package
+        loadedPackages =  atom.packages.getLoadedPackages()
+        iconPacks = ['file-icons', 'file-type-icons', 'seti-icons', 'envygeeks-file-icons']
+
+        loadedPackages.forEach (pack, i) ->
+            if (iconPacks.indexOf(pack.name) >= 0)
+                root.classList.add('dont-change-icons')
+
         # Accent color
 
         setAccentColor = (currentAccentColor) ->

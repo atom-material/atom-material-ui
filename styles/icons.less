@@ -118,7 +118,7 @@
         }
     }
 }
-body:not([class*="file-icons"]) {
+html:not(.dont-change-icons) {
     .tree-view {
         .list-group, .list-tree {
             li {
@@ -146,7 +146,7 @@ body:not([class*="file-icons"]) {
 
 // Tabs Icons
 
-[class*="tab-icons"] body:not(.file-icons) {
+html[class*="tab-icons"]:not(.dont-change-icons) {
     .tab-bar .tab .title:not(.icon) {
         &::before {
             .tree-view-icon();
