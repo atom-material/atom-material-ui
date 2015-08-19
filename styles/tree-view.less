@@ -49,6 +49,9 @@
             & > span[class*="icon"]::before, & > .header.list-item span, & > .header.list-item::before {
                 color: rgba(255,255,255,0.9);
             }
+            &.status-modified, &.status-modified > span[class*="icon"]::before, &.status-modified > .header.list-item span, &.status-modified > .header.list-item::before {
+                color: darken(@text-color-modified, 50%) !important;
+            }
         }
     }
 }

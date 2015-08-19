@@ -33,6 +33,19 @@
                 &::before {
                     background: @color;
                 }
+                &.status-modified::before {
+                    background-color: @text-color-modified;
+                    color: darken(@text-color-modified, 60%);
+                }
+                &.status-added::before {
+                    background-color: @text-color-added;
+                }
+                &.status-renamed::before {
+                    background-color: @text-color-renamed;
+                }
+                &.status-remo::before {
+                    background-color: @text-color-removed;
+                }
             }
         }
     }
