@@ -1,7 +1,7 @@
 ![](http://i.imgur.com/7C2H2mw.png)
 ---
 
-A dark UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). (Mostly) works with other dark syntax themes as it uses syntax colors for the UI. Light themes work too, but doesn't look as nice.
+A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). (Mostly) works with other dark syntax themes as it uses syntax colors for the UI. Light themes work too, but might not look as nice.
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
