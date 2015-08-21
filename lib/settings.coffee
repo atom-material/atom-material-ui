@@ -62,7 +62,7 @@ module.exports =
             type: 'boolean',
             default: false
         useRobotoInUI:
-            title: 'Use Roboto on the menu'
+            title: 'Use Roboto font for UI'
             type: 'boolean'
             default: false
 
