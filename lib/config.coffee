@@ -50,6 +50,19 @@ module.exports =
 
         setRobotoFont(atom.config.get('atom-material-ui.useRoboto'))
 
+        # Roboto font for UI
+
+        setRobotoUIFont = (boolean) ->
+            if boolean
+                root.classList.add('roboto')
+            else
+                root.classList.remove('roboto')
+
+        atom.config.onDidChange 'atom-material-ui.useRobotoInUI', ->
+            setRobotoUIFont(atom.config.get('atom-material-ui.useRobotoInUI'))
+
+        setRobotoUIFont(atom.config.get('atom-material-ui.useRobotoInUI'))
+
         # Slim Scrollbars
 
         setSlimScrollbars = (boolean) ->

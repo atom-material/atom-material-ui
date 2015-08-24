@@ -61,6 +61,10 @@ module.exports =
             title: 'Use accent color in tabs\' ripple effect'
             type: 'boolean',
             default: false
+        useRobotoInUI:
+            title: 'Use Roboto font for UI'
+            type: 'boolean'
+            default: false
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->
