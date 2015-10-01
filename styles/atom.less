@@ -16,11 +16,12 @@ atom-workspace {
     }
     /deep/::-webkit-scrollbar-track,
     /deep/::-webkit-scrollbar-corner {
-        background: @app-background-color;
+        background: transparent;
     }
     /deep/::-webkit-scrollbar-thumb {
         background: @scrollbar-color;
         border-radius: 4px;
+        border: 1px solid fade(@text-color, 15%);
     }
 }
 .slim-scrollbar {
