@@ -20,8 +20,16 @@
                     background-color: @color;
                 }
             }
-            &.modified:not(:hover) .close-icon {
-                border-color: @color;
+            &.modified:hover .close-icon {
+                color: @color;
+            }
+            &.modified:not(:hover) {
+                .close-icon {
+                    border-color: @color;
+                }
+                .title::after {
+                    border-color: @color;
+                }
             }
         }
         .placeholder::after {
