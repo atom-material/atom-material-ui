@@ -1,6 +1,68 @@
+atom-notifications {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    padding-bottom: 3rem;
+}
 atom-notification {
+    padding: 0;
+
+    .content {
+        border-radius: 0;
+        width: 100%;
+
+        > div {
+            padding: 1.25rem 2rem;
+            line-height: 2;
+        }
+    }
     .close-all.btn {
         height: 28px;
         line-height: 28px;
+    }
+    &.icon::before {
+        display: none;
+    }
+    .close, .close:hover {
+        color: @text-color;
+    }
+    &.success, &.error, &.info, &.warning, &.fatal {
+        border-left: 1px solid transparent;
+
+        .content {
+            background-color: darken(@app-background-color, 5%);
+            color: @text-color;
+        }
+        .close-all.btn, .close-all.btn:hover {
+            border-color: fade(@text-color, 50%);
+            color: fade(@text-color, 50%);
+        }
+    }
+    &.success {
+        border-color: @md-light-green;
+    }
+    &.error, &.fatal {
+        border-color: @md-red;
+    }
+    &.info {
+        border-color: @md-light-blue;
+    }
+    &.warning {
+        border-color: @md-yellow;
+    }
+    &.has-close {
+        .content > div {
+            padding-right: 4rem;
+        }
+        &:only-child {
+            .content > div {
+                padding-right: 4rem;
+            }
+        }
+        &:first-child:not(:only-child) {
+            .content > div {
+                padding-right: 12rem;
+            }
+        }
     }
 }
