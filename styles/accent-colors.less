@@ -73,7 +73,7 @@
             }
         }
         .package-card, .package-detail .package-card {
-            .btn-group > .btn {
+            .btn-group > .btn {                
                 &:hover {
                     color: @color !important;
                 }
@@ -101,7 +101,7 @@
             }
         }
     }
-    .link {
+    .link, .text-info {
         color: @color;
 
         &:hover {
@@ -119,7 +119,6 @@
     }
     atom-text-editor[mini].is-focused,
     atom-text-editor[mini].is-focused::shadow {
-
         &:before {
            background-color: @color;
            transform: scaleX(1);
@@ -165,6 +164,9 @@
         }
         .character-match {
             .highlight(@app-background-color);
+        }
+        &.select-list.popover-list .suggestion-description-more-link {
+            color: @color;
         }
     }
     .markdown-preview a {

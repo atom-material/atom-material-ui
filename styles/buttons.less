@@ -12,6 +12,13 @@
         color: @color;
     }
 }
+.btn-group > .btn {
+    border: none;
+
+    &.selected {
+        background: darken(@app-background-color, 10%);
+    }
+}
 .btn, button, button[class] {
     background: @app-background-color;
     color: @text-color;
