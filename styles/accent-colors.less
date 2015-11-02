@@ -63,6 +63,10 @@
     .select-list ol.list-group, &.select-list ol.list-group {
         li.selected {
             background-color: @color;
+            color: lighten(@color, 50%);
+        }
+        li {
+            color: @text-color;
         }
     }
     .settings-view {
@@ -73,7 +77,7 @@
             }
         }
         .package-card, .package-detail .package-card {
-            .btn-group > .btn {                
+            .btn-group > .btn {
                 &:hover {
                     color: @color !important;
                 }
@@ -177,23 +181,23 @@
 .light-accent(@accent) when (lightness(@accent) >= 60%) {
     .select-list ol.list-group, &.select-list ol.list-group {
         li {
-            color: @text-color-subtle;
+            color: @text-color;
 
-            &.selected {
-                background-color: @accent;
-                color: darken(@accent, 40%) !important;
+            span {
+                color: @text-color;
+            }
+        }
+        li.selected {
+            background-color: @accent;
+            color: darken(@accent, 40%) !important;
 
-                &.two-lines {
-                    .primary-line, .secondary-line {
-                        color: darken(@accent, 40%) !important;
-                    }
-                }
-                span {
+            &.two-lines {
+                .primary-line, .secondary-line {
                     color: darken(@accent, 40%) !important;
                 }
             }
             span {
-                color: @text-color-subtle;
+                color: darken(@accent, 40%) !important;
             }
         }
     }
