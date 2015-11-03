@@ -17,6 +17,19 @@ atom-notification {
             line-height: 2;
         }
     }
+    .btn-toolbar {
+        line-height: 3rem;
+
+        .btn {
+            margin-right: 2rem;
+        }
+        .btn-copy-report {
+            color: @text-color;
+        }
+    }
+    .detail {
+        background: none;
+    }
     .item {
         border: none;
     }
@@ -40,6 +53,10 @@ atom-notification {
         .close-all.btn, .close-all.btn:hover {
             border-color: fade(@text-color, 50%);
             color: fade(@text-color, 50%);
+        }
+        code {
+            background-color: lighten(@md-red, 5%);
+            color: #FFF;
         }
     }
     &.success {
@@ -67,6 +84,14 @@ atom-notification {
             .content > div {
                 padding-right: 12rem;
             }
+        }
+    }
+    &.has-stack .stack-toggle {
+        color: @md-red;
+
+        .icon {
+            position: relative;
+            top: 1px;
         }
     }
 }
