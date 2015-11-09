@@ -4,7 +4,7 @@
     &.ripple-accent-color {
         .tab-bar {
             .tab {
-                &::before {
+                .ink {
                     background-color: fade(@color, 50%);
                 }
                 &.modified:not(:hover) .title::after {
@@ -12,6 +12,9 @@
                 }
             }
         }
+    }
+    .btn.btn-primary {
+        .button-variant(@color, #FFF);
     }
     .tab-bar {
         .tab {
