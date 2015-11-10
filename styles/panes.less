@@ -14,6 +14,9 @@ atom-pane-container {
         &:focus {
             background-color: @app-background-color;
         }
+        &.active .item-views {
+            background-color: lighten(@app-background-color, 1%);
+        }
     }
     atom-pane-axis.horizontal > * {
         border-right: 1px solid @pane-item-border-color;
@@ -24,7 +27,7 @@ atom-pane-container {
     }
     atom-pane-axis.vertical > * {
         border-bottom: 1px solid @pane-item-border-color;
-        
+
         &:last-child {
             border-bottom: none;
         }
