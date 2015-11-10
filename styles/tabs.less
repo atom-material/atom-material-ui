@@ -13,12 +13,16 @@
 @tab-bar-bottom-border-color: transparent;
 @tab-max-width: 160px;
 
+.active .tab-bar {
+    opacity: 1;
+}
 .tab-bar {
     height: @tab-height;
     padding: 0;
     overflow-x: auto;
     overflow-y: hidden;
     background-color: @app-background-color;
+    opacity: 0.5;
 
     &::-webkit-scrollbar {
         display: none;
@@ -273,6 +277,20 @@
 }
 .tab-size-big .tab-bar {
     .tab-size(64px);
+}
+.tab-min-width {
+    .tab-bar {
+        overflow: hidden;
+        overflow-x: scroll;
+
+        .tab {
+            min-width: 80px;
+
+            &.active {
+                min-width: 150px;
+            }
+        }
+    }
 }
 .ripple-color(@color) when (lightness(@color) > 60%) {
     background-color: rgba(0,0,0,0.1);
