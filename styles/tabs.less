@@ -3,16 +3,30 @@
 .tab-bar {
     line-height: 3rem;
     height: 3rem;
+    background-color: @accent-color;
+    position: relative;
+    z-index: 2000;
 
     .tab {
         position: relative;
         padding: 0 0.75rem;
         cursor: pointer;
         font-size: 0.8rem;
-        border-bottom: 2px solid transparent;
+        color: @text-color-highlight;
 
-        &.active {
-            border-color: @accent-color;
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            height: 0.125rem;
+            width: 100%;
+            transform: scaleX(0) translateX(50%);
+            transition: transform 250ms @md-timing-function;
+            background-color: @text-color-highlight;
+        }
+        &.active::before {
+            transform: scaleX(1) translateX(0);
         }
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
