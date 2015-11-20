@@ -1,7 +1,6 @@
 // NOTE: color of buttons on hover needs adjusting
 
 .tool-bar {
-    position: relative;
     background: darken(@app-background-color, 0%);
     border: none;
     
@@ -36,6 +35,7 @@
             border-radius: 0;
             
             &:before {
+                // NOTE: should be configured by ui scaling setting
                 font-size: 20px;
             }
         }
