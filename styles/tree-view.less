@@ -1,5 +1,3 @@
-
-
 .tree-view {
     background-color: darken(@app-background-color, 2%);
     box-shadow: inset -5px 0 10px rgba(0, 0, 0, .2), inset 5px 0 10px rgba(0, 0, 0, .2);
@@ -52,15 +50,16 @@
         &:hover {
             cursor: pointer;
             background-color: darken(@app-background-color, 0%);
-            box-shadow: -9000px 0 0 darken(@app-background-color, 0%);
+            box-shadow: -100px 0 0 darken(@app-background-color, 0%);
         }
     }
     
     //set selected state
     .selected {
-        .header {
+        .header, .file {
             background-color: darken(@accent-color, 2%);
-            box-shadow: -9000px 0 0 darken(@accent-color, 2%);
+            box-shadow: -100px 0 0 darken(@accent-color, 2%);
+            .text-color(@accent-color);
         }
     }
 }
