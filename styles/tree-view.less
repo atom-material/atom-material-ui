@@ -1,43 +1,84 @@
-.tree-view {
+.tree-view.list-tree {
     font-size: 0.8rem;
     padding-top: 3rem;
+    background-color: darken(@app-background-color, 1.5%);
+    box-shadow: inset -0.25rem 0 0.25rem rgba(0,0,0,0.05);
 
-    .project-root > .header {
+    .project-root {
+        padding: 0;
+    }
+    .project-root > .header, .project-root > .header.selected {
         position: fixed;
         line-height: 3rem;
         height: 3rem;
         background-color: darken(@accent-color, 2%);
-        color: @text-color-highlight;
         z-index: 1000;
-        top: 0;
-        left: 0;
+        margin-top: -3rem;
         width: 100%;
+        padding: 0 0.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.01), 0 0.125rem 0.25rem rgba(0,0,0,0.2);
+        .text-color(@accent-color);
 
         span {
             line-height: 3rem;
             text-transform: uppercase;
         }
     }
-    .name.icon::before {
-        font-size: 1rem;
-        margin-right: 1.5rem;
+    .name.icon {
+        &.icon-repo::before {
+            margin-right: 0.5rem;
+        }
+        &::before {
+            font-size: 1rem;
+            margin-right: 1.5rem;
+        }
+    }
+    li {
+        padding: 0 0.5rem;
     }
 }
 .list-tree, .list-group {
     li:not(.list-nested-item), li.list-nested-item > .list-item {
-        line-height: 3em;
+        line-height: 3.25em;
 
         &.selected {
             position: relative;
 
             &::before {
-                content: '';
-                top: 0;
-                left: -100%;
-                width: 300%;
-                height: 100%;
-                background-color: lighten(@app-background-color, 5%);
+                .selected-item();
             }
         }
+        .name {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    li.directory.selected:not(.project-root) > div.header.list-item {
+        position: relative;
+
+        &::after {
+            .selected-item();
+        }
+    }
+    &:focus {
+        li.directory.selected > div.header.list-item {
+            color: #FFF;
+
+            &::after {
+                .selected-item-focused()
+            }
+        }
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
+            &.selected {
+                color: #FFF;
+
+                &::before {
+                    .selected-item-focused()
+                }
+            }
+        }
+    }
+    &.has-collapsable-children .list-nested-item > .list-item::before {
+        z-index: 10;
     }
 }

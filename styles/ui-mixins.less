@@ -1,0 +1,35 @@
+.ripple-color(@color) when (lightness(@color) > 70%) {
+    background-color: rgba(0,0,0,0.1);
+}
+.ripple-color(@color) when (lightness(@color) < 70%) {
+    background-color: rgba(255,255,255,0.1);
+}
+.text-color(@color) when (lightness(@color) >= 70%) {
+    color: desaturate(darken(@color, 50%), 50%);
+}
+.text-color(@color) when (lightness(@color) < 70%) {
+    color: desaturate(lighten(@color, 60%), 50%);
+}
+.tab-border-color(@color) when (lightness(@color) >= 70%) {
+    &::before {
+        background-color: darken(@color, 10%);
+    }
+}
+.tab-border-color(@color) when (lightness(@color) < 70%) {
+    &::before {
+        background-color: desaturate(lighten(@color, 60%), 50%);
+    }
+}
+.selected-item() {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background-color: fade(@text-color, 20%);
+    z-index: 0;
+}
+.selected-item-focused() {
+    background-color: @accent-color;
+}

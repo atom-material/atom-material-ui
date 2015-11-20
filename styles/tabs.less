@@ -1,10 +1,21 @@
 @import "ui-variables";
 
+@-webkit-keyframes ripple {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(200);
+        opacity: 0;
+    }
+}
 .tab-bar {
+    position: relative;
     line-height: 3rem;
     height: 3rem;
     background-color: @accent-color;
     position: relative;
+    overflow-x: auto;
     z-index: 2000;
 
     .tab {
@@ -12,7 +23,11 @@
         padding: 0 0.75rem;
         cursor: pointer;
         font-size: 0.8rem;
-        color: @text-color-highlight;
+        overflow: hidden;
+        min-width: 6rem;
+        max-width: 12rem;
+        .text-color(@accent-color);
+        .tab-border-color(@accent-color);
 
         &::before {
             position: absolute;
@@ -22,11 +37,20 @@
             height: 0.125rem;
             width: 100%;
             transform: scaleX(0) translateX(50%);
-            transition: transform 250ms @md-timing-function;
-            background-color: @text-color-highlight;
+            transition: transform 250ms @md-timing-function, opacity 250ms @md-timing-function;
+            opacity: 0;
+            z-index: 2000;
         }
-        &.active::before {
-            transform: scaleX(1) translateX(0);
+        &.active {
+            &::before {
+                opacity: 1;
+                transform: scaleX(1) translateX(0);
+            }
+            .ink {
+                display: inline-block;
+                -webkit-animation: ripple 500ms @md-timing-function;
+                -webkit-animation-fill-mode: forwards;
+            }
         }
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
@@ -48,5 +72,41 @@
                 top: -0.125rem;
             }
         }
+        .title {
+            pointer-events: none;
+            -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,1) 70%,rgba(255,255,255,0) 90%);
+
+            &::before {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .ink {
+        display: none;
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        width: 2px;
+        height: 2px;
+        -webkit-transform: translate3d(0,0,0);
+        .ripple-color(@accent-color);
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &::before, &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        height: 3rem;
+        width: 0.75rem;
+        z-index: 1000;
+    }
+    &::before {
+        background-image: linear-gradient(to right, @accent-color 0%, transparent 100%);
+    }
+    &::after {
+        background-image: linear-gradient(to left, @accent-color 0%, transparent 100%);
+        right: 0;
     }
 }
