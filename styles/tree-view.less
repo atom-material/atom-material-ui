@@ -1,84 +1,66 @@
-.tree-view.list-tree {
-    font-size: 0.8rem;
-    padding-top: 3rem;
-    background-color: darken(@app-background-color, 1.5%);
-    box-shadow: inset -0.25rem 0 0.25rem rgba(0,0,0,0.05);
 
-    .project-root {
-        padding: 0;
-    }
-    .project-root > .header, .project-root > .header.selected {
-        position: fixed;
-        line-height: 3rem;
+
+.tree-view {
+    background-color: darken(@app-background-color, 2%);
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, .2), inset 5px 0 10px rgba(0, 0, 0, .2);
+    
+    //style project folder to match top bar
+    .project-root > .header {
         height: 3rem;
+        line-height: 3rem !important;
         background-color: darken(@accent-color, 2%);
-        z-index: 1000;
-        margin-top: -3rem;
-        width: 100%;
-        padding: 0 0.5rem;
-        box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.01), 0 0.125rem 0.25rem rgba(0,0,0,0.2);
+        box-shadow: inset -10px 0 10px rgba(0, 0, 0, .2), inset 10px 0 10px rgba(0, 0, 0, .2);
         .text-color(@accent-color);
-
-        span {
-            line-height: 3rem;
-            text-transform: uppercase;
+    }
+    
+    //move and flip folder open indicators
+    .list-nested-item {
+        >.list-item::before {
+            float: right;
+            width: 3rem !important;
+            height: 3rem !important;
+            line-height: 3rem !important;
+            text-align: center;
+        }
+        
+        &.collapsed > .list-item::before {
+            content: "\f0a4" !important;
         }
     }
-    .name.icon {
-        &.icon-repo::before {
-            margin-right: 0.5rem;
-        }
-        &::before {
-            font-size: 1rem;
-            margin-right: 1.5rem;
-        }
-    }
-    li {
-        padding: 0 0.5rem;
-    }
-}
-.list-tree, .list-group {
-    li:not(.list-nested-item), li.list-nested-item > .list-item {
-        line-height: 3.25em;
-
-        &.selected {
-            position: relative;
-
-            &::before {
-                .selected-item();
-            }
-        }
-        .name {
-            position: relative;
-            z-index: 10;
-        }
-    }
-    li.directory.selected:not(.project-root) > div.header.list-item {
+    
+    //position text and icon
+    .icon {
         position: relative;
-
-        &::after {
-            .selected-item();
+        display: inline-block;
+        height: 3rem;
+        line-height: 3rem !important;
+        padding-left: 4rem;
+        padding-right: 1rem;
+        
+        &:before {
+            position: absolute;
+            left: 0;
+            height: 3rem;
+            width: 3rem;
+            line-height: 3rem !important;
+            text-align: center;
         }
     }
-    &:focus {
-        li.directory.selected > div.header.list-item {
-            color: #FFF;
-
-            &::after {
-                .selected-item-focused()
-            }
-        }
-        li:not(.list-nested-item), li.list-nested-item > .list-item {
-            &.selected {
-                color: #FFF;
-
-                &::before {
-                    .selected-item-focused()
-                }
-            }
+    
+    //set mouseover state
+    .header, .file {
+        &:hover {
+            cursor: pointer;
+            background-color: darken(@app-background-color, 0%);
+            box-shadow: -9000px 0 0 darken(@app-background-color, 0%);
         }
     }
-    &.has-collapsable-children .list-nested-item > .list-item::before {
-        z-index: 10;
+    
+    //set selected state
+    .selected {
+        .header {
+            background-color: darken(@accent-color, 2%);
+            box-shadow: -9000px 0 0 darken(@accent-color, 2%);
+        }
     }
 }
