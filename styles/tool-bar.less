@@ -1,4 +1,26 @@
 .tool-bar {
+    &.tool-bar-horizontal {
+        position: relative;
+        height: 3rem;
+        z-index: 100;
+        border: none;
+        background: @accent-color;
+
+        &.tool-bar-24px {
+            .tool-bar-btn {
+                width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+                padding: 0;
+                margin: 0;
+                .text-color(@accent-color);
+            }
+        }
+        .tool-bar-spacer {
+            margin: 0 0.5rem;
+            border: none;
+        }
+    }
     &.tool-bar-vertical {
         background: darken(@app-background-color, 3.5%);
         padding: 0;
