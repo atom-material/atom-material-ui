@@ -9,6 +9,18 @@
                 .selected-item();
             }
         }
+        &.status-modified:not(.selected) {
+            color: @md-amber;
+        }
+        &.status-added:not(.selected) {
+            color: @md-light-green;
+        }
+        &.status-renamed:not(.selected) {
+            color: @md-blue;
+        }
+        &.status-removed:not(.selected) {
+            color: @md-red;
+        }
         .name {
             position: relative;
             z-index: 10;

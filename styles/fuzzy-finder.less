@@ -1,0 +1,70 @@
+atom-panel.modal, .overlay {
+    color: @text-color;
+    background-color: @app-background-color;
+    padding: 0;
+    border-radius: 0 0 0.125rem 0.125rem;
+    .z-depth-2;
+
+    atom-text-editor[mini], atom-text-editor[mini]::shadow {
+        margin: 0 1rem 1rem;
+    }
+    .select-list ol.list-group, .select-list ol.list-group {
+        background-color: @app-background-color;
+        border-radius: 0 0 0.125rem 0.125rem;
+
+        li {
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: @text-color;
+            padding: 1rem;
+            line-height: 1.5rem;
+
+            &.two-lines {
+                .primary-line {
+                    color: @text-color;
+
+                    &::before {
+                        margin-right: 1.5rem;
+                    }
+                }
+                .secondary-line {
+                    font-size: 0.7rem;
+                    color: @text-color;
+                    padding: 0;
+                    margin-left: 2.5rem;
+                    opacity: 0.75;
+                }
+            }
+            .status.icon {
+                float: right;
+            }
+            &.selected {
+                background-color: @accent-color;
+                .text-color(@accent-color);
+
+                &.two-lines {
+                    .primary-line {
+                        .text-color(@accent-color);
+                    }
+                    .secondary-line {
+                        .text-color(@accent-color);
+                    }
+                }
+                .status.icon {
+                    .text-color(@accent-color);
+                }
+                span {
+                    font-weight: 700;
+                    .text-color(@accent-color);
+                }
+                &:last-child {
+                    border-radius: 0 0 @component-border-radius @component-border-radius;
+                }
+            }
+        }
+    }
+    .tree-view-dialog {
+        label.icon {
+            color: @text-color-subtle;
+        }
+    }
+}

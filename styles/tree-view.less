@@ -3,19 +3,21 @@
     padding-top: 3rem;
     background-color: darken(@app-background-color, 1.5%);
     box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
+    overflow: hidden;
 
     .project-root {
         padding: 0;
+        transform: translate3d(0,0,0);
     }
     .project-root > .header, .project-root > .header.selected {
-        position: fixed;
+        position: absolute;
         line-height: 3rem;
         height: 3rem;
         background-color: darken(@accent-color, 2%);
-        z-index: 1000;
         margin-top: -3rem;
         width: 100%;
         padding: 0 0.5rem;
+        z-index: 1000;
         .text-color(@accent-color);
         .z-depth-1;
 
@@ -26,7 +28,7 @@
     }
     .name.icon {
         &.icon-repo::before {
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
         }
         &::before {
             font-size: 1rem;
@@ -40,7 +42,7 @@
         position: relative;
 
         &::after {
-            .selected-item();
+            .selected-item;
         }
     }
     &:focus {

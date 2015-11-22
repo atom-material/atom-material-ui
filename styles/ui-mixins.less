@@ -4,18 +4,18 @@
 .ripple-color(@color) when (lightness(@color) < 70%) {
     background-color: rgba(255,255,255,0.1);
 }
-.text-color(@color) when (lightness(@color) >= 70%) {
+.text-color(@color) when (lightness(@color) >= 65%) {
     color: desaturate(darken(@color, 50%), 50%);
 }
-.text-color(@color) when (lightness(@color) < 70%) {
+.text-color(@color) when (lightness(@color) < 65%) {
     color: desaturate(lighten(@color, 60%), 50%);
 }
-.tab-border-color(@color) when (lightness(@color) >= 70%) {
+.tab-border-color(@color) when (lightness(@color) >= 65%) {
     &::before {
         background-color: darken(@color, 10%);
     }
 }
-.tab-border-color(@color) when (lightness(@color) < 70%) {
+.tab-border-color(@color) when (lightness(@color) < 65%) {
     &::before {
         background-color: desaturate(lighten(@color, 60%), 50%);
     }
