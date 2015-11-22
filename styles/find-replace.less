@@ -27,10 +27,23 @@
                 max-height: 2rem;
                 text-align: center;
                 border-radius: 50%;
+                box-shadow: none;
+                background-color: @app-background-color;
 
                 + .btn {
                     margin-left: 0.25rem;
                 }
+                &.selected {
+                    background-color: @accent-color;
+                }
+            }
+        }
+        .btn, button, button[class] {
+            box-shadow: none;
+            .background-alt(@app-background-color);
+
+            &:hover {
+                .z-depth-1;
             }
         }
     }

@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('robotocondensed-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: 'roboto_condensedbold_italic';
+    src: url('robotocondensed-bolditalic-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: 'roboto_condenseditalic';
+    src: url('robotocondensed-italic-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('robotocondensed-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: 'roboto_condensedlight_italic';
+    src: url('robotocondensed-lightitalic-webfont.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: condensed;
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('robotocondensed-regular-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: condensed;
+}

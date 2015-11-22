@@ -1,0 +1,50 @@
+.tooltip {
+    @tip-background-color: @md-grey-700;
+    @tip-text-color: #FFF;
+    // white-space: nowrap;
+    transition: opacity 500ms @md-timing-function, transform 500ms @md-timing-function;
+
+    .no-animations & {
+        transition: none;
+    }
+    .tooltip-arrow {
+        display: none;
+    }
+    .keystroke {
+        color: fade(@tip-text-color, 30%);
+        padding-left: 0.125rem;
+    }
+    .tooltip-inner {
+        line-height: 1.5rem;
+        padding: 0 0.5rem;
+        border-radius: @component-border-radius;
+        background-color: @tip-background-color;
+        color: @tip-text-color;
+        // white-space: nowrap;
+        max-width: 20rem;
+
+        span {
+            color: fade(@tip-text-color, 80%);
+        }
+    }
+    &.top, &.bottom {
+        margin: auto;
+        padding: 0.8rem 0;
+    }
+    &.top {
+        margin-bottom: 0.8rem;
+        transform: translateY(1rem);
+
+        &.in {
+            transform: translateY(0);
+        }
+    }
+    &.bottom {
+        margin-top: 0;
+        transform: translateY(-1rem);
+
+        &.in {
+            transform: translateY(0);
+        }
+    }
+}

@@ -52,10 +52,18 @@
                 -webkit-animation: ripple 500ms @md-timing-function;
                 -webkit-animation-fill-mode: forwards;
             }
+            .title {
+                padding-left: 2rem;
+
+                &::before {
+                    transform: scale(1);
+                }
+            }
         }
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
             right: 1rem;
+            transform: scale(1);
         }
         .close-icon {
             width: 1rem;
@@ -67,6 +75,8 @@
             top: 1rem;
             padding: 0;
             cursor: pointer;
+            transition: transform 250ms @md-timing-function;
+            transform: scale(0);
 
             &::before {
                 position: relative;
@@ -74,11 +84,26 @@
             }
         }
         .title {
+            position: relative;
             pointer-events: none;
+            transition: padding 250ms @md-timing-function;
             -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,1) 70%,rgba(255,255,255,0) 90%);
 
             &::before {
-                margin-right: 1rem;
+                left: 0;
+                top: 1rem;
+                position: absolute;
+                transition: transform 250ms @md-timing-function;
+                transform: scale(0);
+                line-height: 1.25;
+            }
+            &.icon::before {
+                line-height: 1;
+            }
+        }
+        &:hover {
+            .close-icon {
+                transform: scale(1);
             }
         }
     }

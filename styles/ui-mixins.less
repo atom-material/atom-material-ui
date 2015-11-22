@@ -20,6 +20,12 @@
         background-color: desaturate(lighten(@color, 60%), 50%);
     }
 }
+.background-alt(@color) when (lightness(@color) >= 65%) {
+    background: darken(@color, 1%);
+}
+.background-alt(@color) when (lightness(@color) < 65%) {
+    background: lighten(@color, 1%);
+}
 .selected-item() {
     position: absolute;
     content: '';

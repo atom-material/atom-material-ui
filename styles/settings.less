@@ -15,8 +15,8 @@
                 top: calc(50% - 1px);
                 left: calc(50% - 1px);
                 pointer-events: none;
-                width: 2px;
-                height: 2px;
+                width: 0.125rem;
+                height: 0.125rem;
                 background-color: @accent-color;
                 -webkit-transform: translate3d(0,0,0);
             }
@@ -43,6 +43,19 @@
                     .text-color(@accent-color);
                 }
             }
+        }
+    }
+    .panels-item {
+        padding: 3rem;
+    }
+    .section:not(:empty) {
+        + .section {
+            margin-top: 3rem;
+            border-top: none;
+        }
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
     }
 }

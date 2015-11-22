@@ -16,7 +16,6 @@ module.exports =
                     ink.classList.add('ink')
                     tab.appendChild(ink)
 
-
                 ink = tab.querySelector('.ink')
                 ink.style.left = x + 'px'
                 ink.style.top = y + 'px'

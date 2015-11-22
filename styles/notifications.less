@@ -1,0 +1,112 @@
+atom-notifications {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    padding: 1rem 0.5rem;
+    z-index: 9999;
+}
+atom-notification {
+    padding: 0;
+    border-radius: 0.125rem;
+
+    .content {
+        border-radius: 0.125rem;
+        width: 100%;
+
+        > div {
+            padding: 1.25rem 2rem;
+            line-height: 2;
+        }
+    }
+    .btn-toolbar {
+        line-height: 3rem;
+
+        .btn {
+            margin-right: 2rem;
+        }
+        .btn-copy-report {
+            color: @text-color;
+        }
+    }
+    .detail {
+        background: none;
+    }
+    .item {
+        border: none;
+    }
+    .close-all.btn {
+        height: 1.75rem;
+        line-height: 1.75rem;
+    }
+    &.icon::before {
+        display: none;
+    }
+    .close, .close:hover {
+        color: @text-color;
+    }
+    &.success, &.error, &.info, &.warning, &.fatal {
+        border-left: 1px solid transparent;
+
+        .content {
+            background-color: darken(@app-background-color, 5%);
+            color: @text-color;
+        }
+        .close-all.btn, .close-all.btn:hover {
+            border-color: fade(@text-color, 50%);
+            color: fade(@text-color, 50%);
+        }
+        code {
+            background-color: lighten(@md-red, 5%);
+            color: #FFF;
+            line-height: 1;
+        }
+        .btn {
+            max-width: 18rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &.success {
+        border-color: @md-light-green;
+    }
+    &.error, &.fatal {
+        border-color: @md-red;
+
+        a {
+            color: @md-red;
+
+            &.btn {
+                color: @text-color;
+            }
+        }
+    }
+    &.info {
+        border-color: @md-light-blue;
+    }
+    &.warning {
+        border-color: @md-yellow;
+    }
+    &.has-close {
+        .content > div {
+            padding-right: 4rem;
+        }
+        &:only-child {
+            .content > div {
+                padding-right: 4rem;
+            }
+        }
+        &:first-child:not(:only-child) {
+            .content > div {
+                padding-right: 12rem;
+            }
+        }
+    }
+    &.has-stack .stack-toggle {
+        color: @md-red;
+
+        .icon {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
