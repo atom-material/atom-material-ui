@@ -15,7 +15,8 @@
         }
         .tool-bar-btn:first-child {
             background: darken(@accent-color, 5%);
-            .text-color(@accent-color);
+            color: @accent-text-color;
+            .z-depth-1;
         }
         .tool-bar-spacer {
             margin: 0.5rem 0;
@@ -28,7 +29,7 @@
             background: @accent-color;
 
             .tool-bar-btn {
-                .text-color(@accent-color);
+                color: @accent-text-color;
             }
         }
         &.tool-bar-bottom {

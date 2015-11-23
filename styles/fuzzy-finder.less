@@ -39,22 +39,22 @@ atom-panel.modal, .overlay {
             }
             &.selected {
                 background-color: @accent-color;
-                .text-color(@accent-color);
+                color: @accent-text-color;
 
                 &.two-lines {
                     .primary-line {
-                        .text-color(@accent-color);
+                        color: @accent-text-color;
                     }
                     .secondary-line {
-                        .text-color(@accent-color);
+                        color: @accent-text-color;
                     }
                 }
                 .status.icon {
-                    .text-color(@accent-color);
+                    color: @accent-text-color;
                 }
                 span {
                     font-weight: 700;
-                    .text-color(@accent-color);
+                    color: @accent-text-color;
                 }
                 &:last-child {
                     border-radius: 0 0 @component-border-radius @component-border-radius;
@@ -66,5 +66,8 @@ atom-panel.modal, .overlay {
         label.icon {
             color: @text-color-subtle;
         }
+    }
+    .error-message, .loading {
+        padding: 0.75rem 1rem;
     }
 }

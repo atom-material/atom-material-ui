@@ -18,7 +18,7 @@
         width: 100%;
         padding: 0 0.5rem;
         z-index: 1000;
-        .text-color(@accent-color);
+        color: @accent-text-color;
         .z-depth-1;
 
         span {
@@ -47,18 +47,18 @@
     }
     &:focus {
         li.directory.selected > div.header.list-item {
-            color: #FFF;
+            color: @accent-text-color;
 
             &::after {
-                .selected-item-focused()
+                background-color: @accent-color;
             }
         }
         li:not(.list-nested-item), li.list-nested-item > .list-item {
             &.selected {
-                color: #FFF;
+                color: @accent-text-color;
 
                 &::before {
-                    .selected-item-focused()
+                    background-color: @accent-color;
                 }
             }
         }

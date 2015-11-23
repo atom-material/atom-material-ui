@@ -4,35 +4,11 @@
 .ripple-color(@color) when (lightness(@color) < 70%) {
     background-color: rgba(255,255,255,0.1);
 }
-.text-color(@color) when (lightness(@color) >= 65%) {
-    color: desaturate(darken(@color, 50%), 50%);
-}
-.text-color(@color) when (lightness(@color) < 65%) {
-    color: desaturate(lighten(@color, 60%), 50%);
-}
-.checkbox-color(@color) when (lightness(@color) >= 65%) {
-    background-color: desaturate(darken(@color, 50%), 50%);
-    border-color: desaturate(darken(@color, 50%), 50%);
-}
-.checkbox-color(@color) when (lightness(@color) < 65%) {
-    background-color: desaturate(lighten(@color, 60%), 50%);
-    border-color: desaturate(lighten(@color, 60%), 50%);
-}
-.tab-border-color(@color) when (lightness(@color) >= 65%) {
-    &::before {
-        background-color: darken(@color, 10%);
-    }
-}
-.tab-border-color(@color) when (lightness(@color) < 65%) {
-    &::before {
-        background-color: desaturate(lighten(@color, 60%), 50%);
-    }
-}
 .background-alt(@color) when (lightness(@color) >= 65%) {
-    background: darken(@color, 1%);
+    background: darken(@color, 2%);
 }
 .background-alt(@color) when (lightness(@color) < 65%) {
-    background: lighten(@color, 1%);
+    background: lighten(@color, 2%);
 }
 .selected-item() {
     position: absolute;
@@ -44,9 +20,7 @@
     background-color: fade(@text-color, 20%);
     z-index: 0;
 }
-.selected-item-focused() {
-    background-color: @accent-color;
-}
+// MD Shadows Helper
 .z-depth-1() {
     box-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.24);
 }

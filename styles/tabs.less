@@ -27,8 +27,7 @@
         overflow: hidden;
         min-width: 6rem;
         max-width: 12rem;
-        .text-color(@accent-color);
-        .tab-border-color(@accent-color);
+        color: @accent-text-color;
 
         &::before {
             position: absolute;
@@ -40,6 +39,7 @@
             transform: scaleX(0) translateX(50%);
             transition: transform 250ms @md-timing-function, opacity 250ms @md-timing-function;
             opacity: 0;
+            background-color: @accent-text-color;
             z-index: 2000;
         }
         &.active {
@@ -51,13 +51,6 @@
                 display: inline-block;
                 -webkit-animation: ripple 500ms @md-timing-function;
                 -webkit-animation-fill-mode: forwards;
-            }
-            .title {
-                padding-left: 2rem;
-
-                &::before {
-                    transform: scale(1);
-                }
             }
         }
         &.modified:not(:hover) .close-icon {
@@ -89,16 +82,8 @@
             transition: padding 250ms @md-timing-function;
             -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,1) 70%,rgba(255,255,255,0) 90%);
 
-            &::before {
-                left: 0;
-                top: 1rem;
-                position: absolute;
-                transition: transform 250ms @md-timing-function;
-                transform: scale(0);
-                line-height: 1.25;
-            }
             &.icon::before {
-                line-height: 1;
+                margin-right: 1rem;
             }
         }
         &:hover {
@@ -115,7 +100,7 @@
         width: 2px;
         height: 2px;
         -webkit-transform: translate3d(0,0,0);
-        .ripple-color(@accent-color);
+        background-color: fade(@accent-text-color, 50%);
     }
     &::-webkit-scrollbar {
         display: none;
@@ -134,5 +119,27 @@
     &::after {
         background-image: linear-gradient(to left, @accent-color 0%, transparent 100%);
         right: 0;
+    }
+}
+.has-custom-icons .tab-bar .tab {
+    .title {
+        &::before {
+            left: 0;
+            top: 1rem;
+            position: absolute;
+            transition: transform 250ms @md-timing-function;
+            transform: scale(0);
+            line-height: 1.25;
+        }
+        &.icon::before {
+            line-height: 1;
+        }
+    }
+    &.active .title {
+        padding-left: 2rem;
+
+        &::before {
+            transform: scale(1);
+        }
     }
 }

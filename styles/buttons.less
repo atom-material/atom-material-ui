@@ -21,8 +21,10 @@
     }
     &:active, &:focus {
         color: @text-color;
+        background: lighten(@app-background-color, 1.5%);
         outline: none;
         border: none;
+        .z-depth-2();
     }
     &.icon::before {
         margin-right: 1rem;
@@ -51,7 +53,7 @@
     }
     &.selected {
         background: @accent-color;
-        .text-color(@accent-color);
+        color: @accent-text-color;
 
         &:hover {
             background: desaturate(lighten(@accent-color, 5%), 20%);
@@ -59,6 +61,10 @@
         &:active, &:focus {
             outline: none;
         }
+    }
+    &.btn-primary {
+        background-color: @accent-color;
+        color: @accent-text-color;
     }
 }
 .btn-group {
