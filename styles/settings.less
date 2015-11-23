@@ -45,17 +45,224 @@
             }
         }
     }
+    .breadcrumb {
+        margin-bottom: 2rem;
+    }
     .panels-item {
         padding: 3rem;
+    }
+    .section, .sub-section {
+        &.collapsed {
+            > *:not([class*="heading"]) {
+                display: none;
+            }
+        }
     }
     .section:not(:empty) {
         + .section {
             margin-top: 3rem;
             border-top: none;
         }
-        .section-heading {
-            font-size: 2rem;
+        a:not(.btn) {
+            color: @accent-color;
+        }
+        .section-heading, .sub-section-heading {
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-size: 2.5rem;
             margin-bottom: 2rem;
+
+            &::before {
+                font-size: 2rem;
+                margin-right: 2.5rem;
+            }
+            > span {
+                margin-left: 1rem;
+                font-size: 0.8rem;
+                background-color: @accent-color;
+                .text-color(@accent-color);
+            }
+        }
+        .section-heading {
+            font-weight: 300;
+
+            &::before {
+                position: relative;
+                top: -0.25rem;
+            }
+            + .text {
+                margin-bottom: 2rem;
+            }
+        }
+        .sub-section-heading {
+            font-size: 1.25rem;
+            margin: 3rem 0 2rem;
+            font-weight: 500;
+
+            &::before {
+                font-size: 1.25rem;
+                margin-right: 1rem;
+            }
+        }
+        .text, .setting-description, .text span {
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+
+            &::before {
+                margin-right: 1rem;
+            }
+            &.setting-title {
+                font-size: 1rem;
+            }
+            &:not(:first-child)::before {
+                margin: 0 0.25rem;
+            }
+        }
+    }
+    .package-card {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.125rem;
+        background: lighten(@app-background-color, 5%);
+        .z-depth-1;
+
+        &:hover {
+            background: lighten(@app-background-color, 5%);
+        }
+        .card-name, .card-name a:not(.button) {
+            color: @text-color;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            span {
+                font-size: 0.8rem;
+                margin-left: 0.5rem;
+            }
+        }
+        .package-description {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .meta {
+            .btn {
+                box-shadow: none;
+                background: none;
+
+                &:hover {
+                    background: darken(@app-background-color, 2.5%);
+                    box-shadow: none;
+                }
+            }
+        }
+        .meta-user {
+            line-height: 2.25rem;
+
+            .avatar {
+                border-radius: 50%;
+                width: 2.25rem;
+                height: 2.25rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .container > .row {
+        + .row {
+            margin-top: 2rem;
+        }
+    }
+    .themes-panel {
+        .themes-picker {
+            margin: 2rem 0 0;
+        }
+        .themes-picker-item {
+            + .themes-picker-item {
+                margin-top: 2rem;
+            }
+        }
+    }
+    select.form-control {
+        -webkit-appearance: none;
+        background: none;
+        box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+        padding: 0;
+        line-height: 3rem;
+        height: 3rem;
+        padding: 0;
+        color: @text-color;
+        border-radius: 0;
+        border: none;
+        cursor: pointer;
+
+        &:hover, &:focus, &:active {
+            box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+            background: none;
+        }
+    }
+    .setting-title + .setting-description {
+        margin-top: 0.5rem;
+    }
+    .radio, .checkbox {
+        padding-left: 3rem;
+
+        .setting-description {
+            margin-top: 0.5rem;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            position: relative;
+            left: -1rem;
+            border: 0.125rem solid @accent-color;
+            background: none;
+
+            &:checked {
+                background: @accent-color;
+
+                &::before, &::after {
+                    border: 0.1rem solid transparent;
+                    transition: none;
+                    .checkbox-color(@accent-color);
+                }
+                &::after {
+                    transform: rotate(-45deg) scale(1) translate(-0.025rem, -0.2rem);
+                }
+                &::before {
+                    transform: rotate(225deg) scale(1) translate(0.175rem, -0.025rem);
+                }
+            }
+        }
+    }
+    code {
+        color: @text-color;
+        background: fade(@text-color, 5%);
+    }
+    .table {
+        background: lighten(@app-background-color, 5%);
+        border-radius: 0.125rem;
+        margin: 3rem 0;
+        .z-depth-1;
+
+        > thead, tbody {
+            > tr {
+                border: none;
+
+                > th, > td {
+                    border-bottom: 1px solid fade(@text-color, 5%);
+                }
+                > th {
+                    height: 3.5rem;
+                    line-height: 3.5rem;
+                    padding: 0 1.5rem;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    color: lighten(@text-color, 15%);
+                }
+                > td {
+                    border-top: none;
+                    height: 3rem;
+                    line-height: 3rem;
+                    padding: 0 1.5rem;
+                }
+            }
         }
     }
 }

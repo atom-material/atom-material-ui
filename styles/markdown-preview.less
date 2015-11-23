@@ -1,0 +1,27 @@
+.markdown-preview {
+    color: @text-color;
+    background-color: lighten(@app-background-color, 2%);
+
+    code {
+        color: @text-color;
+        background-color: lighten(@app-background-color, 4%);
+    }
+    h1, h2, h3 {
+        border-color: fade(@text-color, 10%);
+    }
+    table {
+        tr {
+            background: none;
+            border-color: lighten(@app-background-color, 10%);
+        }
+        tr:nth-child(2n) {
+            background-color: lighten(@app-background-color, 4%);
+        }
+        th, td {
+            border-color: lighten(@app-background-color, 10%);
+        }
+        th {
+            background-color: lighten(@app-background-color, 8%);
+        }
+    }
+}

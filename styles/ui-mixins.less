@@ -10,6 +10,14 @@
 .text-color(@color) when (lightness(@color) < 65%) {
     color: desaturate(lighten(@color, 60%), 50%);
 }
+.checkbox-color(@color) when (lightness(@color) >= 65%) {
+    background-color: desaturate(darken(@color, 50%), 50%);
+    border-color: desaturate(darken(@color, 50%), 50%);
+}
+.checkbox-color(@color) when (lightness(@color) < 65%) {
+    background-color: desaturate(lighten(@color, 60%), 50%);
+    border-color: desaturate(lighten(@color, 60%), 50%);
+}
 .tab-border-color(@color) when (lightness(@color) >= 65%) {
     &::before {
         background-color: darken(@color, 10%);
