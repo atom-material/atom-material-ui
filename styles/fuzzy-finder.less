@@ -13,7 +13,7 @@ atom-panel.modal, .overlay {
         border-radius: 0 0 0.125rem 0.125rem;
 
         li {
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid fade(@text-color, 10%);
             color: @text-color;
             padding: 1rem;
             line-height: 1.5rem;
@@ -21,13 +21,14 @@ atom-panel.modal, .overlay {
             &.two-lines {
                 .primary-line {
                     color: @text-color;
+                    font-size: 0.85rem;
 
                     &::before {
                         margin-right: 1.5rem;
                     }
                 }
                 .secondary-line {
-                    font-size: 0.7rem;
+                    font-size: 0.75rem;
                     color: @text-color;
                     padding: 0;
                     margin-left: 2.5rem;
@@ -57,7 +58,7 @@ atom-panel.modal, .overlay {
                     color: @accent-text-color;
                 }
                 &:last-child {
-                    border-radius: 0 0 @component-border-radius @component-border-radius;
+                    border-radius: 0 0 0.125rem 0.125rem;
                 }
             }
         }

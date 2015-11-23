@@ -10,11 +10,24 @@ module.exports =
                     description: 'Sets the accent color for the UI theme. Requires reload.'
                     type: 'color'
                     default: '#009688'
-                getFromSyntax:
+                panelShadows:
                     order: 2
-                    title: 'Get from syntax'
-                    type: 'button'
-                    
+                    title: 'Panels cast shadows'
+                    description: 'Adds depth to the user interface by using shadows.'
+                    type: 'boolean'
+                    default: true
+
+        tabs:
+            order: 2
+            type: 'object'
+            properties:
+                tintedTabBar:
+                    order: 1
+                    title: 'Tinted tab bar'
+                    description: 'Paints the tab bar with the chosen accent color.'
+                    type: 'boolean'
+                    default: true
+
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->
             Config = require './config'

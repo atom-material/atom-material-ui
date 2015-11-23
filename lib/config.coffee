@@ -30,9 +30,10 @@ module.exports =
 
             console.log yiq
 
-            return "desaturate(darken(#{color}, 32%), 20%)" if yiq >= 190
+            return "desaturate(darken(#{color}, 38%), 25%)" if yiq >= 220
+            return "desaturate(darken(#{color}, 32%), 20%)" if yiq >= 190 && yiq < 220
             return "desaturate(darken(#{color}, 25%), 20%)" if yiq >= 130 && yiq < 190
-            return "desaturate(lighten(#{color}, 60%), 20%)" if yiq < 130
+            return "lighten(#{color}, 60%)" if yiq < 130
 
         setAccentColor = (currentAccentColor) ->
             accentColor = currentAccentColor.toHexString()
@@ -50,4 +51,31 @@ module.exports =
         atom.config.onDidChange 'atom-material-ui.ui.accentColor', ->
             setAccentColor(atom.config.get('atom-material-ui.ui.accentColor'))
 
-        # console.log fs.readFileSync "#{__dirname}/../styles/custom.less"
+        atom.themes.onDidChangeActiveThemes ->
+            setAccentColor(atom.config.get('atom-material-ui.ui.accentColor'))
+
+        # Tinted tab bar
+
+        setTintedTabBar = (boolean) ->
+            if boolean
+                root.classList.add('tinted-tab-bar')
+            else
+                root.classList.remove('tinted-tab-bar')
+
+        atom.config.onDidChange 'atom-material-ui.tabs.tintedTabBar', ->
+            setTintedTabBar(atom.config.get('atom-material-ui.tabs.tintedTabBar'))
+
+        setTintedTabBar(atom.config.get('atom-material-ui.tabs.tintedTabBar'))
+
+        # Raised tab bar
+
+        setPanelShadows = (boolean) ->
+            if boolean
+                root.classList.add('panel-shadows')
+            else
+                root.classList.remove('panel-shadows')
+
+        atom.config.onDidChange 'atom-material-ui.ui.panelShadows', ->
+            setPanelShadows(atom.config.get('atom-material-ui.ui.panelShadows'))
+
+        setPanelShadows(atom.config.get('atom-material-ui.ui.panelShadows'))

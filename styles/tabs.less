@@ -13,11 +13,10 @@
     position: relative;
     line-height: 3rem;
     height: 3rem;
-    background-color: @accent-color;
+    background-color: @app-background-color;
     position: relative;
     overflow-x: auto;
     z-index: 2000;
-    .z-depth-1;
 
     .tab {
         position: relative;
@@ -27,7 +26,7 @@
         overflow: hidden;
         min-width: 6rem;
         max-width: 12rem;
-        color: @accent-text-color;
+        color: @text-color;
 
         &::before {
             position: absolute;
@@ -39,7 +38,7 @@
             transform: scaleX(0) translateX(50%);
             transition: transform 250ms @md-timing-function, opacity 250ms @md-timing-function;
             opacity: 0;
-            background-color: @accent-text-color;
+            background-color: @accent-color;
             z-index: 2000;
         }
         &.active {
@@ -56,6 +55,8 @@
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
             right: 1rem;
+            border-color: @text-color;
+            opacity: 0.75;
             transform: scale(1);
         }
         .close-icon {
@@ -114,11 +115,35 @@
         z-index: 1000;
     }
     &::before {
-        background-image: linear-gradient(to right, @accent-color 0%, transparent 100%);
+        background-image: linear-gradient(to right, @app-background-color 0%, transparent 100%);
     }
     &::after {
-        background-image: linear-gradient(to left, @accent-color 0%, transparent 100%);
+        background-image: linear-gradient(to left, @app-background-color 0%, transparent 100%);
         right: 0;
+    }
+    .tinted-tab-bar & {
+        background-color: @accent-color;
+
+        &::before {
+            background-image: linear-gradient(to right, @accent-color 0%, transparent 100%);
+        }
+        &::after {
+            background-image: linear-gradient(to left, @accent-color 0%, transparent 100%);
+            right: 0;
+        }
+        .tab {
+            color: @accent-text-color;
+
+            &::before {
+                background-color: @accent-text-color;
+            }
+        }
+        &.modified:not(:hover) .close-icon {
+            border-color: @accent-text-color;
+        }
+    }
+    .panel-shadows & {
+        .z-depth-1;
     }
 }
 .has-custom-icons .tab-bar .tab {

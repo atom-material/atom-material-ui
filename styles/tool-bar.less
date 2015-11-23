@@ -7,17 +7,6 @@
     &.tool-bar-vertical {
         width: 3rem;
 
-        &.tool-bar-left {
-            box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
-        }
-        &.tool-bar-right {
-            box-shadow: inset 0.125rem 0 0.25rem rgba(0,0,0,0.05);
-        }
-        .tool-bar-btn:first-child {
-            background: darken(@accent-color, 5%);
-            color: @accent-text-color;
-            .z-depth-1;
-        }
         .tool-bar-spacer {
             margin: 0.5rem 0;
         }
@@ -26,11 +15,7 @@
         height: 3rem;
 
         &.tool-bar-top {
-            background: @accent-color;
-
-            .tool-bar-btn {
-                color: @accent-text-color;
-            }
+            background: @app-background-color;
         }
         &.tool-bar-bottom {
             background: @app-background-color;
@@ -72,6 +57,34 @@
         }
         &.tool-bar-vertical.gutter-bottom::after {
             display: none;
+        }
+    }
+    .panel-shadows & {
+        &.tool-bar-vertical {
+            .tool-bar-btn:first-child {
+                .z-depth-1;
+            }
+        }
+        &.tool-bar-left {
+            box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
+        }
+        &.tool-bar-right {
+            box-shadow: inset 0.125rem 0 0.25rem rgba(0,0,0,0.05);
+        }
+    }
+    .tinted-tab-bar & {
+        &.tool-bar-vertical {
+            .tool-bar-btn:first-child {
+                background: darken(@accent-color, 5%);
+                color: @accent-text-color;
+            }
+        }
+        &.tool-bar-top {
+            background: @accent-color;
+
+            .tool-bar-btn {
+                color: @accent-text-color;
+            }
         }
     }
 }

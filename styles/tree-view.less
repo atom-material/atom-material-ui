@@ -2,7 +2,6 @@
     font-size: 0.8rem;
     padding-top: 3rem;
     background-color: darken(@app-background-color, 1.5%);
-    box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
     overflow: hidden;
 
     .project-root {
@@ -13,17 +12,21 @@
         position: absolute;
         line-height: 3rem;
         height: 3rem;
-        background-color: darken(@accent-color, 2%);
+        background-color: darken(@app-background-color, 2%);
         margin-top: -3rem;
         width: 100%;
         padding: 0 0.5rem;
         z-index: 1000;
-        color: @accent-text-color;
-        .z-depth-1;
+        color: @text-color;
 
-        span {
+        span, &::before {
             line-height: 3rem;
             text-transform: uppercase;
+            color: @text-color;
+
+            .selected & {
+                color: @text-color;
+            }
         }
     }
     .name.icon {
@@ -65,5 +68,26 @@
     }
     &.has-collapsable-children .list-nested-item > .list-item::before {
         z-index: 10;
+    }
+    .tinted-tab-bar & {
+        .project-root > .header, .project-root > .header.selected {
+            background-color: darken(@accent-color, 2%);
+            color: @accent-text-color;
+
+            span, &::before {
+                color: @accent-text-color;
+
+                .selected & {
+                    color: @accent-text-color;
+                }
+            }
+        }
+    }
+    .panel-shadows & {
+        box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
+        
+        .project-root > .header, .project-root > .header.selected {
+            .z-depth-1;
+        }
     }
 }
