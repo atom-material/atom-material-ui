@@ -1,8 +1,8 @@
 .tooltip {
     @tip-background-color: @md-grey-700;
     @tip-text-color: #FFF;
-    // white-space: nowrap;
     transition: opacity 500ms @md-timing-function, transform 500ms @md-timing-function;
+    z-index: 9999;
 
     .no-animations & {
         transition: none;
@@ -20,7 +20,6 @@
         border-radius: @component-border-radius;
         background-color: @tip-background-color;
         color: @tip-text-color;
-        // white-space: nowrap;
         max-width: 20rem;
 
         span {
@@ -45,6 +44,20 @@
 
         &.in {
             transform: translateY(0);
+        }
+    }
+    &.right {
+        transform: translateX(-1rem);
+
+        &.in {
+            transform: translateX(0);
+        }
+    }
+    &.left {
+        transform: translateX(1rem);
+
+        &.in {
+            transform: translateX(0);
         }
     }
 }
