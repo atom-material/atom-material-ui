@@ -1,0 +1,54 @@
+.settings-view {
+    select.form-control {
+        -webkit-appearance: none;
+        background: none;
+        box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+        padding: 0;
+        line-height: 3rem;
+        height: 3rem;
+        padding: 0;
+        color: @text-color;
+        border-radius: 0;
+        border: none;
+        cursor: pointer;
+
+        &:hover, &:focus, &:active {
+            box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+            background: none;
+        }
+        option {
+            background: @app-background-color;
+            color: @text-color;
+            border: 1px solid fade(@text-color, 20%);
+        }
+    }
+    .radio, .checkbox {
+        padding-left: 3rem;
+
+        .setting-description {
+            margin-top: 0.5rem;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            position: relative;
+            left: -1rem;
+            border: 0.125rem solid @accent-color;
+            background: none;
+
+            &:checked {
+                background: @accent-color;
+
+                &::before, &::after {
+                    border: 0.1rem solid @accent-text-color;
+                    background-color: @accent-text-color;
+                    transition: none;
+                }
+                &::after {
+                    transform: rotate(-45deg) scale(1) translate(-0.025rem, -0.2rem);
+                }
+                &::before {
+                    transform: rotate(225deg) scale(1) translate(0.175rem, -0.025rem);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.settings-view {
+    .packages {
+        .search-container {
+            margin-bottom: 3rem;
+        }
+    }
+    .package-card {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.125rem;
+        background: lighten(@app-background-color, 5%);
+        .z-depth-1;
+
+        &:hover {
+            background: lighten(@app-background-color, 5%);
+        }
+        .card-name, .card-name a:not(.button) {
+            color: @text-color;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            span {
+                font-size: 0.8rem;
+                margin-left: 0.5rem;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .package-description {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .meta {
+            .btn {
+                box-shadow: none;
+                background: none;
+
+                &:hover {
+                    background: darken(@app-background-color, 2.5%);
+                    box-shadow: none;
+                }
+            }
+        }
+        .meta-user {
+            line-height: 2.25rem;
+
+            a.author {
+                color: @text-color;
+            }
+            .avatar {
+                border-radius: 50%;
+                width: 2.25rem;
+                height: 2.25rem;
+                margin-right: 1rem;
+            }
+        }
+        .stats {
+            font-size: 0.75rem;
+
+            .icon::before {
+                font-size: 1rem;
+                margin-right: 0.5rem;
+            }
+            .stats-item {
+                + .stats-item {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+    .package-detail-view, .package-detail {
+        .text, .link {
+            float: left;
+            margin: 0 1rem 0 0;
+        }
+        .btn-wrap-group {
+            clear: both;
+            padding: 1.5rem 0;
+            white-space: nowrap;
+
+            .btn + .btn {
+                margin-left: 1rem;
+            }
+        }
+        .section.settings-panel {
+            padding-top: 2rem;
+            border: none;
+        }
+    }
+}

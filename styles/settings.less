@@ -1,54 +1,10 @@
+@import "settings/alerts";
+@import "settings/config-menu";
+@import "settings/inputs";
+@import "settings/packages";
+@import "settings/tables";
+
 .settings-view {
-    .config-menu {
-        border: none;
-        min-width: 15rem;
-        padding: 0.5rem 0;
-        background: darken(@app-background-color, 1%);
-
-        .nav > li {
-            overflow: hidden;
-            position: relative;
-
-            &::before {
-                display: none;
-                content: '';
-                position: absolute;
-                border-radius: 50%;
-                top: calc(50% - 1px);
-                left: calc(50% - 1px);
-                pointer-events: none;
-                width: 0.125rem;
-                height: 0.125rem;
-                background-color: @accent-color;
-                -webkit-transform: translate3d(0,0,0);
-            }
-            > a {
-                padding: 0 1rem;
-                line-height: 3rem;
-                transition: color 250ms @md-timing-function;
-                background: none;
-
-                &::before {
-                    margin-right: 2rem;
-                }
-                &:hover {
-                    color: @text-color;
-                    background: none;
-                }
-            }
-            &.active {
-                &::before {
-                    display: block;
-                    -webkit-animation: ripplePaint 250ms @md-timing-function;
-                    -webkit-animation-fill-mode: forwards;
-                }
-                a {
-                    background-color: transparent;
-                    color: @accent-text-color;
-                }
-            }
-        }
-    }
     .breadcrumb {
         margin-bottom: 2rem;
     }
@@ -127,91 +83,6 @@
             }
         }
     }
-    .package-card {
-        padding: 1rem;
-        border: none;
-        border-radius: 0.125rem;
-        background: lighten(@app-background-color, 5%);
-        .z-depth-1;
-
-        &:hover {
-            background: lighten(@app-background-color, 5%);
-        }
-        .card-name, .card-name a:not(.button) {
-            color: @text-color;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-
-            span {
-                font-size: 0.8rem;
-                margin-left: 0.5rem;
-            }
-            &:hover {
-                text-decoration: none;
-            }
-        }
-        .package-description {
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .meta {
-            .btn {
-                box-shadow: none;
-                background: none;
-
-                &:hover {
-                    background: darken(@app-background-color, 2.5%);
-                    box-shadow: none;
-                }
-            }
-        }
-        .meta-user {
-            line-height: 2.25rem;
-
-            a.author {
-                color: @text-color;
-            }
-            .avatar {
-                border-radius: 50%;
-                width: 2.25rem;
-                height: 2.25rem;
-                margin-right: 1rem;
-            }
-        }
-        .stats {
-            font-size: 0.75rem;
-
-            .icon::before {
-                font-size: 1rem;
-                margin-right: 0.5rem;
-            }
-            .stats-item {
-                + .stats-item {
-                    margin-left: 1rem;
-                }
-            }
-        }
-    }
-    .package-detail-view, .package-detail {
-        .text, .link {
-            float: left;
-            margin: 0 1rem 0 0;
-        }
-        .btn-wrap-group {
-            clear: both;
-            padding: 1.5rem 0;
-            white-space: nowrap;
-
-            .btn + .btn {
-                margin-left: 1rem;
-            }
-        }
-        .section.settings-panel {
-            padding-top: 2rem;
-            border: none;
-        }
-    }
     .container > .row {
         + .row {
             margin-top: 2rem;
@@ -231,125 +102,12 @@
             box-shadow: none;
         }
     }
-    select.form-control {
-        -webkit-appearance: none;
-        background: none;
-        box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
-        padding: 0;
-        line-height: 3rem;
-        height: 3rem;
-        padding: 0;
-        color: @text-color;
-        border-radius: 0;
-        border: none;
-        cursor: pointer;
-
-        &:hover, &:focus, &:active {
-            box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
-            background: none;
-        }
-        option {
-            background: @app-background-color;
-            color: @text-color;
-            border: 1px solid fade(@text-color, 20%);
-        }
-    }
     .setting-title + .setting-description {
         margin-top: 0.5rem;
-    }
-    .radio, .checkbox {
-        padding-left: 3rem;
-
-        .setting-description {
-            margin-top: 0.5rem;
-        }
-        input[type="checkbox"], input[type="radio"] {
-            position: relative;
-            left: -1rem;
-            border: 0.125rem solid @accent-color;
-            background: none;
-
-            &:checked {
-                background: @accent-color;
-
-                &::before, &::after {
-                    border: 0.1rem solid @accent-text-color;
-                    background-color: @accent-text-color;
-                    transition: none;
-                }
-                &::after {
-                    transform: rotate(-45deg) scale(1) translate(-0.025rem, -0.2rem);
-                }
-                &::before {
-                    transform: rotate(225deg) scale(1) translate(0.175rem, -0.025rem);
-                }
-            }
-        }
     }
     code {
         color: @text-color;
         background: fade(@text-color, 5%);
-    }
-    .table {
-        background: lighten(@app-background-color, 5%);
-        border-radius: 0.125rem;
-        margin: 3rem 0;
-        .z-depth-1;
-
-        > thead, tbody {
-            > tr {
-                border: none;
-
-                > th, > td {
-                    border-bottom: 1px solid fade(@text-color, 5%);
-                }
-                > th {
-                    height: 3.5rem;
-                    line-height: 3.5rem;
-                    padding: 0 1.5rem;
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    color: lighten(@text-color, 15%);
-                }
-                > td {
-                    border-top: none;
-                    height: 3rem;
-                    line-height: 3rem;
-                    padding: 0 1.5rem;
-                }
-            }
-        }
-    }
-    .packages {
-        .search-container {
-            margin-bottom: 3rem;
-        }
-    }
-    .alert::before {
-        margin-right: 1rem;
-        border-radius: 0.125rem;
-    }
-    .alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info {
-        border-color: fade(@text-color, 10%);
-        background-color: fade(@text-color, 2.5%);
-        color: @text-color;
-    }
-    .alert-error::before, .alert-danger::before {
-        color: @md-red;
-    }
-    .alert-warning::before {
-        color: darken(@md-amber, 20%);
-    }
-    .alert-success::before {
-        color: darken(@md-light-green, 10%);
-    }
-    .alert-info::before {
-        color: darken(@md-light-blue, 10%);
-    }
-}
-.panel-shadows .settings-view {
-    .config-menu {
-        box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
     }
 }
 @-webkit-keyframes ripplePaint {

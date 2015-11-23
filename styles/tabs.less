@@ -55,7 +55,7 @@
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
             right: 1rem;
-            border-color: @text-color;
+            border-color: @accent-color;
             opacity: 0.75;
             transform: scale(1);
         }
@@ -136,6 +136,9 @@
 
             &::before {
                 background-color: @accent-text-color;
+            }
+            &.modified:not(:hover) .close-icon {
+                border-color: @accent-text-color;
             }
         }
         &.modified:not(:hover) .close-icon {

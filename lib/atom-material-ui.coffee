@@ -16,6 +16,12 @@ module.exports =
                     description: 'Adds depth to the user interface by using shadows.'
                     type: 'boolean'
                     default: true
+                animations:
+                    order: 3
+                    title: 'Use animations'
+                    description: 'Enables animations for clicked tabs and other UI elements.'
+                    type: 'boolean'
+                    default: true
 
         tabs:
             order: 2

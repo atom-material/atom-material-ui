@@ -9,3 +9,48 @@ atom-panel-container {
         }
     }
 }
+atom-pane-container {
+    atom-pane {
+        .item-views {
+            .pane-item {
+                color: fade(@text-color, 50%);
+
+                .panel-heading {
+                    padding: 1.25rem 2rem;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+
+                    span.highlight-info {
+                        color: darken(@text-color, 15%);
+                        font-weight: 500;
+                        font-style: italic;
+                    }
+                }
+                .results-view {
+                    color: @text-color;
+                    
+                    > li.selected::before {
+                        background: fade(@text-color, 20%);
+                        min-height: 2.5rem;
+                    }
+                    li {
+                        padding: 0 2rem;
+
+                        .icon {
+                            margin: 0 1.25rem 0 0.25rem;
+                        }
+                        .line-number {
+                            color: darken(@text-color, 10%);
+                            font-weight: 600;
+                        }
+                        .path-match-number {
+                            color: @text-color;
+                            margin-left: 0.5rem;
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

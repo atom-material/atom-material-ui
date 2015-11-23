@@ -1,0 +1,23 @@
+.settings-view {
+    .alert::before {
+        margin-right: 1rem;
+        border-radius: 0.125rem;
+    }
+    .alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info {
+        border-color: fade(@text-color, 10%);
+        background-color: fade(@text-color, 2.5%);
+        color: @text-color;
+    }
+    .alert-error::before, .alert-danger::before {
+        color: @md-red;
+    }
+    .alert-warning::before {
+        color: darken(@md-amber, 20%);
+    }
+    .alert-success::before {
+        color: darken(@md-light-green, 10%);
+    }
+    .alert-info::before {
+        color: darken(@md-light-blue, 10%);
+    }
+}

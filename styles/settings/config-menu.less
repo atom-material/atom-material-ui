@@ -1,0 +1,57 @@
+.settings-view {
+    .config-menu {
+        border: none;
+        min-width: 15rem;
+        padding: 0.5rem 0;
+        background: darken(@app-background-color, 1%);
+
+        .nav > li {
+            overflow: hidden;
+            position: relative;
+
+            &::before {
+                display: none;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                top: calc(50% - 1px);
+                left: calc(50% - 1px);
+                pointer-events: none;
+                width: 0.125rem;
+                height: 0.125rem;
+                background-color: @accent-color;
+                -webkit-transform: translate3d(0,0,0);
+            }
+            > a {
+                padding: 0 1rem;
+                line-height: 3rem;
+                transition: color 250ms @md-timing-function;
+                background: none;
+
+                &::before {
+                    margin-right: 2rem;
+                }
+                &:hover {
+                    color: @text-color;
+                    background: none;
+                }
+            }
+            &.active {
+                &::before {
+                    display: block;
+                    -webkit-animation: ripplePaint 250ms @md-timing-function;
+                    -webkit-animation-fill-mode: forwards;
+                }
+                a {
+                    background-color: transparent;
+                    color: @accent-text-color;
+                }
+            }
+        }
+    }
+}
+.panel-shadows .settings-view {
+    .config-menu {
+        box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
+    }
+}

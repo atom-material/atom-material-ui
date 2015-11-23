@@ -1,7 +1,7 @@
 ![](http://i.imgur.com/7C2H2mw.png)
 ---
 
-A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). (Mostly) works with other dark syntax themes as it uses syntax colors for the UI. Light themes work too, but might not look as nice.
+A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax).
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
@@ -19,7 +19,7 @@ Atom Material UI supports different accent colors. To change it, go to Settings 
 
 ![](http://i.imgur.com/JB2iA5m.png)
 
-You'll find the color dropdown there.
+You'll find the color picker there.
 
 ## Screenshot
 
