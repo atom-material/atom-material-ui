@@ -1,7 +1,16 @@
+.select-arrow(@color) when (lightness(@color) > 50%) {
+    background-image: url('atom://atom-material-ui/assets/svg/arrow-drop-down.svg');
+}
+.select-arrow(@color) when (lightness(@color) < 50%) {
+    background-image: url('atom://atom-material-ui/assets/svg/arrow-drop-down-white.svg');
+}
 .settings-view {
     select.form-control {
         -webkit-appearance: none;
-        background: none;
+        background-size: 1.5rem;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: right center;
         box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
         padding: 0;
         line-height: 3rem;
@@ -10,11 +19,19 @@
         color: @text-color;
         border-radius: 0;
         border: none;
+        border-bottom: 2px solid transparent;
         cursor: pointer;
+        .select-arrow(@app-background-color);
 
-        &:hover, &:focus, &:active {
+        &:hover {
+            .select-arrow(@app-background-color);
+            background-color: transparent;
             box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
-            background: none;
+        }
+        &:focus, &:active {
+            .select-arrow(@app-background-color);
+            background-color: transparent;
+            border-color: @base-color;
         }
         option {
             background: @app-background-color;
