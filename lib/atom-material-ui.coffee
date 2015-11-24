@@ -8,8 +8,8 @@ module.exports =
         b = parseInt(color.substr(5, 2), 16)
         yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000
 
-        return "desaturate(darken(#{color}, 38%), 25%)" if yiq >= 220
-        return "desaturate(darken(#{color}, 32%), 20%)" if yiq >= 190 && yiq < 220
+        return "desaturate(darken(#{color}, 40%), 25%)" if yiq >= 220
+        return "desaturate(darken(#{color}, 35%), 20%)" if yiq >= 190 && yiq < 220
         return "desaturate(darken(#{color}, 25%), 20%)" if yiq >= 130 && yiq < 190
         return "lighten(#{color}, 60%)" if yiq < 130
 

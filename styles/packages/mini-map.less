@@ -1,0 +1,32 @@
+.minimap-quick-settings {
+    background: @app-background-color;
+    .z-depth-1;
+
+    li {
+        padding: 0 1rem;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            color: @base-color;
+            width: 1.25rem;
+            height: 1.25rem;
+            line-height: 1rem;
+            margin-right: 1rem;
+            border: 0.125rem solid @base-color;
+            border-radius: 0.125rem;
+            vertical-align: middle;
+        }
+    }
+    .active {
+        &::before {
+            content: '\2713';
+        }
+    }
+    .btn-group {
+        padding: 1rem;
+        height: 4.25rem;
+    }
+}
