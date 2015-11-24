@@ -31,7 +31,7 @@
     }
     &[disabled], &.disabled {
         opacity: 0.5;
-        background: darken(@app-background-color, 5%);
+        background: darken(@app-background-color, 2.5%);
         pointer-events: none;
         box-shadow: none;
     }
@@ -56,7 +56,7 @@
         color: @accent-text-color;
 
         &:hover {
-            background: desaturate(lighten(@accent-color, 5%), 20%);
+            background: desaturate(lighten(@base-color, 5%), 20%);
         }
         &:active, &:focus {
             outline: none;

@@ -30,7 +30,7 @@ module.exports =
                     default: '#FFFFFF'
                 genAccent:
                     title: 'Generate complementary accent'
-                    description: 'Material UI will try to set a complementary color for your selected base and set it as an accent. <small>Experimental</small>'
+                    description: 'Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme. <small>Experimental</small>'
                     type: 'boolean'
                     default: true
 

@@ -1,0 +1,48 @@
+autocomplete-suggestion-list {
+    background: @app-background-color;
+    margin-left: auto !important; // Need to override inline style
+    .z-depth-2;
+
+    &.select-list.popover-list {
+        background: @app-background-color;
+        max-width: 40rem;
+        border-radius: 0.125rem;
+
+        .suggestion-description {
+            background: darken(@app-background-color, 2.5%);
+
+            span, a {
+                font-size: 0.8rem;
+            }
+            a {
+                color: @base-color;
+            }
+        }
+        .suggestion-list-scroller {
+            background: none;
+
+            li {
+                background: none;
+                position: relative;
+
+                &::before {
+                    display: none;
+                }
+                &.selected {
+                    background: @base-color;
+                    color: @accent-text-color;
+
+                    .word-container span {
+                        color: @accent-text-color;
+                    }
+                    .icon-container {
+                        i.icon {
+                            background: @accent-text-color;
+                            color: @base-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -28,26 +28,26 @@
         .setting-description {
             margin-top: 0.5rem;
         }
-        input[type="checkbox"], input[type="radio"] {
-            position: relative;
-            left: -1rem;
-            border: 0.125rem solid @base-color;
-            background: none;
+    }
+    input[type="checkbox"], input[type="radio"] {
+        position: relative;
+        left: -1rem;
+        border: 0.125rem solid @base-color;
+        background: none;
 
-            &:checked {
-                background: @base-color;
+        &:checked {
+            background: @base-color;
 
-                &::before, &::after {
-                    border: 0.1rem solid @accent-text-color;
-                    background-color: @accent-text-color;
-                    transition: none;
-                }
-                &::after {
-                    transform: rotate(-45deg) scale(1) translate(-0.025rem, -0.2rem);
-                }
-                &::before {
-                    transform: rotate(225deg) scale(1) translate(0.175rem, -0.025rem);
-                }
+            &::before, &::after {
+                border: 0.1rem solid @accent-text-color;
+                background-color: @accent-text-color;
+                transition: none;
+            }
+            &::after {
+                transform: rotate(-45deg) scale(1) translate(-0.025rem, -0.2rem);
+            }
+            &::before {
+                transform: rotate(225deg) scale(1) translate(0.175rem, -0.025rem);
             }
         }
     }

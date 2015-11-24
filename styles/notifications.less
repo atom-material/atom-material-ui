@@ -17,6 +17,12 @@ atom-notification {
             padding: 1.25rem 2rem;
             line-height: 2;
         }
+        .message + .detail {
+            padding-top: 0;
+        }
+        .detail + .meta {
+            padding-top: 0;
+        }
     }
     .btn-toolbar {
         line-height: 3rem;
@@ -26,6 +32,9 @@ atom-notification {
         }
         .btn-copy-report {
             color: @text-color;
+            line-height: 1;
+            position: relative;
+            top: -0.25rem;
         }
     }
     .detail {
@@ -37,6 +46,7 @@ atom-notification {
     .close-all.btn {
         height: 1.75rem;
         line-height: 1.75rem;
+        border: none;
     }
     &.icon::before {
         display: none;
@@ -52,13 +62,19 @@ atom-notification {
             color: @text-color;
         }
         .close-all.btn, .close-all.btn:hover {
-            border-color: fade(@text-color, 50%);
+            border-color: transparent;
             color: fade(@text-color, 50%);
+            box-shadow: none;
+            line-height: 1.65rem;
+
+            &:hover {
+                .z-depth-1;
+            }
         }
         code {
             background-color: lighten(@md-red, 5%);
             color: #FFF;
-            line-height: 1;
+            font-size: 0.75rem;
         }
         .btn {
             max-width: 18rem;
