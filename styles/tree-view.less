@@ -53,7 +53,7 @@
             color: @accent-text-color;
 
             &::after {
-                background-color: @accent-color;
+                background-color: @base-color;
             }
         }
         li:not(.list-nested-item), li.list-nested-item > .list-item {
@@ -61,7 +61,7 @@
                 color: @accent-text-color;
 
                 &::before {
-                    background-color: @accent-color;
+                    background-color: @base-color;
                 }
             }
         }
@@ -71,7 +71,7 @@
     }
     .tinted-tab-bar & {
         .project-root > .header, .project-root > .header.selected {
-            background-color: darken(@accent-color, 2%);
+            background-color: darken(@base-color, 2%);
             color: @accent-text-color;
 
             span, &::before {

@@ -20,4 +20,20 @@
     .alert-info::before {
         color: darken(@md-light-blue, 10%);
     }
+    .close, button[class] {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        background: none;
+        height: auto;
+        line-height: 1.25;
+
+        &:hover {
+            box-shadow: none;
+            background: none;
+        }
+        &::before {
+            margin: 0;
+        }
+    }
 }

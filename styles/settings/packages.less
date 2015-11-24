@@ -87,6 +87,12 @@
         .section.settings-panel {
             padding-top: 2rem;
             border: none;
+
+            .control-group:not(:last-child) .controls .control-group:last-child {
+                margin-bottom: 2.5rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid fade(@text-color, 5%);
+            }
         }
     }
 }

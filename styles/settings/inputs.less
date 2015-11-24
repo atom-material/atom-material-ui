@@ -31,11 +31,11 @@
         input[type="checkbox"], input[type="radio"] {
             position: relative;
             left: -1rem;
-            border: 0.125rem solid @accent-color;
+            border: 0.125rem solid @base-color;
             background: none;
 
             &:checked {
-                background: @accent-color;
+                background: @base-color;
 
                 &::before, &::after {
                     border: 0.1rem solid @accent-text-color;
@@ -50,5 +50,11 @@
                 }
             }
         }
+    }
+    input[type="color"] {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        border: none;
     }
 }

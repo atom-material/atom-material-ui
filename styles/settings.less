@@ -24,7 +24,7 @@
             border-top: none;
         }
         a:not(.btn) {
-            color: @accent-color;
+            color: @base-color;
         }
         &.settings-panel:only-child {
             padding-top: 2rem;
@@ -42,7 +42,7 @@
             > span {
                 margin-left: 1rem;
                 font-size: 0.8rem;
-                background-color: @accent-color;
+                background-color: @base-color;
                 color: @accent-text-color;
             }
         }
@@ -80,6 +80,17 @@
             }
             &:not(:first-child)::before {
                 margin: 0 0.25rem;
+            }
+            small {
+                display: inline-block;
+                padding: 0.25rem 0.5rem;
+                background: @text-color;
+                color: @app-background-color;
+                line-height: 1rem;
+                border-radius: 0.125rem;
+                vertical-align: middle;
+                text-transform: uppercase;
+                margin: 0.125rem 0.5rem;
             }
         }
     }

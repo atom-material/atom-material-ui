@@ -38,7 +38,7 @@
             transform: scaleX(0) translateX(50%);
             transition: transform 250ms @md-timing-function, opacity 250ms @md-timing-function;
             opacity: 0;
-            background-color: @accent-color;
+            background-color: @base-color;
             z-index: 2000;
         }
         &.active {
@@ -55,7 +55,7 @@
         &.modified:not(:hover) .close-icon {
             top: 1.25rem;
             right: 1rem;
-            border-color: @accent-color;
+            border-color: @base-color;
             opacity: 0.75;
             transform: scale(1);
         }
@@ -101,7 +101,7 @@
         width: 2px;
         height: 2px;
         -webkit-transform: translate3d(0,0,0);
-        background-color: fade(@accent-text-color, 50%);
+        background-color: fade(@text-color, 10%);
     }
     &::-webkit-scrollbar {
         display: none;
@@ -122,20 +122,20 @@
         right: 0;
     }
     .tinted-tab-bar & {
-        background-color: @accent-color;
+        background-color: @base-color;
 
         &::before {
-            background-image: linear-gradient(to right, @accent-color 0%, transparent 100%);
+            background-image: linear-gradient(to right, @base-color 0%, transparent 100%);
         }
         &::after {
-            background-image: linear-gradient(to left, @accent-color 0%, transparent 100%);
+            background-image: linear-gradient(to left, @base-color 0%, transparent 100%);
             right: 0;
         }
         .tab {
             color: @accent-text-color;
 
             &::before {
-                background-color: @accent-text-color;
+                background-color: @accent-color;
             }
             &.modified:not(:hover) .close-icon {
                 border-color: @accent-text-color;
@@ -143,6 +143,9 @@
         }
         &.modified:not(:hover) .close-icon {
             border-color: @accent-text-color;
+        }
+        .ink {
+            background-color: fade(@accent-text-color, 25%);
         }
     }
     .panel-shadows & {
