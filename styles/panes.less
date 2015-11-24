@@ -8,6 +8,35 @@ atom-panel-container {
             background-color: @app-background-color;
         }
     }
+    .panel-shadows & {
+        atom-panel {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 0.25rem;
+                height: 100%;
+                opacity: 0.1;
+                z-index: 10000;
+            }
+            &.right {
+                position: relative;
+
+                &::after {
+                    left: 0;
+                    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+                }
+            }
+            &.left {
+                position: relative;
+
+                &::after {
+                    right: 0;
+                    background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+                }
+            }
+        }
+    }
 }
 atom-pane-container {
     atom-pane {
@@ -28,7 +57,7 @@ atom-pane-container {
                 }
                 .results-view {
                     color: @text-color;
-                    
+
                     > li.selected::before {
                         background: fade(@text-color, 20%);
                         min-height: 2.5rem;
