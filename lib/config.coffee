@@ -32,9 +32,9 @@ module.exports =
             amu.writeConfig()
 
         atom.config.onDidChange 'atom-material-ui.colors.abaseColor', (value) ->
-            if atom.config.get('atom-material-ui.colors.genAccent')
-                accent = tinycolor(value.newValue.toHexString()).tetrad()
-                atom.config.set('atom-material-ui.colors.accentColor', accent[2].toHexString())
+            if atom.config.get 'atom-material-ui.colors.genAccent'
+                accent = tinycolor(value.newValue.toHexString()).complement().saturate(20).lighten(5)
+                atom.config.set 'atom-material-ui.colors.accentColor', accent.toHexString()
             amu.writeConfig()
 
         atom.themes.onDidChangeActiveThemes ->

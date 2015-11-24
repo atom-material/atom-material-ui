@@ -48,6 +48,13 @@ status-bar {
         }
     }
 }
+.text-warning {
+    color: @md-amber;
+
+    a code, a:hover code {
+        color: darken(@md-amber, 5%);
+    }
+}
 kbd {
     background: fade(@text-color, 50%);
     color: @app-background-color;
@@ -59,5 +66,13 @@ kbd {
     }
     + kbd {
         margin-left: 0.5rem;
+    }
+}
+
+// Animations Override
+html:not(.use-animations) {
+    *, *::before, *::after {
+        transition: none !important;
+        -webkit-animation-duration: 0s !important;
     }
 }
