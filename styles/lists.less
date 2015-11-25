@@ -1,0 +1,17 @@
+.list-tree, .list-group {
+    li:not(.list-nested-item), li.list-nested-item > .list-item {
+        line-height: 3.25em;
+
+        &.selected {
+            position: relative;
+
+            &::before {
+                .selected-item();
+            }
+        }
+        .name {
+            position: relative;
+            z-index: 10;
+        }
+    }
+}

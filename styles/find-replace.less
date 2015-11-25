@@ -1,0 +1,37 @@
+.find-and-replace, .project-find {
+    padding: 1rem;
+
+    .header {
+        background-color: darken(@app-background-color, 1%);
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        margin: -1rem -1rem 0.5rem;
+    }
+    .find-meta-container {
+        line-height: 2.5rem;
+        padding: 0 0.5rem;
+    }
+    .btn-group {
+        margin: 0.25rem 0;
+        margin-left: 1rem;
+
+        + .btn-group {
+            margin-left: 1rem;
+        }
+        &.btn-toggle.btn-group-options {
+            padding-top: 0.125rem;
+
+            .btn {
+                padding: 0;
+                max-width: 2rem;
+                max-height: 2rem;
+                text-align: center;
+                border-radius: 50%;
+
+                + .btn {
+                    margin-left: 0.25rem;
+                }
+            }
+        }
+    }
+}

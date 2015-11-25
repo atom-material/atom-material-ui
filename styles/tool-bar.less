@@ -1,48 +1,76 @@
-// NOTE: color of buttons on hover needs adjusting
-
 .tool-bar {
-    background: darken(@app-background-color, 0%);
+    background: darken(@app-background-color, 3.5%);
+    position: relative;
+    z-index: 2000;
     border: none;
-    
-    &.tool-bar-top {
-        background: @accent-color;
-        .text-color(@accent-color);
-    }
-    
+
     &.tool-bar-vertical {
         width: 3rem;
-        padding-top: 3rem;
-        
+
+        &.tool-bar-left {
+            box-shadow: inset -0.125rem 0 0.25rem rgba(0,0,0,0.05);
+        }
+        &.tool-bar-right {
+            box-shadow: inset 0.125rem 0 0.25rem rgba(0,0,0,0.05);
+        }
         .tool-bar-btn:first-child {
-            position: absolute;
-            top: 0;
-            z-index: 100;
-            background: @accent-color;
+            background: darken(@accent-color, 5%);
             .text-color(@accent-color);
         }
+        .tool-bar-spacer {
+            margin: 0.5rem 0;
+        }
     }
-    
     &.tool-bar-horizontal {
         height: 3rem;
+
+        &.tool-bar-top {
+            background: @accent-color;
+
+            .tool-bar-btn {
+                .text-color(@accent-color);
+            }
+        }
+        &.tool-bar-bottom {
+            background: @app-background-color;
+
+            .tool-bar-btn {
+                color: @text-color;
+            }
+        }
+        .tool-bar-spacer {
+            margin: 0 0.5rem;
+        }
     }
-    
+    &.tool-bar-horizontal, &.tool-bar-vertical {
+        .tool-bar-spacer {
+            border: none;
+        }
+    }
     &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
-        button.tool-bar-btn {
+        .tool-bar-btn {
             width: 3rem;
             height: 3rem;
             margin: 0;
             padding: 0;
             border-radius: 0;
-            
-            &:before {
-                // NOTE: should be configured by ui scaling setting
+            box-shadow: none;
+            background: none;
+            transition: color 250ms @md-timing-function;
+
+            .tool-bar-vertical & {
+                color: @text-color;
+
+                &:hover:not(:first-child) {
+                    color: @text-color-dark;
+                }
+            }
+            &::before {
                 font-size: 1.25rem;
             }
         }
-    }
-    
-    .tool-bar-spacer {
-        border: none;
-        border-bottom: 1px solid darken(@app-background-color, 5%);
+        &.tool-bar-vertical.gutter-bottom::after {
+            display: none;
+        }
     }
 }

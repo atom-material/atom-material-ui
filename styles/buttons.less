@@ -1,0 +1,73 @@
+.btn, button, button[class] {
+    display: inline-block;
+    padding: 0;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 1rem;
+    background: @app-background-color;
+    transition: box-shadow 250ms @md-timing-function, background 250ms @md-timing-function;
+    text-transform: uppercase;
+    color: @text-color;
+    outline: none;
+    border: none;
+    margin: 0.25rem 0;
+    vertical-align: middle;
+    .z-depth-1();
+
+    &:hover {
+        color: @text-color;
+        background: @app-background-color;
+        .z-depth-2();
+    }
+    &:active, &:focus {
+        outline: none;
+        border: none;
+    }
+    &.icon::before {
+        margin-right: 1rem;
+    }
+    &[disabled], &.disabled {
+        opacity: 0.5;
+        background: darken(@app-background-color, 5%);
+        pointer-events: none;
+        box-shadow: none;
+    }
+    .btn-group & {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+
+        &:only-child {
+            .z-depth-1();
+
+            &:hover {
+                .z-depth-2();
+            }
+            &[disabled], &.disabled {
+                box-shadow: none;
+            }
+        }
+    }
+    &.selected {
+        background: @accent-color;
+        .text-color(@accent-color);
+
+        &:hover {
+            background: desaturate(lighten(@accent-color, 5%), 20%);
+        }
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+}
+.btn-group {
+    min-height: 0;
+    line-height: 1;
+    height: 2.25rem;
+    display: inline-block;
+    vertical-align: middle;
+
+    + .btn-group {
+        margin-left: 1rem;
+    }
+}
