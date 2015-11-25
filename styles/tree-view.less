@@ -1,7 +1,6 @@
 .tree-view {
     font-size: 0.8rem;
     padding-top: 3rem;
-    background-color: darken(@app-background-color, 1.5%);
     overflow: hidden;
 
     .project-root {
@@ -9,15 +8,15 @@
         transform: translate3d(0,0,0);
     }
     .project-root > .header, .project-root > .header.selected {
+        background: @app-background-color;
         position: absolute;
         line-height: 3rem;
         height: 3rem;
-        background-color: darken(@app-background-color, 2%);
         margin-top: -3rem;
         width: 100%;
         padding: 0 0.5rem;
-        z-index: 1000;
         color: @text-color;
+        z-index: 1000;
 
         span, &::before {
             line-height: 3rem;
@@ -88,4 +87,19 @@
             .z-depth-1;
         }
     }
+    .panel-contrast & {
+        background-color: darken(@app-background-color, 1.5%);
+
+        .project-root > .header, .project-root > .header.selected {
+            background-color: darken(@app-background-color, 2%);
+        }
+    }
+    .compact-tree-view & {
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
+            line-height: 1.75rem;
+        }
+    }
+}
+.tree-view-scroller {
+    transform: translate3d(0, 0, 0);
 }

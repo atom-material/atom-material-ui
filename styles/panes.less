@@ -40,6 +40,11 @@ atom-panel-container {
 }
 atom-pane-container {
     atom-pane {
+        opacity: 0.9;
+
+        &.active {
+            opacity: 1;
+        }
         .item-views {
             .pane-item {
                 color: fade(@text-color, 50%);

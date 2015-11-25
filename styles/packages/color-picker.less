@@ -1,0 +1,35 @@
+.ColorPicker {
+    .ColorPicker-format-button {
+        background: #CCC;
+        color: #666;
+        border: none;
+        box-shadow: none;
+        border-radius: 0 0 0.125rem 0.125rem;
+
+        &.is--active {
+            background: #ebebeb;
+
+            &:hover {
+                background-color: #ebebeb;
+                color: #666;
+            }
+        }
+        &:hover {
+            background-color: #CCC;
+            color: #666;
+            box-shadow: none;
+        }
+    }
+    .ColorPicker-format {
+        height: 2rem;
+        bottom: -2rem;
+    }
+    &.is--flipped {
+        .ColorPicker-format-button {
+            border-radius: 0.125rem 0.125rem 0 0;
+        }
+        .ColorPicker-format {
+            top: -2rem;
+        }
+    }
+}

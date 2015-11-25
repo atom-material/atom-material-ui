@@ -23,4 +23,4 @@ module.exports =
         treeView.addEventListener 'scroll', (event) ->
             scrollPos = treeView.scrollTop
             projectRoot = document.querySelector('.project-root > .header')
-            projectRoot.style.top = scrollPos + 'px'
+            projectRoot.style.transform = 'translateY(' + scrollPos + 'px)'

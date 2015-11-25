@@ -2,6 +2,18 @@
     .packages {
         .search-container {
             margin-bottom: 3rem;
+
+            .btn-group {
+                margin: 0.25rem 0 0.25rem 1rem;
+
+                .btn {
+                    background: fade(@text-color, 5%);
+
+                    &.selected {
+                        background: @base-color;
+                    }
+                }
+            }
         }
     }
     .package-card, .package-detail-view .package-card, .package-detail .package-card {

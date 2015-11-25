@@ -1,5 +1,4 @@
 .tool-bar {
-    background: darken(@app-background-color, 3.5%);
     position: relative;
     border: none;
     z-index: 5000;
@@ -80,5 +79,8 @@
                 color: @accent-text-color;
             }
         }
+    }
+    .panel-contrast & {
+        background: darken(@app-background-color, 3.5%);
     }
 }

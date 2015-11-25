@@ -1,0 +1,56 @@
+.deprecation-cop {
+    .deprecation-overview {
+        float: right;
+        padding: 1.25rem 2rem;
+
+        .btn-group {
+            margin: 0;
+        }
+    }
+    .deprecation {
+        padding: 0 2rem;
+
+        > .deprecation-info, > .list-item {
+            padding: 0 2rem;
+            margin: 0 -2rem;
+
+            &:hover {
+                background: fade(@text-color, 10%) !important; // Atom ships with this as !important by default. Go figure.
+            }
+        }
+    }
+    .btn-group {
+        margin: 1rem 0 1.5rem;
+
+        .btn:not(.btn-primary) {
+            .z-depth-1;
+
+            &:hover {
+                .z-depth-2;
+            }
+            + .btn {
+                margin-left: 1rem;
+            }
+        }
+    }
+    .deprecation-detail.list-item {
+        .deprecation-message {
+            line-height: 2.5rem;
+        }
+        .stack-trace {
+            margin: 1rem 0;
+
+            > * {
+                line-height: 1.5rem;
+                font-family: monospace;
+            }
+        }
+    }
+    .selectors {
+        padding: 0 2rem;
+
+        li.list-tree.has-collapsable-children {
+            margin: 0;
+        }
+    }
+}

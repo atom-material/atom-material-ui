@@ -48,6 +48,11 @@ module.exports =
                     description: 'Enables animations for clicked tabs and other UI elements.'
                     type: 'boolean'
                     default: true
+                panelContrast:
+                    title: 'Contrasting panels'
+                    description: 'Adds a little contrast between panels to differentiate where one starts and the other ends.'
+                    type: 'boolean'
+                    default: false
 
         tabs:
             order: 3
@@ -59,8 +64,18 @@ module.exports =
                     type: 'boolean'
                     default: false
 
-        fonts:
+        treeView:
             order: 4
+            type: 'object'
+            properties:
+                compactList:
+                    title: 'Compact tree view'
+                    description: 'Reduces line height in the tree view component.'
+                    type: 'boolean'
+                    default: false
+
+        fonts:
+            order: 5
             type: 'object'
             properties:
                 fontSize:

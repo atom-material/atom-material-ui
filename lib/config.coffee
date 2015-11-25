@@ -57,8 +57,14 @@ module.exports =
         atom.config.onDidChange 'atom-material-ui.tabs.tintedTabBar', (value) ->
             amu.toggleClass(value.newValue, 'tinted-tab-bar')
 
+        atom.config.onDidChange 'atom-material-ui.ui.animations', (value) ->
+            amu.toggleClass(value.newValue, 'use-animations')
+
         atom.config.onDidChange 'atom-material-ui.ui.panelShadows', (value) ->
             amu.toggleClass(value.newValue, 'panel-shadows')
 
-        atom.config.onDidChange 'atom-material-ui.ui.animations', (value) ->
-            amu.toggleClass(value.newValue, 'use-animations')
+        atom.config.onDidChange 'atom-material-ui.ui.panelContrast', (value) ->
+            amu.toggleClass(value.newValue, 'panel-contrast')
+
+        atom.config.onDidChange 'atom-material-ui.treeView.compactList', (value) ->
+            amu.toggleClass(value.newValue, 'compact-tree-view')
