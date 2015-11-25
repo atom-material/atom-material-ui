@@ -68,7 +68,7 @@
     &.has-collapsable-children .list-nested-item > .list-item::before {
         z-index: 10;
     }
-    .tinted-tab-bar & {
+    .tinted-tab-bar &, .tinted-tab-bar.panel-contrast & {
         .project-root > .header, .project-root > .header.selected {
             background-color: darken(@base-color, 2%);
             color: @accent-text-color;
@@ -88,10 +88,10 @@
         }
     }
     .panel-contrast & {
-        background-color: darken(@app-background-color, 1.5%);
+        background-color: darken(@app-background-color, 2%);
 
         .project-root > .header, .project-root > .header.selected {
-            background-color: darken(@app-background-color, 2%);
+            background-color: darken(@app-background-color, 2.5%);
         }
     }
     .compact-tree-view & {
