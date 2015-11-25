@@ -2,9 +2,16 @@ tinycolor = require 'tinycolor2'
 amu = require './atom-material-ui'
 
 init = () ->
+    if !localStorage.getItem 'atom-material-ui:configOk'
+        console.log 'AMU needs to reset your settings. Sorry!'
+        atom.config.set('atom-material-ui')
+        amu.writeConfig()
+        localStorage.setItem 'atom-material-ui:configOk', true
+
     amu.toggleClass(atom.config.get('atom-material-ui.tabs.tintedTabBar'), 'tinted-tab-bar')
     amu.toggleClass(atom.config.get('atom-material-ui.ui.panelShadows'), 'panel-shadows')
     amu.toggleClass(atom.config.get('atom-material-ui.ui.animations'), 'use-animations')
+
 
 module.exports =
     apply: ->
@@ -40,7 +47,13 @@ module.exports =
         atom.themes.onDidChangeActiveThemes ->
             amu.writeConfig()
 
-        # Boolean-value Settings
+        # Font Size Settings
+
+        atom.config.onDidChange 'atom-material-ui.fonts.fontSize', ->
+            amu.writeConfig()
+
+        # className-toggling Settings
+
         atom.config.onDidChange 'atom-material-ui.tabs.tintedTabBar', (value) ->
             amu.toggleClass(value.newValue, 'tinted-tab-bar')
 

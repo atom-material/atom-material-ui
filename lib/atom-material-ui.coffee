@@ -19,7 +19,7 @@ module.exports =
             type: 'object'
             properties:
                 abaseColor: # hack to force this setting to show first, should be "baseColor"
-                    title: 'Base color'
+                    title: 'Primary color'
                     description: 'Changes the main theme color.'
                     type: 'color'
                     default: '#009688'
@@ -32,7 +32,7 @@ module.exports =
                     title: 'Generate complementary accent'
                     description: 'Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme. <small>Experimental</small>'
                     type: 'boolean'
-                    default: true
+                    default: false
 
         ui:
             order: 2
@@ -42,7 +42,7 @@ module.exports =
                     title: 'Panels cast shadows'
                     description: 'Adds depth to the user interface by using shadows.'
                     type: 'boolean'
-                    default: true
+                    default: false
                 animations:
                     title: 'Use animations'
                     description: 'Enables animations for clicked tabs and other UI elements.'
@@ -55,9 +55,9 @@ module.exports =
             properties:
                 tintedTabBar:
                     title: 'Tinted tab bar'
-                    description: 'Paints the tab bar with the chosen accent color.'
+                    description: 'Paints the tab bar with the chosen primary color.'
                     type: 'boolean'
-                    default: true
+                    default: false
 
         fonts:
             order: 4
@@ -67,6 +67,7 @@ module.exports =
                     title: 'User interface font size'
                     description: 'Scales the entire UI based on this value.'
                     default: 16
+                    minimum: 10
                     type: 'number'
 
     toggleClass: (boolean, className) ->
@@ -81,12 +82,16 @@ module.exports =
         accentColor = atom.config.get('atom-material-ui.colors.accentColor').toHexString()
         baseColor = atom.config.get('atom-material-ui.colors.abaseColor').toHexString()
         accentTextColor = this.getContrast baseColor
+        fontSize = atom.config.get('atom-material-ui.fonts.fontSize')
 
         config =
             """
             @accent-color: #{accentColor};
             @accent-text-color: #{accentTextColor};
             @base-color: #{baseColor};
+            :root {
+                font-size: #{fontSize}px;
+            }
             """
 
         fs.writeFile "#{__dirname}/../styles/custom.less", config, 'utf8', () ->
@@ -99,4 +104,6 @@ module.exports =
             Config = require './config'
             Bindings = require './bindings'
             Config.apply()
-            Bindings.apply()
+            setTimeout ->
+                Bindings.apply()
+            , 5000
