@@ -1,0 +1,25 @@
+Add material click effect to treeview items and buttons
+
+Make treeview items 3rem tall and add option for compact (2rem) treeview
+
+Improve styling of statusbar including linter support (nice looking line/file/project buttons)
+
+Improve scrollbars (preferably flat material style with accent color)
+
+Add hover effects to buttons/treeview items/tabs
+
+Ensure first icon of toolbar and project folder are fixed to maintain bar
+
+Add option to enable/disable said icon and project folder (remove from bar)
+
+Add option to move treeview folder arrows to the right side
+
+Prevent flash of unstyled content on startup (if possible)
+
+Add option to keep toolbar on same level as editor
+
+[low-priority] Add option to include file icons in tabs
+
+[low-priority] Add more animations (load in animations etc)
+
+[low-priority] Match accent color to windows 10 theme color
