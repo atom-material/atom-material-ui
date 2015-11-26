@@ -10,7 +10,9 @@ init = () ->
 
     amu.toggleClass(atom.config.get('atom-material-ui.tabs.tintedTabBar'), 'tinted-tab-bar')
     amu.toggleClass(atom.config.get('atom-material-ui.ui.panelShadows'), 'panel-shadows')
+    amu.toggleClass(atom.config.get('atom-material-ui.ui.panelContrast'), 'panel-contrast')
     amu.toggleClass(atom.config.get('atom-material-ui.ui.animations'), 'use-animations')
+    amu.toggleClass(atom.config.get('atom-material-ui.treeView.compactList'), 'compact-tree-view')
 
 
 module.exports =
