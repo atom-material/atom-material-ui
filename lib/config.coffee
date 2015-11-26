@@ -3,10 +3,10 @@ amu = require './atom-material-ui'
 
 init = () ->
     if !localStorage.getItem 'atom-material-ui:configOk'
-        console.log 'AMU needs to reset your settings. Sorry!'
         atom.config.set('atom-material-ui')
-        amu.writeConfig()
-        localStorage.setItem 'atom-material-ui:configOk', true
+        amu.writeConfig ->
+            atom.notifications.addSuccess 'There were breaking changes and Material UI had to reset its settings.'
+            localStorage.setItem 'atom-material-ui:configOk', true
 
     amu.toggleClass(atom.config.get('atom-material-ui.tabs.tintedTabBar'), 'tinted-tab-bar')
     amu.toggleClass(atom.config.get('atom-material-ui.ui.panelShadows'), 'panel-shadows')

@@ -93,7 +93,7 @@ module.exports =
         else
             root.classList.remove(className)
 
-    writeConfig: () ->
+    writeConfig: (cb) ->
         accentColor = atom.config.get('atom-material-ui.colors.accentColor').toHexString()
         baseColor = atom.config.get('atom-material-ui.colors.abaseColor').toHexString()
         accentTextColor = this.getContrast baseColor
@@ -113,6 +113,9 @@ module.exports =
             themePack = atom.packages.getLoadedPackage('atom-material-ui')
             themePack.deactivate()
             themePack.activate()
+
+            if cb && typeof cb == 'function'
+                cb()
 
     activate: () ->
         atom.themes.onDidChangeActiveThemes ->
