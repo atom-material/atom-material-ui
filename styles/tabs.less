@@ -24,9 +24,10 @@
         cursor: pointer;
         font-size: 0.8rem;
         overflow: hidden;
-        min-width: 6rem;
+        min-width: 7rem;
         max-width: 12rem;
         color: @text-color;
+        transition: min-width 250ms @md-timing-function;
 
         &::before {
             position: absolute;
@@ -42,6 +43,8 @@
             z-index: 2000;
         }
         &.active {
+            min-width: 10rem;
+
             &::before {
                 opacity: 1;
                 transform: scaleX(1) translateX(0);
@@ -50,6 +53,23 @@
                 display: inline-block;
                 -webkit-animation: ripple 500ms @md-timing-function;
                 -webkit-animation-fill-mode: forwards;
+            }
+        }
+        &.is-dragging {
+            opacity: 1;
+            border: none;
+            margin: 0;
+
+            .close-icon {
+                visibility: hidden;
+            }
+            .ink {
+                display: none;
+            }
+        }
+        &.is-drop-target {
+            &::after {
+                display: none;
             }
         }
         &.modified:not(:hover) .close-icon {
@@ -103,6 +123,28 @@
         -webkit-transform: translate3d(0,0,0);
         background-color: fade(@text-color, 10%);
     }
+    .placeholder {
+        margin: 0;
+        height: 3rem;
+        background: none;
+        pointer-events: none;
+        width: 0.125rem;
+        border: 1px solid;
+        border-color: fade(@base-color, 50%);
+        z-index: 100000;
+
+        &::after {
+            top: auto;
+            bottom: -0.125rem;
+            background: none;
+            margin-left: -0.5rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0.5rem 0.5rem 0.5rem;
+            border-color: transparent transparent @base-color transparent;
+        }
+    }
     &::-webkit-scrollbar {
         display: none;
     }
@@ -140,12 +182,22 @@
             &.modified:not(:hover) .close-icon {
                 border-color: @accent-color;
             }
+            &.is-dragging {
+                background-color: @base-color;
+            }
         }
         &.modified:not(:hover) .close-icon {
             border-color: @accent-text-color;
         }
         .ink {
             background-color: fade(@accent-text-color, 25%);
+        }
+        .placeholder {
+            border-color: fade(@accent-color, 50%);
+
+            &::after {
+                border-color: transparent transparent @accent-color transparent;
+            }
         }
     }
     .panel-shadows & {

@@ -1,0 +1,103 @@
+linter-panel {
+    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+linter-bottom-container {
+    margin-right: 1rem;
+}
+linter-bottom-tab {
+    background: fade(@text-color, 10%);
+    color: @text-color;
+
+    &.active {
+        background: @base-color;
+        color: @accent-text-color;
+    }
+    &[hidden] {
+        &:first-child + linter-bottom-tab {
+            border-radius: 0.125rem 0 0 0.125rem;
+        }
+    }
+    &:nth-last-child(2) {
+        border-radius: 0 0.125rem 0.125rem;
+    }
+}
+.linter-highlight {
+    margin-left: 1rem;
+
+    &.status-success {
+        color: @md-green;
+    }
+    &.status-error {
+        color: @md-red;
+    }
+}
+linter-message {
+    line-height: 2rem;
+    display: block;
+    padding: 0.5rem;
+
+    + linter-message {
+        border-top: 1px solid fade(@text-color, 5%);
+    }
+    span:last-child {
+        margin-left: 1rem;
+    }
+    .linter-message-link {
+        margin-left: 0.5rem;
+
+        span {
+            margin: 0;
+        }
+    }
+}
+.badge {
+    background: @text-color;
+    color: @app-background-color;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.25rem;
+    line-height: 1.5rem;
+    position: relative;
+    top: -0.125rem;
+
+    &.badge-flexible {
+        padding: 0 0.5rem;
+    }
+    &:not(.line-number) {
+        &.warning {
+            background-color: @md-amber;
+            color: darken(@md-amber, 30%);
+        }
+        &.error {
+            background: @md-red;
+            color: #FFF;
+        }
+    }
+}
+#linter-inline {
+    background: @text-color;
+    .z-depth-2;
+
+    &::before {
+        border-color: transparent transparent @text-color @text-color;
+    }
+    linter-message {
+        padding: 0;
+
+        span:last-child {
+            color: @app-background-color;
+        }
+    }
+}
+atom-text-editor::shadow {
+    .decoration.linter-row {
+        .linter-gutter.linter-highlight {
+            &.warning {
+                background-color: @md-amber;
+            }
+            &.error {
+                background-color: @md-red;
+            }
+        }
+    }
+}

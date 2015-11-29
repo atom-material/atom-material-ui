@@ -124,4 +124,4 @@ module.exports =
             Config.apply()
             setTimeout ->
                 Bindings.apply()
-            , 5000
+            , 0

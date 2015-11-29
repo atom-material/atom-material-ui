@@ -8,8 +8,8 @@ module.exports =
 
             if (tab && tab.nodeName == 'LI')
                 rect = tab.getBoundingClientRect()
-                x = event.clientX - rect.left
-                y = event.clientY - rect.top
+                x = (event.clientX || 80) - rect.left
+                y = (event.clientY || 24) - rect.top
 
                 if (tab.querySelectorAll('.ink').length == 0)
                     ink = document.createElement('span')
@@ -24,3 +24,11 @@ module.exports =
             scrollPos = treeView.scrollTop
             projectRoot = document.querySelector('.project-root > .header')
             projectRoot.style.transform = 'translateY(' + scrollPos + 'px)'
+
+        atom.workspace.onDidChangeActivePaneItem ->
+            tabBar = document.querySelector('.tab-bar')
+            activeTab = document.querySelector('.tab-bar .tab.active')
+            activeTab.click() if activeTab && activeTab.click
+
+        # Initialize project-root scroll position
+        document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
