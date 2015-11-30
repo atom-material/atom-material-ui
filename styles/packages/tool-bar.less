@@ -31,6 +31,9 @@
         .tool-bar-spacer {
             border: none;
         }
+        .tool-bar-btn:first-child {
+            transition: -webkit-filter 250ms @md-timing-function;
+        }
     }
     &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
         .tool-bar-btn {
@@ -82,5 +85,15 @@
     }
     .panel-contrast & {
         background: darken(@app-background-color, 5%);
+    }
+}
+.tinted-tab-bar .is-blurred .tool-bar {
+    &.tool-bar-vertical {
+        .tool-bar-btn:first-child {
+            -webkit-filter: grayscale(1) brightness(1.25);
+        }
+    }
+    &.tool-bar-top {
+        -webkit-filter: grayscale(1) brightness(1.25);
     }
 }
