@@ -23,7 +23,7 @@ Or, inside Atom's settings select Install and then search for this package.
 
 Atom Material UI supports different accent colors. To change it, go to Settings > Themes and click the cog icon next to the theme selector.
 
-![](http://i.imgur.com/JB2iA5m.png)
+![](http://i.imgur.com/NwPru3G.png)
 
 You'll find the color picker there.
 
