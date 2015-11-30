@@ -1,0 +1,19 @@
+.ps-container {
+    > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+        > .ps-scrollbar-y, > .ps-scrollbar-x {
+            background-color: fade(@text-color, 35%);
+            border: 1px solid fade(@text-color, 40%);
+        }
+    }
+    &:hover {
+        > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+            &:hover, &:active {
+                background-color: fade(@text-color, 10%);
+
+                > .ps-scrollbar-y, > .ps-scrollbar-x {
+                    background-color: fade(@text-color, 35%);
+                }
+            }
+        }
+    }
+}

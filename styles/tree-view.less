@@ -102,4 +102,15 @@
 }
 .tree-view-scroller {
     transform: translate3d(0, 0, 0);
+    position: relative;
+
+}
+.scrollThumb {
+    position: absolute;
+    width: 0.5rem;
+    border-radius: 0.25rem;
+    // background-color: fade(@text-color, 25%);
+    background-color: red;
+    right: 0;
+    z-index: 10;
 }

@@ -1,3 +1,5 @@
+Ps = require 'perfect-scrollbar'
+
 rippleClick = (event) ->
     item = event.target
 
@@ -19,19 +21,36 @@ module.exports =
     apply: ->
         tabs = document.querySelector('.tab-bar')
         treeView = document.querySelector('.tree-view-scroller')
+        atomWorkspace = document.querySelector('atom-workspace')
 
         tabs.addEventListener 'click', (event) ->
             rippleClick(event)
 
         treeView.addEventListener 'scroll', (event) ->
-            scrollPos = treeView.scrollTop
+            scrollPosY = treeView.scrollTop
+            scrollPosX = treeView.scrollLeft
             projectRoot = document.querySelector('.project-root > .header')
-            projectRoot.style.transform = 'translateY(' + scrollPos + 'px)'
+            projectRoot.style.transform = 'translate(' + scrollPosX + 'px,' + scrollPosY + 'px)'
+
+        treeView.addEventListener 'click', () ->
+            if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+                setTimeout ->
+                    Ps.update(treeView)
+                , 0
 
         atom.workspace.onDidChangeActivePaneItem ->
             tabBar = document.querySelector('.tab-bar')
             activeTab = document.querySelector('.tab-bar .tab.active')
             activeTab.click() if activeTab && activeTab.click
+
+        if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+            Ps.initialize(treeView)
+
+        window.addEventListener 'resize', () ->
+            if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+                setTimeout ->
+                    Ps.update(treeView)
+                , 0
 
         # Initialize project-root scroll position
         document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
