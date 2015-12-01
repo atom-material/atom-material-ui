@@ -119,7 +119,7 @@ module.exports =
 
     activate: () ->
         atom.themes.onDidChangeActiveThemes ->
-            Config = require './config'
+            Config = require './conf'
             Bindings = require './bindings'
             Config.apply()
             setTimeout ->

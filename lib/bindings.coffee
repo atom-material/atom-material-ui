@@ -54,5 +54,5 @@ module.exports =
                 , 0
 
         # Initialize project-root scroll position
-        if treeView
-            document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
+        # if treeView
+        #     document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
