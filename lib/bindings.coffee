@@ -26,9 +26,6 @@ module.exports =
         tabs.addEventListener 'click', (event) ->
             rippleClick(event)
 
-        atom.workspace.onDidOpen(event) ->
-            console.log event
-
         if treeView
             treeView.addEventListener 'scroll', (event) ->
                 scrollPosY = treeView.scrollTop
