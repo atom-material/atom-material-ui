@@ -26,31 +26,36 @@ module.exports =
         tabs.addEventListener 'click', (event) ->
             rippleClick(event)
 
-        treeView.addEventListener 'scroll', (event) ->
-            scrollPosY = treeView.scrollTop
-            scrollPosX = treeView.scrollLeft
-            projectRoot = document.querySelector('.project-root > .header')
-            projectRoot.style.transform = 'translate(' + scrollPosX + 'px,' + scrollPosY + 'px)'
+        atom.workspace.onDidOpen(event) ->
+            console.log event
 
-        treeView.addEventListener 'click', () ->
-            if (atomWorkspace.classList.contains('scrollbars-visible-always'))
-                setTimeout ->
-                    Ps.update(treeView)
-                , 0
+        if treeView
+            treeView.addEventListener 'scroll', (event) ->
+                scrollPosY = treeView.scrollTop
+                scrollPosX = treeView.scrollLeft
+                projectRoot = document.querySelector('.project-root > .header')
+                projectRoot.style.transform = 'translate(' + scrollPosX + 'px,' + scrollPosY + 'px)'
+
+            treeView.addEventListener 'click', () ->
+                if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+                    setTimeout ->
+                        Ps.update(treeView)
+                    , 0
 
         atom.workspace.onDidChangeActivePaneItem ->
             tabBar = document.querySelector('.tab-bar')
             activeTab = document.querySelector('.tab-bar .tab.active')
             activeTab.click() if activeTab && activeTab.click
 
-        if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+        if (treeView && atomWorkspace.classList.contains('scrollbars-visible-always'))
             Ps.initialize(treeView)
 
         window.addEventListener 'resize', () ->
-            if (atomWorkspace.classList.contains('scrollbars-visible-always'))
+            if (treeView && atomWorkspace.classList.contains('scrollbars-visible-always'))
                 setTimeout ->
                     Ps.update(treeView)
                 , 0
 
         # Initialize project-root scroll position
-        document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
+        if treeView
+            document.querySelector('.project-root > .header').style.transform = 'translateY(' + treeView.scrollTop + 'px)'
