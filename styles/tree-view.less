@@ -1,30 +1,22 @@
 .tree-view {
     font-size: 0.8rem;
-    // padding-top: 3rem;
     overflow: hidden;
 
     .project-root {
         padding: 0;
         transform: translate3d(0,0,0);
     }
-    .project-root > .header, .project-root > .header.selected {
-        background: @app-background-color;
-        // position: absolute;
-        line-height: 3rem;
-        height: 3rem;
-        // margin-top: -3rem;
-        width: 100%;
-        padding: 0 0.5rem;
-        color: @text-color;
-        transition: -webkit-filter 250ms @md-timing-function;
-        z-index: 1000;
-
-        span, &::before {
+    .project-root {
+        > .header {
             line-height: 3rem;
-            color: @text-color;
+            height: 3rem;
+            width: 100%;
+            padding: 0 0.5rem;
+            transition: -webkit-filter 250ms @md-timing-function;
+            z-index: 1000;
 
-            .selected & {
-                color: @text-color;
+            span, &::before {
+                line-height: 3rem;
             }
         }
     }
@@ -40,7 +32,7 @@
     li {
         padding: 0 0.5rem;
     }
-    li.directory.selected:not(.project-root) > div.header.list-item {
+    li.directory.selected > div.header.list-item {
         position: relative;
 
         &::after {
@@ -71,31 +63,8 @@
     &.has-collapsable-children .list-nested-item > .list-item::before {
         z-index: 10;
     }
-    .tinted-tab-bar &, .tinted-tab-bar.panel-contrast & {
-        .project-root > .header, .project-root > .header.selected {
-            background-color: darken(@base-color, 2%);
-            color: @accent-text-color;
-
-            span, &::before {
-                color: @accent-text-color;
-
-                .selected & {
-                    color: @accent-text-color;
-                }
-            }
-        }
-    }
-    .panel-shadows & {
-        .project-root > .header, .project-root > .header.selected {
-            .z-depth-1;
-        }
-    }
     .panel-contrast & {
         background-color: darken(@app-background-color, 2%);
-
-        .project-root > .header, .project-root > .header.selected {
-            background-color: darken(@app-background-color, 2.5%);
-        }
     }
     .compact-tree-view & {
         li:not(.list-nested-item), li.list-nested-item > .list-item {
