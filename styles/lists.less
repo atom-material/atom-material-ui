@@ -28,6 +28,20 @@
             z-index: 10;
         }
     }
+    li.list-nested-item {
+        &.status-modified:not(.selected) > .list-item {
+            color: @md-amber;
+        }
+        &.status-added:not(.selected) > .list-item {
+            color: @md-light-green;
+        }
+        &.status-renamed:not(.selected) > .list-item {
+            color: @md-blue;
+        }
+        &.status-removed:not(.selected) > .list-item {
+            color: @md-red;
+        }
+    }
     .selected::before {
         background: none;
     }
