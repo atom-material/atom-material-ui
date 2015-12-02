@@ -3,7 +3,7 @@
   "theme": "ui",
   "version": "1.0.5",
   "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
-  "main": "lib/atom-material-ui",
+  "main": "./lib/main",
   "keywords": [
     "ui",
     "theme",

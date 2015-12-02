@@ -9,18 +9,19 @@
             position: relative;
 
             &::before {
-                display: none;
+                opacity: 0;
                 content: '';
                 position: absolute;
                 border-radius: 50%;
-                top: calc(50% - 1px);
-                left: calc(50% - 1px);
+                top: ~'calc(50% - 15rem)';
+                left: ~'calc(50% - 15rem)';
                 pointer-events: none;
-                width: 0.125rem;
-                height: 0.125rem;
+                width: 30rem;
+                height: 30rem;
                 background-color: @base-color;
                 pointer-events: none;
-                -webkit-transform: translate3d(0,0,0);
+                transform: scale(0) translate3d(0, 0, 0);
+                transition: transform 250ms @md-timing-function;
             }
             > a {
                 padding: 0 1rem;
@@ -38,9 +39,8 @@
             }
             &.active {
                 &::before {
-                    display: block;
-                    -webkit-animation: ripplePaint 250ms @md-timing-function;
-                    -webkit-animation-fill-mode: forwards;
+                    opacity: 1;
+                    transform: scale(1) translate3d(0, 0, 0);
                 }
                 a {
                     background-color: transparent;

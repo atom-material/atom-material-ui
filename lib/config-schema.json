@@ -1,0 +1,88 @@
+{
+    "colors": {
+        "order": 1,
+        "type": "object",
+        "properties": {
+            "abaseColor": {
+                "title": "Primary color",
+                "description": "Changes the main theme color.",
+                "type": "color",
+                "default": "#009688"
+            },
+            "accentColor": {
+                "title": "Accent color",
+                "description": "Accent color used to underline active tabs.",
+                "type": "color",
+                "default": "#FFFFFF"
+            },
+            "genAccent": {
+                "title": "Generate complementary accent",
+                "description": "Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme. <small>Experimental</small>",
+                "type": "boolean",
+                "default": false
+            }
+        }
+    },
+    "ui": {
+        "order": 2,
+        "type": "object",
+        "properties": {
+            "panelShadows": {
+                "title": "Panels cast shadows",
+                "description": "Adds depth to the user interface by using shadows.",
+                "type": "boolean",
+                "default": false
+            },
+            "animations": {
+                "title": "Use animations",
+                "description": "Enables animations for clicked tabs and other UI elements.",
+                "type": "boolean",
+                "default": true
+            },
+            "panelContrast": {
+                "title": "Contrasting panels",
+                "description": "Adds a little contrast between panels to differentiate where one starts and the other ends.",
+                "type": "boolean",
+                "default": false
+            }
+        }
+    },
+    "tabs": {
+        "order": 3,
+        "type": "object",
+        "properties": {
+            "tintedTabBar": {
+                "title": "Tinted tab bar",
+                "description": "Paints the tab bar with the chosen primary color.",
+                "type": "boolean",
+                "default": false
+            }
+        }
+    },
+    "treeView": {
+        "order": 4,
+        "type": "object",
+        "properties": {
+            "compactList": {
+                "title": "Compact tree view",
+                "description": "Reduces line height in the tree view component.",
+                "type": "boolean",
+                "default": false
+            }
+        }
+    },
+    "fonts": {
+        "order": 5,
+        "type": "object",
+        "properties": {
+            "fontSize": {
+                "title": "User interface font size",
+                "description": "Scales the entire UI based on this value.",
+                "type": "number",
+                "default": 16,
+                "minimum": 10,
+                "maximum": 32
+            }
+        }
+    }
+}
