@@ -1,0 +1,58 @@
+.terminal-plus {
+    &.terminal-view {
+        border-bottom: 1px solid fade(@text-color, 5%);
+        .z-depth-2;
+
+        .standard {
+            background: @app-background-color;
+            color: @text-color;
+        }
+        .terminal-cursor {
+            background: fade(@text-color, 50%);
+        }
+        // The following are !important because the were span elements
+        // with no class names and had inline styles. Looks weird.
+        span[style="color:#cd0000;"] {
+            color: @md-red !important;
+        }
+        span[style="color:#00cd00;"] {
+            color: @md-light-green !important;
+        }
+        span[style="color:#0000cd;"] {
+            color: @md-blue !important;
+        }
+        span[style="color:#cd00cd;"] {
+            color: lighten(@md-deep-purple, 10%) !important;
+        }
+        span[style="color:#000000;background-color:#cd0000;"] {
+            color: #FFF !important;
+            background-color: @md-red !important;
+        }
+        span[style="color:#000000;background-color:#00cdcd;"] {
+            color: darken(@md-cyan, 25%) !important;
+            background-color: @md-cyan !important;
+        }
+        span[style="color:#000000;background-color:#00cd00;"] {
+            color: darken(@md-light-green, 35%) !important;
+            background-color: @md-light-green !important;
+        }
+        .btn-toolbar {
+            background-color: darken(@app-background-color, 1.5%);
+            padding: 0.5rem;
+
+            .btn {
+                box-shadow: none;
+                background: none;
+            }
+        }
+    }
+    &.status-bar {
+        padding: 0.5rem;
+        margin: 0;
+        .z-depth-2;
+
+        .icon-x {
+            color: @md-red;
+        }
+    }
+}
