@@ -108,5 +108,9 @@
     color: @text-color;
     text-transform: uppercase;
     padding: 0 1rem;
+    transition: -webkit-filter 250ms @md-timing-function;
     z-index: 100;
+}
+.is-blurred .tree-view > li.tabBlender {
+    -webkit-filter: grayscale(1) brightness(1.25);
 }
