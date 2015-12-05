@@ -1,0 +1,39 @@
+.script-view {
+    .panel-heading {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        background: darken(@app-background-color, 5%);
+
+        .header-view {
+            line-height: 1rem;
+
+            span[class*="icon-"] {
+                float: left;
+                margin-right: 1rem;
+            }
+            .icon-alert {
+                color: @md-amber;
+            }
+            .icon-stop {
+                color: @md-red;
+            }
+        }
+        .heading-buttoms div {
+            margin-left: 0.75rem;
+        }
+    }
+    .panel-body {
+        border: none;
+        padding: 0.5rem;
+
+        pre {
+            border: none;
+
+            &.stdout {
+                padding: 0.5rem;
+                border-top: 1px solid fade(@text-color, 5%);
+                margin: 1rem -0.5rem 0;
+            }
+        }
+    }
+}
