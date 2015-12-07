@@ -6,12 +6,15 @@
 
 .settings-view {
     .breadcrumb {
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
     .panels-item {
-        padding: 3rem;
+        padding: 1.5rem;
     }
     .section, .sub-section {
+        &:first-child {
+            border-top: none;
+        }
         &.collapsed {
             > *:not([class*="heading"]) {
                 display: none;
@@ -20,7 +23,6 @@
     }
     .section:not(:empty) {
         + .section {
-            margin-top: 3rem;
             border-top: none;
         }
         a:not(.btn) {
