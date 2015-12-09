@@ -2,12 +2,12 @@ atom-notifications {
     display: flex;
     align-items: flex-end;
     flex-flow: column-reverse;
-    padding: 1rem 0.5rem;
+    padding: 2rem 0.5rem;
     z-index: 9999;
 }
 atom-notification {
     padding: 0;
-    border-radius: 0.125rem;
+    border-radius: 0 0.125rem 0.125rem 0;
 
     .content {
         border-radius: 0.125rem;
@@ -55,7 +55,7 @@ atom-notification {
         color: @text-color;
     }
     &.success, &.error, &.info, &.warning, &.fatal {
-        border-left: 1px solid transparent;
+        border-left: 0.125rem solid transparent;
 
         .content {
             background-color: darken(@app-background-color, 5%);

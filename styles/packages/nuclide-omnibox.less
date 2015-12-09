@@ -1,0 +1,27 @@
+atom-panel.modal {
+    .omnisearch-modal {
+        atom-text-editor[mini] {
+            margin: 0.5rem 1rem 1rem;
+        }
+    }
+    .omnisearch-tabs {
+        margin: 0;
+
+        .tab-bar {
+            background-color: fade(@text-color, 5%);
+            .z-depth-1;
+        }
+        kbd.key-binding {
+            margin-left: 0.5rem;
+            letter-spacing: 0.125rem;
+        }
+    }
+    .omnisearch-results {
+        padding: 0;
+        background-color: fade(@text-color, 10%);
+
+        .list-tree > li {
+            padding: 0 1rem;
+        }
+    }
+}

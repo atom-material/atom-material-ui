@@ -149,7 +149,7 @@
     &::-webkit-scrollbar {
         display: none;
     }
-    &::before, &::after {
+    &:not([data-reactid])::before, &:not([data-reactid])::after {
         content: '';
         position: fixed;
         top: 0;
@@ -164,7 +164,7 @@
         background-image: linear-gradient(to left, @app-background-color 0%, transparent 100%);
         right: 0;
     }
-    .tinted-tab-bar & {
+    .tinted-tab-bar &:not([data-reactid]) {
         background-color: @base-color;
 
         &::before {
@@ -201,11 +201,11 @@
             }
         }
     }
-    .panel-shadows & {
+    .panel-shadows &:not([data-reactid]) {
         .z-depth-1;
     }
 }
-.has-custom-icons .tab-bar .tab {
+.has-custom-icons .tab-bar:not([data-reactid]) .tab {
     .title[data-path] {
         &::before {
             // Override icon color in icon-packages as it can hurt readability
@@ -216,6 +216,6 @@
         }
     }
 }
-.tinted-tab-bar .is-blurred .tab-bar {
+.tinted-tab-bar .is-blurred .tab-bar:not([data-reactid]) {
     -webkit-filter: grayscale(1) brightness(1.25);
 }

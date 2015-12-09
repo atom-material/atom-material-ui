@@ -1,0 +1,37 @@
+.fixedDataTableLayout_main {
+    background: fade(@text-color, 5%);
+}
+.public_fixedDataTable_header, .public_fixedDataTable_header .public_fixedDataTableCell_main {
+    background: fade(@text-color, 5%);
+    color: @text-color;
+    line-height: 1;
+    font-weight: normal;
+}
+.nuclide-diagnostics-pane-nav {
+    border-top: 1px solid fade(@text-color, 5%);
+    padding: 0 0.25rem 0 0.75rem;
+
+    .btn, button, button[class] {
+        box-shadow: none;
+
+        &.icon::before {
+            margin: 0;
+        }
+    }
+    label {
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+}
+.nuclide-diagnostics-status-bar {
+    &:hover {
+        background: none;
+    }
+    [class*="nuclide-diagnostics-status-bar-"] {
+        margin-right: 0.5rem;
+
+        .icon {
+            margin-right: 0.25rem;
+        }
+    }
+}
