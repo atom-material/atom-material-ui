@@ -20,6 +20,28 @@
                 "description": "Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme. <small>Experimental</small>",
                 "type": "boolean",
                 "default": false
+            },
+            "predefinedColor": {
+                "title": "Predefined colors",
+                "description": "Pick a predefined color from the Material Design palette. If you change the Primary Color it will override this settings.",
+                "type": "string",
+                "enum": [
+                    "Amber",
+                    "Blue",
+                    "Blue Grey",
+                    "Brown",
+                    "Cyan",
+                    "Green",
+                    "Grey",
+                    "Indigo",
+                    "Lime",
+                    "Orange",
+                    "Pink",
+                    "Purple",
+                    "Red",
+                    "Teal"
+                ],
+                "default": "Teal"
             }
         }
     },
