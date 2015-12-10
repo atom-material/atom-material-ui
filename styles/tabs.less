@@ -107,6 +107,28 @@
             &.icon::before {
                 margin-right: 1rem;
             }
+            &[class*="status-"]::after {
+                content: '';
+                width: 0.5rem;
+                height: 0.5rem;
+                margin-right: 1rem;
+                float: left;
+                position: relative;
+                top: 1.3rem;
+                border-radius: 50%;
+            }
+            &.status-modified::after {
+                background-color: @md-amber;
+            }
+            &.status-added::after {
+                background-color: @md-light-green;
+            }
+            &.status-removed::after {
+                background-color: @md-red;
+            }
+            &.status-renamed::after {
+                background-color: @md-blue;
+            }
         }
         &:hover {
             .close-icon {
