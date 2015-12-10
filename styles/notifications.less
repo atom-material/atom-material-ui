@@ -80,27 +80,36 @@ atom-notification {
             max-width: 18rem;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: @text-color;
         }
     }
     &.success {
         border-color: @md-light-green;
+
+        a {
+            color: @md-light-green;
+        }
     }
     &.error, &.fatal {
         border-color: @md-red;
 
         a {
             color: @md-red;
-
-            &.btn {
-                color: @text-color;
-            }
         }
     }
     &.info {
         border-color: @md-light-blue;
+
+        a {
+            color: @md-light-blue;
+        }
     }
     &.warning {
-        border-color: @md-yellow;
+        border-color: @md-amber;
+
+        a {
+            color: @md-amber;
+        }
     }
     &.has-close {
         .content > div {

@@ -15,7 +15,7 @@ Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio
 
 Fire up a console and type:
 
-`$ apm install atom-material-ui atom-material-syntax atom-material-syntax-light`
+`apm install atom-material-ui atom-material-syntax atom-material-syntax-light`
 
 Or, inside Atom's settings select Install and then search for this package.
 
@@ -36,6 +36,31 @@ Here's the obligatory screenshot. The toolbar on the left side is a package name
 ## Light syntax theme variant
 
 ![](http://i.imgur.com/NFJB47Q.png)
+
+## Contributing
+
+If you want to contribute you should fork this repository, make your changes and then send a pull request.
+
+```shell
+apm uninstall atom-material-ui #if you had it installed
+git clone <your_forked_repo>
+cd atom-material-ui/
+apm link && apm install
+```
+
+I recommend installing the package [editorconfig](https://atom.io/packages/editorconfig) so you don't have to change your global settings for indentation.
+
+Leave an empty line between a selector's properties and a nested selector. The white space helps with readability:
+
+```css
+.selector {
+    property: value;
+
+    .nested {
+        property: value;
+    }
+}
+```
 
 ## Extra
 

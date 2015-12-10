@@ -29,6 +29,16 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
         color: fade(@text-color, 50%);
     }
 }
+atom-text-editor, atom-text-editor::shadow {
+    .find-result {
+        .region {
+            background: fade(@base-color, 5%);
+            border-color: fade(@base-color, 20%);
+            border-radius: 0.125rem;
+            box-sizing: border-box;
+        }
+    }
+}
 atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
     background-color: transparent;
 
