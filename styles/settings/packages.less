@@ -93,6 +93,19 @@
             background-color: @app-background-color;
             opacity: 0.75;
         }
+        .meta-controls {
+            .install-button, .uninstall-button {
+                &.is-installing, &.is-uninstalling {
+                    background-image: none;
+                    -webkit-animation: none;
+                    
+                    &::before {
+                        -webkit-animation: spin 1s linear infinite;
+                        content: '\f087';
+                    }
+                }
+            }
+        }
     }
     .package-detail-view, .package-detail {
         .table {
@@ -138,5 +151,13 @@
     }
     .alert + .package-container {
         margin-top: 3rem;
+    }
+}
+@-webkit-keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
     }
 }
