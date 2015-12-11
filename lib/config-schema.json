@@ -25,22 +25,7 @@
                 "title": "Predefined colors",
                 "description": "Pick a predefined color from the Material Design palette. If you change the Primary Color it will override this settings.",
                 "type": "string",
-                "enum": [
-                    "Amber",
-                    "Blue",
-                    "Blue Grey",
-                    "Brown",
-                    "Cyan",
-                    "Green",
-                    "Grey",
-                    "Indigo",
-                    "Lime",
-                    "Orange",
-                    "Pink",
-                    "Purple",
-                    "Red",
-                    "Teal"
-                ],
+                "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
                 "default": "Teal"
             }
         }
@@ -92,7 +77,7 @@
                 "default": false
             },
             "blendTabs": {
-                "title": "Blend with tab bar",
+                "title": "Blend tree view with tab bar",
                 "description": "Makes the tree view blend with the tab bar by adding a colored element fixed to the top.",
                 "type": "boolean",
                 "default": false
