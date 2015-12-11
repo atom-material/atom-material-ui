@@ -12,7 +12,7 @@
             }
         }
         &.status-modified:not(.selected) {
-            color: @md-amber;
+            color: lighten(desaturate(@md-amber, 25%), 5%);
         }
         &.status-added:not(.selected) {
             color: @md-light-green;
@@ -30,7 +30,7 @@
     }
     li.list-nested-item {
         &.status-modified:not(.selected) > .list-item {
-            color: @md-amber;
+            color: lighten(desaturate(@md-amber, 25%), 5%);
         }
         &.status-added:not(.selected) > .list-item {
             color: @md-light-green;

@@ -78,7 +78,7 @@
             },
             "blendTabs": {
                 "title": "Blend tree view with tab bar",
-                "description": "Makes the tree view blend with the tab bar by adding a colored element fixed to the top.",
+                "description": "Makes the tree view blend with the tab bar by adding a colored element fixed to the top. Only works with a colored tab bar.",
                 "type": "boolean",
                 "default": false
             }
