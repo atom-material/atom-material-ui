@@ -1,0 +1,49 @@
+.nuclide-debugger-root {
+    section.padded {
+        padding: 1rem;
+    }
+    h2 {
+        height: 3rem;
+        line-height: 3rem;
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        margin: -1rem -1rem 1rem;
+    }
+    .tinted-tab-bar & {
+        h2 {
+            background: @base-color;
+            color: @accent-text-color;
+        }
+    }
+    .panel-contrast & {
+        background: fade(@text-color, 2.5%);
+    }
+    .panel-contrast:not(.tinted-tab-bar) & {
+        h2 {
+            background: fade(@text-color, 3%);
+        }
+    }
+    .panel-shadows & {
+        h2 {
+            .z-depth-1;
+        }
+    }
+    .btn-toolbar.form-group {
+        button + button {
+            margin-left: 1rem;
+        }
+    }
+    button[class*="close-button"] {
+        top: 0.125rem;
+        right: 1rem;
+        color: @accent-text-color;
+        position: absolute;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+
+        &::before {
+            margin: 0;
+        }
+    }
+}

@@ -4,7 +4,7 @@
 .select-arrow(@color) when (lightness(@color) < 50%) {
     background-image: url('atom://atom-material-ui/assets/svg/arrow-drop-down-white.svg');
 }
-.settings-view {
+.settings-view, [class*="nuclide"] {
     select.form-control {
         -webkit-appearance: none;
         background-size: 1.5rem;

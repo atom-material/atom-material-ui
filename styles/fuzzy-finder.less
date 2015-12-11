@@ -70,7 +70,13 @@ atom-panel.modal, .overlay {
             color: @text-color-subtle;
         }
     }
-    .error-message, .loading {
+    .error-message, .loading, .message, label {
         padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+        font-weight: normal;
+
+        &::before {
+            margin-right: 0.5rem;
+        }
     }
 }

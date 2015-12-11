@@ -32,7 +32,7 @@
     li {
         padding: 0 0.5rem;
     }
-    li.directory.selected > div.header.list-item {
+    li.directory.selected > .list-item {
         position: relative;
 
         &::after {
@@ -43,7 +43,7 @@
         color: fade(@text-color, 30%);
     }
     &:focus {
-        li.directory.selected > div.header.list-item {
+        li.directory.selected > .list-item {
             color: @accent-text-color;
 
             &::after {
