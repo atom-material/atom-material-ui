@@ -11,7 +11,7 @@
             background: fade(@text-color, 50%);
         }
         // The following are !important because the were span elements
-        // with no class names and had inline styles. Looks weird.
+        // with no class names and had inline styles. Looks weird, I know.
         span[style="color:#cd0000;"] {
             color: @md-red !important;
         }
@@ -53,6 +53,22 @@
 
         .icon-x {
             color: @md-red;
+        }
+    }
+}
+atom-panel.modal {
+    .terminal-plus-dialog {
+        padding: 1rem;
+        overflow: hidden;
+
+        label {
+            font-weight: 500;
+        }
+        .icon::before {
+            margin-right: 1rem;
+        }
+        atom-text-editor[mini], atom-text-editor[mini]::shadow {
+            margin: 0 0 1rem;
         }
     }
 }
