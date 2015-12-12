@@ -101,3 +101,31 @@ atom-text-editor::shadow {
         }
     }
 }
+linter-new-panel, linter-default-panel {
+    background: fade(@text-color, 2.5%);
+
+    .panel-heading {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .heading-title {
+    }
+    .heading-status {
+        > * {
+            margin-right: 0.5rem;
+        }
+    }
+    .status-success {
+        color: @md-green;
+    }
+    .status-error {
+        color: @md-red;
+    }
+    .status-warning {
+        color: @md-amber;
+    }
+    .panel-shadows & {
+        .z-depth-2;
+    }
+}
