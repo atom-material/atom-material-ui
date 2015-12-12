@@ -55,6 +55,7 @@
             }
             &::before {
                 font-size: 1.25rem;
+                line-height: 3rem;
             }
         }
         &.tool-bar-vertical.gutter-bottom::after {
@@ -85,6 +86,24 @@
     }
     .panel-contrast & {
         background: darken(@app-background-color, 5%);
+    }
+    .compact-tab-bar & {
+        &.tool-bar-vertical {
+            width: 2.5rem;
+        }
+        &.tool-bar-horizontal {
+            height: 2.5rem;
+        }
+        &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
+            .tool-bar-btn {
+                width: 2.5rem;
+                height: 2.5rem;
+
+                &::before {
+                    line-height: 2.5rem;
+                }
+            }
+        }
     }
 }
 .tinted-tab-bar .is-blurred .tool-bar {

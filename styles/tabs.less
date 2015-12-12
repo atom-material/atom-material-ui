@@ -238,6 +238,22 @@
     .panel-shadows &:not([data-reactid]) {
         .z-depth-1;
     }
+    .compact-tab-bar & {
+        height: 2.5rem;
+        line-height: 2.5rem;
+
+        &::before, &::after {
+            height: 2.5rem;
+        }
+        .tab {
+            .close-icon {
+                top: 0.75rem;
+            }
+            &.modified:not(:hover) .close-icon {
+                top: 1rem;
+            }
+        }
+    }
 }
 .has-custom-icons .tab-bar:not([data-reactid]) .tab {
     .title[data-path] {

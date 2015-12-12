@@ -58,6 +58,12 @@
         "order": 3,
         "type": "object",
         "properties": {
+            "compactTabs": {
+                "title": "Compact tab bar",
+                "description": "Reduces line height so the tab bar won't be too tall.",
+                "type": "boolean",
+                "default": false
+            },
             "tintedTabBar": {
                 "title": "Tinted tab bar",
                 "description": "Paints the tab bar with the chosen primary color.",
