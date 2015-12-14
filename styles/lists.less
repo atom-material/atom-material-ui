@@ -46,3 +46,18 @@
         background: none;
     }
 }
+.select-list, .popover-list {
+    atom-text-editor[mini], atom-text-editor[mini]::shadow {
+        height: auto;
+    }
+    .styleguide & {
+        atom-text-editor[mini], atom-text-editor[mini]::shadow {
+            height: auto;
+        }
+    }
+    .list-group {
+        li {
+            padding: 0 0.75rem;
+        }
+    }
+}
