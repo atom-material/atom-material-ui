@@ -5,20 +5,39 @@
 @import "settings/tables";
 
 .settings-view {
+    padding: 0;
+
     .breadcrumb {
+        padding: 0 0 1rem;
         margin-bottom: 0;
     }
     .panels-item {
-        padding: 1.5rem;
+        padding: 3rem;
     }
     .section, .sub-section {
+        padding: 0;
+        margin: 0;
+
         &:first-child {
             border-top: none;
+        }
+        &:first-child, &:last-child {
+            padding: 0;
         }
         &.collapsed {
             > *:not([class*="heading"]) {
                 display: none;
             }
+        }
+        &:empty {
+            display: none;
+
+            + .section, + .sub-section {
+                padding-top: 0;
+            }
+        }
+        + .section, + .sub-section {
+            padding-top: 3rem;
         }
     }
     .section:not(:empty) {
@@ -61,7 +80,7 @@
         }
         .sub-section-heading {
             font-size: 1.25rem;
-            margin: 3rem 0 1rem;
+            margin: 0 0 1.5rem;
             font-weight: 500;
 
             &::before {
@@ -147,5 +166,14 @@
     }
     .container:empty {
         display: none;
+    }
+    .editor-container {
+        margin: 0 0 3rem;
+    }
+    .deprecated-packages[style="display: none;"] {
+        + .section, + .sub-section {
+            margin-top: 0;
+            padding-top: 0;
+        }
     }
 }

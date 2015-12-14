@@ -5,4 +5,49 @@
         top: 3rem;
         right: 3rem;
     }
+    section {
+        &.bordered {
+            padding: 2rem 0;
+            border-color: fade(@text-color, 5%);
+
+            &[data-name="styleguide"] {
+                padding-top: 0;
+            }
+        }
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 300;
+            color: @text-color;
+            margin-bottom: 2rem;
+
+            &:hover {
+                color: @text-color;
+            }
+            .collapsed & {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .example {
+        pre {
+            border: none;
+            background-color: darken(@app-background-color, 2.5%);
+
+            span:not([class]) {
+                color: @text-color;
+            }
+        }
+    }
+    .example-rendered {
+        padding: 2rem;
+
+        .block {
+            + .block {
+                margin-top: 2rem;
+            }
+            > div:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }
