@@ -1,21 +1,39 @@
 .ps-container {
     > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
+        border-radius: 0;
         z-index: 200;
-        
+
         > .ps-scrollbar-y, > .ps-scrollbar-x {
-            background-color: fade(@text-color, 35%);
-            border: 1px solid fade(@text-color, 40%);
+            background-color: fade(@base-color, 50%);
+            border-radius: 0;
+            border: none;
         }
     }
     &:hover {
         > .ps-scrollbar-y-rail, > .ps-scrollbar-x-rail {
             &:hover, &:active {
-                background-color: fade(@text-color, 10%);
+                background-color: fade(@base-color, 10%);
 
                 > .ps-scrollbar-y, > .ps-scrollbar-x {
-                    background-color: fade(@text-color, 35%);
+                    background-color: fade(@base-color, 50%);
                 }
             }
         }
+    }
+}
+.scrollbars-visible-always {
+    /deep/::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+        z-index: 99999;
+    }
+    /deep/::-webkit-scrollbar-track,
+    /deep/::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    /deep/::-webkit-scrollbar-thumb {
+        background: fade(@base-color, 40%);
+        border-radius: 0;
+        border: none;
     }
 }
