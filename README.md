@@ -31,15 +31,15 @@ You'll find the color picker there.
 
 Here's the obligatory screenshot. The toolbar on the left side is a package named [Tool-bar-main](https://atom.io/packages/tool-bar-main).
 
-![](http://i.imgur.com/BbNSkFT.png)
+![](http://i.imgur.com/ExPYmJY.png)
 
 ## Light syntax theme variant
 
-![](http://i.imgur.com/NFJB47Q.png)
+![](http://i.imgur.com/q1o78sX.png)
 
 ## Dark syntax theme variant
 
-![](http://i.imgur.com/s23XB6r.png)
+![](http://i.imgur.com/orhIvwS.png)
 
 ## Contributing
 
