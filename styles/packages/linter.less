@@ -78,8 +78,6 @@ atom-text-editor::shadow {
     }
 }
 linter-new-panel, linter-default-panel {
-    background: darken(@app-background-color, 2%);
-
     .panel-heading {
         padding: 0.25rem 0.5rem;
         font-size: 0.7rem;
@@ -106,6 +104,9 @@ linter-new-panel, linter-default-panel {
     }
     .status-warning {
         color: @md-amber;
+    }
+    .panel-contrast & {
+        background: darken(@app-background-color, 2%);
     }
     .panel-shadows & {
         .z-depth-2;

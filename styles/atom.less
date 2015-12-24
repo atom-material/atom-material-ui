@@ -20,7 +20,6 @@ background-tips {
     color: fade(@text-color, 30%);
 }
 status-bar {
-    background-color: darken(@app-background-color, 2%);
     min-height: 1.5rem;
     line-height: 1.25rem;
 
@@ -34,6 +33,9 @@ status-bar {
             margin: 0 0.25rem;
             display: inline-block;
         }
+    }
+    .panel-contrast & {
+        background-color: darken(@app-background-color, 2%);
     }
 }
 .text-warning {
