@@ -37,6 +37,10 @@ Here's the obligatory screenshot. The toolbar on the left side is a package name
 
 ![](http://i.imgur.com/NFJB47Q.png)
 
+## Dark syntax theme variant
+
+![](http://i.imgur.com/s23XB6r.png)
+
 ## Contributing
 
 If you want to contribute you should fork this repository, make your changes and then send a pull request.
