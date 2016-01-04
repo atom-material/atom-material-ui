@@ -22,7 +22,7 @@ linter-bottom-tab {
     }
 }
 .linter-highlight {
-    margin-left: 1rem;
+    margin-left: 0.25rem;
 
     &.status-success {
         color: @md-green;
@@ -30,17 +30,20 @@ linter-bottom-tab {
     &.status-error {
         color: @md-red;
     }
+    &:first-child {
+        margin-left: 0;
+    }
 }
 linter-message {
     line-height: 2rem;
     display: block;
-    padding: 0.5rem;
+    padding-left: 0.25rem;
 
     + linter-message {
         border-top: 1px solid fade(@text-color, 5%);
     }
     span:last-child {
-        margin-left: 1rem;
+        margin-left: 0.5rem;
     }
     .linter-message-link {
         margin-left: 0.5rem;
@@ -52,20 +55,21 @@ linter-message {
 }
 #linter-inline {
     background: @text-color;
+    padding: 0.25rem;
     .z-depth-2;
 
     &::before {
         border-color: transparent transparent @text-color @text-color;
     }
     linter-message {
-        padding: 0;
+        height: 1.85rem;
 
         span:last-child {
             color: @app-background-color;
         }
     }
 }
-atom-text-editor::shadow {
+atom-text-editor, atom-text-editor::shadow {
     .decoration.linter-row {
         .linter-gutter.linter-highlight {
             &.warning {
