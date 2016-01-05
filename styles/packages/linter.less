@@ -1,5 +1,10 @@
 linter-panel {
-    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    .panel-contrast & {
+        background-color: darken(@app-background-color, 2.5%);
+    }
+    .panel-shadows & {
+        box-shadow: 0 -0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    }
 }
 linter-bottom-container {
     margin-right: 1rem;
@@ -35,6 +40,7 @@ linter-bottom-tab {
     }
 }
 linter-message {
+    background-color: transparent;
     line-height: 2rem;
     display: block;
     padding-left: 0.25rem;

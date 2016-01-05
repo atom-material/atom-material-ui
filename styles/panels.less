@@ -1,3 +1,17 @@
+atom-panel {
+    .inset-panel {
+        .panel-heading {
+            background: darken(@app-background-color, 2.5%);
+            font-size: 0.8rem;
+        }
+        .padded & {
+            .panel-heading {
+                margin: -0.5rem -0.5rem 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+}
 atom-panel-container {
     &.top, &.bottom, &.left, &.right {
         background-color: @app-background-color;
