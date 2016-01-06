@@ -1,17 +1,17 @@
 // VCS colors
-.status-modified {
+.status-modified:not(.tree-view .status-modified) {
     color: @md-amber;
 }
-.status-added {
+.status-added:not(.tree-view .status-added) {
     color: @md-light-green;
 }
-.status-removed {
+.status-removed:not(.tree-view .status-removed) {
     color: @md-red;
 }
-.status-renamed {
+.status-renamed:not(.tree-view .status-renamed) {
     color: @md-blue;
 }
-.status-ignored {
+.status-ignored:not(.tree-view .status-ignored) {
     color: fade(@text-color, 50%);
 }
 // Text colors
