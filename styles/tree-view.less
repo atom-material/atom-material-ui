@@ -1,0 +1,86 @@
+@import "ui-variables";
+
+.tree-view-line-height(@height) {
+    .list-group, .list-tree {
+        li {
+            &:not(.list-nested-item), &.list-nested-item > .list-item {
+                line-height: @height;
+                height: @height;
+
+            }
+            &::before {
+                line-height: @height;
+                height: @height;
+            }
+            span[class*="icon-"]::before {
+                margin-right: 1.25rem;
+            }
+        }
+    }
+}
+
+.tree-view {
+    font-size: @font-size;
+    background-color: @tree-view-background-color;
+
+    .selected::before {
+        background-color: rgba(0,0,0,0.025);
+    }
+    .tree-view-line-height(32px);
+}
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 8px;
+    }
+}
+.tree-view-scroller {
+    transform: translate3d(0, 0, 0);
+}
+.focusable-panel {
+    opacity: 1;
+
+    &:focus {
+        .panel-background(@app-background-color);
+
+        .selected, .selected[class*="status-"] {
+            color: #FFF;
+            text-shadow: none;
+
+            &::before {
+                background: @background-color-selected;
+            }
+            & > span[class*="icon"]::before, & > .header.list-item span, & > .header.list-item::before {
+                color: rgba(255,255,255,0.9);
+            }
+            &.status-modified, &.status-modified > span[class*="icon"]::before, &.status-modified > .header.list-item span, &.status-modified > .header.list-item::before {
+                color: darken(@text-color-modified, 50%) !important;
+            }
+        }
+    }
+}
+.compact-tree-view {
+    .tree-view {
+        .tree-view-line-height(24px);
+    }
+}
+.root-height(@size) {
+    .tree-view {
+        .project-root.list-nested-item {
+            &::before {
+                height: @size;
+            }
+            > div {
+                line-height: @size;
+            }
+        }
+    }
+}
+.tab-size-small {
+    .root-height(32px);
+}
+.tab-size-normal {
+    .root-height(48px);
+}
+.tab-size-big {
+    .root-height(64px);
+}

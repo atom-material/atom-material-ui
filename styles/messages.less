@@ -1,0 +1,47 @@
+@import "ui-variables";
+@import "elevation";
+
+.background-message {
+    color: fade(@text-color, 20%);
+}
+.panel-heading {
+    background: @app-background-color !important;
+    padding: 20px;
+    border-bottom: 1px solid lighten(@app-background-color, 1%);
+}
+.highlight-info {
+    background: @background-color-selected !important;
+    color: @app-background-color !important;
+}
+.settings-view .alert-info {
+    background-color: lighten(@app-background-color, 5%);
+    border: none;
+    color: @background-color-selected;
+}
+div#linter-inline {
+    background: fade(darken(@app-background-color, 10%), 95%);
+    &:extend(.elevation-2);
+
+    &::before {
+        border-color: transparent transparent fade(darken(@app-background-color, 10%), 95%) fade(darken(@app-background-color, 10%), 95%);
+    }
+    a {
+        color: fade(@text-color, 50%);
+    }
+    linter-message {
+        span:not(.badge) {
+            color: @text-color;
+        }
+    }
+}
+linter-bottom-tab {
+    &.linter-tab {
+        opacity: 0.35;
+        color: @text-color;
+        background: darken(@app-background-color, 10%);
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@import "ui-variables";
+@import "ui-mixins";
+@import "utilities";
+@import "elevation";
+
+.button-variant(@background-color, @color) {
+    background-color: @background-color;
+    color: @color;
+
+    &:hover, &:focus, &:active, &:active:focus {
+        background-color: @background-color;
+        color: @color;
+    }
+}
+.btn-group > .btn {
+    border: none;
+
+    &.selected {
+        background: darken(@app-background-color, 10%);
+    }
+}
+.btn, button, button[class] {
+    background: @app-background-color;
+    color: @text-color;
+    transition: all 250ms ease;
+    height: 36px;
+    border-radius: 3px;
+    line-height: 36px;
+    text-transform: uppercase;
+    &:extend(.ripple);
+
+    &:hover {
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
+        &:extend(.elevation-1);
+    }
+    &:focus, &:active:focus {
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
+        outline: none;
+    }
+    &:active {
+        background: lighten(@app-background-color, 2%);
+        color: lighten(@text-color, 5%);
+        outline: none;
+        &:extend(.elevation-2);
+    }
+    &.selected, &.selected:hover {
+        background: darken(@app-background-color, 2%);
+        &:extend(.elevation-0);
+    }
+    &[disabled], &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    // Alternative Buttons
+
+    &.btn-info {
+        .button-variant(@md-indigo, #FFF);
+    }
+    &.btn-success {
+        .button-variant(@md-light-green, #FFF);
+    }
+    &.btn-warning {
+        .button-variant(@md-amber, #FFF);
+    }
+    &.btn-error {
+        .button-variant(@md-red, #FFF);
+    }
+}

@@ -1,0 +1,39 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.panel {
+    &.bordered {
+        border: 1px solid @base-border-color;
+        border-radius: @component-border-radius;
+    }
+}
+atom-panel, .tool-panel {
+    .text(normal);
+    position: relative;
+    background-color: @app-background-color;
+}
+.inset-panel {
+    position: relative;
+    background-color: @app-background-color;
+}
+.panel-heading {
+    .text(normal);
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+}
+.find-and-replace, .project-find {
+    .options-label,
+    .find-meta-container span,
+    .header-item.description span {
+        color: fade(@text-color, 30%);
+    }
+}
+.panel-contrast {
+    atom-panel, .tool-panel, .tab-bar, .tree-view, .focusable-panel, .focusable-panel:focus {
+        background-color: desaturate(darken(@app-background-color, 1.5%), 2.5%);
+    }
+    .tool-bar {
+        background-color: desaturate(darken(@app-background-color, 4%), 2.5%);
+    }
+}

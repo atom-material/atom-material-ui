@@ -1,0 +1,162 @@
+.material-icons-font() {
+    font-family: 'Material Icons';
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+.tree-view-icon() {
+    .material-icons-font();
+    font-size: 1.6rem;
+    top: -2px;
+}
+
+// Settings Icons
+
+.settings-view {
+    [class*="icon-"]::before {
+        .material-icons-font();
+    }
+    .icon-settings::before, .icon-gear::before {
+        content: '\E8B8';
+    }
+    .icon-keyboard::before {
+        content: '\E312';
+    }
+    .icon-package::before {
+        content: '\E87B';
+    }
+    .icon-paintcan::before {
+        content: '\E243';
+    }
+    .icon-cloud-download::before {
+        content: '\E2C0';
+    }
+    .icon-plus::before {
+        content: '\E148';
+    }
+    .icon-link-external::before {
+        content: '\E89E';
+    }
+    .icon-question::before {
+        content: '\E887';
+    }
+    .icon-clippy::before {
+        content: '\E14F';
+    }
+    .icon-trashcan::before {
+        content: '\E872';
+    }
+    .icon-playback-pause::before {
+        content: '\E034';
+    }
+    .icon-playback-play::before {
+        content: '\E037';
+    }
+    .icon-device-desktop::before {
+        content: '\E30C';
+    }
+    .icon-hourglass::before {
+        content: '\E88B';
+    }
+    .icon-heart::before {
+        content: '\E87D';
+    }
+    .icon-star::before {
+        content: '\E838';
+    }
+    .icon-dashboard::before {
+        content: '\E871';
+    }
+    .icon-link::before {
+        content: '\E157';
+    }
+    .icon-bug::before {
+        content: '\E868';
+    }
+    .icon-book::before {
+        content: '\E865';
+    }
+    .icon-versions::before {
+        content: '\E62D';
+    }
+    .icon-repo::before {
+        content: '\E865';
+    }
+    .icon-squirrel::before {
+        content: '\E86B';
+    }
+    .icon-law::before {
+        content: '\E865';
+    }
+    .icon-check::before {
+        content: '\E5CA';
+    }
+    .icon-search::before {
+        content: '\E8B6';
+    }
+    .icon-x::before {
+        content: '\E5CD';
+    }
+}
+
+// Tree View Icons
+
+.tree-view {
+    .list-group, .list-tree {
+        li {
+            .icon-file-directory::before {
+                .material-icons-font();
+                content: '\E2C7';
+                font-size: 1.6rem;
+                top: -2px;
+            }
+        }
+        li.expanded > div{
+            & > .icon-file-directory::before {
+                content: '\E2C8';
+            }
+        }
+    }
+}
+html:not(.dont-change-icons) {
+    .tree-view {
+        .list-group, .list-tree {
+            li {
+                .icon-file-text::before {
+                    .tree-view-icon();
+                    content: '\E24D';
+                }
+                .icon-book::before {
+                    .tree-view-icon();
+                    content: '\E02F';
+                }
+                .icon-file-media::before {
+                    .tree-view-icon();
+                    content: '\E3F4';
+                }
+            }
+        }
+        .icon-repo::before {
+            .tree-view-icon();
+            content: '\E865';
+            margin-right: 1rem;
+        }
+    }
+}
+
+// Tabs Icons
+
+html[class*="tab-icons"]:not(.dont-change-icons) {
+    .tab-bar .tab .title:not(.icon) {
+        &::before {
+            .tree-view-icon();
+            content: '\E24D';
+        }
+        &[data-name*=".png"]::before {
+            content: '\E3F4';
+        }
+        &[data-name*=".md"]::before {
+            content: '\E02F';
+        }
+    }
+}

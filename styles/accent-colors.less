@@ -1,0 +1,320 @@
+@import "ui-variables";
+
+.accent(@color) {
+    &.ripple-accent-color {
+        .tab-bar {
+            .tab {
+                .ink {
+                    background-color: fade(@color, 50%);
+                }
+                &.modified:not(:hover) .title::after {
+                    border-color: fade(@color, 87%);
+                }
+            }
+        }
+    }
+    .btn.btn-primary {
+        .button-variant(@color, #FFF);
+    }
+    .tab-bar {
+        .tab {
+            &.active {
+                &::after {
+                    background-color: @color;
+                }
+            }
+            &.modified:hover .close-icon {
+                color: @color;
+            }
+            &.modified:not(:hover) {
+                .close-icon {
+                    border-color: @color;
+                }
+                .title::after {
+                    border-color: @color;
+                }
+            }
+        }
+        .placeholder::after {
+            border-top-color: @color;
+        }
+    }
+    .focusable-panel {
+        &:focus {
+            .selected, .selected[class*="status-"] {
+                color: #FFF;
+
+                &::before {
+                    background: @color;
+                }
+                &.status-modified::before {
+                    background-color: @text-color-modified;
+                    color: darken(@text-color-modified, 60%);
+                }
+                &.status-added::before {
+                    background-color: @text-color-added;
+                }
+                &.status-renamed::before {
+                    background-color: @text-color-renamed;
+                }
+                &.status-remo::before {
+                    background-color: @text-color-removed;
+                }
+            }
+        }
+    }
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li.selected {
+            background-color: @color;
+            color: lighten(@color, 50%);
+        }
+        li {
+            color: @text-color;
+        }
+    }
+    .settings-view {
+        select.form-control {
+            &:focus {
+                border-bottom-color: @color;
+                box-shadow: 0 1px 0 @color;
+            }
+        }
+        .package-card, .package-detail .package-card {
+            .btn-group > .btn {
+                &:hover {
+                    color: @color !important;
+                }
+            }
+        }
+        .package-readme a {
+            color: @color;
+        }
+        .alert-info {
+            color: lighten(@color, 20%);
+        }
+        .config-menu .nav > li.active {
+            &::before {
+                background-color: @color;
+            }
+        }
+        atom-text-editor[mini], atom-text-editor[mini]::shadow {
+            .selection .region {
+                background-color: @syntax-selection-color;
+            }
+        }
+        atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+            .selection .region {
+                background-color: @syntax-selection-color;
+            }
+        }
+    }
+    .link, .text-info {
+        color: @color;
+
+        &:hover {
+            color: lighten(@color, 20%);
+        }
+    }
+    atom-text-editor[mini],
+    atom-text-editor[mini]::shadow {
+        .cursor {
+            border-color: @color;
+        }
+        .selection .region {
+            background-color: @syntax-selection-color;
+        }
+    }
+    atom-text-editor[mini].is-focused,
+    atom-text-editor[mini].is-focused::shadow {
+        &:before {
+           background-color: @color;
+           transform: scaleX(1);
+        }
+
+        .selection .region {
+            background-color: @syntax-selection-color;
+        }
+    }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                span.character-match {
+                    color: rgba(0,0,0,0.8);
+                    font-weight: bold;
+                }
+            }
+            li.selected {
+                span.character-match {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    autocomplete-suggestion-list, autocomplete-suggestion-list.select-list.popover-list {
+        ol.list-group {
+            li {
+                .word {
+                    color: @text-color;
+                }
+                .right-label {
+                    color: fade(@text-color, 50%);
+                }
+                &.selected {
+                    .word {
+                        color: #FFF;
+                    }
+                    .right-label {
+                        color: rgba(255,255,255,0.5);
+                    }
+                }
+            }
+        }
+        .character-match {
+            .highlight(@app-background-color);
+        }
+        &.select-list.popover-list .suggestion-description-more-link {
+            color: @color;
+        }
+    }
+    .markdown-preview a {
+        color: @color;
+    }
+    .light-accent(@color);
+}
+.light-accent(@accent) when (lightness(@accent) >= 60%) {
+    .select-list ol.list-group, &.select-list ol.list-group {
+        li {
+            color: @text-color;
+
+            span {
+                color: @text-color;
+            }
+        }
+        li.selected {
+            background-color: @accent;
+            color: darken(@accent, 40%) !important;
+
+            &.two-lines {
+                .primary-line, .secondary-line {
+                    color: darken(@accent, 40%) !important;
+                }
+            }
+            span {
+                color: darken(@accent, 40%) !important;
+            }
+        }
+    }
+    atom-panel.modal, .overlay {
+        .select-list ol.list-group, &.select-list ol.list-group {
+            li {
+                &.selected {
+                    color: #FFF;
+                }
+                span.character-match {
+                    color: darken(@accent, 40%);
+                }
+            }
+        }
+    }
+    autocomplete-suggestion-list, autocomplete-suggestion-list.select-list.popover-list {
+        ol.list-group {
+            li.selected {
+                .word {
+                    color: darken(@accent, 40%);
+                }
+                .icon.snippet, .icon {
+                    color: darken(@accent, 40%);
+                }
+                .snippet-completion, .left-label {
+                    color: darken(@accent, 30%);
+                }
+            }
+        }
+    }
+    .settings-view {
+        .config-menu .nav > li.active > a {
+            color: darken(@accent, 40%);
+        }
+        .alert-info {
+            color: darken(@accent, 40%);
+        }
+    }
+    .focusable-panel {
+        &:focus {
+            .selected, .selected[class*="status-"] {
+                color: darken(@accent, 40%);
+
+                & > span[class*="icon"]::before, & > .header.list-item span, & > .header.list-item::before {
+                    color: darken(@accent, 40%);
+                }
+            }
+        }
+    }
+    .link {
+        color: darken(@accent, 25%);
+
+        &:hover {
+            color: darken(@accent, 20%);
+        }
+    }
+}
+html.blue {
+    .accent(@md-blue);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(35deg);
+    }
+}
+html.cyan {
+    .accent(@md-cyan);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: none;
+    }
+}
+html.green {
+    .accent(@md-light-green);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(-100deg) brightness(1.2);
+    }
+}
+html.pink {
+    .accent(@md-pink);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(165deg) saturate(3);
+    }
+}
+html.purple {
+    .accent(lighten(@md-deep-purple, 10%));
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(70deg) saturate(3.5);
+    }
+}
+html.red {
+    .accent(@md-red);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(175deg) saturate(2.5);
+    }
+}
+html.teal {
+    .accent(@md-teal-300);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(-10deg) saturate(0.5);
+    }
+}
+html.white {
+    .accent(lighten(@md-grey, 15%));
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: grayscale(1);
+    }
+}
+html.yellow {
+    .accent(@md-yellow);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(240deg) saturate(8);
+    }
+}
+html.orange {
+    .accent(@md-orange);
+    .settings-view input[type="checkbox"] {
+        -webkit-filter: hue-rotate(225deg) saturate(8);
+    }
+}

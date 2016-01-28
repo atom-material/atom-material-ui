@@ -1,0 +1,297 @@
+@import "ui-variables";
+@import "elevation";
+
+.settings-view {
+    .breadcrumb > .active a {
+        .highlight(@app-background-color);
+        font-weight: bold;
+    }
+    .section {
+        border-color: fade(@text-color, 5%);
+
+        atom-text-editor[mini], atom-text-editor[mini]::shadow {
+            opacity: 1;
+        }
+    }
+    select.form-control {
+        .select-arrow(@app-background-color);
+        background-position: right center;
+        background-size: 22px;
+        border: none;
+        border-bottom: 1px solid fade(@text-color, 10%);
+        box-shadow: none;
+        border-radius: 0;
+        cursor: pointer;
+        padding: 0;
+        line-height: 36px;
+        height: 36px;
+        -webkit-appearance: none;
+
+        &:hover, &:focus {
+            .select-arrow(@app-background-color);
+            background-position: right center;
+            background-size: 22px;
+        }
+        &:focus {
+            border-bottom-color: @background-color-selected;
+            box-shadow: 0 1px 0 @background-color-selected;
+        }
+        option {
+            background-color: lighten(@app-background-color, 5%);
+            color: @text-color;
+            border: none;
+        }
+    }
+    .btn.active-theme-settings {
+        &:hover {
+            background: none;
+            .highlight(@app-background-color);
+            &:extend(.elevation-0);
+        }
+    }
+    .package-update-view {
+        .package-name {
+            .highlight(@app-background-color);
+        }
+    }
+    .package-readme {
+        h1, h2, h3, h4, h5, h6 {
+            color: @text-color;
+        }
+    }
+    .package-card, .package-detail .package-card {
+        &:extend(.elevation-1);
+        position: relative;
+        padding-left: 170px;
+        padding-bottom: 72px;
+        min-height: 100px;
+        background: lighten(@app-background-color, 5%);
+        border-radius: @component-border-radius;
+        border: none;
+        color: @text-color;
+
+        &:hover {
+            background: lighten(@app-background-color, 5%);
+        }
+        &.disabled {
+            background: lighten(@app-background-color, 5%);
+            opacity: 0.75;
+        }
+        [class*="icon-"]::before {
+            position: relative;
+            top: -2px;
+        }
+        .card-name {
+            margin-bottom: 10px;
+
+            a {
+                color: @text-color;
+            }
+        }
+        .stats {
+            opacity: 0.5;
+
+            [class*="icon-"] {
+                color: @text-color;
+            }
+        }
+        .meta {
+            display: block;
+            width: 170px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+        .meta-controls {
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 700px;
+            height: 36px;
+
+            .btn-toolbar {
+                margin: 0;
+
+                > .btn-group {
+                    margin: 0;
+                }
+            }
+        }
+        .btn-group > .btn {
+            background: none;
+            border: none;
+            outline: none;
+            color: @text-color;
+
+            &:hover {
+                color: @background-color-selected;
+            }
+            &:focus, &:active:focus {
+                color: @text-color;
+            }
+            &:active {
+                background: lighten(@app-background-color, 10%);;
+            }
+        }
+        .meta-user {
+            display: block;
+            white-space: nowrap;
+            margin: 0;
+
+            a {
+                display: inline-block;
+                max-width: 100%;
+            }
+            .author {
+                color: fade(@text-color, 60%);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 80px;
+                position: relative;
+                top: 4px;
+            }
+            .avatar {
+                width: 48px;
+                height: 48px;
+                margin-right: 10px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .setting-description {
+        .highlight(@app-background-color);
+    }
+    .link {
+        color: @background-color-selected;
+
+        &:hover {
+            color: lighten(@background-color-selected, 20%);
+        }
+    }
+    input[type="checkbox"] {
+        background: transparent url('atom://atom-material-ui/assets/checkbox.svg') no-repeat;
+        background-position: center center;
+        border: none;
+        width: 18px;
+        height: 18px;
+        transform: translate3d(0,0,0);
+
+        &:checked {
+            background-color: transparent;
+            background-image: url('atom://atom-material-ui/assets/checkbox-checked.svg')
+        }
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+    }
+    .config-menu {
+        border-color: fade(@text-color, 5%);
+        min-width: 200px;
+
+        [class*="icon-"]::before {
+            font-size: 18px;
+            position: relative;
+            top: -1px;
+        }
+        .nav > li {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                display: none;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                top: calc(50% - 1px);
+                left: calc(50% - 1px);
+                pointer-events: none;
+                width: 2px;
+                height: 2px;
+                background: fade(@text-color, 20%);
+                -webkit-transform: translate3d(0,0,0);
+            }
+            & > a {
+                transition: color 250ms ease;
+                padding: 1.25rem 1rem;
+
+                &:hover {
+                    color: lighten(@text-color, 20%);
+                    background-color: transparent;
+                }
+                &::before {
+                    margin-right: 2rem;
+                }
+            }
+            &.active {
+                & > a {
+                    background-color: transparent;
+
+                    &:hover {
+                        color: #FFF;
+                    }
+                }
+                &::before {
+                    display: block;
+                    -webkit-animation: ripplePaint 250ms ease;
+                    -webkit-animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+    .section-heading-count {
+        color: lighten(@text-color, 10%);
+        font-size: 1rem;
+        margin-left: 1rem;
+        background-color: fade(@text-color, 5%);
+    }
+    section, .section {
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: 200;
+
+            &::before {
+                font-size: 2.5rem;
+                position: relative;
+                top: -0.75rem;
+            }
+        }
+        .section-heading, .sub-section-heading {
+            font-weight: 400;
+            color: @text-color;
+
+            &::before {
+                margin-right: 2rem;
+            }
+        }
+    }
+    .error-message {
+        .close {
+            top: -11px;
+
+            &::before {
+                margin: 0 8px;
+            }
+        }
+    }
+}
+.no-animations {
+    .config-menu {
+        .nav > li {
+            & > a {
+                transition: none;
+            }
+            &.active::before {
+                -webkit-animation: ripplePaint 0ms;
+                -webkit-animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+@-webkit-keyframes ripplePaint {
+    from { transform: scale(1); }
+    to { transform: scale(130); }
+}

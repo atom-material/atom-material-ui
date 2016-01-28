@@ -1,0 +1,16 @@
+@import "ui-variables";
+
+autocomplete-suggestion-list {
+    ol.list-group {
+        li.selected {
+            .icon.snippet, .icon {
+                color: #FFF;
+            }
+        }
+    }
+    &.select-list.popover-list {
+        .suggestion-description {
+            background-color: darken(@app-background-color, 5%);
+        }
+    }
+}

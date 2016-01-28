@@ -1,0 +1,310 @@
+@import "ui-variables";
+@import "ui-mixins";
+@import "keyframes";
+@import "animate";
+@import "fonts";
+
+@tab-radius: 0;
+@modified-icon-width: 8px;
+@tab-skew: 0;
+@tab-top-padding: 0;
+@tab-bottom-border-height: 0;
+@tab-border: none;
+@tab-bar-bottom-border-color: transparent;
+@tab-max-width: 160px;
+
+.active .tab-bar {
+    opacity: 1;
+}
+.tab-bar {
+    height: @tab-height;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: @app-background-color;
+    opacity: 0.5;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .tab {
+        position: relative;
+        top: @tab-top-padding;
+        max-width: @tab-max-width;
+        height: @tab-height;
+        line-height: @tab-height;
+        padding: 0 10px 0 12px;
+        opacity: 0.5;
+        color: @text-color;
+        border: none;
+        overflow: hidden;
+        -webkit-transition: opacity 250ms ease;
+        -webkit-transform: translate3d(0,0,0);
+
+        .close-icon {
+            right: 10px;
+            z-index: 3;
+            text-align: right;
+            line-height: @tab-height;
+            color: @text-color;
+            cursor: pointer;
+            -webkit-animation: zoomOut 250ms ease;
+            -webkit-animation-fill-mode: forwards;
+
+            &:hover {
+                color: inherit;
+            }
+            &::before {
+                font-family: 'Material Icons';
+                font-size: 16px;
+                line-height: 3;
+                content: '\E5CD';
+            }
+        }
+        &:hover .close-icon {
+            -webkit-animation: zoomIn 250ms ease;
+        }
+        &.modified:not(:hover) .close-icon {
+            right: 10px;
+            top: @tab-height / 2 - @modified-icon-width / 2 + 1px;
+            width: @modified-icon-width;
+            height: @modified-icon-width;
+            border-width: 2px;
+        }
+        &.modified:hover .close-icon:hover {
+            color: #fff;
+        }
+        &.modified:not(:hover) .title::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: calc(50% - @modified-icon-width/2 - 3px);
+            border-radius: 50%;
+            width: @modified-icon-width;
+            height: @modified-icon-width;
+            border: 2px solid @tab-border-color;
+        }
+        .title {
+            position: relative;
+            z-index: 1;
+            padding-right: 10px;
+            padding-left: 0;
+            top: 0 !important; // seti-icons overrides this property
+            transition: padding-left 200ms;
+            pointer-events: none;
+        }
+        .title::before {
+            display: none;
+            position: absolute !important; // seti-icons overrides this property
+            top: 50% !important; // Some file-type icons override this property.
+            left: 0 !important;
+            right: auto;
+            bottom: auto;
+            transform: translateY(-50%) scale(0) !important; // Some file-types override this
+            transition: all 200ms;
+            display: block;
+            margin-right: 10px !important;
+        }
+        .ink {
+            display: none;
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            width: 2px;
+            height: 2px;
+            -webkit-transform: translate3d(0,0,0);
+            .ripple-color(@app-background-color);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            height: 2px;
+            -webkit-transition: left 250ms ease, right 250ms ease;
+            -webkit-transform: translate3d(0,0,0);
+        }
+    }
+    .tab.active {
+        z-index: 1;
+        opacity: 1;
+
+        .title::before {
+            transform: translateY(-50%) scale(1) !important; // Some file-types override this
+        }
+        .close-icon {
+            display: inline-block;
+            line-height: @tab-height - 1px;
+            color: @text-color;
+            -webkit-animation: zoomIn 250ms ease;
+        }
+        .ink {
+            display: inline-block;
+            -webkit-animation: ripple 500ms ease;
+            -webkit-animation-fill-mode: forwards;
+        }
+        &::after {
+            left: 0;
+            right: 0;
+        }
+        .title::before {
+            display: none;
+        }
+        .title::after {
+            display: none;
+        }
+    }
+    .tab:hover {
+        color: @text-color;
+
+        .close-icon {
+            display: inline-block;
+        }
+    }
+    .tab.active:hover .close-icon {
+        color: @text-color;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+    .tab.is-dragging {
+        background: darken(@tab-background-color, 2%);
+    }
+    .placeholder {
+        height: 100%;
+        margin: 0;
+        pointer-events: none;
+        width: 0;
+
+        &::after {
+            top: 0;
+            left: -6px;
+            margin: 0;
+            border-radius: 0;
+            border: 6px solid transparent;
+            background: transparent;
+        }
+    }
+}
+.no-animations {
+    .tab-bar {
+        .tab {
+            .close-icon, &::after, .title::before {
+                display: none;
+                -webkit-animation: none;
+                -webkit-transition: none;
+            }
+            &.active {
+                .close-icon, &::after, .title::before, &::before {
+                    display: inline-block;
+                    -webkit-animation: none;
+                    -webkit-transition: none;
+                }
+                .ink {
+                    display: none;
+                }
+            }
+            .title {
+                -webkit-transition: none;
+
+                &::before {
+                    display: none !important;
+                }
+            }
+            &:hover {
+                .close-icon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.tab-size(@size) {
+    height: @size !important;
+
+    .tab {
+        height: @size !important;
+        line-height: @size !important;
+
+        .close-icon {
+            line-height: @size !important;
+
+            &::before {
+                line-height: @size !important;
+            }
+        }
+        &.modified:not(:hover) .close-icon {
+            top: calc(50% - 5px);
+        }
+    }
+}
+.tab-icons {
+    .tab-bar {
+        .tab.active {
+            .title {
+                padding-left: 24px;
+            }
+            .title::before {
+                display: block !important;
+                width: auto;
+                height: auto;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+    }
+}
+.tab-icons-all {
+  .tab-bar {
+      .tab { // Specificity increase to prevent putting !important on transform
+          .title {
+              padding-left: 24px;
+          }
+          .title::before {
+              display: block !important;
+              width: auto;
+              height: auto;
+              transform: translateY(-50%) scale(1) !important;
+          }
+      }
+  }
+}
+.tab-size-small .tab-bar {
+    .tab-size(32px);
+}
+.tab-size-normal .tab-bar {
+    .tab-size(48px);
+}
+.tab-size-big .tab-bar {
+    .tab-size(64px);
+}
+.tab-min-width {
+    .tab-bar {
+        overflow: hidden;
+        overflow-x: scroll;
+
+        .tab {
+            min-width: 80px;
+
+            &.active {
+                min-width: 150px;
+            }
+        }
+    }
+}
+.ripple-color(@color) when (lightness(@color) > 60%) {
+    background-color: rgba(0,0,0,0.1);
+}
+.ripple-color(@color) when (lightness(@color) < 60%) {
+    background-color: rgba(255,255,255,0.1);
+}
+@-webkit-keyframes ripple {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(200);
+        opacity: 0;
+    }
+}

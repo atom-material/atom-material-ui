@@ -1,0 +1,30 @@
+@import "elevation";
+
+.tool-bar {
+    border: none;
+    background-color: rgba(0,0,0,0.15);
+
+    .btn, button, button[class] {
+        &:hover, &:focus, &:active, &:active:focus {
+            background: inherit;
+            &:extend(.elevation-0);
+        }
+    }
+    &.tool-bar-vertical {
+        box-shadow: inset -1px 0 5px rgba(0,0,0,0.1);
+
+        .tool-bar-spacer {
+            border-bottom: none;
+        }
+    }
+    &.tool-bar-horizontal {
+        box-shadow: inset 0 -1px 3px rgba(0,0,0,0.05);
+
+        .tool-bar-spacer {
+            border-left: none;
+        }
+    }
+    .tool-bar-spacer {
+        border-color: @text-color;
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "atom-material-ui",
+  "theme": "ui",
+  "version": "0.8.0",
+  "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
+  "keywords": [
+    "ui",
+    "theme",
+    "material",
+    "material design"
+  ],
+  "license": "MIT",
+  "main": "lib/settings",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvestreh/atom-material-ui.git"
+  },
+  "engines": {
+    "atom": ">0.40.0"
+  },
+  "readme": "![](http://i.imgur.com/7C2H2mw.png)\n---\n\nA dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax). (Mostly) works with other dark syntax themes as it uses syntax colors for the UI. Light themes work too, but might not look as nice.\n\nInspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).\n\n## Installation\n\nFire up a console and type:\n\n`$ apm install atom-material-ui atom-material-syntax atom-material-syntax-light`\n\nOr, inside Atom's settings select Install and then search for this package.\n\n## Configuration\n\nAtom Material UI supports different accent colors. To change it, go to Settings > Themes and click the cog icon next to the theme selector.\n\n![](http://i.imgur.com/JB2iA5m.png)\n\nYou'll find the color dropdown there.\n\n## Screenshot\n\nHere's the obligatory screenshot. The toolbar on the left side is a package named [Tool-bar-main](https://atom.io/packages/tool-bar-main).\n\n![](http://i.imgur.com/2jNgkR9.png)\n\nAnimated tabs! (these animations can be disabled from the theme's settings)\n\n![](http://i.imgur.com/lUR3uRv.gif)\n\n## Light syntax theme variant\n\n![](http://i.imgur.com/HkCKXxX.png)\n\n## Extra\n\n![](http://i.imgur.com/0tHORB1.png)\n\nYou can download the redesigned icon from [dropbox](https://dl.dropboxusercontent.com/u/115930/Atom-MD-Icon.zip). It's a ZIP file containing multiple resolution PNGs, ICNS and ICO formats. Windows ICO converted by Akshit Tripathi.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/silvestreh/atom-material-ui/issues"
+  },
+  "homepage": "https://github.com/silvestreh/atom-material-ui#readme",
+  "_id": "atom-material-ui@0.8.0",
+  "_shasum": "9b14d83576cf544de4f779a1d79e1fc5fb0b0307",
+  "_resolved": "file:../d-116028-9258-1aq0p4b/package.tgz",
+  "_from": "../d-116028-9258-1aq0p4b/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/bindings.coffee",
+        "lib/config.coffee",
+        "lib/settings.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

@@ -1,0 +1,146 @@
+@import "ui-variables";
+@import "keyframes";
+
+atom-panel.modal, .overlay {
+    color: @text-color;
+    background-color: #FFF;
+    padding: 0;
+    border-radius: @component-border-radius;
+    transition: all 500ms ease;
+    &:extend(.elevation-2);
+
+    atom-text-editor[mini] {
+        color: @text-color-dark;
+        margin: 10px 10px @component-padding;
+        box-shadow: inset 0 -1px 0 0 @background-color-selected;
+        border-radius: 0;
+    }
+    .select-list .loading, .select-list .error-message {
+        padding: @component-padding;
+        color: @text-color-subtle;
+    }
+    .select-list ol.list-group, .select-list ol.list-group {
+        background-color: #FFF;
+        border-radius: 0 0 @component-border-radius + 1px @component-border-radius + 1px;
+
+        li {
+            padding: @component-padding;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: @app-background-color;
+
+            &.two-lines {
+                padding: @component-padding/2 @component-padding;
+
+                .primary-line {
+                    color: @text-color-subtle;
+                }
+                .secondary-line {
+                    color: fade(@text-color-subtle, 60%);
+                }
+            }
+            .status.icon {
+                float: right;
+                margin-left: @component-icon-padding;
+
+                &:before {
+                    margin-right: 0;
+                }
+            }
+            span {
+                color: @app-background-color;
+            }
+            &.selected {
+                &.two-lines {
+                    .primary-line {
+                        color: #FFF;
+                    }
+                    .secondary-line {
+                        color: rgba(255,255,255,0.6);
+                    }
+                }
+                .status.icon {
+                    color: @text-color-selected;
+                }
+                span {
+                    .highlight(@app-background-color);
+                }
+                &:last-child {
+                    border-radius: 0 0 @component-border-radius @component-border-radius;
+                }
+            }
+        }
+    }
+    .tree-view-dialog {
+        label.icon {
+            padding: @component-padding;
+            color: lighten(@text-color-subtle, 20%);
+        }
+    }
+}
+.alt-cmd-palette, .alt-cmd-palette.panel-contrast {
+    atom-panel.modal.from-top, .overlay.from-top {
+        background-color: lighten(@app-background-color, 8%);
+
+        .select-list .loading, .select-list .error-message {
+            padding: @component-padding;
+            color: fade(@text-color, 50%);
+        }
+        .select-list ol.list-group, .select-list ol.list-group {
+            background-color: lighten(@app-background-color, 8%);
+
+            li {
+                color: @text-color;
+
+                span {
+                    color: @text-color;
+
+                    &.character-match {
+                        color: @text-color;
+                    }
+                }
+                &.two-lines {
+                    .primary-line {
+                        color: @text-color;
+                    }
+                    .secondary-line {
+                        color: fade(@text-color, 40%);
+                    }
+                }
+
+                &.selected {
+                    color: #FFF;
+
+                    span {
+                        color: #FFF;
+                    }
+                    &.two-lines {
+                        .primary-line {
+                            color: #FFF;
+                        }
+                        .secondary-line {
+                            color: fade(#FFF, 80%);
+                        }
+                    }
+                }
+            }
+        }
+        atom-text-editor[mini] {
+            background-color: lighten(@app-background-color, 8%);
+            color: @text-color;
+        }
+        .tree-view-dialog {
+            label.icon {
+                color: @text-color;
+            }
+        }
+    }
+}
+.panel-contrast {
+    atom-panel.modal, .overlay {
+        background: #FFF;
+    }
+}
+@-webkit-keyframes circleReveal {
+    from { clip-path: circle(0% at center); }
+    to { clip-path: circle(100% at center); }
+}

@@ -1,0 +1,81 @@
+@import "ui-variables";
+
+// Pattern matching; ish is cray.
+// http://lesscss.org/#-pattern-matching-and-guard-expressions
+.text(normal) {
+  font-weight: normal;
+  color: @text-color;
+  text-shadow: none;
+}
+.text(subtle) {
+  font-weight: normal;
+  color: @text-color-subtle;
+  text-shadow: none;
+}
+.text(highlight) {
+  font-weight: normal;
+  .highlight(@app-background-color);
+}
+.text(selected) {
+  .text(highlight)
+}
+.text(info) {
+  color: @text-color-info;
+  text-shadow: none;
+}
+.text(success) {
+  color: @text-color-success;
+  text-shadow: none;
+}
+.text(warning) {
+  color: @text-color-warning;
+  text-shadow: none;
+}
+.text(error) {
+  color: @text-color-error;
+  text-shadow: none;
+}
+.highlight(@color) when (lightness(@color) > 50%) {
+    color: lighten(@text-color, 15%);
+}
+.highlight(@color) when (lightness(@color) < 50%) {
+    color: rgba(255,255,255,0.9);
+}
+.panel-background(@color) when (lightness(@color) > 50%) {
+    background-color: @app-background-color;
+}
+.panel-background(@color) when (lightness(@color) < 50%) {
+    background-color: @app-background-color;
+}
+.select-arrow(@color) when (lightness(@color) > 50%) {
+    background: transparent url('atom://atom-material-ui/assets/arrow-drop-down.svg') no-repeat;
+}
+.select-arrow(@color) when (lightness(@color) < 50%) {
+    background: transparent url('atom://atom-material-ui/assets/arrow-drop-down-white.svg') no-repeat;
+}
+.depth(@color) when (lightness(@color) >= 60%) {
+    box-shadow: inset 0 3px 4px rgba(0,0,0,0.05), inset 3px 0 4px rgba(0,0,0,0.05);
+}
+.depth(@color) when (lightness(@color) < 60%) {
+    box-shadow: inset 0 3px 4px rgba(0,0,0,0.1), inset 3px 0 4px rgba(0,0,0,0.1);
+}
+.ui-font-size(@size) {
+    .tab-bar .tab {
+        font-size: @size;
+    }
+    .tree-view .list-item {
+        font-size: @size;
+    }
+    .settings-view {
+        font-size: @size;
+    }
+    atom-panel, .tool-panel {
+        font-size: @size;
+    }
+    atom-text-editor[mini], atom-text-editor[mini]::shadow {
+        font-size: @size;
+    }
+    .btn, button, button[class] {
+        font-size: @size;
+    }
+}

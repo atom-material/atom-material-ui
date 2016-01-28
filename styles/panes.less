@@ -1,0 +1,33 @@
+@import "ui-mixins";
+@import "ui-variables";
+@import "buttons";
+
+.pane-item {
+    .panel {
+        border-color: fadeout(@inset-panel-border-color, 30%);
+    }
+}
+atom-pane-container {
+    atom-pane {
+        .item-views {
+            background: lighten(@app-background-color, 0.5%);
+        }
+        &.active .item-views {
+            background-color: @app-background-color;
+        }
+    }
+    atom-pane-axis.horizontal > * {
+        border-right: 1px solid @pane-item-border-color;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+    atom-pane-axis.vertical > * {
+        border-bottom: 1px solid @pane-item-border-color;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

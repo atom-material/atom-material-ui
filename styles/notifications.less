@@ -1,0 +1,97 @@
+atom-notifications {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    padding-bottom: 3rem;
+}
+atom-notification {
+    padding: 0;
+    border-radius: 3px;
+
+    .content {
+        border-radius: 3px;
+        width: 100%;
+
+        > div {
+            padding: 1.25rem 2rem;
+            line-height: 2;
+        }
+    }
+    .btn-toolbar {
+        line-height: 3rem;
+
+        .btn {
+            margin-right: 2rem;
+        }
+        .btn-copy-report {
+            color: @text-color;
+        }
+    }
+    .detail {
+        background: none;
+    }
+    .item {
+        border: none;
+    }
+    .close-all.btn {
+        height: 28px;
+        line-height: 28px;
+    }
+    &.icon::before {
+        display: none;
+    }
+    .close, .close:hover {
+        color: @text-color;
+    }
+    &.success, &.error, &.info, &.warning, &.fatal {
+        border-left: 1px solid transparent;
+
+        .content {
+            background-color: darken(@app-background-color, 5%);
+            color: @text-color;
+        }
+        .close-all.btn, .close-all.btn:hover {
+            border-color: fade(@text-color, 50%);
+            color: fade(@text-color, 50%);
+        }
+        code {
+            background-color: lighten(@md-red, 5%);
+            color: #FFF;
+        }
+    }
+    &.success {
+        border-color: @md-light-green;
+    }
+    &.error, &.fatal {
+        border-color: @md-red;
+    }
+    &.info {
+        border-color: @md-light-blue;
+    }
+    &.warning {
+        border-color: @md-yellow;
+    }
+    &.has-close {
+        .content > div {
+            padding-right: 4rem;
+        }
+        &:only-child {
+            .content > div {
+                padding-right: 4rem;
+            }
+        }
+        &:first-child:not(:only-child) {
+            .content > div {
+                padding-right: 12rem;
+            }
+        }
+    }
+    &.has-stack .stack-toggle {
+        color: @md-red;
+
+        .icon {
+            position: relative;
+            top: 1px;
+        }
+    }
+}

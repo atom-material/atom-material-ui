@@ -1,0 +1,73 @@
+@import "ui-variables";
+@import "ui-mixins";
+@import "elevation";
+
+atom-text-editor[mini], atom-text-editor[mini]::shadow {
+    position: relative;
+    color: @text-color;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    min-height: 36px;
+    padding: 5px 0;
+    max-height: none;
+    box-shadow: inset 0 -1px 0 0 fade(@text-color, 10%);
+    transition: all 250ms ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: 0px;
+        top: auto;
+        left: 0;
+        right: 0;
+        transition: all 300ms;
+        transform: scaleX(0);
+    }
+    .cursor {
+        border-width: 2px;
+    }
+    .placeholder-text {
+        color: fade(@text-color, 50%);
+    }
+}
+atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+    background-color: transparent;
+}
+.no-animations {
+    atom-text-editor[mini], atom-text-editor[mini]::shadow {
+        transition: none;
+
+        &::before {
+            transition: none;
+        }
+    }
+}
+
+// FIXME: these should go in syntax themes?
+atom-text-editor, atom-text-editor::shadow {
+    .gutter.drop-shadow {
+        -webkit-box-shadow: -2px 0 10px 2px rgba(0,0,0,0.5);
+    }
+    .wrap-guide {
+        background-color: fade(@text-color, 5%);
+    }
+    .indent-guide {
+        color: fade(@text-color, 5%);
+    }
+}
+.roboto-mono {
+    atom-text-editor, atom-text-editor::shadow, atom-text-editor[mini], atom-text-editor[mini]::shadow {
+        font-family: 'Roboto Mono', 'Monaco', monospace;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+.roboto {
+    atom-workspace {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,42 @@
+@import "ui-variables";
+@import "keyframes";
+
+// Material Design tooltip specs
+// http://www.google.com/design/spec/components/tooltips.html
+.tooltip {
+    @tip-background-color: @md-grey-700;
+    @tip-text-color: #FFF;
+    white-space: nowrap;
+    transition: opacity .5s @md-timing-function;
+    
+    .no-animations & {
+      transition: none;
+    }
+
+    .tooltip-arrow {
+      display: none;
+    }
+
+    .keystroke {
+        color: fade(@tip-text-color, 30%);
+        padding-left: 2px;
+    }
+
+    .tooltip-inner {
+        line-height: 22px;
+        padding: 0 8px;
+        border-radius: @component-border-radius;
+        background-color: @tip-background-color;
+        color: @tip-text-color;
+        white-space: nowrap;
+        max-width: none;
+    }
+
+    &.top,
+    &.bottom {
+      margin-top: 0;
+      padding: 14px 0;
+    }
+
+    // Google has no specs on left-right tooltip margin placement (actually top too, but it's quite similar to bottom), so no need to edit the margin and padding of them
+}

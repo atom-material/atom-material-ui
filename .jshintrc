@@ -1,0 +1,16 @@
+{
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esnext": true,
+    "forin": true,
+    "strict": "global",
+    "undef": true,
+    "unused": true,
+    "loopfunc": true,
+    "globals": {
+        "atom": false
+    }
+}
