@@ -9,10 +9,10 @@
 }
 atom-pane-container {
     atom-pane {
-        .item-views {
+        .item-views, .item-views .pane-item {
             background: lighten(@app-background-color, 0.5%);
         }
-        &.active .item-views {
+        &.active .item-views, &.active .item-views .pane-item {
             background-color: @app-background-color;
         }
     }

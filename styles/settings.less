@@ -2,6 +2,8 @@
 @import "elevation";
 
 .settings-view {
+    background-color: @app-background-color;
+
     .breadcrumb > .active a {
         .highlight(@app-background-color);
         font-weight: bold;
@@ -215,6 +217,7 @@
                 -webkit-transform: translate3d(0,0,0);
             }
             & > a {
+                color: @text-color;
                 transition: color 250ms ease;
                 padding: 1.25rem 1rem;
 
