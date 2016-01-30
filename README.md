@@ -1,7 +1,7 @@
 [![apm](https://img.shields.io/apm/dm/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
 [![apm](https://img.shields.io/apm/v/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
 [![apm](https://img.shields.io/apm/l/atom-material-ui.svg?style=flat-square)]()
-
+[![Build Status](https://travis-ci.org/silvestreh/atom-material-ui.svg?branch=master)](https://travis-ci.org/silvestreh/atom-material-ui)
 <a href="https://pledgie.com/campaigns/29552"><img alt="Click here to lend your support to: Atom Material Design Theme and make a donation at pledgie.com !" src="https://pledgie.com/campaigns/29552.png?skin_name=chrome" border="0"></a>
 
 ![](http://i.imgur.com/7C2H2mw.png)
