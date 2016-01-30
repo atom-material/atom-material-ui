@@ -63,7 +63,7 @@ apm link && apm install
 
 ### Reporting a bug
 
-Before opening an issue please search through the exiting ones, even those that are marked as closed. Also, please take these into account before submitting an issue:
+Before opening an issue please search through the existing ones, even those that are marked as closed. Also, please take these into account before submitting an issue:
 
 - **Which version of Atom are you using?** You can get the exact version by running `atom -v` in your terminal, or by starting Atom and running the Application: About command from the Command Palette.
 
