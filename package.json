@@ -1,24 +1,23 @@
 {
-  "name": "atom-material-ui",
-  "theme": "ui",
-  "version": "1.0.5",
-  "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
-  "main": "./lib/main",
-  "keywords": [
-    "ui",
-    "theme",
-    "material",
-    "md",
-    "material design"
-  ],
-  "repository": "https://github.com/silvestreh/atom-material-ui",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "atom-space-pen-views": "^2.1.0",
-    "perfect-scrollbar": "^0.6.7",
-    "tinycolor2": "^1.1.2"
-  }
+    "name": "atom-material-ui",
+    "theme": "ui",
+    "version": "1.0.5",
+    "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
+    "main": "./lib/main",
+    "keywords": [
+        "ui",
+        "theme",
+        "material",
+        "md",
+        "material design"
+    ],
+    "repository": "https://github.com/silvestreh/atom-material-ui",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+        "perfect-scrollbar": "^0.6.7",
+        "tinycolor2": "^1.1.2"
+    }
 }

@@ -43,28 +43,7 @@ Here's the obligatory screenshot. The toolbar on the left side is a package name
 
 ## Contributing
 
-If you want to contribute you should fork this repository, make your changes and then send a pull request.
-
-```shell
-apm uninstall atom-material-ui #if you had it installed
-git clone <your_forked_repo>
-cd atom-material-ui/
-apm link && apm install
-```
-
-I recommend installing the package [editorconfig](https://atom.io/packages/editorconfig) so you don't have to change your global settings for indentation.
-
-Leave an empty line between a selector's properties and a nested selector. The white space helps with readability:
-
-```css
-.selector {
-    property: value;
-
-    .nested {
-        property: value;
-    }
-}
-```
+Please check the [CONTRIBUTING.md](https://github.com/silvestreh/atom-material-ui/blob/master/CONTRIBUTING.md) file.
 
 ## Extra
 
