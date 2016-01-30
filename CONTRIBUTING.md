@@ -4,8 +4,6 @@
 
 Some of this content comes from Atom's Contributing guidelines. Please, don't be intimidated, this is just a *guideline*. All bug reports, feature requests, and questions are **always** welcome.
 
----
-
 ## Code contributions
 If you want to get your hands dirty and contribute with some code, you should fork this repository, make your changes, and then send in a pull request.
 
@@ -17,8 +15,6 @@ apm link && apm install
 ```
 
 I recommend installing the package [editorconfig](https://atom.io/packages/editorconfig) so you don't have to change your global settings for indentation.
-
----
 
 ### Stylesheets
 
@@ -47,14 +43,25 @@ Don't be afraid to include another level if you want to target a `&.className`:
     }
 }
 ```
----
+
 ### JavaScript
 
 In a nutshell, we're following [Airbnb's JavaScript styleguide](https://github.com/airbnb/javascript), except we use four spaces per indent.
 
----
+## Testing
 
-## Reporting a bug
+### Getting the development version
+
+If you'd like to test new features and hunt bugs, follow these simple steps to get the latest (development) version.
+
+```shell
+apm uninstall atom-material-ui #if you had it installed
+git clone git@github.com:silvestreh/atom-material-ui.git
+cd atom-material-ui/
+apm link && apm install
+```
+
+### Reporting a bug
 
 Before opening an issue please search through the exiting ones, even those that are marked as closed, before you submit yours.
 
