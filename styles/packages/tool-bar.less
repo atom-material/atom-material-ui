@@ -74,6 +74,10 @@
             .tool-bar-btn:first-child {
                 background: darken(@base-color, 5%);
                 color: @accent-text-color;
+
+                svg path, svg polygon {
+                    fill: @accent-text-color;
+                }
             }
         }
         &.tool-bar-top {
@@ -81,6 +85,10 @@
 
             .tool-bar-btn {
                 color: @accent-text-color;
+
+                svg path, svg polygon {
+                    fill: @accent-text-color;
+                }
             }
         }
     }
@@ -106,7 +114,7 @@
         }
     }
 }
-.tinted-tab-bar .is-blurred .tool-bar {
+.is-blurred .tinted-tab-bar .tool-bar {
     &.tool-bar-vertical {
         .tool-bar-btn:first-child {
             -webkit-filter: grayscale(0.65) brightness(1.25);

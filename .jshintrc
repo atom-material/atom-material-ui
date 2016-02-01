@@ -11,6 +11,12 @@
     "unused": true,
     "loopfunc": true,
     "globals": {
-        "atom": false
+        "atom": false,
+        "describe": false,
+        "it": false,
+        "expect": false,
+        "beforeEach": false,
+        "waitsForPromise": false,
+        "jasmine": false
     }
 }

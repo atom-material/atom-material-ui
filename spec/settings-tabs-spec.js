@@ -1,4 +1,5 @@
 'use babel';
+'use strict';
 
 describe('AMU tabs options', () => {
     beforeEach(() => {
