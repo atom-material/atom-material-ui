@@ -42,7 +42,7 @@ apm install atom-material-syntax
 
 ![](http://i.imgur.com/ExPYmJY.png)
 
-### [Light syntax]([Atom Material Syntax](https://atom.io/packages/atom-material-syntax-light) theme variant
+### With [Light syntax](https://atom.io/packages/atom-material-syntax-light) theme variant
 
 ```shell
 apm install atom-material-syntax-light
@@ -50,7 +50,7 @@ apm install atom-material-syntax-light
 
 ![](http://i.imgur.com/q1o78sX.png)
 
-### [Dark syntax]([Atom Material Syntax](https://atom.io/packages/atom-material-syntax-dark) theme variant
+### With [Dark syntax](https://atom.io/packages/atom-material-syntax-dark) theme variant
 
 ```shell
 apm install atom-material-syntax-dark
