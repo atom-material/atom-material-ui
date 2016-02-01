@@ -9,4 +9,11 @@ atom-panel.tool-panel.panel-left.left {
         height: 100%;
         z-index: 100;
     }
+    .nuclide-file-tree {
+        .list-tree {
+            &.has-collapsable-children .list-nested-item > .list-item::before {
+                z-index: 10;
+            }
+        }
+    }
 }
