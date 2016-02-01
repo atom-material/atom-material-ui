@@ -12,15 +12,17 @@ A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidel
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
 
-## Installation
+# Installation
 
 Fire up a console and type:
 
-`apm install atom-material-ui atom-material-syntax atom-material-syntax-light atom-material-syntax-dark`
+```shell
+apm install atom-material-ui
+```
 
 Or, inside Atom's settings select Install and then search for this package.
 
-## Configuration
+# Configuration
 
 Atom Material UI supports different accent colors. To change it, go to Settings > Themes and click the cog icon next to the theme selector.
 
@@ -28,25 +30,39 @@ Atom Material UI supports different accent colors. To change it, go to Settings 
 
 You'll find the color picker there.
 
-## Screenshot
+# Screenshots
 
-Here's the obligatory screenshot. The toolbar on the left side is a package named [Tool-bar-main](https://atom.io/packages/tool-bar-main).
+Here's the obligatory screenshot.
+
+### With [Atom Material Syntax](https://atom.io/packages/atom-material-syntax)
+
+```shell
+apm install atom-material-syntax
+```
 
 ![](http://i.imgur.com/ExPYmJY.png)
 
-## Light syntax theme variant
+### [Light syntax]([Atom Material Syntax](https://atom.io/packages/atom-material-syntax-light) theme variant
+
+```shell
+apm install atom-material-syntax-light
+```
 
 ![](http://i.imgur.com/q1o78sX.png)
 
-## Dark syntax theme variant
+### [Dark syntax]([Atom Material Syntax](https://atom.io/packages/atom-material-syntax-dark) theme variant
+
+```shell
+apm install atom-material-syntax-dark
+```
 
 ![](http://i.imgur.com/orhIvwS.png)
 
-## Contributing
+# Contributing
 
 Please check the [CONTRIBUTING.md](https://github.com/silvestreh/atom-material-ui/blob/master/CONTRIBUTING.md) file.
 
-## Extra
+# Extra
 
 ![](http://i.imgur.com/0tHORB1.png)
 
