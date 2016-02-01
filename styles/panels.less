@@ -20,6 +20,13 @@ atom-panel-container {
             background-color: @app-background-color;
         }
     }
+    .tinted-tab-bar & {
+        &.top {
+            atom-panel, .tool-panel {
+                background: @base-color;
+            }
+        }
+    }
     .panel-shadows & {
         atom-panel {
             &::after {

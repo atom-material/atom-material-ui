@@ -1,0 +1,38 @@
+.buck-toolbar {
+    max-height: 3rem;
+    transform: translate3d(0,0,0);
+    position: relative;
+    z-index: 100;
+
+    .compact-tab-bar & {
+        max-height: 2.5rem;
+    }
+    .tinted-tab-bar & {
+        .btn-group.btn-group-sm {
+            .btn {
+                background-color: fade(@accent-text-color, 20%);
+                color: @accent-text-color;
+            }
+        }
+    }
+    .btn-group.btn-group-sm {
+        .btn {
+            line-height: 2rem;
+            padding: 0 1rem;
+        }
+    }
+    .select-list.popover-list.popover-list-subtle.inline-block {
+        background: @app-background-color;
+        border-radius: 0.125rem;
+        margin: -0.25rem 1rem 0 0;
+        .z-depth-1;
+
+        atom-text-editor[mini] {
+            padding: 0.25rem 0.5rem;
+
+            &::before, &::after {
+                display: none;
+            }
+        }
+    }
+}
