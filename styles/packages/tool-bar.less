@@ -38,6 +38,18 @@
         }
     }
     &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
+        &.tool-bar-horizontal {
+            .tool-bar-spacer {
+                height: 2rem;
+                margin-top: 0.5rem;
+            }
+        }
+        &.tool-bar-vertical {
+            .tool-bar-spacer {
+                width: 2rem;
+                margin-left: 0.5rem;
+            }
+        }
         .tool-bar-btn {
             width: 3rem;
             height: 3rem;
@@ -100,6 +112,21 @@
             }
         }
     }
+    .panel-contrast & {
+        &.tool-bar-vertical {
+            &.tool-bar-left {
+                background-color: darken(@app-background-color, 3.5%);
+            }
+            &.tool-bar-right {
+                background-color: darken(@app-background-color, 2.5%);
+            }
+        }
+        &.tool-bar-horizontal {
+            &.tool-bar-bottom {
+                background-color: darken(@app-background-color, 2.5%);
+            }
+        }
+    }
     .tinted-tab-bar & {
         &.tool-bar-vertical {
             .tool-bar-btn:first-child {
@@ -127,13 +154,6 @@
             .tool-bar-spacer {
                 border-color: fade(@accent-text-color, 15%);
             }
-        }
-    }
-    .panel-contrast:not(.tinted-tab-bar) & {
-        background: darken(@app-background-color, 2.5%);
-
-        &.tool-bar-horizontal.tool-bar-top, &.tool-bar-horizontal.tool-bar-bottom {
-            background: darken(@app-background-color, 2.5%);
         }
     }
     .compact-tab-bar & {
