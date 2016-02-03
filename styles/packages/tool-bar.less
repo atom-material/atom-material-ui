@@ -8,6 +8,7 @@
 
         .tool-bar-spacer {
             margin: 0.5rem 0;
+            border-bottom: none;
         }
     }
     &.tool-bar-horizontal {
@@ -25,11 +26,12 @@
         }
         .tool-bar-spacer {
             margin: 0 0.5rem;
+            border-left: none;
         }
     }
     &.tool-bar-horizontal, &.tool-bar-vertical {
         .tool-bar-spacer {
-            border: none;
+            border-color: fade(@text-color, 10%);
         }
         .tool-bar-btn:first-child {
             transition: -webkit-filter 250ms @md-timing-function;
@@ -122,10 +124,17 @@
                     color: @accent-text-color;
                 }
             }
+            .tool-bar-spacer {
+                border-color: fade(@accent-text-color, 15%);
+            }
         }
     }
-    .panel-contrast & {
-        background: darken(@app-background-color, 5%);
+    .panel-contrast:not(.tinted-tab-bar) & {
+        background: darken(@app-background-color, 2.5%);
+
+        &.tool-bar-horizontal.tool-bar-top, &.tool-bar-horizontal.tool-bar-bottom {
+            background: darken(@app-background-color, 2.5%);
+        }
     }
     .compact-tab-bar & {
         &.tool-bar-vertical {
