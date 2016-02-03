@@ -11,8 +11,7 @@ If you want to get your hands dirty and contribute with some code, you should fo
 apm uninstall atom-material-ui #if you had it installed
 git clone <your_forked_repo>
 cd atom-material-ui/
-npm install
-apm link -d
+apm link && apm install
 atom -d .
 ```
 
@@ -57,11 +56,18 @@ In a nutshell, we're following [Airbnb's JavaScript styleguide](https://github.c
 If you'd like to test new features and hunt bugs, follow these simple steps to get the latest (development) version.
 
 ```shell
-apm uninstall atom-material-ui #if you had it installed
 git clone git@github.com:silvestreh/atom-material-ui.git
 cd atom-material-ui/
-apm link && apm install
+apm link -d && apm install
 ```
+
+You'll have to run Atom in *developer mode* to test the theme. To do so, open a terminal and run:
+
+```shell
+atom -d .
+```
+
+This way both, the APM published version and the development version, can coexist.
 
 ### Reporting a bug
 
