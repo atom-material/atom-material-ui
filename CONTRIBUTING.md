@@ -11,7 +11,9 @@ If you want to get your hands dirty and contribute with some code, you should fo
 apm uninstall atom-material-ui #if you had it installed
 git clone <your_forked_repo>
 cd atom-material-ui/
-apm link && apm install
+npm install
+apm link -d
+atom -d .
 ```
 
 I recommend installing the package [editorconfig](https://atom.io/packages/editorconfig) so you don't have to change your global settings for indentation.
