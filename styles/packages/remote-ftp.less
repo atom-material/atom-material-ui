@@ -7,26 +7,10 @@
         background: darken(@app-background-color, 1.5%);
         height: 2.5rem;
     }
-    .tabBlender {
-        display: none;
-        position: relative;
-        list-style: none;
-        background: @base-color;
-        color: @accent-text-color;
-        height: 3rem;
-        line-height: 3rem;
-        text-transform: uppercase;
-        padding: 0 1rem;
-        z-index: 10;
-
-        &::after {
-            content: 'Remote files';
-        }
+    .tabBlender span::after {
+        content: 'Remote files';
     }
     .panel-shadows & {
-        .tabBlender {
-            .z-depth-1;
-        }
         > .queue {
             .z-depth-1;
         }
@@ -40,11 +24,23 @@
         }
     }
     .blend-tree-view.tinted-tab-bar & {
+        &::before {
+            content: '';
+            background: @base-color;
+            display: block;
+            height: 3rem;
+            position: absolute;
+        }
         .tabBlender {
             display: block;
         }
         > .scroller {
             top: 3rem;
+        }
+    }
+    .compact-tab-bar.blend-tree-view.tinted-tab-bar & {
+        > .scroller {
+            top: 2.5rem;
         }
     }
 }

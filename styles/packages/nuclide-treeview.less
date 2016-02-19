@@ -1,3 +1,24 @@
+.nuclide-ui-panel-component {
+    transform: translate3d(0,0,0);
+    
+    .blend-tree-view.tinted-tab-bar & {
+        .tabBlender {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .nuclide-file-tree {
+            padding-top: 3rem;
+            box-sizing: content-box;
+        }
+    }
+    .blend-tree-view.tinted-tab-bar.compact-tab-bar & {
+        .nuclide-file-tree {
+            padding-top: 2.5rem;
+        }
+    }
+}
 atom-panel.tool-panel.panel-left.left {
     .nuclide-ui-panel-component-scroller {
         transform: translate3d(0,0,0);

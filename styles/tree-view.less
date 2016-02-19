@@ -49,7 +49,7 @@
                 background-color: @base-color;
             }
         }
-        li:not(.list-nested-item):not(.tabBlender), li.list-nested-item > .list-item {
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
             &.selected {
                 color: @accent-text-color;
 
@@ -66,21 +66,8 @@
         background-color: darken(@app-background-color, 2%);
     }
     .compact-tree-view & {
-        li:not(.list-nested-item):not(.tabBlender), li.list-nested-item > .list-item {
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
             line-height: 1.75rem;
-        }
-    }
-}
-.tinted-tab-bar, .tinted-tab-bar.panel-contrast {
-    .tree-view-resizer {
-        > .tabBlender {
-            display: block;
-            background: darken(@base-color, 2.5%);
-            color: @accent-text-color;
-
-            span::after {
-                content: 'Projects'
-            }
         }
     }
 }
@@ -88,28 +75,32 @@
     transform: translate3d(0, 0, 0);
     position: relative;
 }
-.tree-view-resizer {
-    > .tabBlender {
-        display: none;
-        list-style: none;
-        margin: 0 -0.5rem 0 -0.25rem;
-        position: relative;
-        width: 110%;
-        height: 3rem;
-        line-height: 3rem;
-        background: @app-background-color;
-        color: @text-color;
-        text-transform: uppercase;
-        padding: 0 1rem;
-        z-index: 100;
-    }
-    .panel-shadows & {
-        .tabBlender {
-            .z-depth-1;
-        }
-    }
-}
 .compact-tab-bar .tree-view-resizer > .tabBlender {
     height: 2.5rem;
     line-height: 2.5rem;
+}
+.tabBlender {
+    display: none;
+    position: relative;
+    background: @base-color;
+    color: @accent-text-color;
+    text-transform: uppercase;
+    height: 3rem;
+    line-height: 3rem;
+    z-index: 100;
+
+    span::after {
+        padding: 0 1rem;
+        content: 'Projects';
+    }
+    .panel-shadows & {
+        .z-depth-1;
+    }
+    .compact-tab-bar & {
+        line-height: 2.5rem;
+        height: 2.5rem;
+    }
+    .blend-tree-view.tinted-tab-bar & {
+        display: block;
+    }
 }
