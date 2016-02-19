@@ -1,0 +1,50 @@
+.remote-ftp-view {
+    > .scroller {
+        padding: 0 0.5rem;
+        bottom: 2.5rem;
+    }
+    > .queue {
+        background: darken(@app-background-color, 1.5%);
+        height: 2.5rem;
+    }
+    .tabBlender {
+        display: none;
+        position: relative;
+        list-style: none;
+        background: @base-color;
+        color: @accent-text-color;
+        height: 3rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        padding: 0 1rem;
+        z-index: 10;
+
+        &::after {
+            content: 'Remote files';
+        }
+    }
+    .panel-shadows & {
+        .tabBlender {
+            .z-depth-1;
+        }
+        > .queue {
+            .z-depth-1;
+        }
+    }
+    .panel-contrast & {
+        > .scroller {
+            background: darken(@app-background-color, 1.5%);
+        }
+        > .queue {
+            background: darken(@app-background-color, 3%);
+        }
+    }
+    .blend-tree-view.tinted-tab-bar & {
+        .tabBlender {
+            display: block;
+        }
+        > .scroller {
+            top: 3rem;
+        }
+    }
+}

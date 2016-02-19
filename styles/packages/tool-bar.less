@@ -33,9 +33,6 @@
         .tool-bar-spacer {
             border-color: fade(@text-color, 10%);
         }
-        .tool-bar-btn:first-child {
-            transition: -webkit-filter 250ms @md-timing-function;
-        }
     }
     &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
         &.tool-bar-horizontal {
@@ -173,15 +170,5 @@
                 }
             }
         }
-    }
-}
-.is-blurred .tinted-tab-bar .tool-bar {
-    &.tool-bar-vertical {
-        .tool-bar-btn:first-child {
-            -webkit-filter: grayscale(0.65) brightness(1.25);
-        }
-    }
-    &.tool-bar-top {
-        -webkit-filter: grayscale(0.65) brightness(1.25);
     }
 }

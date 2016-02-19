@@ -17,7 +17,6 @@
     position: relative;
     overflow-y: hidden;
     overflow-x: auto;
-    transition: -webkit-filter 250ms @md-timing-function;
     z-index: 2000;
 
     .tab {
@@ -268,7 +267,4 @@
             margin-right: 1rem;
         }
     }
-}
-.is-blurred .tinted-tab-bar .tab-bar:not([data-reactid]) {
-    -webkit-filter: grayscale(0.65) brightness(1.25);
 }

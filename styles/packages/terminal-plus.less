@@ -59,6 +59,12 @@
             background-color: darken(@app-background-color, 2%);
         }
     }
+    .panel-shadows & {
+        .z-depth-1;
+    }
+    .panel-shadows.panel-contrast & {
+        background-color: darken(@app-background-color, 1%);
+    }
 }
 atom-panel.modal {
     .terminal-plus-dialog {
