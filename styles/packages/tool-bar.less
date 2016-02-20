@@ -78,7 +78,7 @@
                     bottom: 0.5rem;
                     content: "\f05f";
                     font-family: 'Octicons Regular';
-                    color: @app-background-color;
+                    color: #FFF;
                     display: inline-block;
                     line-height: 1;
                     -webkit-font-smoothing: antialiased;
@@ -87,7 +87,7 @@
                     text-align: center;
                     width: 0.75rem;
                     height: 0.75rem;
-                    background: @text-color-error;
+                    background: @md-red;
                     border-radius: 50%;
                     border: 0.125rem solid @text-color-error;
                     box-sizing: content-box;
@@ -167,6 +167,20 @@
 
                 &::before {
                     line-height: 2.5rem;
+                }
+                &.tool-bar-mode-dev::after {
+                    right: 0.25rem;
+                    bottom: 0.25rem;
+                }
+            }
+            &.tool-bar-horizontal {
+                .tool-bar-spacer {
+                    height: 1.75rem;
+                }
+            }
+            &.tool-bar-vertical {
+                .tool-bar-spacer {
+                    width: 1.75rem;
                 }
             }
         }
