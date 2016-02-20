@@ -1,19 +1,12 @@
 .tool-bar {
-    position: relative;
     border: none;
     z-index: 5000;
 
-    &.tool-bar-vertical {
-        width: 3rem;
-
-        .tool-bar-spacer {
-            margin: 0.5rem 0;
-            border-bottom: none;
-        }
+    &.tool-bar-vertical .tool-bar-spacer {
+        margin: 0.5rem 0;
+        border-bottom: none;
     }
     &.tool-bar-horizontal {
-        height: 3rem;
-
         &.tool-bar-top {
             background: @app-background-color;
         }
@@ -154,12 +147,6 @@
         }
     }
     .compact-tab-bar & {
-        &.tool-bar-vertical {
-            width: 2.5rem;
-        }
-        &.tool-bar-horizontal {
-            height: 2.5rem;
-        }
         &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
             .tool-bar-btn {
                 width: 2.5rem;
@@ -175,12 +162,12 @@
             }
             &.tool-bar-horizontal {
                 .tool-bar-spacer {
-                    height: 1.75rem;
+                    height: 1.5rem;
                 }
             }
             &.tool-bar-vertical {
                 .tool-bar-spacer {
-                    width: 1.75rem;
+                    width: 1.5rem;
                 }
             }
         }
