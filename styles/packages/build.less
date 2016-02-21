@@ -32,22 +32,17 @@
         }
     }
     .output {
+        background-color: @app-background-color;
         min-height: 8.75rem;
+        border-top: 1px solid darken(@app-background-color, 1.5%);
     }
     .panel-contrast & {
         .output {
-            background-color: darken(@app-background-color, 1.5%);
+            background-color: darken(@app-background-color, 0.5%);
         }
     }
     .panel-shadows & {
         .z-depth-1;
-
-        .output {
-            background-color: @app-background-color;
-        }
-        .control-container {
-            background-color: darken(@app-background-color, 1.5%);
-        }
     }
 }
 #build-status-bar {
