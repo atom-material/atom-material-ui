@@ -36,4 +36,11 @@
         border-radius: 0;
         border: none;
     }
+    &.panel-contrast {
+        .tree-view-scroller, .nuclide-ui-panel-component-scroller, .remote-ftp-view > .scroller {
+            &::-webkit-scrollbar-track {
+                background: darken(@app-background-color, 2%);
+            }
+        }
+    }
 }
