@@ -13,9 +13,9 @@ describe('AMU Font Options', () => {
 
     it('should be able to scale UI via font-size', () => {
         atom.config.set('atom-material-ui.fonts.fontSize', '18');
-        expect(atom.config.get('atom-material-ui.fonts.fontSize')).toBe(18);
+        expect(document.querySelector(':root').style.fontSize).toBe('18px');
 
         atom.config.set('atom-material-ui.fonts.fontSize', '16');
-        expect(atom.config.get('atom-material-ui.fonts.fontSize')).toBe(16);
+        expect(document.querySelector(':root').style.fontSize).toBe('16px');
     });
 });
