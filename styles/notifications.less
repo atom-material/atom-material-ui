@@ -47,12 +47,15 @@ atom-notification {
         height: 1.75rem;
         line-height: 1.75rem;
         border: none;
+        color: @text-color;
+        padding: 0 0.5rem;
     }
     &.icon::before {
         display: none;
     }
     .close, .close:hover {
         color: @text-color;
+        opacity: 1;
     }
     &.success, &.error, &.info, &.warning, &.fatal {
         border-left: 0.125rem solid transparent;
