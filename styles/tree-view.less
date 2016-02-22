@@ -56,6 +56,34 @@
                 &::before {
                     background-color: @base-color;
                 }
+                &.status-modified {
+                    color: darken(@md-amber, 25%);
+
+                    &::before {
+                        background-color: lighten(desaturate(@md-amber, 25%), 5%);
+                    }
+                }
+                &.status-added {
+                    color: #FFF;
+
+                    &::before {
+                        background-color: @md-light-green;
+                    }
+                }
+                &.status-renamed {
+                    color: #FFF;
+
+                    &::before {
+                        background-color: @md-blue;
+                    }
+                }
+                &.status-removed {
+                    color: #FFF;
+
+                    &::before {
+                        background-color: @md-red;
+                    }
+                }
             }
         }
     }

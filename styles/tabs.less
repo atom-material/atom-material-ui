@@ -17,6 +17,7 @@
     position: relative;
     overflow-y: hidden;
     overflow-x: auto;
+    -webkit-font-smoothing: antialiased;
     z-index: 2000;
 
     .tab {
@@ -258,13 +259,23 @@
         }
     }
 }
-.has-custom-icons .tab-bar:not([data-reactid]) .tab {
-    .title[data-path] {
-        &::before {
-            // Override icon color in icon-packages as it can hurt readability
-            // with some @base-color.
-            color: @accent-text-color !important;
-            margin-right: 1rem;
+.has-custom-icons {
+    .tab-bar:not([data-reactid]) .tab {
+        .title[data-path] {
+            &::before {
+                margin-right: 1rem;
+            }
+        }
+    }
+    &.tinted-tab-bar {
+        .tab-bar:not([data-reactid]) .tab {
+            .title[data-path] {
+                &::before {
+                    // Override icon color in icon-packages as it can hurt readability
+                    // with some @base-color.
+                    color: @accent-text-color !important;
+                }
+            }
         }
     }
 }
