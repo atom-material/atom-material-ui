@@ -42,11 +42,41 @@
         color: fade(@text-color, 30%);
     }
     &:focus {
-        li.directory.selected > .list-item {
-            color: @accent-text-color;
+        li.directory.selected {
+            > .list-item {
+                color: @accent-text-color;
 
-            &::after {
-                background-color: @base-color;
+                &::after {
+                    background-color: @base-color;
+                }
+            }
+            &.status-modified > .list-item {
+                color: darken(@md-amber, 30%);
+
+                &::after {
+                    background-color: lighten(desaturate(@md-amber, 25%), 5%);
+                }
+            }
+            &.status-added > .list-item {
+                color: #FFF;
+
+                &::after {
+                    background-color: @md-light-green;
+                }
+            }
+            &.status-renamed > .list-item {
+                color: #FFF;
+
+                &::after {
+                    background-color: @md-blue;
+                }
+            }
+            &.status-removed > .list-item {
+                color: #FFF;
+
+                &::after {
+                    background-color: @md-red;
+                }
             }
         }
         li:not(.list-nested-item), li.list-nested-item > .list-item {
@@ -56,8 +86,11 @@
                 &::before {
                     background-color: @base-color;
                 }
+                .name.icon::before {
+                    color: currentColor;
+                }
                 &.status-modified {
-                    color: darken(@md-amber, 25%);
+                    color: darken(@md-amber, 30%);
 
                     &::before {
                         background-color: lighten(desaturate(@md-amber, 25%), 5%);
