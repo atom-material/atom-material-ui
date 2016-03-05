@@ -116,13 +116,19 @@
     }
     .tinted-tab-bar & {
         &.tool-bar-vertical {
-            .tool-bar-btn:first-child {
+            .tool-bar-btn {
                 background: darken(@base-color, 5%);
                 color: @accent-text-color;
 
                 svg path, svg polygon {
                     fill: @accent-text-color;
                 }
+            }
+            .tool-bar-btn.tool-bar-item-align-end,
+            .tool-bar-btn:not(.tool-bar-item-align-end) + .tool-bar-btn,
+            .tool-bar-spacer + .tool-bar-btn {
+                background: none;
+                color: @text-color;
             }
         }
         &.tool-bar-top {
