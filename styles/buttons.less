@@ -1,6 +1,9 @@
 @import "ui-mixins";
 @import "ui-variables";
 
+button {
+    display: inline-block;
+}
 .btn, button {
     padding: 0;
     height: 2.25rem;
@@ -16,9 +19,6 @@
     vertical-align: middle;
     .z-depth-1();
 
-    &:not(.btn-block) {
-        display: inline-block;
-    }
     &:hover {
         color: @text-color;
         background: @app-background-color;
