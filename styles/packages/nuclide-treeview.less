@@ -1,6 +1,23 @@
+.nuclide-file-tree-toolbar {
+    top: 4rem;
+    right: 1rem;
+
+    .btn-group .btn {
+        padding: 0;
+        width: 2.25rem;
+        border-radius: 50%;
+
+        &.selected {
+            border-radius: 50%;
+        }
+    }
+    span::before {
+        margin: 0;
+    }
+}
 .nuclide-ui-panel-component {
     transform: translate3d(0,0,0);
-    
+
     .blend-tree-view.tinted-tab-bar & {
         .tabBlender {
             position: absolute;
