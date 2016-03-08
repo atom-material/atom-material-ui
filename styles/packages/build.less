@@ -1,50 +1,27 @@
 .build {
     .control-container {
-        background-color: darken(@app-background-color, 3%);
-        width: 7rem;
-        padding: 0.5rem;
-        text-align: center;
-
         .btn {
-            float: none;
-            color: @text-color;
-            width: 2.5rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            text-align: center;
-            padding: 0;
-            margin: 0 0 0.5rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
 
-            &:nth-child(2n) {
-                margin-left: 0.5rem;
-            }
-        }
-        .title {
-            line-height: 1rem;
-            display: inline-block;
-        }
-        .icon-gear {
-            display: inline-block;
-            width: 1rem;
-            height: 1rem;
-            text-align: center;
-            line-height: 1rem;
-        }
+    .panel-heading {
+        margin-bottom: 0;
+        padding: 5px;
     }
-    .output {
-        background-color: @app-background-color;
-        min-height: 8.75rem;
-        border-top: 1px solid darken(@app-background-color, 1.5%);
-    }
+
     .panel-contrast & {
         .output {
             background-color: darken(@app-background-color, 0.5%);
         }
     }
+
     .panel-shadows & {
         .z-depth-1;
     }
 }
+
 #build-status-bar {
     margin-right: 1rem;
 
