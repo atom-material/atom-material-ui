@@ -11,16 +11,16 @@
                 .selected-item();
             }
         }
-        &.status-modified:not(.selected) {
-            color: lighten(desaturate(@md-amber, 25%), 5%);
+        &.status-modified {
+            color: desaturate(@md-amber, 15%);
         }
-        &.status-added:not(.selected) {
+        &.status-added {
             color: @md-light-green;
         }
-        &.status-renamed:not(.selected) {
+        &.status-renamed {
             color: @md-blue;
         }
-        &.status-removed:not(.selected) {
+        &.status-removed {
             color: @md-red;
         }
         .name {
