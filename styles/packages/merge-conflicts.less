@@ -1,0 +1,72 @@
+atom-overlay .side {
+    padding: 0 0.5rem;
+
+    &.ours {
+        background: @md-indigo;
+    }
+    &.theirs {
+        background: @md-teal-300;
+
+        .text-subtle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .text-highlight {
+        color: white;
+    }
+    .text-subtle {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+atom-text-editor, atom-text-editor::shadow {
+    .line.conflict-ours {
+        background: fade(@md-indigo, 50%);
+
+        &.cursor-line {
+            background: fade(@md-indigo, 75%);
+        }
+        .source {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .line.conflict-theirs {
+        background: fade(@md-teal-300, 50%);
+
+        &.cursor-line {
+            background: fade(@md-teal-300, 75%);
+        }
+        .source {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+.overlay.resolver {
+    padding: 0.5rem 1rem 1rem;
+
+    .text-highlight {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: @text-color;
+
+        + .block {
+            margin: 1rem 0;
+        }
+    }
+    .text-info {
+        color: @text-color;
+    }
+}
+.merge-conflicts {
+    padding: 1rem;
+
+    .panel-heading {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+    }
+    .panel-contrast &, .panel-contrast.panel-shadows & {
+        background: darken(@app-background-color, 0.75%);
+    }
+    .panel-shadows & {
+        .z-depth-1;
+    }
+}
