@@ -1,3 +1,42 @@
 .incompatible-packages {
     padding: 3rem;
+
+    .incompatible-package {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.125rem;
+        background: lighten(@app-background-color, 5%);
+        margin: 1rem 0;
+        .z-depth-1;
+
+        .heading {
+            margin-bottom: 2rem;
+            color: @text-color;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+        .btn, button {
+            margin: 0;
+            box-shadow: none;
+            background: none;
+
+            &:hover {
+                .z-depth-1;
+            }
+        }
+        ul {
+            line-height: 2.5rem;
+            margin: 0;
+            padding: 0 0 0 0.5rem;
+
+            .icon {
+                span {
+                    font-weight: 300;
+                }
+                &::before {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
 }
