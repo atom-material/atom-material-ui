@@ -1,9 +1,3 @@
-.background-alt(@color) when (lightness(@color) >= 65%) {
-    background: darken(@color, 2%);
-}
-.background-alt(@color) when (lightness(@color) < 65%) {
-    background: lighten(@color, 2%);
-}
 .selected-item() {
     position: absolute;
     content: '';

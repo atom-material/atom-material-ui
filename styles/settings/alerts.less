@@ -1,46 +1,44 @@
-.settings-view {
-    .alert::before {
-        margin-right: 1rem;
-        border-radius: 0.125rem;
-    }
-    .alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info {
-        border-color: fade(@text-color, 10%);
-        background-color: fade(@text-color, 2.5%);
-        color: @text-color;
-    }
-    .alert-error::before, .alert-danger::before {
-        color: @md-red;
-    }
-    .alert-warning::before {
-        color: darken(@md-amber, 20%);
-    }
-    .alert-success::before {
-        color: darken(@md-light-green, 10%);
-    }
-    .alert-info::before {
-        color: darken(@md-light-blue, 10%);
-    }
-    .close, button[class*="close"] {
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        background: none;
-        height: auto;
-        line-height: 1.25;
+.alert::before {
+    margin-right: 1rem;
+    border-radius: 0.125rem;
+}
+.alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info {
+    border-color: fade(@text-color, 10%);
+    background-color: fade(@text-color, 2.5%);
+    color: @text-color;
+}
+.alert-error::before, .alert-danger::before {
+    color: @md-red;
+}
+.alert-warning::before {
+    color: darken(@md-amber, 20%);
+}
+.alert-success::before {
+    color: darken(@md-light-green, 10%);
+}
+.alert-info::before {
+    color: darken(@md-light-blue, 10%);
+}
+.close, button[class*="close"] {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    height: auto;
+    line-height: 1.25;
 
-        &:hover {
-            box-shadow: none;
-            background: none;
-        }
-        &::before {
-            margin: 0;
-        }
+    &:hover {
+        box-shadow: none;
+        background: none;
     }
-    .error-message .error-details {
-        margin-top: 1.5rem;
-        background: fade(@text-color, 2.5%);
-        border-color: fade(@text-color, 5%);
-        color: @text-color;
-        margin-bottom: 0;
+    &::before {
+        margin: 0;
     }
+}
+.error-message .error-details {
+    margin-top: 1.5rem;
+    background: fade(@text-color, 2.5%);
+    border-color: fade(@text-color, 5%);
+    color: @text-color;
+    margin-bottom: 0;
 }
