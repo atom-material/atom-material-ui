@@ -6,6 +6,10 @@
     border-color: fade(@text-color, 10%);
     background-color: fade(@text-color, 2.5%);
     color: @text-color;
+
+    .settings-view & {
+        &:extend(.alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info);
+    }
 }
 .alert-error::before, .alert-danger::before {
     color: @md-red;
