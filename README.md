@@ -8,6 +8,8 @@
 ![](http://i.imgur.com/7C2H2mw.png)
 ---
 
+[![Join the chat at https://gitter.im/silvestreh/atom-material-ui](https://badges.gitter.im/silvestreh/atom-material-ui.svg)](https://gitter.im/silvestreh/atom-material-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/silvestreh/atom-material-syntax).
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
