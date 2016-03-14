@@ -9,6 +9,19 @@
         opacity: 0;
     }
 }
+.tinted-tab-bar .active {
+    .tab-bar:not([data-reactid]) {
+        background: @base-color;
+        opacity: 1;
+
+        &::before {
+            background-image: linear-gradient(to right, @base-color 0%, transparent 100%);
+        }
+        &::after {
+            background-image: linear-gradient(to left, @base-color 0%, transparent 100%);
+        }
+    }
+}
 .tab-bar {
     position: relative;
     line-height: 3rem;
@@ -194,13 +207,13 @@
     }
     .tinted-tab-bar &:not([data-reactid]) {
         background-color: @base-color;
+        opacity: 0.88;
 
         &::before {
             background-image: linear-gradient(to right, @base-color 0%, transparent 100%);
         }
         &::after {
             background-image: linear-gradient(to left, @base-color 0%, transparent 100%);
-            right: 0;
         }
         .tab {
             color: @accent-text-color;
