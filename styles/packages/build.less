@@ -1,27 +1,92 @@
-.build {
-    .control-container {
-        .btn {
-            height: 1.5rem;
-            line-height: 1.5rem;
+.left, .right {
+    .build .heading {
+        padding: 0 0.5rem 0 1rem;
+    }
+    .tinted-tab-bar & {
+        .build .heading {
+            background-color: @base-color;
+        }
+        .build .control-container {
+            .btn {
+                color: @accent-text-color;
+            }
         }
     }
+}
+.build {
+    .output {
+        padding: 0.5rem 1rem;
 
+        .terminal {
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+    }
+    .heading {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        line-height: 3rem;
+        height: 3rem;
+        font-weight: normal;
+
+        .control-container {
+            margin-left: 1rem;
+
+            .btn {
+                color: @text-color;
+                margin: 0;
+            }
+        }
+    }
+    .control-container {
+        opacity: 1;
+
+        .btn {
+            background: none;
+            box-shadow: none;
+            color: @text-color;
+            padding: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+    }
     .panel-heading {
         margin-bottom: 0;
         padding: 5px;
     }
-
     .panel-contrast & {
+        .heading {
+            background-color: darken(@app-background-color, 1.5%);
+        }
         .output {
             background-color: darken(@app-background-color, 0.5%);
         }
     }
-
     .panel-shadows & {
         .z-depth-1;
+
+        .heading {
+            .z-depth-1;
+        }
     }
 }
+.tinted-tab-bar .top, .tinted-tab-bar .left, .tinted-tab-bar .right {
+    .build {
+        .heading {
+            background: @base-color;
+            color: @accent-text-color;
 
+            .control-container .btn {
+                color: @accent-text-color;
+            }
+            .heading-text {
+                color: @accent-text-color;
+            }
+        }
+    }
+}
 #build-status-bar {
     margin-right: 1rem;
 
