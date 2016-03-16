@@ -43,4 +43,44 @@
             top: 2.5rem;
         }
     }
+    li.directory.selected > .list-item {
+        position: relative;
+
+        &::after {
+            .selected-item;
+        }
+    }
+
+    :focus {
+        li.directory.selected {
+            > .list-item {
+                color: @accent-text-color;
+
+                &::after {
+                    background-color: @base-color;
+                }
+            }
+        }
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
+            &.selected {
+                color: @accent-text-color;
+
+                &::before {
+                    background-color: @base-color;
+                }
+                .name.icon::before {
+                    color: currentColor;
+                }
+            }
+        }
+    }
+
+    .compact-tree-view & {
+        li:not(.list-nested-item), li.list-nested-item > .list-item {
+            line-height: 1.75rem;
+        }
+        .name.icon::before {
+            margin: 0 0.5rem 0 0;
+        }
+    }
 }
