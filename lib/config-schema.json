@@ -2,6 +2,7 @@
     "colors": {
         "order": 1,
         "type": "object",
+        "title": "Colors",
         "properties": {
             "abaseColor": {
                 "title": "Primary color",
@@ -33,6 +34,7 @@
     "ui": {
         "order": 2,
         "type": "object",
+        "title": "User Interface",
         "properties": {
             "animations": {
                 "title": "Use animations",
@@ -57,6 +59,7 @@
     "tabs": {
         "order": 3,
         "type": "object",
+        "title": "Tabs",
         "properties": {
             "compactTabs": {
                 "title": "Compact tab bar",
@@ -75,6 +78,7 @@
     "treeView": {
         "order": 4,
         "type": "object",
+        "title": "Tree View",
         "properties": {
             "blendTabs": {
                 "title": "Blend tree view with tab bar",
@@ -93,6 +97,7 @@
     "fonts": {
         "order": 5,
         "type": "object",
+        "title": "Fonts",
         "properties": {
             "fontSize": {
                 "title": "User interface font size",
