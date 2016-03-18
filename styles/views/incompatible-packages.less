@@ -39,6 +39,15 @@
                 }
             }
         }
+        pre {
+            background: lighten(@app-background-color, 3%);
+            border-radius: 0;
+            margin: 1rem -1rem -1rem;
+            width: ~"calc(100% + 2rem)";
+            color: @text-color;
+            padding: 1rem;
+            border: none;
+        }
         .badge {
             font-size: 0.75rem;
             line-height: 1;
@@ -46,12 +55,23 @@
             top: 0.3rem;
 
             &.badge-info {
+                background-color: @text-color-info;
                 padding-right: 1rem;
 
                 &::before {
                     -webkit-animation: spin 1s linear infinite;
                     content: '\f087';
                 }
+            }
+            &.badge-success {
+                background-color: @text-color-success;
+            }
+            &.badge-error {
+                background-color: @text-color-error;
+            }
+            &.badge-warning {
+                background-color: @text-color-warning;
+                color: darken(@text-color-warning, 30%);
             }
         }
     }
