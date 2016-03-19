@@ -28,6 +28,14 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
     .placeholder-text {
         color: fade(@text-color, 50%);
     }
+    .selection .region {
+        background: fade(@text-color, 10%);
+    }
+    .settings-view .section &, .settings-view .section & {
+        .selection .region {
+            background: fade(@text-color, 10%);
+        }
+    }
 }
 atom-text-editor, atom-text-editor::shadow {
     text-rendering: optimizeLegibility;
@@ -46,5 +54,10 @@ atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
 
     &::before {
         transform: scaleX(1);
+    }
+    .settings-view .section &, .settings-view .section & {
+        .selection .region {
+            background: fade(@text-color, 20%);
+        }
     }
 }
