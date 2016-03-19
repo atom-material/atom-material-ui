@@ -1,0 +1,95 @@
+.debugger-panel-heading {
+    height: 3rem;
+    line-height: 3rem;
+    flex-basis: 3rem;
+    background: none;
+    background: darken(@app-background-color, 2%);
+    position: relative;
+
+    .btn {
+        padding: 0;
+        width: 2.25rem;
+        height: 2.25rem;
+        text-align: center;
+        box-shadow: none;
+        background: none;
+        color: @text-color;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        width: 0.5rem;
+        height: 100%;
+        background: darken(@app-background-color, 2%);
+    }
+    .btn.btn-error {
+        float: right;
+        text-indent: -9999em;
+        position: relative;
+        color: @text-color-error;
+
+        &::before {
+            text-indent: 0;
+            position: absolute;
+            top: ~'calc(50% - 0.5rem)';
+            left: ~'calc(50% - 0.5rem)';
+            font-family: 'Octicons Regular';
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none;
+            font-size: 1rem;
+            width: 1rem;
+            height: 1rem;
+            content: "\f081";
+        }
+    }
+    + .panel-body:not([tabindex]) {
+        background: darken(@app-background-color, 0.75%);
+    }
+}
+.panel-shadows .debugger-panel-heading::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: ~'calc(100% + 0.35rem)';
+    height: 0.25rem;
+    background: linear-gradient(to bottom, black, transparent);
+    opacity: 0.05;
+}
+.debugger-vertical-pane {
+    .list-item {
+        &.heading {
+            padding: 0 1rem;
+            background: darken(@app-background-color, 1.5%);
+
+            + ul {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+.debugger-editor {
+    height: 3.125rem !important;
+    flex-basis: 3.125rem !important;
+    padding: 0 0.25rem 0 0.5rem;
+    background-color: fade(@text-color, 2.5%);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 0.25rem;
+        height: 100%;
+        background: fade(@text-color, 2.5%);
+    }
+    atom-text-editor, atom-text-editor::shadow {
+        box-shadow: none;
+    }
+}
