@@ -2,7 +2,6 @@
     font-size: 0.8rem;
     overflow: hidden;
 
-
     .project-root {
         padding: 0;
         transform: translate3d(0,0,0);
@@ -171,5 +170,16 @@
     }
     .blend-tree-view.tinted-tab-bar & {
         display: block;
+    }
+}
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 0.25rem;
+    }
+    &[data-show-on-right-side='false'] .tree-view-resize-handle {
+        right: -0.125rem;
+    }
+    &[data-show-on-right-side='true'] .tree-view-resize-handle {
+        left: 0;
     }
 }
