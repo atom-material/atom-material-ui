@@ -27,22 +27,18 @@
             border-color: fade(@text-color, 10%);
         }
     }
-    &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
+    &.tool-bar-12px, &.tool-bar-16px, &.tool-bar-24px, &.tool-bar-32px {
         &.tool-bar-horizontal {
             .tool-bar-spacer {
-                height: 2rem;
-                margin-top: 0.5rem;
+                height: 100%;
             }
         }
         &.tool-bar-vertical {
             .tool-bar-spacer {
-                width: 2rem;
-                margin-left: 0.5rem;
+                width: 100%;
             }
         }
         .tool-bar-btn {
-            width: 3rem;
-            height: 3rem;
             margin: 0;
             padding: 0;
             border-radius: 0;
@@ -56,10 +52,6 @@
                 &:hover:not(:first-child) {
                     color: @text-color-dark;
                 }
-            }
-            &::before {
-                font-size: 1.25rem;
-                line-height: 3rem;
             }
             &.tool-bar-mode-dev {
                 position: relative;
@@ -89,6 +81,50 @@
                 &:hover {
                     color: @text-color;
                 }
+            }
+        }
+    }
+    &.tool-bar-12px {
+        .tool-bar-btn {
+            width: 2rem;
+            height: 2rem;
+
+            &::before {
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+        }
+    }
+    &.tool-bar-16px {
+        .tool-bar-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+
+            &::before {
+                font-size: 1.125rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+    &.tool-bar-24px {
+        .tool-bar-btn {
+            width: 3rem;
+            height: 3rem;
+
+            &::before {
+                font-size: 1.25rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    &.tool-bar-32px {
+        .tool-bar-btn {
+            width: 3.75rem;
+            height: 3.75rem;
+
+            &::before {
+                font-size: 1.5rem;
+                line-height: 3.75rem;
             }
         }
     }
