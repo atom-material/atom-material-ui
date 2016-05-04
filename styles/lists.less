@@ -45,6 +45,26 @@
     .selected::before {
         background: none;
     }
+    &.mark-active {
+        li:not(.list-nested-item):not(.tabBlender), li.list-nested-item > .list-item {
+            padding-left: 2.5rem;
+
+            &.active::after {
+                position: absolute;
+                left: 1rem;
+                font-family: 'Octicons Regular';
+                font-weight: normal;
+                font-style: normal;
+                display: inline-block;
+                -webkit-font-smoothing: antialiased;
+                text-decoration: none;
+                font-size: 1rem;
+                width: 1rem;
+                height: 1rem;
+                content: "\f03a";
+            }
+        }
+    }
 }
 .select-list, .popover-list {
     atom-text-editor[mini], atom-text-editor[mini]::shadow {
