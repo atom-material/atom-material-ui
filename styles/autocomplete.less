@@ -25,7 +25,7 @@ autocomplete-suggestion-list {
         .suggestion-list-scroller {
             background: none;
 
-            li {
+            ol li {
                 background: none;
                 position: relative;
 
@@ -39,6 +39,11 @@ autocomplete-suggestion-list {
                     .word-container span {
                         color: @accent-text-color;
                     }
+
+                    .left-label {
+                        color: darken(@accent-text-color, 15%);
+                    }
+
                     .icon-container {
                         i.icon {
                             background: @accent-text-color;
