@@ -22,8 +22,10 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
         top: auto;
         left: 0;
         right: 0;
-        transition: all 300ms;
         transform: scaleX(0);
+    }
+    .use-animations &::before {
+        transition: transform 300ms;
     }
     .placeholder-text {
         color: fade(@text-color, 50%);

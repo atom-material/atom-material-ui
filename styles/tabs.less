@@ -9,6 +9,20 @@
         opacity: 0;
     }
 }
+atom-workspace:not(.use-animations) {
+    .tab-bar {
+        .tab {
+            transition: none;
+
+            &::before {
+                transition: none;
+            }
+            .ink {
+                animation: none;
+            }
+        }
+    }
+}
 .tinted-tab-bar .active {
     .tab-bar:not([data-reactid]) {
         background: @base-color;
