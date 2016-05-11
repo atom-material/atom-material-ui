@@ -3,7 +3,8 @@
 [![apm](https://img.shields.io/apm/v/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
 [![apm](https://img.shields.io/apm/l/atom-material-ui.svg?style=flat-square)]()
 [![Gitter](https://img.shields.io/gitter/room/silvestreh/atom-material-ui.svg?style=flat-square)](https://gitter.im/silvestreh/atom-material-ui)
-[![Gratipay](https://img.shields.io/gratipay/user/silvestreh.svg?style=flat-square)](https://gratipay.com/Atom-Material-UI/)
+
+[![Support AMU](https://pledgie.com/campaigns/29552.png?skin_name=chrome)](https://pledgie.com/campaigns/29552)
 
 ![AMU](http://i.imgur.com/7C2H2mw.png)
 ---
