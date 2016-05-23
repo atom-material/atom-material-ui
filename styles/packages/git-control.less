@@ -1,0 +1,58 @@
+.git-control {
+    .menu {
+        .item {
+            position: relative;
+            color: @text-color;
+
+            div {
+                min-width: 3rem;
+            }
+            &.inactive {
+                color: fade(@text-color, 25%);
+
+                div {
+                    cursor: not-allowed;
+                }
+            }
+        }
+        .icon::before {
+            font-size: 1.5rem;
+        }
+        .icon {
+            + div {
+                line-height: 1.5rem;
+                padding: 0 0.5rem;
+                border-radius: @component-border-radius;
+                background-color: @tip-background-color;
+                color: @tip-text-color;
+                max-width: 20rem;
+                word-wrap: break-word;
+                word-break: keep-all;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: auto;
+                transform: translateX(-50%);
+                z-index: 9999;
+            }
+            &:hover + div {
+                display: block;
+            }
+        }
+    }
+    .files {
+        .file {
+            .clickable.text {
+                margin-top: 0;
+                margin-left: 4rem;
+            }
+        }
+    }
+    .icon::before {
+        font-size: 1rem;
+    }
+    pre {
+        border: none;
+    }
+}
