@@ -72,6 +72,18 @@
                 "description": "Paints the tab bar with the chosen primary color.",
                 "type": "boolean",
                 "default": false
+            },
+            "noTabMinWidth": {
+                "title": "No minimum width for tabs",
+                "description": "Prevents tabs from overflowing off the tab bar.",
+                "type": "boolean",
+                "default": false
+            },
+            "noTabMaxWidth": {
+                "title": "No maximum width for tabs",
+                "description": "Allows open tabs to fill the entire tab bar.",
+                "type": "boolean",
+                "default": false
             }
         }
     },
