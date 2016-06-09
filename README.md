@@ -61,7 +61,7 @@ apm install atom-material-syntax-dark
 
 # Contributing
 
-Please check the [CONTRIBUTING.md](https://github.com/silvestreh/atom-material-ui/blob/master/CONTRIBUTING.md) file.
+Please check the [CONTRIBUTING.md](https://github.com/silvestreh/atom-material-ui/blob/master/.github/CONTRIBUTING.md) file.
 
 # Extra
 
