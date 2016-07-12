@@ -34,12 +34,4 @@ describe('AMU tabs options', () => {
         atom.config.set('atom-material-ui.tabs.noTabMinWidth', true);
         expect(this.workspace.classList.contains('no-tab-min-width')).toBe(true);
     });
-
-    it('should be able to toggle tab max width', () => {
-        atom.config.set('atom-material-ui.tabs.noTabMaxWidth', false);
-        expect(this.workspace.classList.contains('no-tab-max-width')).toBe(false);
-
-        atom.config.set('atom-material-ui.tabs.noTabMaxWidth', true);
-        expect(this.workspace.classList.contains('no-tab-max-width')).toBe(true);
-    });
 });

@@ -78,12 +78,6 @@
                 "description": "Prevents tabs from overflowing off the tab bar.",
                 "type": "boolean",
                 "default": false
-            },
-            "noTabMaxWidth": {
-                "title": "No maximum width for tabs",
-                "description": "Allows open tabs to fill the entire tab bar.",
-                "type": "boolean",
-                "default": false
             }
         }
     },
