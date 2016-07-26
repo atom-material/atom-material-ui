@@ -66,6 +66,10 @@ button {
         &:active, &:focus {
             outline: none;
         }
+        .text-highlight, .text-error,
+        .text-success, .text-info {
+            color: @accent-text-color;
+        }
     }
     &.btn-primary {
         background-color: @base-color;
@@ -107,7 +111,6 @@ button {
 .btn-group {
     min-height: 0;
     line-height: 1;
-    height: 2.25rem;
     display: inline-block;
     vertical-align: middle;
 
