@@ -26,4 +26,12 @@ describe('AMU color options', () => {
         atom.config.set('atom-material-ui.colors.accentColor', '#B0E457');
         expect(atom.config.get('atom-material-ui.colors.accentColor').toHexString().toUpperCase()).toBe('#B0E457');
     });
+
+    it('should be able to paint the cursor', () => {
+        atom.config.set('atom-material-ui.colors.paintCursor', false);
+        expect(this.workspace.classList.contains('paint-cursor')).toBe(false);
+
+        atom.config.set('atom-material-ui.colors.paintCursor', true);
+        expect(this.workspace.classList.contains('paint-cursor')).toBe(true);
+    });
 });

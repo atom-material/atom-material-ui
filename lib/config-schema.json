@@ -18,7 +18,7 @@
             },
             "genAccent": {
                 "title": "Generate complementary accent",
-                "description": "Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme. <small>Experimental</small>",
+                "description": "Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme.",
                 "type": "boolean",
                 "default": false
             },
@@ -28,6 +28,12 @@
                 "type": "string",
                 "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
                 "default": "Teal"
+            },
+            "paintCursor": {
+                "title": "Paint text editor's cursor",
+                "description": "Overrides the syntax theme's cursor color with the selected Primary Color.",
+                "type": "boolean",
+                "default": false
             }
         }
     },

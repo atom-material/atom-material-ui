@@ -13,10 +13,11 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
     box-shadow: inset 0 -1px 0 0 fade(@text-color, 10%);
     transition: all 250ms ease;
 
-    & .cursor {
-        border-color: @base-color;
+    .paint-cursor & {
+        .cursor {
+            border-color: @base-color;
+        }
     }
-
     &::before {
         content: '';
         position: absolute;
@@ -46,17 +47,17 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
 atom-text-editor, atom-text-editor::shadow {
     text-rendering: optimizeLegibility;
 
-    & .cursor {
-        border-color: @base-color;
+    .paint-cursor & {
+        .cursor {
+            border-color: @base-color;
+        }
+        .gutter .cursor-line {
+            color: @accent-color;
+        }
+        .gutter .cursor-line-no-selection {
+            color: @base-color;
+        }
     }
-
-    & .gutter .cursor-line {
-        color: @accent-color;
-    }
-    & .gutter .cursor-line-no-selection {
-        color: @base-color;
-    }
-
     .find-result {
         .region {
             background: fade(@text-color, 15%);
