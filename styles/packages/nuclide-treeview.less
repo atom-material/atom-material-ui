@@ -1,11 +1,11 @@
 .nuclide-file-tree-toolbar {
-    top: 4rem;
     right: 1rem;
 
     .btn-group .btn {
         padding: 0;
         width: 2.25rem;
         border-radius: 50%;
+        margin-bottom: 1rem;
 
         &.selected {
             border-radius: 50%;
@@ -19,12 +19,6 @@
     transform: translate3d(0,0,0);
 
     .blend-tree-view.tinted-tab-bar & {
-        // .tabBlender {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        // }
         .nuclide-file-tree {
             box-sizing: content-box;
         }
@@ -33,6 +27,39 @@
         .nuclide-file-tree {
             padding-top: 2.5rem;
         }
+    }
+}
+.nuclide-file-tree-working-set-name-outline {
+    background: white;
+    border: none;
+    border-radius: 0.125rem 0 0 0.125rem;
+    vertical-align: middle;
+
+    atom-text-editor {
+        padding: 0.25rem 0.5rem;
+
+        &::shadow {
+            .placeholder-text {
+                color: @md-grey;
+            }
+            .text {
+                color: @md-grey-700;
+            }
+            .selection .region {
+                background: fade(@base-color, 20%);
+            }
+        }
+        &::before {
+            display: none;
+        }
+    }
+    + button, + .btn {
+        margin: 0;
+        line-height: 2rem;
+        height: 1.95rem;
+        border-radius: 0 0.125rem 0.125rem 0;
+        vertical-align: middle;
+        box-shadow: none;
     }
 }
 atom-panel.tool-panel.panel-left.left {
