@@ -45,6 +45,7 @@ atom-workspace:not(.use-animations) {
     overflow-y: hidden;
     overflow-x: auto;
     -webkit-font-smoothing: antialiased;
+    border-radius: 0;
     z-index: 95;
 
     .tab {
@@ -203,22 +204,22 @@ atom-workspace:not(.use-animations) {
     &::-webkit-scrollbar {
         display: none;
     }
-    &:not([data-reactid])::before, &:not([data-reactid])::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        height: 3rem;
-        width: 0.75rem;
-        pointer-events: none;
-        z-index: 1000;
-    }
-    &::before {
-        background-image: linear-gradient(to right, @app-background-color 0%, transparent 100%);
-    }
-    &::after {
-        background-image: linear-gradient(to left, @app-background-color 0%, transparent 100%);
-        right: 0;
-    }
+    // &:not([data-reactid])::before, &:not([data-reactid])::after {
+    //     content: '';
+    //     position: fixed;
+    //     top: 0;
+    //     height: 3rem;
+    //     width: 0.75rem;
+    //     pointer-events: none;
+    //     z-index: 1000;
+    // }
+    // &::before {
+    //     background-image: linear-gradient(to right, @app-background-color 0%, transparent 100%);
+    // }
+    // &::after {
+    //     background-image: linear-gradient(to left, @app-background-color 0%, transparent 100%);
+    //     right: 0;
+    // }
     .tinted-tab-bar &:not([data-reactid]) {
         background-color: @base-color;
         opacity: 0.88;
