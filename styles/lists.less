@@ -24,6 +24,9 @@
         &.status-removed {
             color: @md-red;
         }
+        &.status-ignored {
+            color: fade(@text-color, 40%);
+        }
         .name {
             position: relative;
             z-index: 10;
@@ -41,6 +44,9 @@
         }
         &.status-removed:not(.selected) > .list-item {
             color: @md-red;
+        }
+        &.status-ignored:not(.selected) > .list-item {
+            color: fade(@text-color, 40%);
         }
     }
     .selected::before {
