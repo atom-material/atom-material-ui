@@ -26,8 +26,8 @@
                 "title": "Predefined colors",
                 "description": "Pick a predefined color from the Material Design palette. If you change the Primary Color it will override this settings.",
                 "type": "string",
-                "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
-                "default": "Teal"
+                "enum": ["Random", "Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
+                "default": "Random"
             },
             "paintCursor": {
                 "title": "Paint text editor's cursor",
