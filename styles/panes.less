@@ -2,27 +2,27 @@
 
 atom-pane-resize-handle {
     &.horizontal, &.vertical {
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             background: @text-color;
             opacity: 0.075;
         }
     }
-    &.horizontal::before {
+    &.horizontal::after {
         top: 0;
         left: ~"calc(50% - 0.0625rem)";
         width: 0.0625rem;
         height: 100%;
     }
-    &.vertical::before {
+    &.vertical::after {
         top: ~"calc(50% - 0.0625rem)";
         left: 0;
         width: 100%;
         height: 0.0625rem;
     }
     .panel-contrast &, .tinted-tab-bar &, .panel-shadows & {
-        &.vertical::before {
+        &.vertical::after {
             display: none;
         }
     }
@@ -32,8 +32,6 @@ atom-pane-resize-handle {
             bottom: 0;
             left: 0;
             content: '';
-            width: 100%;
-            height: 50%;
             background-color: darken(@app-background-color, 2%);
         }
     }
