@@ -23,20 +23,22 @@
 .alert-info::before {
     color: darken(@md-light-blue, 10%);
 }
-.close, button[class*="close"] {
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    background: none;
-    height: auto;
-    line-height: 1.25;
-
-    &:hover {
+.alert {
+    .close, button[class*="close"] {
         box-shadow: none;
-        background: none;
-    }
-    &::before {
         margin: 0;
+        padding: 0;
+        background: none;
+        height: auto;
+        line-height: 1.25;
+
+        &:hover {
+            box-shadow: none;
+            background: none;
+        }
+        &::before {
+            margin: 0;
+        }
     }
 }
 .error-message .error-details {
