@@ -2,6 +2,8 @@
     padding: 3rem;
 
     .inset-panel {
+        background: transparent;
+
         .panel-heading {
             padding: 0;
             margin-bottom: 2rem;
@@ -15,8 +17,19 @@
         margin: 0;
     }
     [class*="highlight"] {
+        padding: 0 .5rem;
         margin-left: 0.5rem;
         font-weight: 600;
+        line-height: 1.75;
+        background: @text-color-info;
+        color: white;
+
+        &.highlight-error {
+            background: @text-color-error;
+        }
+        &.highlight-warning {
+            background: @text-color-warning;
+        }
     }
     .panels {
         margin-left: -0.5rem;
