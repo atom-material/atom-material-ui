@@ -1,6 +1,6 @@
 @import "ui-variables";
 
-atom-text-editor[mini], atom-text-editor[mini]::shadow {
+atom-text-editor[mini], atom-text-editor[mini].editor {
     position: relative;
     color: @text-color;
     background-color: transparent;
@@ -44,7 +44,7 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
         }
     }
 }
-atom-text-editor, atom-text-editor::shadow {
+atom-text-editor, atom-text-editor.editor {
     text-rendering: optimizeLegibility;
 
     .paint-cursor & {
@@ -67,7 +67,7 @@ atom-text-editor, atom-text-editor::shadow {
         }
     }
 }
-atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
+atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused.editor {
     background-color: transparent;
 
     &::before {
