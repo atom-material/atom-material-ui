@@ -1,8 +1,8 @@
 {
-  "name": "atom-material-ui",
+  "name": "learn-ide-material-ui",
   "theme": "ui",
   "version": "1.3.9",
-  "description": "A dark UI theme for Atom that follows Google's Material Design Guidelines",
+  "description": "A fork of atom-material-ui with custom defaults for the Learn IDE",
   "main": "./lib/main",
   "keywords": [
     "ui",
@@ -12,9 +12,11 @@
     "dynamic",
     "adaptive",
     "adapt to syntax",
-    "material design"
+    "material design",
+    "learn",
+    "learn ide"
   ],
-  "repository": "https://github.com/silvestreh/atom-material-ui",
+  "repository": "https://github.com/learn-co/learn-ide-material-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.4.0 <2.0.0"
