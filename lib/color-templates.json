@@ -31,6 +31,10 @@
         "base": "#5C6BC0",
         "accent": "#FFFFFF"
     },
+    "learn": {
+        "base": "#00BCE1",
+        "accent": "#FFFFFF"
+    },
     "lime": {
         "base": "#CDDC39",
         "accent": "#737F10"
