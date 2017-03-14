@@ -13,6 +13,8 @@
 
             &::after,
             &::before {
+                top: 1em;
+                left: .5em;
                 opacity: 0;
                 border: .1em solid @accent-text-color;
                 background-color: @accent-text-color;
@@ -20,7 +22,12 @@
                 animation-fill-mode: forwards;
             }
 
+            &::before {
+                width: .5em;
+            }
+
             &::after {
+                width: .85em;
                 animation-delay: 125ms;
             }
         }

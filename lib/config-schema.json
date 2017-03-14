@@ -105,5 +105,20 @@
                 "default": false
             }
         }
+    },
+    "fonts": {
+        "order": 5,
+        "type": "object",
+        "title": "Fonts",
+        "properties": {
+            "fontSize": {
+                "title": "User interface font size",
+                "description": "Scales the entire UI based on this value.",
+                "type": "number",
+                "default": 16,
+                "minimum": 10,
+                "maximum": 32
+            }
+        }
     }
 }

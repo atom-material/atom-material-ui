@@ -26,7 +26,7 @@
         padding: 0 @component-padding;
         color: @text-color-subtle;
         transition: color 0.1s ease-in;
-        font-size: @font-size;
+        font-size: 1em;
         font-weight: 300;
         .md-underline(@base-color);
 
@@ -68,6 +68,11 @@
             margin-top: -@tab-top-padding;
             padding-top: @tab-top-padding;
             padding-right: 10px;
+
+            &.icon::before {
+                font-size: 1.25em;
+                margin-right: 1em;
+            }
         }
 
         &:hover .close-icon {
@@ -80,7 +85,6 @@
         z-index: 1;
 
         .close-icon {
-            line-height: @tab-height - 1px;
             color: @text-color;
         }
     }

@@ -1,5 +1,5 @@
 .tree-view {
-    font-size: @font-size;
+    font-size: 1em;
     background: @tree-view-background-color;
 
     .selected::before {
@@ -18,8 +18,8 @@
     background: @base-color;
     color: @accent-text-color;
     text-transform: uppercase;
-    height: 48px;
-    line-height: 48px;
+    height: @tab-height;
+    line-height: @tab-height;
     pointer-events: none;
     z-index: 100;
 
@@ -38,8 +38,8 @@
     }
 
     .amu-compact-tab-bar & {
-        line-height: 36px;
-        height: 36px;
+        line-height: @compact-tab-height;
+        height: @compact-tab-height;
     }
 
     .amu-blend-tree-view.amu-tinted-tab-bar & {
