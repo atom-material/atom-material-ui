@@ -1,3 +1,9 @@
+# :fire::fire::fire: Latest development version requires **Atom 1.17** :fire::fire::fire:
+
+<small>`Atom 1.17` is on the dev channel. You'll need to clone Atom's repo and build it from source</small>
+
+---
+
 [![Build Status](https://img.shields.io/travis/atom-material/atom-material-ui.svg?style=flat-square)](https://travis-ci.org/atom-material/atom-material-ui)
 [![apm](https://img.shields.io/apm/dm/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
 [![apm](https://img.shields.io/apm/v/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
@@ -12,8 +18,6 @@
 A dynamic UI theme for Atom that (kinda) follows Google's Material Design Guidelines. Best with [Atom Material Syntax](https://github.com/atom-material/atom-material-syntax).
 
 Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).
-
-### NOTE: Latest development version requires Atom 1.17 (currently on the dev channel)
 
 # Installation
 
