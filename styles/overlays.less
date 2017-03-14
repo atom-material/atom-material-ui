@@ -1,0 +1,48 @@
+.overlay,
+atom-panel.modal {
+    color: @text-color;
+    background-color: @overlay-background-color;
+    font-size: @font-size;
+    padding: @component-padding;
+    box-shadow: 0 0 10px @base-border-color;
+    border-radius: @component-border-radius;
+    overflow: hidden;
+    .z-depth-3;
+
+    atom-text-editor[mini] {
+        margin-bottom: @component-padding;
+    }
+
+    &.select-list ol.list-group,
+    .select-list ol.list-group {
+        margin: 0 -@component-padding -@component-padding;
+
+        li {
+            padding: @component-padding;
+            border-bottom: 1px solid fade(@text-color, 2.5%);
+
+            &.two-lines {
+                padding: @component-padding/2 @component-padding;
+            }
+
+            .status.icon {
+                float: right;
+                margin-left: @component-icon-padding;
+
+                &::before {
+                    margin-right: 0;
+                }
+            }
+
+            &.selected {
+                .status.icon {
+                    color: @text-color-selected;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

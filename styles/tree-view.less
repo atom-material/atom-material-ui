@@ -1,0 +1,68 @@
+.tree-view {
+    font-size: @font-size;
+    background: @tree-view-background-color;
+
+    .selected::before {
+        background: fade(@text-color, 5%);
+    }
+
+    .amu-panel-contrast & {
+        background-color: darken(@app-background-color, 1.5%);
+    }
+
+}
+
+.amu-tab-blender {
+    display: none;
+    position: relative;
+    background: @base-color;
+    color: @accent-text-color;
+    text-transform: uppercase;
+    height: 48px;
+    line-height: 48px;
+    pointer-events: none;
+    z-index: 100;
+
+    span::after {
+        padding: 0 @component-padding;
+        content: 'Projects';
+        font-weight: 300;
+    }
+
+    .amu-panel-shadows & {
+        .z-depth-1;
+    }
+
+    .amu-panel-contrast & {
+        background: darken(@base-color, 1.5%);
+    }
+
+    .amu-compact-tab-bar & {
+        line-height: 36px;
+        height: 36px;
+    }
+
+    .amu-blend-tree-view.amu-tinted-tab-bar & {
+        display: block;
+    }
+}
+
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 8px;
+    }
+}
+
+.focusable-panel {
+    opacity: 1;
+
+    &:focus {
+        .selected {
+            color: @accent-text-color;
+
+            &::before {
+                background: @base-color;
+            }
+        }
+    }
+}

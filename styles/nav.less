@@ -1,0 +1,26 @@
+.nav-tabs {
+    border-bottom: 1px solid @base-border-color;
+
+    li {
+        &.active a,
+        a {
+            border: none;
+            margin-right: 0;
+            margin-bottom: 1px;
+        }
+
+        &.active a,
+        &.active a:hover,
+        a:hover {
+            background-color: @background-color-highlight;
+            border: none;
+            color: @text-color-selected;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &.active a {
+            background-color: @tab-background-color-active;
+        }
+    }
+}

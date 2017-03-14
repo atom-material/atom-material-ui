@@ -1,0 +1,25 @@
+.settings-view {
+    .package-card {
+        background-color: fade(@text-color, 5%);
+        border-radius: @component-border-radius;
+        .z-depth-1;
+
+        &.disabled {
+            background-color: fade(@text-color, 5%);
+            opacity: .5;
+        }
+
+        &:hover {
+            background-color: fade(@text-color, 5%);
+        }
+
+        .btn-group {
+            box-shadow: none;
+
+            .status-indicator {
+                min-width: 2px;
+                width: 2px;
+            }
+        }
+    }
+}

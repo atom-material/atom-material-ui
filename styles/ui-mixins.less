@@ -1,0 +1,98 @@
+// Pattern matching; ish is cray.
+// http://lesscss.org/#-pattern-matching-and-guard-expressions
+
+.text(normal) {
+    font-weight: normal;
+    color: @text-color;
+    text-shadow: none;
+}
+
+.text(subtle) {
+    font-weight: normal;
+    color: @text-color-subtle;
+    text-shadow: none;
+}
+
+.text(highlight) {
+    font-weight: normal;
+    color: @text-color-highlight;
+}
+
+.text(selected) {
+    .text(highlight)
+}
+
+.text(info) {
+    color: @text-color-info;
+    text-shadow: none;
+}
+
+.text(success) {
+    color: @text-color-success;
+    text-shadow: none;
+}
+
+.text(warning) {
+    color: @text-color-warning;
+    text-shadow: none;
+}
+
+.text(error) {
+    color: @text-color-error;
+    text-shadow: none;
+}
+
+// MD Shadows Helper
+.z-depth-1() {
+    box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.12), 0 0.0625rem 0.25rem rgba(0,0,0,0.24);
+}
+.z-depth-2() {
+    box-shadow: 0 0.2rem 0.375rem rgba(0,0,0,0.16), 0 0.2rem 0.375rem rgba(0,0,0,0.23);
+}
+.z-depth-3() {
+    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.19), 0 0.375rem 0.375rem rgba(0,0,0,0.23);
+}
+.z-depth-4() {
+    box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,0.25), 0 0.625rem 0.625rem rgba(0,0,0,0.22);
+}
+.z-depth-5() {
+    box-shadow: 0 1.125rem 2.25rem rgba(0,0,0,0.30), 0 1rem 0.75rem rgba(0,0,0,0.22);
+}
+
+// Underline Effect
+.md-underline(@underline-color) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: @underline-color;
+        transform: scaleX(0);
+        will-change: transform;
+    }
+
+    .amu-use-animations & {
+        &::after {
+            transition: transform 250ms;
+        }
+    }
+
+    &.active, &.is-focused, &:focus {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+// <select> arrow
+.select-arrow(@color) when (lightness(@color) > 50%) {
+    background-image: url('atom://atom-material-ui/assets/svg/arrow-drop-down.svg');
+}
+
+.select-arrow(@color) when (lightness(@color) < 50%) {
+    background-image: url('atom://atom-material-ui/assets/svg/arrow-drop-down-white.svg');
+}

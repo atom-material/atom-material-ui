@@ -1,0 +1,49 @@
+.pane-item {
+    section, .section {
+        .section-heading {
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 1.25em;
+            color: @text-color;
+
+            &.icon::before {
+                font-size: 2.5rem;
+                margin-right: 1em;
+            }
+        }
+    }
+
+    .panel {
+        border-color: fadeout(@inset-panel-border-color, 30%);
+    }
+
+    &.preview-pane {
+        .preview-header {
+            background: none;
+            border: none;
+        }
+    }
+}
+
+atom-pane-container {
+    atom-pane {
+        background-color: @app-background-color;
+        border: none;
+    }
+
+    atom-pane-axis.horizontal > * {
+        border-right: 1px solid darken(@app-background-color, 1%);
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    atom-pane-axis.vertical > * {
+        border-right: 1px solid darken(@app-background-color, 1%);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

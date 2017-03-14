@@ -1,0 +1,58 @@
+{
+    "amber": {
+        "base": "#FFD54F",
+        "accent": "#A28832"
+    },
+    "blue": {
+        "base": "#2196F3",
+        "accent": "#FFFFFF"
+    },
+    "blueGrey": {
+        "base": "#607D8B",
+        "accent": "#FFFFFF"
+    },
+    "brown": {
+        "base": "#795548",
+        "accent": "#FFFFFF"
+    },
+    "cyan": {
+        "base": "#80DEEA",
+        "accent": "#528C94"
+    },
+    "green": {
+        "base": "#AAD875",
+        "accent": "#6F8853"
+    },
+    "grey": {
+        "base": "#7E7E7E",
+        "accent": "#FFFFFF"
+    },
+    "indigo": {
+        "base": "#5C6BC0",
+        "accent": "#FFFFFF"
+    },
+    "lime": {
+        "base": "#CDDC39",
+        "accent": "#737F10"
+    },
+    "orange": {
+        "base": "#FFA726",
+        "accent": "#9F6918"
+    },
+    "pink": {
+        "base": "#EC407A",
+        "accent": "#46FFC1"
+    },
+    "purple": {
+        "base": "#7E57C2",
+        "accent": "#B0E457"
+    },
+    "red": {
+        "base": "#EF5350",
+        "accent": "#59FCFF"
+    },
+    "teal": {
+        "base": "#009688",
+        "accent": "#FFFFFF"
+    }
+}

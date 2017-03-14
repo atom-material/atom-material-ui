@@ -1,0 +1,98 @@
+@import "buttons.less";
+
+.panel {
+    &.bordered {
+        border: 1px solid @base-border-color;
+        border-radius: @component-border-radius;
+    }
+
+    .amu-panel-contrast & {
+        background-color: darken(@app-background-color, 1.5%);
+    }
+}
+
+.tool-panel, atom-panel {
+    position: relative;
+    background-color: @tool-panel-background-color;
+    .text(normal);
+
+    &.bottom,
+    &.footer,
+    &.panel-bottom,
+    &.panel-footer {
+        border-top: 1px solid @tool-panel-border-color;
+    }
+
+    .amu-panel-contrast & {
+        background-color: darken(@app-background-color, 1.5%);
+    }
+
+    .amu-panel-shadows & {
+        &.bottom,
+        &.footer,
+        &.panel-bottom,
+        &.panel-footer {
+            .z-depth-1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0.25rem;
+            height: 100%;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 10000;
+        }
+
+        &.right {
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                left: 0;
+                background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+                pointer-events: none;
+            }
+        }
+
+        &.left {
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                right: 0;
+                background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.inset-panel {
+    position: relative;
+    background-color: @inset-panel-background-color;
+}
+
+.is-blurred {
+    .inset-panel,
+    atom-panel {}
+}
+
+.panel-heading {
+    .text(normal);
+    background: none;
+    font-size: @font-size * 1.5;
+    font-weight: 300;
+
+    .btn {
+        padding-left: 8px;
+        padding-right: 8px;
+        @bg: lighten(@button-background-color, 10%);
+        @hover: lighten(@button-background-color-hover, 10%);
+        @selected: lighten(@button-background-color-selected, 10%);
+        @text: lighten(@text-color, 10%);
+        .btn-background(@bg, @hover, @selected, @text);
+    }
+}

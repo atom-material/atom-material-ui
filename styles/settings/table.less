@@ -1,0 +1,36 @@
+.settings-view {
+    .table {
+        background: lighten(@app-background-color, 5%);
+        border-radius: @component-border-radius;
+        margin: 48px 0;
+        .z-depth-1;
+
+        > thead,
+        tbody {
+            > tr {
+                border: none;
+
+                 > td,
+                > th {
+                    border-bottom: 1px solid fade(@text-color, 5%);
+                }
+
+                > th {
+                    height: 56px;
+                    line-height: 56px;
+                    padding: 0 24px;
+                    font-size: @font-size;
+                    font-weight: 600;
+                    color: lighten(@text-color, 15%);
+                }
+
+                > td {
+                    border-top: none;
+                    height: 48px;
+                    line-height: 48px;
+                    padding: 0 24px;
+                }
+            }
+        }
+    }
+}

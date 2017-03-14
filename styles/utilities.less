@@ -1,0 +1,19 @@
+.key-binding {
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    line-height: 100%;
+    border-radius: @component-border-radius;
+    margin-left: @component-icon-padding;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: @font-size - 1;
+    padding: @component-padding / 2;
+}
+
+.badge {
+    .text(highlight);
+    background: @base-color;
+
+    .section-heading & {
+        font-size: .375em;
+    }
+}
