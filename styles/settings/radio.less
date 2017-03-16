@@ -1,0 +1,15 @@
+.input-radio {
+    cursor: pointer;
+
+    &:checked {
+        background: @base-color;
+    }
+
+    &:active:not(:checked) {
+        background: fade(@base-color, 25%);
+    }
+
+    &::before {
+        background-color: @accent-text-color;
+    }
+}

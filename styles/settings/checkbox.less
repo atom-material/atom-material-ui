@@ -1,50 +1,52 @@
-.settings-view {
-    .input-checkbox {
-        border: .125em solid @base-color;
-        background: none;
-        position: relative;
-        top: .125em;
-        width: 1.5em;
-        height: 1.5em;
-        cursor: pointer;
+.input-checkbox {
+    border: .125em solid @base-color;
+    background: none;
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
 
-        &:checked {
-            background: @base-color;
+    &:active:not(:checked) {
+        background-color: fade(@base-color, 25%);
+    }
 
-            &::after,
-            &::before {
-                top: 1em;
-                left: .5em;
-                opacity: 0;
-                border: .1em solid @accent-text-color;
-                background-color: @accent-text-color;
-                animation: fadeIn 125ms linear;
-                animation-fill-mode: forwards;
-            }
+    &:checked {
+        background: @base-color;
 
-            &::before {
-                width: .5em;
-            }
-
-            &::after {
-                width: .85em;
-                animation-delay: 125ms;
-            }
+        &::after,
+        &::before {
+            top: 1em;
+            left: .5em;
+            opacity: 0;
+            border: .1em solid @accent-text-color;
+            background-color: @accent-text-color;
+            animation: fadeIn 125ms linear;
+            animation-fill-mode: forwards;
         }
 
-        &:focus {
-            box-shadow: 0 0 1em fade(@base-color, 30%);
+        &::before {
+            width: .5em;
+        }
+
+        &::after {
+            width: .85em;
+            animation-delay: 125ms;
         }
     }
 
-    .checkbox {
-        padding-left: 2.5em;
-
-        .setting-title, .setting-description {
-            padding-left: 1rem;
-        }
+    &:focus {
+        box-shadow: 0 0 1em fade(@base-color, 30%);
     }
 }
+
+.checkbox {
+    padding-left: 2.5em;
+
+    .setting-title, .setting-description {
+        padding-left: 1rem;
+    }
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; }

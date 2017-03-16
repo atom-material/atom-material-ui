@@ -1,0 +1,39 @@
+.nuclide-workspace-views-toggle-button .nuclide-workspace-views-toggle-button-inner {
+    background-color: @base-color;
+}
+
+.nuclide-workspace-views-panel {
+    position: relative;
+
+    &-handle {
+        position: absolute;
+        opacity: 0;
+        z-index: 10;
+
+        .left &, .right & {
+            top: 0;
+            bottom: 0;
+        }
+
+        .bottom &, .top & {
+            left: 0;
+            right: 0;
+        }
+
+        .bottom & {
+            top: 0;
+        }
+
+        .top & {
+            bottom: 0;
+        }
+
+        .left & {
+            right: 0;
+        }
+
+        .right & {
+            left: 0;
+        }
+    }
+}
