@@ -12,3 +12,29 @@
         }
     }
 }
+
+.sb-table, .nuclide-ui-table {
+    thead th {
+        background-color: darken(@app-background-color, 1.5%);
+
+        &:nth-of-type(even) {
+            background-color: darken(@app-background-color, 2.5%);
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(even), &:nth-of-type(even):hover {
+                background-color: lighten(@app-background-color, 1%);
+            }
+
+            &:hover {
+                background-color: inherit;
+            }
+        }
+
+        td:nth-of-type(even) {
+            background-color: fade(darken(@app-background-color, 2%), 50%);
+        }
+    }
+}
