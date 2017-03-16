@@ -4,22 +4,11 @@
     li:not(.list-nested-item),
     li.list-nested-item > .list-item {
         .text(normal);
-
-        &.project-root-header {
-            height: @tab-height;
-            line-height: @tab-height;
-        }
     }
 
     .icon::before {
         font-size: 1.35em;
         margin-right: 1em;
-    }
-
-    .project-root {
-        &::before {
-            height: @tab-height;
-        }
     }
 
     .generate-list-item-text-color(@class) {
@@ -53,15 +42,6 @@
     .generate-list-item-status-color(@text-color-renamed, renamed);
     .generate-list-item-status-color(@text-color-modified, modified);
     .generate-list-item-status-color(@text-color-removed, removed);
-
-    &:focus {
-        li:not(.list-nested-item).selected,
-        li.list-nested-item.selected > .list-item {
-            &.project-root-header {
-                color: @accent-text-color;
-            }
-        }
-    }
 
     li:not(.list-nested-item).selected,
     li.list-nested-item.selected > .list-item {
