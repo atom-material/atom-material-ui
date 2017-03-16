@@ -11,14 +11,14 @@
                 "default": "#009688"
             },
             "accentColor": {
-                "title": "Accent color",
-                "description": "Accent color used to underline active tabs.",
+                "title": "Secondary color",
+                "description": "This color is used as an accent to the Primary Color.",
                 "type": "color",
                 "default": "#FFFFFF"
             },
             "genAccent": {
-                "title": "Generate complementary accent",
-                "description": "Material UI will try to generate a complementary color to your selected base color and set it as an accent. If it fails, just pick a different accent color to reload the theme.",
+                "title": "Generate complementary secondary color",
+                "description": "Generates a complementary color based on your selected Primary Color.",
                 "type": "boolean",
                 "default": false
             },

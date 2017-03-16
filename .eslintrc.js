@@ -10,6 +10,7 @@ module.exports = {
     },
     globals: {
         atom: false,
+        Color: false,
     },
     rules: {
         indent: [2, 4]
