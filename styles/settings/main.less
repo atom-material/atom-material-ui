@@ -57,6 +57,37 @@
         position: absolute;
         border: none;
     }
+
+    .themes-panel {
+        .themes-picker-item {
+            .select-container {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .btn {
+        &.active-theme-settings,
+        &.active-syntax-settings {
+                box-shadow: none;
+                border-radius: 50%;
+                width: 2.75rem;
+                height: 2.5rem;
+                line-height: 1;
+                flex-grow: 0;
+                text-align: center;
+                padding: 0;
+        }
+    }
+
+    .section {
+        padding: 3rem;
+    }
+
+    .breadcrumb + .section {
+        padding-top: 1rem;
+    }
 }
 
 // Inputs, Selects, and More
