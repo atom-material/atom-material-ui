@@ -1,0 +1,21 @@
+.loading-spinner {
+    &-tiny, &-small,
+    &-medium, &-large {
+        background: none;
+        border: .125rem solid @base-color;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 2s linear infinite;
+
+        &.idle {
+            border: none;
+            animation: none;
+        }
+    }
+
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

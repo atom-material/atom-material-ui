@@ -7,10 +7,12 @@ module.exports = {
     extends: 'airbnb',
     env: {
         browser: true,
+        jasmine: true
     },
     globals: {
         atom: false,
         Color: false,
+        waitsForPromise: false,
     },
     rules: {
         indent: [2, 4]

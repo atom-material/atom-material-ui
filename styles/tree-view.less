@@ -1,3 +1,13 @@
+.expanded-directory() {
+    content: '';
+    width: 1em;
+    height: 0.6em;
+    background: @app-background-color;
+    position: absolute;
+    top: 0.45em;
+    left: 0.0625em;
+}
+
 .tree-view {
     font-size: 1em;
     background: @tree-view-background-color;
@@ -9,7 +19,6 @@
     .amu-panel-contrast & {
         background-color: darken(@app-background-color, 1.5%);
     }
-
 }
 
 .amu-tab-blender {
@@ -63,6 +72,30 @@
             &::before {
                 background: @base-color;
             }
+        }
+    }
+}
+
+// Directory Icon Animation
+:focus .selected > .header > .icon-file-directory::after {
+    background: @base-color;
+}
+
+.collapsed > .header > .icon-file-directory::after {
+    .expanded-directory;
+    transform: scale(0);
+}
+
+.expanded > .header > .icon-file-directory::after {
+    .expanded-directory;
+    transform: scale(1);
+}
+
+.amu-use-animations {
+    .expanded, .collapsed {
+        > .header > .icon-file-directory::after {
+            transition: 250ms transform;
+            will-change: transform;
         }
     }
 }
