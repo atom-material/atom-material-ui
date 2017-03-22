@@ -31,6 +31,13 @@
         .tool-bar-spacer {
             border-color: fade(@text-color, 5%);
         }
+
+        &.gutter-bottom,
+        &.gutter-top {
+            &::before, &::after {
+                opacity: .5;
+            }
+        }
     }
 
     &.tool-bar-12px,
