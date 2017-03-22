@@ -144,9 +144,9 @@
     line-height: 2.5rem;
 }
 .tabBlender {
-    display: none;
+    display: flex;
     position: relative;
-    background: @base-color;
+    background: @app-background-color;
     color: @accent-text-color;
     text-transform: uppercase;
     height: 3rem;
@@ -170,6 +170,7 @@
     }
     .blend-tree-view.tinted-tab-bar & {
         display: block;
+        background-color: @base-color;
     }
 }
 .tree-view-resizer {
