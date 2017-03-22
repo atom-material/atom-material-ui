@@ -8,8 +8,14 @@
         background: none;
         min-width: 200px;
 
-        li a {
-            padding: 1.25em 1.5em;
+        .nav li {
+            a {
+                padding: 1.25em 1.5em;
+            }
+
+            &.active a {
+                background-color: @base-color;
+            }
         }
 
         .icon::before {
