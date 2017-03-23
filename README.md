@@ -67,7 +67,7 @@ Please check the [CONTRIBUTING.md](https://github.com/atom-material/atom-materia
 
 ![](http://i.imgur.com/0tHORB1.png)
 
-You can download the redesigned icon from [dropbox](https://dl.dropboxusercontent.com/u/115930/Atom-MD-Icon.zip). It's a ZIP file containing multiple resolution PNGs, ICNS and ICO formats. Windows ICO converted by Akshit Tripathi.
+You can download the redesigned icon from [dropbox](https://www.dropbox.com/s/8gyn40sw95626dx/Atom-MD-Icon.zip?dl=0). It's a ZIP file containing multiple resolution PNGs, ICNS and ICO formats. Windows ICO converted by Akshit Tripathi.
 
 # License
 Atom Material UI is licensed under MIT.
