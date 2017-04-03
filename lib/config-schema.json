@@ -8,7 +8,7 @@
                 "title": "Primary color",
                 "description": "Changes the main theme color.",
                 "type": "color",
-                "default": "#009688"
+                "default": "#00BCE1"
             },
             "accentColor": {
                 "title": "Accent color",
@@ -24,10 +24,10 @@
             },
             "predefinedColor": {
                 "title": "Predefined colors",
-                "description": "Pick a predefined color from the Material Design palette. If you change the Primary Color it will override this settings.",
+                "description": "Pick a predefined color. If you change the Primary Color it will override this settings.",
                 "type": "string",
-                "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
-                "default": "Teal"
+                "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Learn", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
+                "default": "Learn"
             },
             "paintCursor": {
                 "title": "Paint text editor's cursor",
@@ -52,13 +52,13 @@
                 "title": "Contrasting panels",
                 "description": "Adds a little contrast between panels to differentiate where one starts and the other ends.",
                 "type": "boolean",
-                "default": false
+                "default": true
             },
             "panelShadows": {
                 "title": "Panels cast shadows",
                 "description": "Adds depth to the user interface by using shadows.",
                 "type": "boolean",
-                "default": false
+                "default": true
             }
         }
     },
@@ -71,7 +71,7 @@
                 "title": "Compact tab bar",
                 "description": "Reduces line height so the tab bar won't be too tall.",
                 "type": "boolean",
-                "default": false
+                "default": true
             },
             "tintedTabBar": {
                 "title": "Tinted tab bar",
@@ -83,7 +83,7 @@
                 "title": "No minimum width for tabs",
                 "description": "Prevents tabs from overflowing off the tab bar.",
                 "type": "boolean",
-                "default": false
+                "default": true
             }
         }
     },
@@ -102,7 +102,7 @@
                 "title": "Compact tree view",
                 "description": "Reduces line height in the tree view component.",
                 "type": "boolean",
-                "default": false
+                "default": true
             }
         }
     },
