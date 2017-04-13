@@ -87,25 +87,6 @@
             }
         }
     },
-    "treeView": {
-        "order": 4,
-        "type": "object",
-        "title": "Tree View",
-        "properties": {
-            "blendTabs": {
-                "title": "Blend tree view with tab bar",
-                "description": "Makes the tree view blend with the tab bar by adding a colored element fixed to the top. Only works with a colored tab bar.",
-                "type": "boolean",
-                "default": false
-            },
-            "compactList": {
-                "title": "Compact tree view",
-                "description": "Reduces line height in the tree view component.",
-                "type": "boolean",
-                "default": false
-            }
-        }
-    },
     "fonts": {
         "order": 5,
         "type": "object",

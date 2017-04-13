@@ -1,0 +1,56 @@
+.atom-dock {
+    &-inner {
+        position: relative;
+
+        &.bottom {
+            .tab-bar:empty {
+                display: none;
+            }
+        }
+    }
+
+    &-resize-handle {
+        position: absolute;
+        z-index: 10;
+
+        &.left, &.right {
+            top: 0;
+            bottom: 0;
+        }
+
+        &.left {
+            right: 0;
+        }
+
+        &.right {
+            left: 0;
+        }
+
+        &.top, &.bottom {
+            left: 0;
+            right: 0;
+        }
+
+        &.top {
+            bottom: 0;
+        }
+
+        &.bottom {
+            top: 0;
+        }
+    }
+
+    &-toggle-button {
+        .atom-dock-toggle-button-inner {
+            background-color: @base-color;
+        }
+    }
+
+    .amu-use-animations & {
+        &-mask:not(:active) {
+            transition:
+                height 250ms @md-timing-function,
+                width 250ms @md-timing-function;
+        }
+    }
+}
