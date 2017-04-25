@@ -1,12 +1,25 @@
 .settings-view {
     .alert {
-        &-info, &-warning {
-            border-color: lighten(@app-background-color, 5%);
-            background-color: lighten(@app-background-color, 2%);
+        &-info, &-warning,
+        &-error, &-success {
+            border-color: fade(@text-color, 5%);
+            background-color: fade(@text-color, 2%);
         }
 
         &-info {
             color: @text-color-info;
+        }
+
+        &-warning {
+            color: @text-color-warning;
+        }
+
+        &-error {
+            color: @text-color-error;
+        }
+
+        &-success {
+            color: @text-color-success;
         }
     }
 }

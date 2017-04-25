@@ -21,5 +21,41 @@
                 width: 2px;
             }
         }
+
+        .meta-controls {
+            .install-button, .uninstall-button {
+                &.is-installing, &.is-uninstalling {
+                    font-size: 0;
+                    padding: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                    background: none;
+                    border: .125rem solid @base-color;
+                    border-right-color: transparent;
+
+                    &::before {
+                        animation: spin 1s linear infinite reverse;
+                        margin: 0;
+                        position: relative;
+                        top: -.125rem;
+                        vertical-align: middle;
+                    }
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .install-button.is-installing::before {
+                transform-origin: .5rem .5rem;
+            }
+
+            .uninstall-button.is-uninstalling::before {
+                transform-origin: .375rem .5rem;
+            }
+        }
     }
 }
