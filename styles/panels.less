@@ -9,8 +9,10 @@ atom-panel {
         z-index: 110;
     }
     .inset-panel {
+        background: @app-background-color;
+
         .panel-heading {
-            background: darken(@app-background-color, 2.5%);
+            background: fade(@text-color, 2.5%);
             font-size: 0.8rem;
         }
         .padded & {
