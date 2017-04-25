@@ -75,6 +75,12 @@
         &:hover .close-icon {
             opacity: 1;
         }
+
+        &[data-type="TreeView"] {
+            &.active::after {
+                display: none;
+            }
+        }
     }
 
     .tab.active {

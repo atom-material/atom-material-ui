@@ -1,13 +1,3 @@
-.expanded-directory() {
-    content: '';
-    width: 1em;
-    height: 0.6em;
-    background: @app-background-color;
-    position: absolute;
-    top: 0.45em;
-    left: 0.0625em;
-}
-
 .tree-view {
     font-size: 1em;
     background: @tree-view-background-color;
@@ -16,43 +6,14 @@
         background: fade(@text-color, 5%);
     }
 
+    &:focus {
+        .selected::before {
+            background: @base-color;
+        }
+    }
+
     .amu-panel-contrast & {
         background-color: darken(@app-background-color, 1.5%);
-    }
-}
-
-.amu-tab-blender {
-    display: none;
-    position: relative;
-    background: @base-color;
-    color: @accent-text-color;
-    text-transform: uppercase;
-    height: @tab-height;
-    line-height: @tab-height;
-    pointer-events: none;
-    z-index: 100;
-
-    span::after {
-        padding: 0 @component-padding;
-        content: 'Projects';
-        font-weight: 300;
-    }
-
-    .amu-panel-shadows & {
-        .z-depth-1;
-    }
-
-    .amu-panel-contrast & {
-        background: darken(@base-color, 1.5%);
-    }
-
-    .amu-compact-tab-bar & {
-        line-height: @compact-tab-height;
-        height: @compact-tab-height;
-    }
-
-    .amu-blend-tree-view.amu-tinted-tab-bar & {
-        display: block;
     }
 }
 
@@ -72,30 +33,6 @@
             &::before {
                 background: @base-color;
             }
-        }
-    }
-}
-
-// Directory Icon Animation
-:focus .selected > .header > .icon-file-directory::after {
-    background: lighten(@app-background-color, 2.5%);
-}
-
-.collapsed > .header > .icon-file-directory::after {
-    .expanded-directory;
-    transform: scale(0);
-}
-
-.expanded > .header > .icon-file-directory::after {
-    .expanded-directory;
-    transform: scale(1);
-}
-
-.amu-use-animations {
-    .expanded, .collapsed {
-        > .header > .icon-file-directory::after {
-            transition: 250ms transform;
-            will-change: transform;
         }
     }
 }
