@@ -1,6 +1,6 @@
 # :fire::fire::fire: Latest development version requires **Atom 1.17** :fire::fire::fire:
 
-<small>`Atom 1.17` is on the dev channel. You'll need to clone Atom's repo and build it from source</small>
+<small>`Atom 1.17` is on the beta channel. You can download it from atom.io/beta</small>
 
 ---
 
