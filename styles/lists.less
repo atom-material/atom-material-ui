@@ -1,5 +1,24 @@
 @import "octicon-mixins.less"; // https://github.com/atom/atom/blob/master/static/variables/octicon-mixins.less
 
+.generate-list-item-text-color(@class) {
+    li:not(.list-nested-item).text-@{class},
+    li.list-nested-item.text-@{class} > .list-item {
+        .text(@class);
+    }
+}
+
+.generate-list-item-status-color(@color, @status) {
+    li:not(.list-nested-item).status-@{status},
+    li.list-nested-item.status-@{status} > .list-item {
+        color: @color;
+    }
+
+    li:not(.list-nested-item).selected.status-@{status},
+    li.list-nested-item.selected.status-@{status} > .list-item {
+        color: @color;
+    }
+}
+
 .list-group, .list-tree {
     li:not(.list-nested-item),
     li.list-nested-item > .list-item {
@@ -11,32 +30,12 @@
         margin-right: 1em;
     }
 
-    .generate-list-item-text-color(@class) {
-        li:not(.list-nested-item).text-@{class},
-        li.list-nested-item.text-@{class} > .list-item {
-            .text(@class);
-        }
-    }
-
     .generate-list-item-text-color(subtle);
     .generate-list-item-text-color(info);
     .generate-list-item-text-color(success);
     .generate-list-item-text-color(warning);
     .generate-list-item-text-color(error);
     .generate-list-item-text-color(selected);
-
-    .generate-list-item-status-color(@color, @status) {
-        li:not(.list-nested-item).status-@{status},
-        li.list-nested-item.status-@{status} > .list-item {
-            color: @color;
-        }
-
-        li:not(.list-nested-item).selected.status-@{status},
-        li.list-nested-item.selected.status-@{status} > .list-item {
-            color: @color;
-        }
-    }
-
     .generate-list-item-status-color(@text-color-subtle, ignored);
     .generate-list-item-status-color(@text-color-added, added);
     .generate-list-item-status-color(@text-color-renamed, renamed);
@@ -47,8 +46,32 @@
     li.list-nested-item.selected > .list-item {
         .text(selected);
 
+        &::before {
+            background: fade(@text-color, 5%);
+        }
+
         :focus & {
             color: @accent-text-color;
+
+            &::before {
+                background: @base-color;
+            }
+
+            &.status-modified {
+                color: darken(@text-color-modified, 30%);
+
+                &::before {
+                    background: @text-color-modified;
+                }
+            }
+
+            &.status-added {
+                color: darken(@text-color-success, 30%);
+
+                &::before {
+                    background: @text-color-success;
+                }
+            }
         }
 
         .character-match {
