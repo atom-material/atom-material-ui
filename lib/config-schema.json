@@ -42,7 +42,7 @@
         "type": "object",
         "title": "User Interface",
         "properties": {
-            "animations": {
+            "useAnimations": {
                 "title": "Use animations",
                 "description": "Enables animations for clicked tabs and other UI elements.",
                 "type": "boolean",
