@@ -1,3 +1,30 @@
+atom-dock {
+    .amu-panel-shadows & {
+        &.left, &.right {
+            .item-views::after {
+                content: '';
+                height: 100%;
+                pointer-events: none;
+                position: absolute;
+                opacity: .05;
+                top: 0;
+                width: .25rem;
+                z-index: 5;
+            }
+        }
+
+        &.left .item-views::after {
+            background: linear-gradient(to left, black, transparent);
+            right: 0;
+        }
+
+        &.right .item-views::after {
+            background: linear-gradient(to right, black, transparent);
+            left: 0;
+        }
+    }
+}
+
 .atom-dock {
     &-inner {
         position: relative;
