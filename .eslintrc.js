@@ -15,6 +15,6 @@ module.exports = {
         waitsForPromise: false,
     },
     rules: {
-        indent: [2, 4]
+        indent: ['error', 4],
     },
 };

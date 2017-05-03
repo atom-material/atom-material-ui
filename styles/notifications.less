@@ -1,0 +1,165 @@
+atom-notifications {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    padding: 2rem 0.5rem;
+    z-index: 9999;
+}
+
+atom-notification {
+    padding: 0;
+    border-radius: 0 0.125rem 0.125rem 0;
+
+    .content {
+        border-radius: 0.125rem;
+        width: 100%;
+
+        > div {
+            padding: 1.25rem 2rem;
+            line-height: 2;
+        }
+        .message + .detail {
+            padding-top: 0;
+        }
+        .detail + .meta {
+            padding-top: 0;
+        }
+    }
+
+    .btn-toolbar {
+        line-height: 3rem;
+
+        .btn {
+            margin-right: 2rem;
+        }
+
+        .btn-copy-report {
+            color: @text-color;
+            line-height: 1;
+            position: relative;
+            top: -0.25rem;
+        }
+    }
+
+    .detail {
+        background: none;
+    }
+
+    .item {
+        border: none;
+    }
+
+    .close-all.btn {
+        height: 1.75rem;
+        line-height: 1.75rem;
+        border: none;
+        color: @text-color;
+        padding: 0 0.5rem;
+    }
+
+    &.icon::before {
+        display: none;
+    }
+
+    .close, .close:hover {
+        color: @text-color;
+        opacity: 1;
+    }
+
+    &.success, &.error, &.info, &.warning, &.fatal {
+        border-left: 0.125rem solid transparent;
+
+        .content {
+            background-color: darken(@app-background-color, 5%);
+            color: @text-color;
+        }
+
+        .close-all.btn, .close-all.btn:hover {
+            border-color: transparent;
+            color: fade(@text-color, 50%);
+            box-shadow: none;
+            line-height: 1.65rem;
+
+            &:hover {
+                .z-depth-1;
+            }
+        }
+
+        code {
+            background-color: lighten(@text-color-error, 5%);
+            color: #FFF;
+            font-size: 0.75rem;
+        }
+
+        .btn {
+            max-width: 18rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: @text-color;
+
+            &-success, &-primary {
+                color: #FFF;
+            }
+        }
+    }
+
+    &.success {
+        border-color: @text-color-success;
+
+        a {
+            color: @text-color-success;
+        }
+    }
+
+    &.error, &.fatal {
+        border-color: @text-color-error;
+
+        a {
+            color: @text-color-error;
+        }
+    }
+
+    &.info {
+        border-color: @text-color-info;
+
+        a {
+            color: @text-color-info;
+        }
+    }
+
+    &.warning {
+        border-color: @text-color-warning;
+
+        a {
+            color: @text-color-warning;
+        }
+    }
+
+    &.has-close {
+        .content > div {
+            padding-right: 4rem;
+        }
+
+        &:only-child {
+            .content > div {
+                padding-right: 4rem;
+            }
+        }
+
+        &:first-child:not(:only-child) {
+            .content > div:first-child {
+                padding-top: 3rem;
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    &.has-stack .stack-toggle {
+        color: @text-color-error;
+
+        .icon {
+            position: relative;
+            top: 1px;
+        }
+    }
+}

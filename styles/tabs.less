@@ -27,13 +27,14 @@
         .md-underline(@base-color);
 
         .close-icon {
-            opacity: 0;
-            transition: opacity 250ms;
-            will-change: opacity;
+            color: @text-color;
+            cursor: pointer;
+            line-height: @tab-height;
             right: @component-icon-padding;
             text-align: right;
-            line-height: @tab-height;
-            color: @text-color;
+            transform: scale(0);
+            transition: transform 250ms @md-timing-function;
+            will-change: opacity;
             z-index: 3;
 
             &:hover {
@@ -73,7 +74,7 @@
         }
 
         &:hover .close-icon {
-            opacity: 1;
+            transform: scale(1);
         }
 
         &[data-type="TreeView"] {
