@@ -1,7 +1,7 @@
 {
   "name": "atom-material-ui",
   "theme": "ui",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A dynamic UI theme for Atom that follows Google's Material Design Guidelines",
   "main": "./lib/main",
   "keywords": [
@@ -59,7 +59,22 @@
           "title": "Predefined colors",
           "description": "Pick a predefined color from the Material Design palette. If you change the Primary Color it will override this settings.",
           "type": "string",
-          "enum": ["Amber", "Blue", "Blue Grey", "Brown", "Cyan", "Green", "Grey", "Indigo", "Lime", "Orange", "Pink", "Purple", "Red", "Teal"],
+          "enum": [
+            "Amber",
+            "Blue",
+            "Blue Grey",
+            "Brown",
+            "Cyan",
+            "Green",
+            "Grey",
+            "Indigo",
+            "Lime",
+            "Orange",
+            "Pink",
+            "Purple",
+            "Red",
+            "Teal"
+          ],
           "default": "Teal"
         },
         "paintCursor": {
