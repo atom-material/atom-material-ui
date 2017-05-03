@@ -1,7 +1,7 @@
 {
   "name": "atom-material-ui",
   "theme": "ui",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A dynamic UI theme for Atom that follows Google's Material Design Guidelines",
   "main": "./lib/main",
   "keywords": [
