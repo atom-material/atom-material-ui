@@ -1,25 +1,23 @@
-.settings-view {
-    .alert {
-        &-info, &-warning,
-        &-error, &-success {
-            border-color: fade(@text-color, 5%);
-            background-color: fade(@text-color, 2%);
-        }
+.alert, .settings-view .alert {
+    &-info, &-warning,
+    &-error, &-success {
+        border-color: fade(@text-color, 5%);
+        background-color: fade(@text-color, 2%);
+    }
 
-        &-info {
-            color: @text-color-info;
-        }
+    &-info {
+        color: @text-color-info;
+    }
 
-        &-warning {
-            color: @text-color-warning;
-        }
+    &-warning {
+        color: @text-color-warning;
+    }
 
-        &-error {
-            color: @text-color-error;
-        }
+    &-error {
+        color: @text-color-error;
+    }
 
-        &-success {
-            color: @text-color-success;
-        }
+    &-success {
+        color: @text-color-success;
     }
 }
