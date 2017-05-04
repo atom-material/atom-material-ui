@@ -46,7 +46,7 @@
     li.list-nested-item.selected > .list-item {
         .text(selected);
 
-        &::before {
+        &:not(.header)::before {
             background: fade(@text-color, 5%);
         }
 
