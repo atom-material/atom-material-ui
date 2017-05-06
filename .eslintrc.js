@@ -2,12 +2,12 @@ module.exports = {
     root: true,
     parser: 'babel-eslint',
     parserOptions: {
-        sourceType: 'module'
+        sourceType: 'module',
     },
     extends: 'airbnb',
     env: {
         browser: true,
-        jasmine: true
+        jasmine: true,
     },
     globals: {
         atom: false,
