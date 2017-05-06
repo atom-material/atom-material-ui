@@ -29,37 +29,31 @@
 
         .meta-controls {
             .install-button, .uninstall-button {
+                // Use px units to avoid icon jiggle
                 &.is-installing, &.is-uninstalling {
-                    font-size: 0;
-                    padding: 0;
-                    width: 2rem;
-                    height: 2rem;
-                    border-radius: 50%;
                     animation: spin 1s linear infinite;
                     background: none;
-                    border: .125rem solid @base-color;
+                    border: 2px solid @base-color;
+                    border-radius: 50%;
                     border-right-color: transparent;
+                    font-size: 0;
+                    height: 32px;
+                    padding: 0;
+                    width: 32px;
 
                     &::before {
                         animation: spin 1s linear infinite reverse;
+                        height: 16px;
                         margin: 0;
                         position: relative;
-                        top: -.125rem;
                         vertical-align: middle;
+                        width: 16px;
                     }
 
                     &:hover {
                         box-shadow: none;
                     }
                 }
-            }
-
-            .install-button.is-installing::before {
-                transform-origin: .5rem .5rem;
-            }
-
-            .uninstall-button.is-uninstalling::before {
-                transform-origin: .375rem .5rem;
             }
         }
     }
