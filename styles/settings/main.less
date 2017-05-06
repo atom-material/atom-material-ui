@@ -41,14 +41,14 @@
             position: relative;
 
             &::after {
-                content: '';
                 background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+                bottom: 0;
+                content: '';
+                opacity: .1;
                 position: absolute;
                 right: 0;
                 top: 0;
-                bottom: 0;
                 width: .25em;
-                opacity: .1;
             }
         }
     }
@@ -58,17 +58,17 @@
     }
 
     input[type="color"] {
-        width: 3rem;
+        border: none;
         height: 3rem;
         position: absolute;
-        border: none;
+        width: 3rem;
     }
 
     .themes-panel {
         .themes-picker-item {
             .select-container {
-                display: flex;
                 align-items: center;
+                display: flex;
             }
         }
     }
@@ -78,12 +78,12 @@
         &.active-syntax-settings {
                 box-shadow: none;
                 border-radius: 50%;
-                width: 2.75rem;
+                flex-grow: 0;
                 height: 2.5rem;
                 line-height: 1;
-                flex-grow: 0;
-                text-align: center;
                 padding: 0;
+                text-align: center;
+                width: 2.75rem;
         }
     }
 
@@ -98,22 +98,21 @@
 
 // Inputs, Selects, and More
 .select() {
-    -webkit-appearance: none;
-    background-size: 24px;
+    .select-arrow(@app-background-color);
+    background-size: 1.5rem;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: right center;
-    box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
-    padding: 0;
-    line-height: 48px;
-    height: 48px;
-    padding: 0;
-    color: @text-color;
     border-radius: 0;
     border: none;
-    border-bottom: 2px solid transparent;
+    border-bottom: .125rem solid transparent;
+    box-shadow: inset 0 -1px 0 fade(@text-color, 10%);
+    color: @text-color;
     cursor: pointer;
-    .select-arrow(@app-background-color);
+    line-height: @component-line-height + @component-padding;
+    height: @component-line-height + @component-padding;
+    padding: 0;
+    -webkit-appearance: none;
 
     &:hover {
         .select-arrow(@app-background-color);
@@ -130,8 +129,8 @@
 
     option {
         background: @app-background-color;
-        color: @text-color;
         border: 1px solid fade(@text-color, 20%);
+        color: @text-color;
     }
 }
 
