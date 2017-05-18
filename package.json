@@ -14,7 +14,7 @@
     "adapt to syntax",
     "material design"
   ],
-  "repository": "https://github.com/silvestreh/atom-material-ui",
+  "repository": "https://github.com/atom-material/atom-material-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.17.0 <2.0.0"
