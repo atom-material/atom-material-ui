@@ -1,9 +1,3 @@
-# :fire::fire::fire: Latest development version requires **Atom 1.17** :fire::fire::fire:
-
-<small>`Atom 1.17` is currently on the beta channel.</small>
-
----
-
 [![Build Status](https://img.shields.io/travis/atom-material/atom-material-ui.svg?style=flat-square)](https://travis-ci.org/atom-material/atom-material-ui)
 [![apm](https://img.shields.io/apm/dm/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
 [![apm](https://img.shields.io/apm/v/atom-material-ui.svg?style=flat-square)](https://atom.io/packages/atom-material-ui)
