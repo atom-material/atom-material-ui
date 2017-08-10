@@ -1,6 +1,7 @@
 .alert, .settings-view .alert {
     &-info, &-warning,
-    &-error, &-success {
+    &-error, &-success,
+    &-danger {
         border-color: fade(@text-color, 5%);
         background-color: fade(@text-color, 2%);
     }
@@ -13,7 +14,7 @@
         color: @text-color-warning;
     }
 
-    &-error {
+    &-error, &-danger {
         color: @text-color-error;
     }
 

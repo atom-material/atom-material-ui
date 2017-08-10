@@ -1,0 +1,101 @@
+.incompatible-packages {
+    padding: 1rem;
+
+    .alert {
+        display: flex;
+
+        .btn.pull-right {
+            float: none !important;
+            margin-left: auto;
+        }
+    }
+
+    .incompatible-package {
+        padding: 1rem;
+        border: none;
+        border-radius: 0.125rem;
+        background: lighten(@app-background-color, 5%);
+        margin: 1rem 0;
+        .z-depth-1;
+
+        .heading {
+            margin-bottom: 0;
+            color: @text-color;
+            font-size: 1.5rem;
+            font-weight: 200;
+            line-height: 2rem;
+        }
+
+        .btn, button {
+            margin: 0;
+            box-shadow: none;
+            background: none;
+
+            &:hover {
+                .z-depth-1;
+            }
+        }
+
+        ul {
+            line-height: 2.5rem;
+            margin: 1rem 0 0;
+            padding: 0 0 0 0.5rem;
+
+            .icon {
+                span {
+                    font-weight: 300;
+                }
+
+                &::before {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        pre {
+            background: lighten(@app-background-color, 3%);
+            border-radius: 0;
+            margin: 1rem -1rem -1rem;
+            width: ~"calc(100% + 2rem)";
+            color: @text-color;
+            padding: 1rem;
+            border: none;
+        }
+
+        .badge {
+            margin: 0 0 0 1rem;
+            top: 0.3rem;
+            padding: .25rem 1rem .25rem .5rem;
+            display: flex;
+            align-items: center;
+            font-size: .75rem;
+
+            &::before {
+                margin-right: .5em;
+            }
+
+            &.badge-info {
+                background-color: @text-color-info;
+                padding-right: 1rem;
+
+                &::before {
+                    -webkit-animation: spin 1s linear infinite;
+                    content: '\f087';
+                }
+            }
+
+            &.badge-success {
+                background-color: @text-color-success;
+            }
+
+            &.badge-error {
+                background-color: @text-color-error;
+            }
+
+            &.badge-warning {
+                background-color: @text-color-warning;
+                color: darken(@text-color-warning, 30%);
+            }
+        }
+    }
+}
