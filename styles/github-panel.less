@@ -1,0 +1,18 @@
+.github-Panel {
+    .github-CommitView, .github-CommitView > *,
+    .github-CommitView atom-text-editor {
+        background: darken(@app-background-color, 1.5%);
+    }
+    .github-CommitView-button {
+        background-color: @base-color;
+
+        &[disabled] {
+            background-color: transparent;
+        }
+
+        &[disabled]:hover {
+            box-shadow: none;
+            color: inherit;
+        }
+    }
+}
