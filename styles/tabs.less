@@ -191,7 +191,7 @@ atom-pane .tab-bar .tab .title[data-path] {
         margin-right: @component-icon-padding;
     }
 
-    &:not(.status-modified):not(.status-added):not(.status-ignored):not(.status-removed):not(.status-renamed)::before {
+    body:not(.file-icons-coloured) &:not(.status-modified):not(.status-added):not(.status-ignored):not(.status-removed):not(.status-renamed)::before {
         color: @text-color !important;
 
         .amu-tinted-tab-bar & {
