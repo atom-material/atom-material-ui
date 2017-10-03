@@ -186,11 +186,16 @@
 }
 
 // File icons
-atom-pane .tab-bar .tab .title[data-path]::before {
-    margin-right: @component-icon-padding;
-    color: @text-color !important;
+atom-pane .tab-bar .tab .title[data-path] {
+    &::before {
+        margin-right: @component-icon-padding;
+    }
 
-    .amu-tinted-tab-bar & {
-        color: @accent-text-color !important;
+    body:not(.file-icons-coloured) &:not(.status-modified):not(.status-added):not(.status-ignored):not(.status-removed):not(.status-renamed)::before {
+        color: @text-color !important;
+
+        .amu-tinted-tab-bar & {
+            color: @accent-text-color !important;
+        }
     }
 }
