@@ -101,10 +101,10 @@ code {
 
 .highlight-color(@name, @color, @text-color) {
     .highlight-@{name} {
-        color: lighten(saturate(@text-color, 0%), 30%);
+        color: lighten(saturate(@text-color, 0%), 60%);
         font-weight: bold;
         text-shadow: none;
-        background-color: fadeout(@color, 60%);
+        background-color: fadeout(@color, 30%);
         border-radius: @component-border-radius;
         padding: 1px 3px;
     }
