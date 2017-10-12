@@ -133,6 +133,14 @@
     }
 }
 
+.list-group .selected::before, .list-tree .selected::before {
+    background-color: fade(@text-color, 5%);
+
+    .focus & {
+        background-color: @base-color;
+    }
+}
+
 .select-list.popover-list {
     background-color: @overlay-background-color;
     box-shadow: 0 0 10px @base-border-color;
