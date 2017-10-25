@@ -165,6 +165,18 @@
             }
         }
     }
+
+    .amu-stretched-tabs & {
+        // Make the tabs span the whole tab bar width
+        .tab {
+            max-width: 100%;
+            flex-grow: 2;
+            text-align: center;
+            &[data-type="TreeView"] {
+                text-align: left;
+            }
+        }
+    }
 }
 
 // Panel Shadows
