@@ -7,7 +7,7 @@ atom-notifications {
 }
 
 atom-notification {
-    padding: 0;
+    padding: 0 !important;
     border-radius: 0 0.125rem 0.125rem 0;
 
     .content {
@@ -18,9 +18,11 @@ atom-notification {
             padding: 1.25rem 2rem;
             line-height: 2;
         }
+
         .message + .detail {
             padding-top: 0;
         }
+
         .detail + .meta {
             padding-top: 0;
         }
@@ -50,11 +52,11 @@ atom-notification {
     }
 
     .close-all.btn {
-        height: 1.75rem;
-        line-height: 1.75rem;
-        border: none;
-        color: @text-color;
-        padding: 0 0.5rem;
+        height: 1.75rem !important;
+        line-height: 1.75rem !important;
+        border: none !important;
+        color: @text-color !important;
+        padding: 0 0.5rem !important;
     }
 
     &.icon::before {
@@ -62,7 +64,7 @@ atom-notification {
     }
 
     .close, .close:hover {
-        color: @text-color;
+        color: @text-color !important;
         opacity: 1;
     }
 
@@ -70,8 +72,8 @@ atom-notification {
         border-left: 0.125rem solid transparent;
 
         .content {
-            background-color: darken(@app-background-color, 5%);
-            color: @text-color;
+            background-color: darken(@app-background-color, 5%) !important;
+            color: @text-color !important;
         }
 
         .close-all.btn, .close-all.btn:hover {
