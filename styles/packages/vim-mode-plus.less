@@ -1,0 +1,62 @@
+atom-text-editor.vim-mode-plus.normal-mode,
+atom-text-editor.vim-mode-plus.visual-mode,
+atom-text-editor.vim-mode-plus.operator-pending-mode,
+atom-text-editor.vim-mode-plus.insert-mode.replace {
+    .amu-paint-cursor & {
+        &.is-focused,
+        &.vim-mode-plus-input-focused,
+        &.vim-mode-plus-search-input-focused {
+            .cursor {
+                background-color: @base-color; // block-cursor
+            }
+        }
+    }
+}
+
+atom-text-editor.vim-mode-plus.operator-pending-mode {
+    .amu-paint-cursor & {
+        &.is-focused,
+        &.vim-mode-plus-search-input-focused {
+            .cursor {
+                background: none;
+                border-bottom-color: @base-color;
+            }
+        }
+    }
+}
+
+atom-text-editor.vim-mode-plus.insert-mode.replace {
+    .amu-paint-cursor & {
+        &.is-focused {
+            .cursor {
+                background: none;
+                border-bottom-color: @base-color;
+            }
+        }
+    }
+}
+
+// vim-mode-plus-input-focused for surround, f, F, t, T, r etc.
+atom-text-editor.vim-mode-plus.normal-mode,
+atom-text-editor.vim-mode-plus.visual-mode,
+atom-text-editor.vim-mode-plus.operator-pending-mode, {
+    .amu-paint-cursor & {
+        &.vim-mode-plus-input-focused {
+            .cursor {
+                background: none;
+                border-bottom-color: @base-color;
+            }
+        }
+    }
+}
+
+atom-text-editor.vim-mode-plus-input-char-waiting {
+    .amu-paint-cursor & {
+        &.is-focused {
+            .cursor {
+                background: none;
+                border-bottom-color: @base-color;
+            }
+        }
+    }
+}
