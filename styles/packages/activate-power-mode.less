@@ -1,0 +1,37 @@
+.streak-container {
+    .title {
+        text-shadow: 2px 2px 2px @base-color;
+    }
+
+    .counter,
+    .exclamations,
+    .max {
+        color: @base-color;
+    }
+
+    .bar {
+        background: @base-color;
+    }
+
+    .generate-levels(5);
+}
+
+.generate-levels(@i) when (@i > 0) {
+    @levelColor: spin(@base-color, (@i * -10));
+    &.level-@{i} {
+        .title {
+            text-shadow: 2px 2px 2px @levelColor;
+        }
+
+        .counter,
+        .exclamations,
+        .max {
+            color: @levelColor;
+        }
+
+        .bar {
+            background: @levelColor;
+        }
+    }
+    .generate-levels(@i - 1);
+}
