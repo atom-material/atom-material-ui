@@ -30,6 +30,23 @@
         margin-right: 1em;
     }
 
+    .amu-compact-tree-view & {
+        .icon::before {
+            margin-left: -.5em;
+            margin-right: .75em;
+        }
+
+        &.has-collapsable-children {
+            .list-nested-item {
+                > .list-tree, > .list-group {
+                    li {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
     .generate-list-item-text-color(subtle);
     .generate-list-item-text-color(info);
     .generate-list-item-text-color(success);

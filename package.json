@@ -140,6 +140,19 @@
         }
       }
     },
+    "treeView": {
+      "order": 4,
+      "type": "object",
+      "title": "Tree View",
+      "properties": {
+        "compactTreeView": {
+          "title": "Compact tree view",
+          "description": "Reduces indentation in tree views.",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
     "fonts": {
       "order": 5,
       "type": "object",
