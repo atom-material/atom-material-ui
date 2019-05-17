@@ -106,11 +106,17 @@
     }
 
     .placeholder {
-        height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+        height: @tab-height;
         pointer-events: none;
+        .amu-compact-tab-bar & {
+            height: @compact-tab-height;
+            &:after {
+                top: @compact-tab-height - 2px;
+            }
+        }
 
         &:after {
-            top: @tab-height + @tab-top-padding + @tab-bottom-border-height - 2px;
+            top: @tab-height - 2px;
         }
     }
 
@@ -184,14 +190,14 @@
     position: relative;
 
     &::before {
-        content: '';
+        content: "";
         background: linear-gradient(to bottom, black, transparent);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 3px;
-        opacity: .125;
+        opacity: 0.125;
         pointer-events: none;
         z-index: 10;
     }
