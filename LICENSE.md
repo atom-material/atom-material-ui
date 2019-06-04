@@ -1,5 +1,4 @@
-Copyright (c) 2017 Silvestre Herrera.
-
+Copyright (c) 2019 Rex Wong
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
