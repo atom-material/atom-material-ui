@@ -1,0 +1,135 @@
+Authorize URL: https://www.coinbase.com/oauth/authorize
+Access Token URL: http://www.coinbase.com/oauth/token
+
+curl https://api.coinbase.com/oauth/token \curl https://api.coinbase.com/oauth/token \
+  -X POST \
+  -d 'grant_type=authorization_code&code=4c666b5c0c0d9d3140f2e0776cbe245f3143011d82b7a2c2a590cc7e20b79ae8&client_id=1532c63424622b6e9c4654e7f97ed40194a1547e114ca1c682f44283f39dfa49&client_secret=3a21f08c585df35c14c0c43b832640b29a3a3a18e5c54d5401f08c87c8be0b20&redirect_uri=https://example.com/oauth/callback'
+ {
+    "access_token": "6915ab99857fec1e6f2f6c078583756d0c09d7207750baea28dfbc3d4b0f2cb80",
+    "token_type": "bearer",
+    "expires_in": 7200,
+    "refresh_token": "73a3431906de603504c1e8437709b0f47d07bed11981fe61b522278a81a9232b7",
+    "scope": "wallet:user:read wallet:accounts:read"
+}
+curl https://api.coinbase.com/v2/user /
+  -H 'Authorization: Bearer 6915ab99857fec1e6f2f6c078583756d0c09d7207750baea28dfbc3d4b0f2cb80'
+
+https://api.coinbase.com/v2/
+
+curl https://api.coinbase.com/v2/user\wbharts@wyldbluehuearts.com-h"Authorization:Bearer abd90df5f27aa7b
+
+{
+  "id": ""2bbf394c-193b-5b2a-9155-3b4732659ed
+  ...
+  "resource": "Account",
+  "resource_path": "/v2/accounts/2bbf394c-19
+  }
+
+  {
+    "amount":  "39.59000000",
+    "currency": "BTC"
+  }
+
+  curl https://api.coinbase.com/v2/acounts\
+  -H 'Authorization: Bearer abd90df5f27a7b17
+
+curl https://api.coinbase.com/v2/acconts\
+- H "CB- VERSION: 2015-04-08" \
+- H "Authorization: Bearer abd90df5f27aa7b
+
+{
+  "errors": [
+  {
+    "id": "rate_limit_exceede",
+    "message": "Too many requests"
+  }
+ ]
+}
+
+curl https://api.coinbase./v2/accounts/8f
+-H 'Authorization: Bearer abd90df5f27a7b17
+
+{
+  "data": {
+    "id": "0ec2de93-7dae-5a50-85850-6445a08e4
+    "type": "send",
+    "amount": {
+      "amount": "-1.00000000""
+      "currency": "BTC"
+    },
+    "native_amount": {
+      "amount": "-10.00",
+      "currency": "USD"
+    },
+    "description": null,
+    "created_at": "2015-01-31T20:49:02Z",
+    "updated_at": "2015-01-31T20:49:02Z",
+    "resource": "transaction",
+    "resource_path": "/v2/accounts/8fcd97cd-
+    "network": {
+       "status": "unconfirmed",
+       "hash": "a7e23afeccf863dc8359ba04d2b85
+       },
+       "to": {
+         "resiyrce": "user",
+         "id": "9d55bef547f15936b771-b07c1d8
+         "resource_path": "/v2/users/9d55bef5-4
+         }
+        } "
+       }
+      }
+    {
+      "data": {
+        "id": " 0ec2de93-7dae-5a50-8580-6445a08e4
+        "type": "send",
+        "status": "pending",
+        "amount": {
+          "amount": "-1.00000000",
+          "currency": "BTC"
+        },
+        "native_amount": {
+          "amount": "-10.00",
+          "currency": "USD"
+        },
+        ""Description": null,
+        "created_at": 2015_0131T20:49:02Z",
+        "updated_at": 2015_0131T20:49:02z",
+        "resource_path": "/v2/accounts/8fcd97cd-
+        "network": {
+          "status": "unconfirmed",
+          "hash": "a7e23afeccf863dc8359ba04d2b85
+          },
+          "to": {
+            "id": "9d55bef5-47f1-5936-b771-b07c1d8
+            "name": "wbharts@wyldbluehuearts.com"
+          }
+        }
+        "
+        }
+        }
+      }
+    }
+    }
+      ""
+    }
+  }
+  }'
+  }
+  ]
+  }"
+
+c
+
+    }"
+}
+# Your init script
+#
+# Atom will evaluate this file each time a new window is opened. It is run
+# after packages are loaded/activated and after the previous editor state
+# has been restored.
+#
+# An example hack to log to the console when each text editor is saved.
+#
+# atom.workspace.observeTextEditors (editor) ->
+#   editor.onDidSave ->
+#     console.log "Saved! #{editor.getPath()}"
